@@ -85,33 +85,39 @@
 \author{Joseph R. Michalka}
 In this dissertation I present work on the modeling of adsorbate-metal
 interactions with a specific focus on Carbon Monoxide (CO) induced
-restructuring of Platinum stepped surfaces. Additionally, I also will present
+restructuring of Platinum stepped surfaces. Additionally, I will also present
 work on the development of a multiple-minima fluctuating charge (MM-flucq)
 electrostatic interaction potential which has been use to simulate charge
-transfer events and  oxide formation on Platinum.
+transfer events and oxide formation on Platinum surfaces.
 
 New Pt-CO and Au-CO forcefields were developed to study coverage-dependent
-CO-induced restructuring of high-index Pt \& Au (557) surfaces. It was observed
+CO-induced restructuring of high-index Platinum \& Gold (557) surfaces. It was observed
 that weak Au-CO binding led to minimal disruption of the surface, whereas the
 strong Pt-CO binding interactions resulted in significant disruption of the
 step-edges leading to step-wandering on the surface. The highest coverage (0.5
 ML) Pt-CO systems also underwent step-doubling which had been seen in an
 earlier experiment. Our proposed mechanism for this reconstruction is based on
-the strong CO-CO quadrupolar repulsion that lead to an increase of surface
-diffusion. The increased adatom mobility directly leads to greater stochastic
+the strong CO-CO quadrupolar repulsion that causes an increase of adatom surface
+mobility. The increased mobility directly leads to greater stochastic
 step-wandering, which in turn eventually led to double-layer formation.
 
-A Pt/Pd (557) surface was constructed to explore the interplay between
+A Platinum/Palladium (557) surface was simulated to explore the interplay between
 CO-induced reconstruction on a more complicated bimetallic surface. The Pt-CO
 forcefield was retuned while a new Pd-CO forcefield was developed. A pure Pd
 (557) system was also explored as a control case. The difference in binding
 strengths was found to play an important role in the disruption of the Pt/Pd
 surface while the preferred binding sites on each system (Pt: atop, Pd: bridge)
-led to vastly different behaviors with regards to surface diffusion and
+led to significantly different behaviors with regards to surface diffusion and
 mobility.
 
-Pt 321/557/765/112
-
+The observation from earlier work of the importance of step-edge energetics
+encouraged us to directly examine the effect of straight edges (557) \& (112)
+and kinked edges (321) \& (765), along with plateau lengths on the CO-induced
+reconstruction of Pt surfaces. As hypothesized, the systems with rougher edges
+experienced a greater amount of surface diffusion and a concomitantly increased
+amount of step-wandering. The length of the (111) plateaus between step edges
+also played an important role with regard to the time taken for the systems to
+undergo step doubling.
 
 Accurate treatment of the electrostatic interactions between adsorbates and
 surfaces is often neglected in molecular dynamics simulations because of the
@@ -119,14 +125,15 @@ increased computational cost and difficulty of implementation. Instead, the
 attractive or repulsive effects of the charge interactions are partioned
 amongst the other interatomic potentials terms during fitting. Our new MM-flucq
 potential allows us to more properly describe a metal surface's response to
-impigning charged species in a dynamic fashion.
+impinging charged species in a dynamic fashion.
 
 \end{abstract}
  %                         % Either place the text between begin/end, or
  % \include{abstract}  % put it in a file to be included
 
  % Including a dedication is optional.
- % \renewcommand{\dedicationname}{\mbox{}} % Replace \mbox{} if you want
+%\renewcommand{\dedicationname}{\mbox{}} % Replace \mbox{} if you want
+\renewcommand{\dedicationname}{DEDICATION} % Replace \mbox{} if you want
                                            % something else. It must be in
                                            % all caps, and doing so is your
                                            % responsibility.
@@ -170,7 +177,10 @@ To my wife and family, and the many great teachers who have always believed in m
 \begin{acknowledge}
 I would like to thank my advisor, Professor J. Daniel Gezelter, for his
 guidance and support throughout this research.
-I am indebted to my former and present colleagues, Dr. Shenyu Kuang, Dr. James Marr, Dr. Kelsey Stocker, Dr. Zack Terranova, Dr. Mary Sherman, Madan Lamichhane, Patrick Louden, Suzanne Neidhart, Patrick McIntyre, Heather Chiallero (?), Andrew Latham, and Thomas Parsons for helpful discussions. 
+I am indebted to my former and present colleagues, Dr. Shenyu Kuang, Dr. James
+Marr, Dr. Kelsey Stocker, Dr. Zack Terranova, Dr. Mary Sherman, Madan
+Lamichhane, Patrick Louden, Suzanne Neidhart, Patrick McIntyre, Heather
+Chiarello (?), Andrew Latham, and Thomas Parsons for helpful discussions. 
 \end{acknowledge}
  %                       % Use one of the two choices to add acknowledge text
  % \include{acknowledgement}
@@ -182,14 +192,26 @@ I am indebted to my former and present colleagues, Dr. Shenyu Kuang, Dr. James M
  % and ensuring that they are is your responsibility.
 
 \chapter{INTRODUCTION}
+%Metal surfaces
+%  motivation (catalysis, energy generation, biomedical applications)
+%  electronic, optical properties (stable at extreme temperatures, pressures for the most part)
+%  list off neat things metal surfaces have done (20 or so spread throughout first couple of paragraphs
+% Tie into importance of adsorbate interactions
 Metal surfaces play a role in many areas of chemistry, including catalysis,
 energy generation, and biomedical applications. Their displayed facets and
-morphologies often play a significant role in their activity and general
-usefulness for the specific task. In all of these cases, the surface of the
-metal will likely be exposed to a variety of atmospheric compositions leading
-to adsorbed species on the surface. 
+morphologies often play a significant role in their activity, selectivity, and
+stability. In most practical applications the surface of the metal will be
+exposed to a variety of atmospheric compositions, typically at high
+temperatures and pressures, leading to adsorbed species on the surface. 
 
 \section{Adsorbate Interactions on Metal Surfaces}
+%Image of particles adsorbed on the surface
+%covalent vs charge-interaction vs attractive by not strongly bound
+%binding affected by surface facet (electronic, d-band) and generalized coordinate number
+% sabatier/volcano plots
+%experimental abilities
+%dft capabilities
+%where molecular dynamics fits
 The frontier orbitals on many common small-molecule adsorbates (CO,
 NO\textsubscript{x}, O\textsubscript{2}) tend to match up well with the d-band
 center of a significant number of relevant metals leading to extremely strong
@@ -198,17 +220,32 @@ coverage and specific surface facet displayed.
 
 
 \subsection{Adsorbate Induced Reconstructions}
+% Studies done on clean metal surfaces tend to suffer from pressure and temperature gaps
+% high pressure xps, stm, spin echo helium bombardment provide some ways to mimic the environment of industrial catalysts
+% Difficult to determine mechanisms because of time and spacial resolution
+% DFT good at calculating relative energies for small systems, but the size of these reconstructions makes calculations expensive
+% mol dyn. allows us to explore the interactions that lead to adsorbate-induced reconstructions
 
-\section{Modeling}
-
+%\section{Modeling} I think spreading this amongst the earlier sections is better
 
 \chapter{METHODOLOGIES}
 
 \section{Metal Interactions}
+% Talk about challenges of metal interactions as compared to simple pair-wise interactions
+% energy dependent on local environment
+% Introduce EAM, many equations, one to two figures?, justify choice
+% Good at mixing, Pt/Pd bimetallic etc.
 
 \section{Metal-Adsorbate Interactions}
+% Covalent, non covalent (strength of interaction)
+% focus on M-CO, describe M-C, M-O, why repulsive morse
+% image of different pieces of the potential from midwest
+%
+
+\section{Adsorbate-Adsorbate}
 
 \section{Electrostatics}
+
 
 \subsection{Multiple Minima Fluctuating Charges (MM-FlucQ)}
 
