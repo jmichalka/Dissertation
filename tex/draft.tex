@@ -36,7 +36,7 @@
 \ProvidesFile{template.tex}
     [2013/04/16 v3.2013^^J%
      Template file for NDdiss2e class by Sameer Vijay and updated by Megan Patnott^^J]
-\documentclass[draft]{nddiss2e}
+\documentclass[final, numrefs]{nddiss2e}
                      % One of the options draft, review, final must be chosen.
                      % One of the options textrefs or numrefs should be chosen
                      % to specify if you want numerical or ``author-date''
@@ -53,6 +53,7 @@
                      %           the textrefs option)
                      % sort&compress (sorts and compresses numerical citations;
                      %           is identical to sort when used with textrefs)
+
 
 \begin{document}
 
@@ -195,44 +196,7 @@ Chiarello (?), Andrew Latham, and Thomas Parsons for helpful discussions.
  % \include{chapter-one}
  % Begin each chapter with \chapter{TITLE}. Chapter titles must be in all caps
  % and ensuring that they are is your responsibility.
-
-\chapter{INTRODUCTION}
-%CHAP1
-%Metal surfaces
-%  motivation (catalysis, energy generation, biomedical applications)
-%  electronic, optical properties (stable at extreme temperatures, pressures for the most part)
-%  list off neat things metal surfaces have done (20 or so spread throughout first couple of paragraphs
-% Tie into importance of adsorbate interactions
-Metal surfaces play a role in many areas of chemistry, including catalysis,
-energy generation, and biomedical applications. Their displayed facets and
-morphologies often play a significant role in their activity, selectivity, and
-stability. In most practical applications the surface of the metal will be
-exposed to a variety of atmospheric compositions, typically at high
-temperatures and pressures, leading to adsorbed species on the surface. 
-
-\section{Adsorbate Interactions on Metal Surfaces}
-%Image of particles adsorbed on the surface
-%covalent vs charge-interaction vs attractive by not strongly bound
-%binding affected by surface facet (electronic, d-band) and generalized coordinate number
-% sabatier/volcano plots
-%experimental abilities
-%dft capabilities
-%where molecular dynamics fits
-The frontier orbitals on many common small-molecule adsorbates (CO,
-NO\textsubscript{x}, O\textsubscript{2}) tend to match up well with the d-band
-center of a significant number of relevant metals leading to extremely strong
-binding interactions. These binding interactions are often mediated by the
-coverage and specific surface facet displayed.
-
-
-\subsection{Adsorbate Induced Reconstructions}
-% Studies done on clean metal surfaces tend to suffer from pressure and temperature gaps
-% high pressure xps, stm, spin echo helium bombardment provide some ways to mimic the environment of industrial catalysts
-% Difficult to determine mechanisms because of time and spacial resolution
-% DFT good at calculating relative energies for small systems, but the size of these reconstructions makes calculations expensive
-% mol dyn. allows us to explore the interactions that lead to adsorbate-induced reconstructions
-
-%\section{Modeling} I think spreading this amongst the earlier sections is better
+\include{chapter1}
 
 \chapter{METHODOLOGIES}
 %CHAP2
@@ -297,7 +261,7 @@ coverage and specific surface facet displayed.
 
 
 \bibliographystyle{nddiss2e}
- \bibliography{ }           % input the bib-database file name
+ \bibliography{draft}           % input the bib-database file name
 
 
 \end{document}
