@@ -81,54 +81,8 @@
 
  % Including an abstract is optional for a master's thesis, and required for a
  % doctoral dissertation.
-\begin{abstract}
-\title{ADSORBATE INDUCED RECONSTRUCTIONS ON METAL SURFACES}
-\author{Joseph R. Michalka}
-In this dissertation I present work on the modeling of adsorbate-metal
-interactions with a specific focus on Carbon Monoxide (CO) induced
-restructuring of Platinum stepped surfaces. Additionally, I will also present
-work on the development of a multiple-minima fluctuating charge (MM-flucq)
-electrostatic interaction potential which has been use to simulate charge
-transfer events and oxide formation on Platinum surfaces.
 
-New Pt-CO and Au-CO forcefields were developed to study coverage-dependent
-CO-induced restructuring of high-index Platinum \& Gold (557) surfaces. It was observed
-that weak Au-CO binding led to minimal disruption of the surface, whereas the
-strong Pt-CO binding interactions resulted in significant disruption of the
-step-edges leading to step-wandering on the surface. The highest coverage (0.5
-ML) Pt-CO systems also underwent step-doubling which had been seen in an
-earlier experiment. Our proposed mechanism for this reconstruction is based on
-the strong CO-CO quadrupolar repulsion that causes an increase of adatom surface
-mobility. The increased mobility directly leads to greater stochastic
-step-wandering, which in turn eventually led to double-layer formation.
-
-A Platinum/Palladium (557) surface was simulated to explore the interplay between
-CO-induced reconstruction on a more complicated bimetallic surface. The Pt-CO
-forcefield was retuned while a new Pd-CO forcefield was developed. A pure Pd
-(557) system was also explored as a control case. The difference in binding
-strengths was found to play an important role in the disruption of the Pt/Pd
-surface while the preferred binding sites on each system (Pt: atop, Pd: bridge)
-led to significantly different behaviors with regards to surface diffusion and
-mobility.
-
-The observation from earlier work of the importance of step-edge energetics
-encouraged us to directly examine the effect of straight edges (557) \& (112)
-and kinked edges (321) \& (765), along with plateau lengths on the CO-induced
-reconstruction of Pt surfaces. As hypothesized, the systems with rougher edges
-experienced a greater amount of surface diffusion and a concomitantly increased
-amount of step-wandering. The length of the (111) plateaus between step edges
-also played an important role with regard to the time taken for the systems to
-undergo step doubling.
-
-Accurate treatment of the electrostatic interactions between adsorbates and
-surfaces is often neglected in molecular dynamics simulations because of the
-increased computational cost and difficulty of implementation. Instead, the
-attractive or repulsive effects of the charge interactions are partioned
-amongst the other interatomic potentials terms during fitting. Our new MM-flucq
-potential allows us to more properly describe a metal surface's response to
-impinging charged species in a dynamic fashion.
-
-\end{abstract}
+\include{abstract}
  %                         % Either place the text between begin/end, or
  % \include{abstract}  % put it in a file to be included
 
@@ -175,21 +129,9 @@ To my wife and family, and the many great teachers who have always believed in m
                                        % add something else, and uncomment
                                        % The name must be in all caps, and
                                        % ensuring this is your responsiblity.
-\begin{acknowledge}
-I would like to thank my advisor, Professor J. Daniel Gezelter, for his
-guidance and support throughout this research.
-I am indebted to my former and present colleagues, Dr. Shenyu Kuang, Dr. James
-Marr, Dr. Kelsey Stocker, Dr. Zack Terranova, Dr. Mary Sherman, Madan
-Lamichhane, Patrick Louden, Suzanne Neidhart, Patrick McIntyre, Heather
-Chiarello (?), Andrew Latham, and Thomas Parsons for helpful discussions. 
-%Advisor
-%Group members friends
-%committee
-%department
-%family
-\end{acknowledge}
- %                       % Use one of the two choices to add acknowledge text
- % \include{acknowledgement}
+ 
+%                       % Use one of the two choices to add acknowledge text
+\include{acknowledgement}
 
 \mainmatter
  % Place the text body here.
@@ -198,56 +140,17 @@ Chiarello (?), Andrew Latham, and Thomas Parsons for helpful discussions.
  % and ensuring that they are is your responsibility.
 \include{chapter1}
 
-\chapter{METHODOLOGIES}
-%CHAP2
+\include{chapter2}
 
-\section{Metal Interactions}
-% Talk about challenges of metal interactions as compared to simple pair-wise interactions
-% energy dependent on local environment
-% Introduce EAM, many equations, one to two figures?, justify choice
-% Good at mixing, Pt/Pd bimetallic etc.
+\include{chapter3}
 
-\section{Metal-Adsorbate Interactions}
-% Covalent, non covalent (strength of interaction)
-% focus on M-CO, describe M-C, M-O, why repulsive morse
-% image of different pieces of the potential from midwest
-% 
+\include{chapter4}
 
-\section{Adsorbate-Adsorbate}
-% Brief mention of Karplus and Straub
-% Focus on quadrupolar repulsion, graph that shows electrostatic repulsion at 2.77 \AA
+\include{chapter5}
 
+\include{chapter6}
 
-
-\section{Electrostatics}
-% Brief mention of Damped Shifted Force
-% If we modify the electrostatics in the metal to deal with the polarization catastrophe
-
-
-\subsection{Multiple Minima Fluctuating Charges (MM-FlucQ)}
-% portions of the white paper
-% how much will be in a paper vs in here...
-
-
-\chapter{MOLECULAR DYNAMICS SIMULATIONS OF THE SURFACE RECONSTRUCTIONS OF PT(557) AND AU(557) UNDER EXPOSURE TO CO}
-%CHAP3
-
-
-\chapter{CO-INDUCED ISLAND FORMATION ON PT/PD(557) SURFACE ALLOYS: A MOLECULAR DYNAMICS STUDY}
-%CHAP4
-
-
-\chapter{EFFECTS OF STEP-TYPE ON THE CO-INDUCED SURFACE RECONSTRUCTIONS OF PT(557)/(112)/(321)/(765) FACETS}
-%CHAP5
-
-
-\chapter{DEVELOPMENT OF A MULTIPLE-MINIMA FLUCTUATING CHARGE (MM-FLUCQ) POTENTIAL}
-%CHAP6
-
-
-\chapter{SUMMARY}
-%CHAP7
-
+\include{chapter7}
 
 \appendix
 
@@ -261,7 +164,7 @@ Chiarello (?), Andrew Latham, and Thomas Parsons for helpful discussions.
 
 
 \bibliographystyle{nddiss2e}
- \bibliography{draft}           % input the bib-database file name
+\bibliography{draft}           % input the bib-database file name
 
 
 \end{document}
