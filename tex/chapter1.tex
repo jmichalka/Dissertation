@@ -82,17 +82,122 @@ formation on Pt surfaces. Finally, Chapter 7 contains a summary of this
 work as well as proposals for future directions.
 
 \section{Metals}
+The electronic nature of metals, as compared to other molecular species makes
+them particularly interesting for a variety of chemical or material processes
+where their specific characteristics can be used effectively. The ease of
+movement of the valence electrons coupled with the band structure of the
+molecular orbitals gives metals many technologically useful characteristics
+including high electrical and thermal conductivity, malleability, and various
+optical properties that make them amenable for sensing applications and energy
+harvesting. While most metals have similar mechanical properties, the metals in
+columns 9, 10, and 11 (Pt, Pd, Rh, etc.) of the periodic table tend to be the
+most active for catalytic applications. The two primary reasons for this
+phenomena are that being near the {\it d}-block these metals typically have a
+larger electron density and the energy of the valence orbitals for these metals
+often matches up well with adsorbate orbitals leading to strong molecular
+interactions.
 
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{../figures/chap1/facets.pdf}
+  \caption{Facets}
+\label{fig:facets}
+\end{figure}
 
 \subsection{Structure}
+The strength and type of bonding will depend on the displayed surface structure
+of the metal.  Most metals adopt an FCC or HCP bulk crystal structure because
+of their close-packing. A bulk sample can be cut along nearly any set of Miller
+indices, however, some are more stable than others.  The three common low
+energy facets are shown in Figure \ref{fig:facets}. For many metal surfaces,
+Platinum and Palladium specifically, the surface energy of the (111) facet is
+the most stable and barring kinetic barriers a higher-index surface will
+minimize to this structure. The displayed low-energy structures are very
+important when considering how the metal will interact with adsorbates because
+the strength of the adsorption is typically tied to the displayed surface.
+
 \subsubsection{Bimetallic Systems}
+Since the properties and structure of metal systems are directly tied to their
+electronic nature, anything that perturbs the density of states will likely
+lead to deviations from bulk behavior. The presence of adsorbates or an
+electron-donating or withdrawing support, i.e. \ce{Al2O3} will perturb the
+system but one of the most powerful ways to design catalysts is through
+combinding two or more metals together. Significant research has been directed
+at examining various bimetallic systems, including heterogenous and homogeous
+alloys, core-shell nanoparticles, and near surface alloys. Figure
+\ref{fig:bimetallics} shows a number of examples. Since the proportion of each
+metal along with its arrangment can in theory be tailored, bimetallic systems
+allow for a high degree of tuning of various properties.
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{../figures/chap1/bimetallics.pdf}
+  \caption{Bimetallics}
+\label{fig:bimetallics}
+\end{figure}
+
 \subsection{Dynamics}
+Low-index facets of metals at room temperature will not undergo much movement
+because they are already low on the potential energy surface. However, these
+systems are also rarely used in real-world applications. High-index surfaces
+and roughened nanoparticles have a larger number of low-coordinated surface
+atoms that also tend to be more active for catalytic processes. The local
+environment that enables them to bond strongly with adsorbates also can lead to
+easier adatom formation and surface mobility. Repeated patterning, as seen in
+step surfaces where a low-index plateau extends for some length and then
+another layer of the metal is laid on top, like a staircase, can prove
+especially useful because of the relatively easy characterization of the
+surface.
+
 \subsubsection{Diffusion \& Step-Wandering}
+The two main types of movement that will occur on metals both involve adatoms.
+Independent adatom movement is the type most likely to be seen as one particle
+is ejected from a stable edge or terrace and then explores the plateau around
+it. Since the strength of metallic bonding is tied to the number of nearest
+neighbors, once an adatom is created and is seated on the surface, there is
+often only a minimal energy barrier for it to continue exploring the surface. 
+
+The second main type of movement involves cooperative adatom diffusion and is
+better described as entire step-edges ``wandering'' on the surface. This
+wandering is ultimately a collection of ejection and readsorbtion events of
+surface metal atoms but it is more helpful to look at the collective motion
+than all of the individual motions.
 
 \section{Adsorbate Interactions on Metal Surfaces}
+The majority of applications involving metals ultimately involve the metal
+surface providing a favorable environment for some other reaction to occur,
+whether that be oxidation of CO, production of \ce{H2} through a
+water-gas-shift reaction, or some other mechanism that involves molecules
+adsorbing to a surface. Having an accurate understanding of how adsorbates
+interact with metal surfaces is thus of the utmost importance. 
+
 \subsection{Binding Sites}
-\subsection{Patterning}
+Generally, a surface with a lower index has less less electron density to
+contribute to a potential adsorbate, weakening the strength of the binding.
+However, the orbitals of the adsorbate also play a role in binding preference.
+The three most common binding sites are highlighted in Figure
+\ref{fig:binding}.
+\begin{figure}
+  \includegraphics[width=\linewidth]{../figures/chap1/binding.pdf}
+  \caption{Binding Sites}
+\label{fig:binding}
+\end{figure}
+
+
 \subsection{Coverage Dependence}
+While there might be one preferred binding site for a single adsorbate on a
+metal surface, the presence of strong adsorbate-adsorbate interactions can lead
+to deviations from expected behavior. While adsorbate-adsorbate interaction are
+often repulsive or induce strain in the metal surface making the binding
+weaker\citep{} it has been shown that cooperative effects can also arise when
+adsorbates are absorbed in different electronic enivornments. It has been
+predicted that while \ce{CO} prefers the atop site on \ce{Pt} at low coverages,
+as the coverage approaches 0.5 monolayers the binding preference changes to a
+mixed atop/bridge (CHECK) configuration because of favorable dipole-dipole
+interactions that result due to non-equivalent charge transfer from the Pt back
+into the CO orbitals. Since the presence and configuration of adsorbates 
+
+
+\subsubsection{Patterning}
 %Image of particles adsorbed on the surface
 %covalent vs charge-interaction vs attractive by not strongly bound
 %binding affected by surface facet (electronic, d-band) and generalized coordinate number
@@ -100,16 +205,6 @@ work as well as proposals for future directions.
 %experimental abilities
 %dft capabilities
 %where molecular dynamics fits
-The frontier orbitals on many common small-molecule adsorbates (CO,
-NO\textsubscript{x}, O\textsubscript{2}) tend to match up well with the d-band
-center of a significant number of relevant metals leading to extremely strong
-binding interactions. These binding interactions are often mediated by the
-coverage and specific surface facet displayed.
-
-\section{Metal Dynamics}
-\subsection{Diffusion}
-\subsection{Step-Wandering}
-
 
 \section{Adsorbate Induced Reconstructions}
 % Studies done on clean metal surfaces tend to suffer from pressure and temperature gaps
@@ -118,10 +213,49 @@ coverage and specific surface facet displayed.
 % DFT good at calculating relative energies for small systems, but the size of these reconstructions makes calculations expensive
 % mol dyn. allows us to explore the interactions that lead to adsorbate-induced reconstructions
 
-%\section{Modeling} I think spreading this amongst the earlier sections is better
+While metal surfaces often remain stable even when the environment is
+perturbed, some situations can arise where the presence of adsorbates
+sufficiently modify the potential energy surface so that a new facet is
+energetically preferred. This situation might even be commonplace, but altering
+the potential energy surface only solves part of the problem. The system must
+also be able to overcome any kinetic barriers that would prevent the
+restructuring from taking place. For systems that are started in a high-index
+configuration, e.g. nanocubes and nanosphers, that are only is these
+configuratios because of kinetic barriers, the introduction of adsorbates will
+likely lead to a restructuring to a lower-energy structure. 
+
+The time and length scales of these reconstruction processes vary
+widely\citep{} and while current experimental techniques are able to observe
+and identify the reconstructions, they are often unable to identify the
+mechanisms of restructuring, which are important for designing catalysts.
 
 \subsection{Refaceting}
+%Williams papers on this, angle > ??? 
+Surfaces will refacet if they were originally cut at too high of an angle. This
+has been explored previously for a number of systems\citep{} and the refaceting
+will continue until RECPLACE WITH EQUATION ABOUT STABILITY. This restructuring
+typically only occurs in the forward direction while the presence of adsorbates
+can induce this reconstruction, a temperature increase will also likely allow
+this to occur since it is most likely that there is just a kinetic barrier that
+must be overcome. 
+
 \subsubsection{Doubling}
-\subsection{Island-Formation}
+Work by Tao {\it et al.} on a \ce{Pt} (557) surface exposed to \ce{CO} observed
+a reversible reconstruction event that was directly dependent on the presence
+of \ce{CO} in the system. When \ce{CO} was introduced the step-edges doubled,
+but upon removal of the \ce{CO} the original (557) motif was recovered. This
+reversible reconstruction strongly implies that the presence of \ce{CO}
+temporarilly modifies the potential energy surface to prefer a new ground state
+structure; however, the exact mechanism of this reconstruction was not deduced
+at the time. This dissertation originally started as an attempt to model this
+system and attemptto provide insights into the mechanism of reconstruction. 
 
-
+\subsection{Island Formation}
+Since catalytic reactions typically only occur at the surface, significant
+research has been devoted to increasing the surface area to bulk ratio of metal
+catalysts, either through catalyst supports, high-index nanostructures, or
+bimetallic near surface alloys. While these systems are typically stable at low
+temperatures and pressures, significant perturbations can lead to what is
+effectively sintering or island-formation of one of the metals on the surface.
+The interplay of surface energies and adsorbate interactions on two or more
+metal surfaces can lead to surprising results.
