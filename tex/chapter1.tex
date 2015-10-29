@@ -41,21 +41,26 @@
 % Tie into importance of adsorbate interactions
 Metal surfaces and nanoparticles play a role in many areas of chemistry,
 including catalysis\citep{}, energy generation\citep{}, and biomedical
-applications.\citep{} The differences in their displayed facets and morphologies can play a
-significant role in their activity\citep{}, selectivity\citep{}, and
-stability\citep{}. Bimetallic species and alloys\citep{}, along with supported
-surfaces and nanoparticles\citep{} allow for an even greater design space for
-various mechanical\citep{}, optical\citep{}, and catalytic properties.\citep{}
-In most practical applications the surface of the metal will be exposed to a
-variety of atmospheric compositions leading to adsorbed species on the surface
-and potentially oxide formation. The interactions between metals and adsorbates
-adds another layer of complexity when attempting to fully describe metal
-surfaces.  This dissertation is intended to provide a fundamental picture for
-adsorbate induced reconstruction on metal surfaces by examining the complex
-interactions present in these systems, measuring the perturbed dynamics, and
-analyzing the effect of different exposed facets by using Molecular Dynamics
-(MD) simulations to capture the atomic mechanisms that lead to restructuring.
-
+applications.\citep{} The differences in their displayed facets and
+morphologies can play a significant role in their activity\citep{},
+selectivity\citep{}, and stability\citep{}. Bimetallic species and
+alloys\citep{}, along with supported surfaces and supported
+nanoparticles\citep{} allow for an even greater design space for various
+mechanical\citep{}, optical\citep{}, and catalytic properties\citep{} because
+of the modification of the electronic environment.  In most practical
+applications the surface of the metal will be exposed to a variety of
+atmospheric compositions leading to various adsorbed species on the surface.
+For certain metals and conditions there is also the possibility of oxide
+formation which can dramatically change the surface properties fo the
+material.\citep{} The interactions between metals and adsorbates adds another
+layer of complexity when attempting to fully describe metal surfaces because
+the presence of adsorbates will directly modify the electronic environment and
+can even lead to reconstruction events that change the surface.\citep{} This
+dissertation is intended to provide a fundamental picture for adsorbate induced
+reconstruction on metal surfaces by examining the complex interactions present
+in these systems, measuring the perturbed dynamics, and analyzing the effect of
+different exposed facets by using Molecular Dynamics (MD) simulations to
+capture the atomic mechanisms that lead to restructuring.
 
 
 %In general, the structure of metal surfaces can be strongly perturbed by the
@@ -67,50 +72,37 @@ analyzing the effect of different exposed facets by using Molecular Dynamics
 %detailed understanding of the mechanism of surface dynamics and restructuring
 %as caused by adsorbates is of the utmost relevance. 
 
-
-
-This dissertation is organized so that a brief overview of metallic systems,
-adsorbate interactions, and adsorbate-induced reconstructions are presented in
-Chapter 1. The second chapter focuses on accurately modeling the metal-metal,
-metal-adsorbate, and adsorbate-adsorbate interactions, along with introducing
-the multiple-minima fluctuating charge (MM-flucQ) method as it relates to the
-electrostatic interactions present in the system. Chapter 3 presents work
-on the surface reconstructions of Pt (557) and Au (557) surfaces when exposed
-to Carbon Monoxide. In Chapter 4 the effect of CO adsorption on a Pt/Pd (557)
-subsurface alloy is explored. The fifth chapter more fully examines the effects
-of step type and plateau length as they affect the CO-induced restructuring of
-Platinum. Moving away from Pt-CO systems, Chapter 6 presents our development of
+This organization of this dissertation is such that a brief overview of
+metallic systems, adsorbate interactions, and adsorbate-induced reconstructions
+is presented in Chapter 1.  The second chapter presents work on the surface
+reconstructions of Pt (557) and Au (557) surfaces when exposed to Carbon
+Monoxide. In Chapter 3 the effect of CO adsorption on a Pt/Pd (557) subsurface
+alloy is explored. The fourth chapter more fully examines the effects of step
+type and plateau length as they affect the CO-induced restructuring of
+Platinum. Moving away from Pt-CO systems, Chapter 5 presents our development of
 the MM-flucQ potential and its applications to charge transfer and oxide
-formation on Pt surfaces. Finally, Chapter 7 contains a summary of this
-work as well as proposals for future directions.
+formation on Pt surfaces. Finally, Chapter 6 contains a summary of this work as
+well as proposals for future directions.
+%The second chapter focuses on accurately modeling the metal-metal,
+%metal-adsorbate, and adsorbate-adsorbate interactions, along with introducing
+%the multiple-minima fluctuating charge (MM-flucQ) method as it relates to the
+%electrostatic interactions present in the system. 
 
 \section{Metals}
-The electronic nature of metals, as compared to other molecular species makes
-them particularly interesting for a variety of chemical or material processes
-where their specific characteristics can be used effectively. The ease of
-movement of the valence electrons coupled with the band structure of the
-molecular orbitals gives metals many technologically useful characteristics
+The electronic properties of metals, as compared to other molecular species
+makes them particularly useful for a variety of chemical and material processes
+where their heterogenous bonding characteristics can be used effectively. The
+ease of movement of the valence electrons coupled with the band structure of
+the molecular orbitals gives metals many technologically useful characteristics
 including high electrical and thermal conductivity, malleability, and various
 optical properties that make them amenable for sensing applications and energy
-harvesting. While most metals have similar mechanical properties, the metals in
-columns 9, 10, and 11 (Pt, Pd, Rh, etc.) of the periodic table tend to be the
-most active for catalytic applications. The two primary reasons for this
-phenomena are that being near the {\it d}-block these metals typically have a
-larger electron density and the energy of the valence orbitals for these metals
-often matches up well with adsorbate orbitals leading to strong molecular
-interactions.
+harvesting. With regards to catalytic activity the metals in columns 9, 10, and
+11 (Pt, Pd, Rh, etc.) of the periodic table tend to be highly active because
+being near the end of the {\it d}-block these metals typically have a larger
+valence electron density and the energy of the valence orbitals for these
+metals often matches up well with adsorbate orbitals leading to strong
+molecular interactions.
 
-
-\begin{figure}
-  \includegraphics[width=\linewidth]{../figures/chap1/facets.pdf}
-  \caption{On the left are displayed face-down views of common low-index facets
-of metals (a) (100), (b) (110), and (c) (111). The dotted lines represent a
-repeatable crystal unit on each facet. The light gray coloring in (b) is
-illustrating the placement of that row of atoms beneath the top and bottom row.
-Facet (d) displays a (112) step edge. The darker shading represents separate
-terraces that are displaced by one atomic height.}
-\label{fig:facets}
-\end{figure}
 
 \subsection{Structure}
 The strength and type of bonding will depend on the displayed surface structure
@@ -123,6 +115,17 @@ the most stable and barring kinetic barriers a higher-index surface will
 minimize to this structure. The displayed low-energy structures are very
 important when considering how the metal will interact with adsorbates because
 the strength of the adsorption is typically tied to the displayed surface.
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{../figures/chap1/facets.pdf}
+  \caption{On the left are displayed face-down views of common low-index facets
+of metals (a) (100), (b) (110), and (c) (111). The dotted lines represent a
+repeatable crystal unit on each facet. The light gray coloring in (b) is
+illustrating the placement of that row of atoms beneath the top and bottom row.
+Facet (d) displays a (112) step edge. The darker shading represents separate
+terraces that are displaced by one atomic height.}
+\label{fig:facets}
+\end{figure}
 
 \subsubsection{Bimetallic Systems}
 Since the properties and structure of metal systems are directly tied to their
@@ -182,11 +185,17 @@ interact with metal surfaces is thus of the utmost importance.
 Generally, a surface with a lower index has less less electron density to
 contribute to a potential adsorbate, weakening the strength of the binding.
 However, the orbitals of the adsorbate also play a role in binding preference.
-The three most common binding sites are highlighted in Figure
+The three most common binding sites on a (111) facet are highlighted in Figure
 \ref{fig:binding}.
 \begin{figure}
   \includegraphics[width=\linewidth]{../figures/chap1/binding.pdf}
-  \caption{Binding Sites}
+  \caption{The atop (green), bridge (blue), and three-fold hollow (red)
+adsorption sites are the three most common binding sites for small molecules on
+low energy surfaces. Depending on the energy levels of the adsorbate orbitals
+that engage in bonding there will be varying preferences for binding sites.
+Carbon monoxide's 4444 orbital is well-matched with platinum's 4444 orbital
+leading to an atop preference, whereas on palladium, CO is more energetically
+stable in the bridge or hollow site.}
 \label{fig:binding}
 \end{figure}
 
