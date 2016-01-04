@@ -1,0 +1,150 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: draft.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: acknowledgement.aux
+A level-1 auxiliary file: chapter1.aux
+A level-1 auxiliary file: chapter2.aux
+A level-1 auxiliary file: chapter3.aux
+Case mismatch error between cite keys johnson89 and Johnson89
+---line 29 of file chapter3.aux
+ : \citation{johnson89
+ :                    }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys johnson89 and Johnson89
+---line 32 of file chapter3.aux
+ : \citation{johnson89
+ :                    }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: chapter4.aux
+A level-1 auxiliary file: chapter5.aux
+A level-1 auxiliary file: chapter6.aux
+The style file: nddiss2e.bst
+Database file #1: draft.bib
+Warning--string name "prb" is undefined
+--line 1208 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1224 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1295 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1390 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1404 of file draft.bib
+Warning--string name "jacs" is undefined
+--line 1422 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1462 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1508 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1519 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1536 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1547 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1562 of file draft.bib
+Warning--string name "jpcb" is undefined
+--line 1575 of file draft.bib
+Warning--string name "pccp" is undefined
+--line 1588 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1609 of file draft.bib
+Warning--string name "jcp" is undefined
+--line 1630 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1670 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1681 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1691 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1702 of file draft.bib
+Warning--string name "ea" is undefined
+--line 1718 of file draft.bib
+Warning--string name "prl" is undefined
+--line 1768 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1796 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1819 of file draft.bib
+Warning--string name "prb" is undefined
+--line 1842 of file draft.bib
+Warning--string name "prl" is undefined
+--line 1892 of file draft.bib
+Warning--I didn't find a database entry for ""
+Warning--empty journal in Alemany98
+Warning--empty journal in Belonoshko00
+Warning--empty journal in PhysRevB.50.17953
+Warning--empty journal in CAR:1985bh
+Warning--empty journal in Chui:2003fk
+Warning--empty journal in Daw89
+Warning--empty journal in Daw84
+Warning--can't use both author and editor fields in De-Boer:1988tg
+Warning--there's a number but no volume in Derouin:2015kx
+Warning--can't use both author and editor fields in TPDGold
+Warning--empty journal in Foiles86
+Warning--empty year in openmd
+Warning--empty journal in Guidelli:2000fy
+Warning--empty journal in Hendriksen:2002
+Warning--empty journal in Johnson89
+Warning--empty journal in KRESSE:1993qf
+Warning--empty journal in KRESSE:1993ve
+Warning--empty journal in KRESSE:1994ul
+Warning--empty journal in PhysRevB.59.1758
+Warning--empty journal in Medasani:2007uq
+Warning--empty journal in mishin99:_inter
+Warning--empty journal in mishin01:cu
+Warning--empty journal in mishin02:b2nial
+Warning--empty journal in Qi99
+Warning--empty publisher in Rifkin1992
+Warning--empty journal in Sankaranarayanan:2005lr
+Warning--empty journal in sankaranarayanan:155441
+Warning--empty journal in Shibata:2002hh
+Warning--empty journal in Beurden:2002ys
+Warning--can't use both author and editor fields in Voter:1995fk
+Warning--empty journal in Wang:2005qy
+Warning--empty journal in zope03:tial_ap
+You've used 133 entries,
+            2774 wiz_defined-function locations,
+            1625 strings with 36339 characters,
+and the built_in function-call counts, 72734 in all, are:
+= -- 6584
+> -- 4953
+< -- 59
++ -- 1669
+- -- 1524
+* -- 6670
+:= -- 11581
+add.period$ -- 563
+call.type$ -- 133
+change.case$ -- 770
+chr.to.int$ -- 121
+cite$ -- 298
+duplicate$ -- 2636
+empty$ -- 5233
+format.name$ -- 1739
+if$ -- 15106
+int.to.chr$ -- 13
+int.to.str$ -- 1
+missing$ -- 135
+newline$ -- 837
+num.names$ -- 532
+pop$ -- 1485
+preamble$ -- 1
+purify$ -- 641
+quote$ -- 0
+skip$ -- 2010
+stack$ -- 0
+substring$ -- 3153
+swap$ -- 215
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1443
+warning$ -- 32
+while$ -- 551
+width$ -- 0
+write$ -- 2037
+(There were 2 error messages)

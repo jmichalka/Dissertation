@@ -1,0 +1,1085 @@
+\begin{thebibliography}{133}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ahmed et~al.(2003)Ahmed, Akhter, and Ahmad]{Au:melting}
+E.~Ahmed, J.~Akhter, and M.~Ahmad.
+\newblock Molecular dynamics study of thermal properties of noble metals.
+\newblock \emph{Computational Materials Science}, 31:\penalty0 309--316, 2003.
+
+\bibitem[Alemany et~al.(1998)Alemany, Rey, and Gallego]{Alemany98}
+M.~M.~G. Alemany, C.~Rey, and L.~J. Gallego.
+\newblock Transport coefficients of liquid transition metals: A computer
+  simulation study using the embedded atom model.
+\newblock 109:\penalty0 5175--5176, 1998.
+
+\bibitem[Baskes(1987)]{Baskes:1987}
+M.~I. Baskes.
+\newblock Application of the embedded-atom method to covalent materials: A
+  semiempirical potential for silicon.
+\newblock \emph{Phys. Rev. Lett.}, 59:\penalty0 2666--2669, Dec 1987.
+\newblock \doi{10.1103/PhysRevLett.59.2666}.
+\newblock URL \url{http://link.aps.org/doi/10.1103/PhysRevLett.59.2666}.
+
+\bibitem[Batteas et~al.(1996)Batteas, Dunphy, Somorjai, and
+  Salmeron]{Batteas:1996rc}
+J.~Batteas, J.~Dunphy, G.~Somorjai, and M.~Salmeron.
+\newblock Coadsorbate induced reconstruction of a stepped \ce{Pt}(111) surface
+  by sulfur and \ce{CO}: A novel surface restructuring mechanism observed by
+  scanning tunneling microscopy.
+\newblock \emph{Phys. Rev. Lett.}, 77\penalty0 (3):\penalty0 534--537, 1996.
+\newblock ISSN 0031-9007.
+\newblock \doi{10.1103/PhysRevLett.77.534}.
+
+\bibitem[Becquart et~al.(1993)Becquart, Kim, Rifkin, and
+  Clapp]{BECQUART:1993rg}
+C.~S. Becquart, D.~Kim, J.~A. Rifkin, and P.~C. Clapp.
+\newblock Fracture properties of metals and alloys from molecular-dynamics
+  simulations.
+\newblock \emph{Materials Science and Engineering A-Structural Materials
+  Properties Microstructure and Processing}, 170:\penalty0 87--94, 1993.
+
+\bibitem[Belonoshko et~al.(2000)Belonoshko, Ahuja, Eriksson, and
+  Johansson]{Belonoshko00}
+A.~B. Belonoshko, R.~Ahuja, O.~Eriksson, and B.~Johansson.
+\newblock Quasi {\it ab initio} molecular dynamic study of $\mbox{Cu}$ melting.
+\newblock 61:\penalty0 3838--3844, 2000.
+
+\bibitem[Bhattacharya et~al.(2011)Bhattacharya, Srivastava, and
+  Menon]{Pt:melting}
+C.~Bhattacharya, M.~Srivastava, and S.~Menon.
+\newblock Melting curves of fcc-metals by cell-theory.
+\newblock \emph{Physica B: Condensed Matter}, 406:\penalty0 4035--4040, July
+  2011.
+
+\bibitem[Bliznakov et~al.(2012)Bliznakov, Vukmirovic, Yang, Sutter, and
+  Adzic]{Bliznakov:2012kx}
+S.~T. Bliznakov, M.~B. Vukmirovic, L.~Yang, E.~A. Sutter, and R.~R. Adzic.
+\newblock \ce{Pt} monolayer on electrodeposited \ce{Pd} nanostructures:
+  Advanced cathode catalysts for {PEM} fuel cells.
+\newblock \emph{J. Electrochem. Soc.}, 159\penalty0 (9):\penalty0 F501--F506,
+  2012.
+\newblock \doi{10.1149/2.006209jes}.
+\newblock URL \url{http://jes.ecsdl.org/content/159/9/F501.abstract}.
+
+\bibitem[Bl\"ochl(1994)]{PhysRevB.50.17953}
+P.~E. Bl\"ochl.
+\newblock Projector augmented-wave method.
+\newblock 50\penalty0 (24):\penalty0 17953--17979, Dec 1994.
+\newblock \doi{10.1103/PhysRevB.50.17953}.
+
+\bibitem[Bradshaw and Hoffmann(1978)]{Bradshaw:1978uf}
+A.~M. Bradshaw and F.~M. Hoffmann.
+\newblock The chemisorption of carbon monoxide on palladium single crystal
+  surfaces: Ir spectroscopic evidence for localised site adsorption.
+\newblock \emph{Surf. Sci.}, 72\penalty0 (3):\penalty0 513--535, 4 1978.
+\newblock \doi{http://dx.doi.org/10.1016/0039-6028(78)90367-9}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0039602878903679}.
+
+\bibitem[Bunluesin et~al.(1998)Bunluesin, Gorte, and Graham]{Bunluesin:1998ys}
+T.~Bunluesin, R.~Gorte, and G.~Graham.
+\newblock Studies of the water-gas-shift reaction on ceria-supported pt, pd,
+  and rh: Implications for oxygen-storage properties.
+\newblock \emph{Appl. Catal., B}, 15\penalty0 (1--2):\penalty0 107 -- 114,
+  1998.
+\newblock ISSN 0926-3373.
+\newblock \doi{http://dx.doi.org/10.1016/S0926-3373(97)00040-4}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0926337397000404}.
+
+\bibitem[Campuzano and Greenler(1979)]{Campuzano:1979uq}
+J.~C. Campuzano and R.~G. Greenler.
+\newblock The adsorption sites of \ce{CO} on \ce{Ni}(111) as determined by
+  infrared reflection-absorption spectroscopy.
+\newblock \emph{Surf. Sci.}, 83\penalty0 (1):\penalty0 301 -- 312, 1979.
+\newblock ISSN 0039-6028.
+\newblock \doi{http://dx.doi.org/10.1016/0039-6028(79)90495-3}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0039602879904953}.
+
+\bibitem[Cao and Veser(2010)]{Cao:2010gf}
+A.~Cao and G.~Veser.
+\newblock Exceptional high-temperature stability through distillation-like
+  self-stabilization in bimetallic nanoparticles.
+\newblock \emph{Nat Mater}, 9\penalty0 (1):\penalty0 75--81, 01 2010.
+\newblock URL \url{http://dx.doi.org/10.1038/nmat2584}.
+
+\bibitem[Car and Parrinello(1985)]{CAR:1985bh}
+R.~Car and M.~Parrinello.
+\newblock Unified approach for molecular-dynamics and density-functional
+  theory.
+\newblock 55\penalty0 (22):\penalty0 2471--2474, 1985.
+\newblock ISSN 0031-9007.
+\newblock \doi{10.1103/PhysRevLett.55.2471}.
+
+\bibitem[Carenco(2014)]{Carenco:2014}
+S.~Carenco.
+\newblock Carbon monoxide-induced dynamic metal-surface nanostructuring.
+\newblock \emph{Chem.--Eur. J.}, 20\penalty0 (34):\penalty0 10616--10625, 2014.
+\newblock ISSN 1521-3765.
+\newblock \doi{10.1002/chem.201403140}.
+\newblock URL \url{http://dx.doi.org/10.1002/chem.201403140}.
+
+\bibitem[Chetty and Couling(2011)]{QuadrupoleCO}
+N.~Chetty and V.~W. Couling.
+\newblock Measurement of the electric quadrupole moment of co.
+\newblock \emph{J. Chem. Phys.}, 134:\penalty0 164307, April 2011.
+
+\bibitem[Chui and Chan(2003)]{Chui:2003fk}
+Y.~Chui and K.~Chan.
+\newblock Analyses of surface and core atoms in a platinum nanoparticle.
+\newblock 5:\penalty0 2869--2874, 2003.
+\newblock \doi{DOI 10.1039/b302122j}.
+
+\bibitem[Conrad et~al.(1978)Conrad, Ertl, and K{\"u}ppers]{Conrad:1978fx}
+H.~Conrad, G.~Ertl, and J.~K{\"u}ppers.
+\newblock Interactions between oxygen and carbon monoxide on a pd(111) surface.
+\newblock \emph{Surf. Sci.}, 76\penalty0 (2):\penalty0 323--342, 9 1978.
+\newblock \doi{http://dx.doi.org/10.1016/0039-6028(78)90101-2}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0039602878901012}.
+
+\bibitem[Daw(1989)]{Daw89}
+M.~S. Daw.
+\newblock Model of metallic cohesion: The embedded-atom method.
+\newblock 39:\penalty0 7441--7452, 1989.
+
+\bibitem[Daw and Baskes(1984)]{Daw84}
+M.~S. Daw and M.~I. Baskes.
+\newblock Embedded-atom method: Derivation and application to impurities,
+  surfaces, and other defects in metals.
+\newblock 29\penalty0 (12):\penalty0 6443--6453, 1984.
+
+\bibitem[De~Boer et~al.(1988)De~Boer, Boom, Mattens, Miedema, and
+  Niessen]{De-Boer:1988tg}
+F.~R. De~Boer, R.~Boom, W.~C.~M. Mattens, A.~R. Miedema, and A.~K. Niessen.
+\newblock \emph{Cohesion in Metals: Transition Metal Alloys}, volume~1 of
+  \emph{Cohesion and Structure}.
+\newblock Elsevier, Amsterdam, 1988.
+
+\bibitem[Derouin et~al.(2015)Derouin, Farber, Heslop, and
+  Killelea]{Derouin:2015kx}
+J.~Derouin, R.~G. Farber, S.~Heslop, and D.~R. Killelea.
+\newblock Formation of surface oxides and ag2o thin films with atomic oxygen on
+  ag(111).
+\newblock \emph{Surface Science}, \penalty0 (0):\penalty0 --, 2015.
+\newblock ISSN 0039-6028.
+\newblock \doi{http://dx.doi.org/10.1016/j.susc.2015.07.003}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0039602815001958}.
+
+\bibitem[Deshlahra et~al.(2009)Deshlahra, Wolf, and Schneider]{Deshlahra:2009}
+P.~Deshlahra, E.~E. Wolf, and W.~F. Schneider.
+\newblock A periodic density functional theory analysis of co chemisorption on
+  pt(111) in the presence of uniform electric fields.
+\newblock \emph{J. Phys. Chem. A}, 113:\penalty0 4125, February 2009.
+
+\bibitem[Deshlahra et~al.(2012{\natexlab{a}})Deshlahra, Conway, Wolf, and
+  Schneider]{Deshlahra:2012}
+P.~Deshlahra, J.~Conway, E.~E. Wolf, and W.~F. Schneider.
+\newblock Influence of dipole-dipole interactions on coverage-dependent
+  adsorption: Co and no on pt(111).
+\newblock \emph{Langumuir}, 28:\penalty0 8408, April 2012{\natexlab{a}}.
+
+\bibitem[Deshlahra et~al.(2012{\natexlab{b}})Deshlahra, Conway, Wolf, and
+  Schneider]{Deshlahra:2012aa}
+P.~Deshlahra, J.~Conway, E.~E. Wolf, and W.~F. Schneider.
+\newblock Influence of dipole--dipole interactions on coverage-dependent
+  adsorption: Co and no on pt(111).
+\newblock \emph{Langmuir}, 28\penalty0 (22):\penalty0 8408--8417,
+  2012{\natexlab{b}}.
+\newblock \doi{10.1021/la300975s}.
+\newblock URL \url{http://dx.doi.org/10.1021/la300975s}.
+\newblock PMID: 22545625.
+
+\bibitem[Elliott and Miller(1984)]{TPDGold}
+G.~S. Elliott and D.~R. Miller.
+\newblock \emph{Helium Scattering from \ce{CO} Adsorbed on \ce{Au}(111)},
+  volume~1 of \emph{Proc. 14th Int. Symp. on Rarefied Gas Dynamics}, pages
+  349--58.
+\newblock University of Tokyo Press, 1984.
+
+\bibitem[Ercolessi et~al.(1988)Ercolessi, Parrinello, and Tosatti]{Ercolessi88}
+F.~Ercolessi, M.~Parrinello, and E.~Tosatti.
+\newblock Simulation of gold in the glue model.
+\newblock \emph{Philosophical Magazine a}, 58:\penalty0 213--226, 1988.
+
+\bibitem[Ertl(2008)]{Ertl08}
+G.~Ertl.
+\newblock Reactions at surfaces: From atoms to complexity (nobel lecture).
+\newblock \emph{Angewandte Chemie-International Edition}, 47\penalty0
+  (19):\penalty0 3524--3535, 2008.
+
+\bibitem[Ertl and Koch(1970)]{Ertl:1970}
+G.~Ertl and J.~Koch.
+\newblock Adsorption von \ce{CO} auf einer palladium(111)-oberfl\"{a}che.
+\newblock \emph{Z. Naturforsch., A: Phys. Sci.}, 25:\penalty0 1906, 1970.
+
+\bibitem[Ertl et~al.(1977)Ertl, Neumann, and Streit]{Ertl:1977}
+G.~Ertl, M.~Neumann, and K.~Streit.
+\newblock Chemisorption of co on the pt(111) surface.
+\newblock \emph{Surface Science}, 64:\penalty0 393, January 1977.
+
+\bibitem[Feibelman and et~al.(2001)]{Feibelman:2001}
+P.~J. Feibelman and et~al.
+\newblock The co/pt(111) puzzle.
+\newblock \emph{J. Phys. Chem. B}, 105:\penalty0 4018--4025, 2001.
+
+\bibitem[Fennell and Gezelter(2006)]{Ewald}
+C.~J. Fennell and J.~D. Gezelter.
+\newblock Is the ewald summation still necessary? pairwise alternatives to the
+  accepted standard for long-range electrostatics.
+\newblock \emph{J. Chem. Phys.}, 124:\penalty0 234104, June 2006.
+
+\bibitem[Fern\'{a}ndez-Navarro and Mej\'{i}a-Rosales(2013)]{Fernandez:2013yg}
+C.~Fern\'{a}ndez-Navarro and S.~Mej\'{i}a-Rosales.
+\newblock Molecular dynamics of free and graphite-supported pt-pd
+  nanoparticles.
+\newblock \emph{Advances in Nanoparticles}, 2\penalty0 (4):\penalty0 323--328,
+  2013.
+
+\bibitem[Finnis and Sinclair(1984)]{Finnis84}
+M.~W. Finnis and J.~E. Sinclair.
+\newblock A simple empirical n-body potential for transition-metals.
+\newblock \emph{Phil. Mag. A}, 50:\penalty0 45--55, 1984.
+
+\bibitem[Foiles et~al.(1986{\natexlab{a}})Foiles, Baskes, and Daw]{EAM}
+S.~M. Foiles, M.~I. Baskes, and M.~S. Daw.
+\newblock Embedded-atom-method functions for the fcc metals \ce{Cu}, \ce{Ag},
+  \ce{Au}, \ce{Ni}, \ce{Pd}, \ce{Pt}, and their alloys.
+\newblock \emph{Phys. Rev. B}, 33\penalty0 (12):\penalty0 7983--7991, June
+  1986{\natexlab{a}}.
+
+\bibitem[Foiles et~al.(1986{\natexlab{b}})Foiles, Baskes, and Daw]{Foiles86}
+S.~M. Foiles, M.~I. Baskes, and M.~S. Daw.
+\newblock Embedded-atom-method functions for the fcc metals $\mbox{Cu, Ag, Au,
+  Ni, Pd, Pt}$, and their alloys.
+\newblock 33\penalty0 (12):\penalty0 7983, 1986{\natexlab{b}}.
+
+\bibitem[Gao et~al.(2009{\natexlab{a}})Gao, Wang, and Goodman]{Gao:2009oj}
+F.~Gao, Y.~Wang, and D.~W. Goodman.
+\newblock \ce{CO} oxidation over \ce{AuPd}(100) from ultrahigh vacuum to
+  near-atmospheric pressures: \ce{CO} adsorption-induced surface segregation
+  and reaction kinetics.
+\newblock \emph{J. Phys. Chem. C}, 113\penalty0 (33):\penalty0 14993--15000,
+  2009{\natexlab{a}}.
+\newblock \doi{10.1021/jp9053132}.
+\newblock URL \url{http://dx.doi.org/10.1021/jp9053132}.
+
+\bibitem[Gao et~al.(2009{\natexlab{b}})Gao, Wang, and Goodman]{Gao:2009wo}
+F.~Gao, Y.~Wang, and D.~W. Goodman.
+\newblock \ce{CO} oxidation over \ce{AuPd}(100) from ultrahigh vacuum to
+  near-atmospheric pressures: The critical role of contiguous \ce{Pd} atoms.
+\newblock \emph{J. Am. Chem. Soc.}, 131\penalty0 (16):\penalty0 5734--5735,
+  2009{\natexlab{b}}.
+\newblock \doi{10.1021/ja9008437}.
+\newblock URL \url{http://dx.doi.org/10.1021/ja9008437}.
+
+\bibitem[Gezelter et~al.()Gezelter, Michalka, Kuang, Marr, Stocker, Li,
+  Vardeman, Lin, Fennell, Sun, Daily, Zheng, and Meineke]{openmd}
+J.~D. Gezelter, J.~Michalka, S.~Kuang, J.~Marr, K.~Stocker, C.~Li, C.~F.
+  Vardeman, T.~Lin, C.~J. Fennell, X.~Sun, K.~Daily, Y.~Zheng, and M.~A.
+  Meineke.
+\newblock {OpenMD, an Open Source Engine for Molecular Dynamics}.
+\newblock Available at {\tt http://openmd.org}.
+
+\bibitem[Giannozzi et~al.(2009)Giannozzi, Baroni, Bonini, Calandra, Car,
+  Cavazzoni, Ceresoli, Chiarotti, Cococcioni, Dabo, {Dal Corso}, de~Gironcoli,
+  Fabris, Fratesi, Gebauer, Gerstmann, Gougoussis, Kokalj, Lazzeri,
+  Martin-Samos, Marzari, Mauri, Mazzarello, Paolini, Pasquarello, Paulatto,
+  Sbraccia, Scandolo, Sclauzero, Seitsonen, Smogunov, Umari, and
+  Wentzcovitch]{QE-2009}
+P.~Giannozzi, S.~Baroni, N.~Bonini, M.~Calandra, R.~Car, C.~Cavazzoni,
+  D.~Ceresoli, G.~L. Chiarotti, M.~Cococcioni, I.~Dabo, A.~{Dal Corso},
+  S.~de~Gironcoli, S.~Fabris, G.~Fratesi, R.~Gebauer, U.~Gerstmann,
+  C.~Gougoussis, A.~Kokalj, M.~Lazzeri, L.~Martin-Samos, N.~Marzari, F.~Mauri,
+  R.~Mazzarello, S.~Paolini, A.~Pasquarello, L.~Paulatto, C.~Sbraccia,
+  S.~Scandolo, G.~Sclauzero, A.~P. Seitsonen, A.~Smogunov, P.~Umari, and R.~M.
+  Wentzcovitch.
+\newblock Quantum espresso: a modular and open-source software project for
+  quantum simulations of materials.
+\newblock \emph{Journal of Physics: Condensed Matter}, 21\penalty0
+  (39):\penalty0 395502 (19pp), 2009.
+\newblock URL \url{http://www.quantum-espresso.org}.
+
+\bibitem[Gu et~al.(2015)Gu, Liu, and Greeley]{Gu:2015cr}
+X.-K. Gu, B.~Liu, and J.~Greeley.
+\newblock First-principles study of structure sensitivity of ethylene glycol
+  conversion on platinum.
+\newblock \emph{ACS Catalysis}, 5\penalty0 (0):\penalty0 2623--2631, 2015.
+\newblock \doi{10.1021/cs5019088}.
+\newblock URL \url{http://dx.doi.org/10.1021/cs5019088}.
+
+\bibitem[Guidelli and Schmickler(2000)]{Guidelli:2000fy}
+R.~Guidelli and W.~Schmickler.
+\newblock Recent developments in models for the inter-face between a metal and
+  an aqueous solution.
+\newblock 45\penalty0 (15-16):\penalty0 2317--2338, 2000.
+\newblock ISSN 0013-4686.
+\newblock \doi{10.1016/S0013-4686(00)00335-2}.
+
+\bibitem[Guo and Yates(1989)]{Guo:1989}
+X.~Guo and J.~T. Yates.
+\newblock Dependence of effective desorption kinetic parameters on surface
+  coverage and adsorption temperature: \ce{CO} on \ce{Pd}(111).
+\newblock \emph{J. Chem. Phys.}, 90\penalty0 (11):\penalty0 6761, 1989.
+\newblock ISSN 00219606.
+\newblock \doi{10.1063/1.456294}.
+\newblock URL
+  \url{http://scitation.aip.org/content/aip/journal/jcp/90/11/10.1063/1.456294}.
+
+\bibitem[Han et~al.(0)Han, Carlton, Suntivich, Xu, and Shao-Horn]{Han:0qr}
+B.~Han, C.~E. Carlton, J.~Suntivich, Z.~Xu, and Y.~Shao-Horn.
+\newblock Oxygen reduction activity and stability trends of bimetallic
+  pt0.5m0.5 nanoparticle in acid.
+\newblock \emph{The Journal of Physical Chemistry C}, 0\penalty0 (0):\penalty0
+  null, 0.
+\newblock \doi{10.1021/jp5129904}.
+\newblock URL \url{http://dx.doi.org/10.1021/jp5129904}.
+
+\bibitem[Hendriksen and Frenken(2002)]{Hendriksen:2002}
+B.~Hendriksen and J.~Frenken.
+\newblock Co oxidation on pt(110): Scanning tunneling microscopy inside a
+  high-pressure flow reactor.
+\newblock 89:\penalty0 0461011, 2002.
+
+\bibitem[Honkala et~al.(2001)Honkala, Piril{\"a}, and Laasonen]{Honkala:2001sf}
+K.~Honkala, P.~Piril{\"a}, and K.~Laasonen.
+\newblock \ce{CO} and \ce{NO} adsorption and co-adsorption on the \ce{Pd}(111)
+  surface.
+\newblock \emph{Surf. Sci.}, 489\penalty0 (1--3):\penalty0 72 -- 82, 2001.
+\newblock ISSN 0039-6028.
+\newblock \doi{http://dx.doi.org/10.1016/S0039-6028(01)01135-9}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0039602801011359}.
+
+\bibitem[Hopster and Ibach(1978)]{Hopster:1978}
+H.~Hopster and H.~Ibach.
+\newblock Adsorption of co on pt(111) and pt 6(111) x (111) studied by high
+  resolution electron energy loss spectroscopy and thermal desorption
+  spectroscopy.
+\newblock \emph{Surface Science}, 77:\penalty0 109, April 1978.
+
+\bibitem[Huang et~al.(2012)Huang, Wen, Zhu, and Sun]{Huang:2012ul}
+R.~Huang, Y.-H. Wen, Z.-Z. Zhu, and S.-G. Sun.
+\newblock Pt--pd bimetallic catalysts: Structural and thermal stabilities of
+  core--shell and alloyed nanoparticles.
+\newblock \emph{J. Phys. Chem. C}, 116\penalty0 (15):\penalty0 8664--8671,
+  2012.
+\newblock \doi{10.1021/jp3015639}.
+\newblock URL \url{http://dx.doi.org/10.1021/jp3015639}.
+
+\bibitem[Izvekov et~al.(2000)Izvekov, Philpott, and Eglitis]{Izvekov:2000fv}
+S.~Izvekov, M.~R. Philpott, and R.~I. Eglitis.
+\newblock Ab initio simulation of metal cluster surrounded by electrolyte.
+\newblock \emph{J. Electrochem. Soc.}, 147\penalty0 (6):\penalty0 2273--2278,
+  Jun 2000.
+\newblock ISSN 0013-4651.
+\newblock \doi{10.1149/1.1393520}.
+
+\bibitem[Jeong and Williams({1999})]{ISI:000083038000001}
+H.~Jeong and E.~Williams.
+\newblock {Steps on surfaces: experiment and theory}.
+\newblock \emph{{SURFACE SCIENCE REPORTS}}, {34}\penalty0 ({6-8}):\penalty0
+  {171--294}, {1999}.
+\newblock ISSN {0167-5729}.
+\newblock \doi{{10.1016/S0167-5729(98)00010-7}}.
+
+\bibitem[Jeong and Williams(1999)]{Jeong:1999aa}
+H.-C. Jeong and E.~D. Williams.
+\newblock Steps on surfaces: experiment and theory.
+\newblock \emph{Surface Science Reports}, 34\penalty0 (6--8):\penalty0 171 --
+  294, 1999.
+\newblock ISSN 0167-5729.
+\newblock \doi{http://dx.doi.org/10.1016/S0167-5729(98)00010-7}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0167572998000107}.
+
+\bibitem[Johnson(1989)]{Johnson89}
+R.~A. Johnson.
+\newblock Alloy models with the embedded-atom method.
+\newblock 39\penalty0 (17):\penalty0 12554, 1989.
+
+\bibitem[Kelemen et~al.(1979)Kelemen, Fischer, and Schwarz]{Kelemen:1979}
+S.~Kelemen, T.~Fischer, and J.~Schwarz.
+\newblock The binding energy of \ce{CO} on clean and sulfur covered platinum
+  surfaces.
+\newblock \emph{Surf. Sci.}, pages 440--450, 1979.
+
+\bibitem[Kim and Henkelman(2013{\natexlab{a}})]{Kim:2013jt}
+H.~Y. Kim and G.~Henkelman.
+\newblock \ce{CO} adsorption-driven surface segregation of \ce{Pd} on
+  \ce{Au}/\ce{Pd} bimetallic surfaces: Role of defects and effect on co
+  oxidation.
+\newblock \emph{ACS Catalysis}, 3\penalty0 (11):\penalty0 2541--2546,
+  2013{\natexlab{a}}.
+\newblock \doi{10.1021/cs4006259}.
+\newblock URL \url{http://dx.doi.org/10.1021/cs4006259}.
+
+\bibitem[Kim and Henkelman(2013{\natexlab{b}})]{Kim:2013mi}
+H.~Y. Kim and G.~Henkelman.
+\newblock \ce{CO} adsorption-driven surface segregation of pd on \ce{Au/Pd}
+  bimetallic surfaces: Role of defects and effect on \ce{CO} oxidation.
+\newblock \emph{ACS Catalysis}, 3\penalty0 (11):\penalty0 2541--2546,
+  2013{\natexlab{b}}.
+\newblock \doi{10.1021/cs4006259}.
+\newblock URL \url{http://dx.doi.org/10.1021/cs4006259}.
+
+\bibitem[Kimura et~al.(1998)Kimura, Cagin, and Goddard~III]{QSC}
+Y.~Kimura, T.~Cagin, and W.~Goddard~III.
+\newblock The quantum sutton-chen many body potential for properties of fcc
+  metals, 1998.
+\newblock URL
+  \url{http://csdrm.caltech.edu/publications/cit-asci-tr/cit-asci-tr003.pdf}.
+
+\bibitem[Korzeniewski et~al.(1986)Korzeniewski, Pons, Schmidt, and
+  Severson]{Pons:1986}
+C.~Korzeniewski, S.~Pons, P.~P. Schmidt, and M.~W. Severson.
+\newblock A theoretical analysis of the vibrational spectrum of carbon monoxide
+  on platinum metal electrodes.
+\newblock \emph{J. Chem. Phys.}, 85:\penalty0 4153, June 1986.
+
+\bibitem[Kresse and Hafner(1993{\natexlab{a}})]{KRESSE:1993qf}
+G.~Kresse and J.~Hafner.
+\newblock Ab initio molecular-dynamics for open-shell transition-metals.
+\newblock 48\penalty0 (17):\penalty0 13115--13118, Nov 1993{\natexlab{a}}.
+\newblock ISSN 0163-1829.
+\newblock \doi{10.1103/PhysRevB.48.13115}.
+
+\bibitem[Kresse and Hafner(1993{\natexlab{b}})]{KRESSE:1993ve}
+G.~Kresse and J.~Hafner.
+\newblock Ab initio molecular-dynamics for liquid-metals.
+\newblock 47\penalty0 (1):\penalty0 558--561, Jan 1993{\natexlab{b}}.
+\newblock ISSN 0163-1829.
+\newblock \doi{10.1103/PhysRevB.47.558}.
+
+\bibitem[Kresse and Hafner(1994)]{KRESSE:1994ul}
+G.~Kresse and J.~Hafner.
+\newblock Ab-initio molecular-dynamics simulation of the liquid-metal
+  amorphous-semiconductor transition in germanium.
+\newblock 49\penalty0 (20):\penalty0 14251--14269, May 1994.
+\newblock ISSN 0163-1829.
+\newblock \doi{10.1103/PhysRevB.49.14251}.
+
+\bibitem[Kresse and Joubert(1999)]{PhysRevB.59.1758}
+G.~Kresse and D.~Joubert.
+\newblock From ultrasoft pseudopotentials to the projector augmented-wave
+  method.
+\newblock 59\penalty0 (3):\penalty0 1758--1775, Jan 1999.
+\newblock \doi{10.1103/PhysRevB.59.1758}.
+
+\bibitem[Kugai et~al.(2011)Kugai, Miller, Guo, and Song]{Kugai:2011rt}
+J.~Kugai, J.~T. Miller, N.~Guo, and C.~Song.
+\newblock Oxygen-enhanced water gas shift on ceria-supported pd--cu and pt--cu
+  bimetallic catalysts.
+\newblock \emph{J. Catal.}, 277\penalty0 (1):\penalty0 46 -- 53, 2011.
+\newblock ISSN 0021-9517.
+\newblock \doi{http://dx.doi.org/10.1016/j.jcat.2010.10.014}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0021951710003714}.
+
+\bibitem[Larsen and Chorkendorff({1999})]{ISI:000083924800001}
+J.~Larsen and I.~Chorkendorff.
+\newblock {From fundamental studies of reactivity on single crystals to the
+  design of catalysts}.
+\newblock \emph{{SURFACE SCIENCE REPORTS}}, {35}\penalty0 ({5-8}):\penalty0
+  {165--222}, {1999}.
+\newblock ISSN {0167-5729}.
+
+\bibitem[Lim et~al.(2009)Lim, Jiang, Camargo, Cho, Tao, Lu, Zhu, and
+  Xia]{Lim:2009fk}
+B.~Lim, M.~Jiang, P.~H.~C. Camargo, E.~C. Cho, J.~Tao, X.~Lu, Y.~Zhu, and
+  Y.~Xia.
+\newblock Pd-pt bimetallic nanodendrites with high activity for oxygen
+  reduction.
+\newblock \emph{Science}, 324\penalty0 (5932):\penalty0 1302--1305, 2009.
+\newblock \doi{10.1126/science.1170377}.
+\newblock URL \url{http://www.sciencemag.org/content/324/5932/1302.abstract}.
+
+\bibitem[Limpattayanate and Hunsom(2014)]{Limpattayanate:2014ij}
+S.~Limpattayanate and M.~Hunsom.
+\newblock Electrocatalytic activity of pt--pd electrocatalysts for the oxygen
+  reduction reaction in proton exchange membrane fuel cells: Effect of
+  supports.
+\newblock \emph{Renewable Energy}, 63\penalty0 (0):\penalty0 205 -- 211, 2014.
+\newblock ISSN 0960-1481.
+\newblock \doi{http://dx.doi.org/10.1016/j.renene.2013.09.014}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0960148113004813}.
+
+\bibitem[Liu et~al.(2012)Liu, Samjeske, Nagamatsu, Sekizawa, Nagasawa, Takao,
+  Imaizumi, Yamamoto, Uruga, and Iwasawa]{Liu:2012bs}
+L.~Liu, G.~Samjeske, S.-i. Nagamatsu, O.~Sekizawa, K.~Nagasawa, S.~Takao,
+  Y.~Imaizumi, T.~Yamamoto, T.~Uruga, and Y.~Iwasawa.
+\newblock Enhanced oxygen reduction reaction activity and characterization of
+  pt--pd/c bimetallic fuel cell catalysts with pt-enriched surfaces in acid
+  media.
+\newblock \emph{J. Phys. Chem. C}, 116\penalty0 (44):\penalty0 23453--23464,
+  2012.
+\newblock \doi{10.1021/jp308021a}.
+\newblock URL \url{http://dx.doi.org/10.1021/jp308021a}.
+
+\bibitem[Loffreda et~al.(1999)Loffreda, Simon, and Sautet]{Loffreda:1999vl}
+D.~Loffreda, D.~Simon, and P.~Sautet.
+\newblock Dependence of stretching frequency on surface coverage and
+  adsorbate--adsorbate interactions: a density-functional theory approach of
+  \ce{CO} on \ce{Pd} (111).
+\newblock \emph{Surf. Sci.}, 425\penalty0 (1):\penalty0 68 -- 80, 1999.
+\newblock ISSN 0039-6028.
+\newblock \doi{http://dx.doi.org/10.1016/S0039-6028(99)00186-7}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0039602899001867}.
+
+\bibitem[Lu and Szpunar(1997)]{Lu97}
+J.~Lu and J.~A. Szpunar.
+\newblock Applications of the embedded-atom method to glass formation and
+  crystallization of liquid and glass transition-metal nickel.
+\newblock \emph{Phil. Mag. A}, 75:\penalty0 1057--1066, 1997.
+
+\bibitem[Lu et~al.(2011)Lu, Gasteiger, and Shao-Horn]{Lu:2011vn}
+Y.-C. Lu, H.~A. Gasteiger, and Y.~Shao-Horn.
+\newblock Catalytic activity trends of oxygen reduction reaction for nonaqueous
+  li-air batteries.
+\newblock \emph{J. Am. Chem. Soc.}, 133\penalty0 (47):\penalty0 19048--19051,
+  2011.
+\newblock \doi{10.1021/ja208608s}.
+\newblock URL \url{http://dx.doi.org/10.1021/ja208608s}.
+
+\bibitem[Mason et~al.(2004)Mason, Grinberg, and Rappe]{Mason:2004}
+S.~E. Mason, I.~Grinberg, and A.~M. Rappe.
+\newblock First-principles extrapolation method for accurate co adsorption
+  energies on metal surfaces.
+\newblock \emph{Phys. Rev. B}, 69:\penalty0 161401, April 2004.
+
+\bibitem[McCarthy et~al.(2012)McCarthy, Strebel, Johansson, den Dunnen,
+  Nierhoff, Nielsen, and Chorkendorff]{McCarthy:2012qd}
+D.~N. McCarthy, C.~E. Strebel, T.~P. Johansson, a.~den Dunnen, a.~Nierhoff,
+  J.~H. Nielsen, and I.~Chorkendorff.
+\newblock Structural modification of platinum model systems under high pressure
+  \ce{CO} annealing.
+\newblock \emph{J. Phys. Chem. C}, 116\penalty0 (29):\penalty0 15353--15360,
+  2012.
+\newblock ISSN 1932-7447.
+\newblock \doi{10.1021/jp302379x}.
+\newblock URL \url{http://pubs.acs.org/doi/abs/10.1021/jp302379x}.
+
+\bibitem[Medasani et~al.(2007)Medasani, Park, and Vasiliev]{Medasani:2007uq}
+B.~Medasani, Y.~H. Park, and I.~Vasiliev.
+\newblock Theoretical study of the surface energy, stress, and lattice
+  contraction of silver nanoparticles.
+\newblock 75, 2007.
+\newblock \doi{ARTN 235436}.
+
+\bibitem[Meineke et~al.(2005)Meineke, Vardeman, Lin, Fennell, and
+  Gezelter]{OOPSE}
+M.~A. Meineke, C.~F. Vardeman, T.~Lin, C.~J. Fennell, and J.~D. Gezelter.
+\newblock {OOPSE}: {A}n object-oriented parallel simulation engine for
+  molecular dynamics.
+\newblock \emph{J. Comput. Chem.}, 26\penalty0 (3):\penalty0 252--271, 2005.
+\newblock ISSN 1096-987X.
+\newblock \doi{10.1002/jcc.20161}.
+\newblock URL \url{http://dx.doi.org/10.1002/jcc.20161}.
+
+\bibitem[Michalka et~al.(2013)Michalka, McIntyre, and Gezelter]{Michalka:2013}
+J.~R. Michalka, P.~W. McIntyre, and J.~D. Gezelter.
+\newblock Molecular dynamics simulations of the surface reconstructions of
+  \ce{Pt}(557) and \ce{Au}(557) under exposure to \ce{CO}.
+\newblock \emph{J. Phys. Chem. C}, 117\penalty0 (28):\penalty0 14579--14587,
+  2013.
+\newblock \doi{10.1021/jp402798n}.
+\newblock URL \url{http://pubs.acs.org/doi/abs/10.1021/jp402798n}.
+
+\bibitem[Mishin et~al.(1999)Mishin, Farkas, Mehl, and
+  Papaconstantopoulos]{mishin99:_inter}
+Y.~Mishin, D.~Farkas, M.~J. Mehl, and D.~A. Papaconstantopoulos.
+\newblock Interatomic potentials for monoatomic metals from experimental data
+  and ab initio calculations.
+\newblock 59\penalty0 (5):\penalty0 3393--3407, 1999.
+\newblock URL \url{http://link.aps.org/abstract/PRB/v59/p3393}.
+
+\bibitem[Mishin et~al.(2001)Mishin, Mehl, Papaconstantopoulos, Voter, and
+  Kress]{mishin01:cu}
+Y.~Mishin, M.~J. Mehl, D.~A. Papaconstantopoulos, A.~F. Voter, and J.~D. Kress.
+\newblock Structural stability and lattice defects in copper: {\em Ab initio},
+  tight-binding, and embed-ded-atom methods.
+\newblock 63:\penalty0 224106, June 2001.
+\newblock URL \url{http://link.aps.org/abstract/PRB/v63/e224106}.
+
+\bibitem[Mishin et~al.(2002)Mishin, Mehl, and
+  Papaconstantopoulos]{mishin02:b2nial}
+Y.~Mishin, M.~J. Mehl, and D.~A. Papaconstantopoulos.
+\newblock Embedded-atom potential for b2-nial.
+\newblock 65\penalty0 (22):\penalty0 224114, June 2002.
+\newblock URL \url{http://link.aps.org/abstract/PRB/v65/e224114}.
+
+\bibitem[Mishin et~al.(2005)Mishin, Mehl, and
+  Papaconstantopoulos]{mishin05:phase_fe_ni}
+Y.~Mishin, M.~Mehl, and D.~Papaconstantopoulos.
+\newblock Phase stability in the fe-ni system: Investigation by
+  first-principles calculations and atomistic simulations.
+\newblock \emph{Acta Mat.}, 53\penalty0 (15):\penalty0 4029--4041, September
+  2005.
+\newblock URL \url{http://dx.doi.org/10.1016/j.actamat.2005.05.001}.
+
+\bibitem[Monkhorst and Pack(1976)]{Monkhorst:1976}
+H.~J. Monkhorst and J.~D. Pack.
+\newblock Special points for brillouin-zone integrations.
+\newblock \emph{Phys. Rev. B}, 13:\penalty0 5188--5192, Jun 1976.
+\newblock \doi{10.1103/PhysRevB.13.5188}.
+\newblock URL \url{http://link.aps.org/doi/10.1103/PhysRevB.13.5188}.
+
+\bibitem[Morlang et~al.(2005)Morlang, Neuhausen, Klementiev, Sch{\"u}tze,
+  Miehe, Fuess, and Lox]{Morlang:2005uq}
+A.~Morlang, U.~Neuhausen, K.~Klementiev, F.-W. Sch{\"u}tze, G.~Miehe, H.~Fuess,
+  and E.~Lox.
+\newblock Bimetallic pt/pd diesel oxidation catalysts: Structural
+  characterisation and catalytic behaviour.
+\newblock \emph{Appl. Catal., B}, 60\penalty0 (3--4):\penalty0 191 -- 199,
+  2005.
+\newblock ISSN 0926-3373.
+\newblock \doi{http://dx.doi.org/10.1016/j.apcatb.2005.03.007}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0926337305001657}.
+
+\bibitem[Ohtani et~al.(1987)Ohtani, Hove, and Somorjai]{Ohtani:1987zh}
+H.~Ohtani, M.~A.~V. Hove, and G.~A. Somorjai.
+\newblock {LEED} intensity analysis of the surface structures of \ce{Pd}(111)
+  and of \ce{CO} adsorbed on \ce{Pd}(111) in a $(\sqrt{3} \times \sqrt{3}
+  )r30^\circ$ arrangement.
+\newblock \emph{Surf. Sci.}, 187\penalty0 (2--3):\penalty0 372--386, 9 1987.
+\newblock \doi{http://dx.doi.org/10.1016/S0039-6028(87)80063-8}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0039602887800638}.
+
+\bibitem[Padmos et~al.(0)Padmos, Langman, MacDonald, Comeau, Yang, Filiaggi,
+  and Zhang]{Padmos:0qf}
+J.~D. Padmos, M.~Langman, K.~MacDonald, P.~Comeau, Z.~Yang, M.~Filiaggi, and
+  P.~Zhang.
+\newblock Correlating the atomic structure of bimetallic silver--gold
+  nanoparticles to their antibacterial and cytotoxic activities.
+\newblock \emph{The Journal of Physical Chemistry C}, 0\penalty0 (0):\penalty0
+  null, 0.
+\newblock \doi{10.1021/acs.jpcc.5b00145}.
+\newblock URL \url{http://dx.doi.org/10.1021/acs.jpcc.5b00145}.
+
+\bibitem[Pearl and Sibener(2001)]{Pearl}
+T.~P. Pearl and S.~J. Sibener.
+\newblock Oxygen driven reconstruction dynamics of ni(977) measured by
+  time-lapse scanning tunneling microscopy.
+\newblock \emph{J. Chem. Phys.}, 115\penalty0 (4):\penalty0 1916, July 2001.
+
+\bibitem[Perdew et~al.(1996)Perdew, Burke, and Ernzerhof]{Perdew_GGA}
+J.~P. Perdew, K.~Burke, and M.~Ernzerhof.
+\newblock Generalized gradient approximation made simple.
+\newblock \emph{Phys. Rev. Lett.}, 77:\penalty0 3865--3868, Oct 1996.
+\newblock \doi{10.1103/PhysRevLett.77.3865}.
+\newblock URL \url{http://link.aps.org/doi/10.1103/PhysRevLett.77.3865}.
+
+\bibitem[Peters et~al.(2000)Peters, Steadman, Isern, Alvarez, and
+  Ferrer]{Peters:2000}
+K.~Peters, P.~Steadman, H.~Isern, J.~Alvarez, and S.~Ferrer.
+\newblock Elevated-pressure chemical reactivity of carbon monoxide over
+  au(111).
+\newblock \emph{Surface Science}, 467:\penalty0 10--22, August 2000.
+
+\bibitem[Piccolo et~al.(2004)Piccolo, Loffreda, Aires, Deranlot, Jugnet,
+  Sautet, and Bertolini]{Piccolo:2004}
+L.~Piccolo, D.~Loffreda, F.~J. C.~S. Aires, C.~Deranlot, Y.~Jugnet, P.~Sautet,
+  and J.~C. Bertolini.
+\newblock The adsorption of co on au(111) at elevated pressures studied by stm,
+  rairs, and dft calculations.
+\newblock \emph{Surface Science}, 566-568:\penalty0 995--1000, June 2004.
+
+\bibitem[Plimpton and Hendrickson(1993)]{Plimpton93}
+S.~J. Plimpton and B.~A. Hendrickson.
+\newblock Parallel molecular dynamics with the embedded atom method.
+\newblock \emph{Mrs Proceedings}, 291:\penalty0 37, 1993.
+
+\bibitem[Qi et~al.(1999)Qi, Cagin, Kimura, and {Goddard III}]{Qi99}
+Y.~Qi, T.~Cagin, Y.~Kimura, and W.~A. {Goddard III}.
+\newblock Molecular-dynamics simulations of glass formation and crystallization
+  in binary liquid metals: $\mbox{Cu-Ag}$ and $\mbox{Cu-Ni}$.
+\newblock 59\penalty0 (5):\penalty0 3527--3533, 1999.
+
+\bibitem[Rappe et~al.(1990)Rappe, Rabe, Kaxiras, and Joannopoulos]{RRKJ_PP}
+A.~M. Rappe, K.~M. Rabe, E.~Kaxiras, and J.~D. Joannopoulos.
+\newblock Optimized pseudopotentials.
+\newblock \emph{Phys. Rev. B}, 41:\penalty0 1227--1230, Jan 1990.
+\newblock \doi{10.1103/PhysRevB.41.1227}.
+\newblock URL \url{http://link.aps.org/doi/10.1103/PhysRevB.41.1227}.
+
+\bibitem[Reier et~al.(2012)Reier, Oezaslan, and Strasser]{Reier:2012uq}
+T.~Reier, M.~Oezaslan, and P.~Strasser.
+\newblock Electrocatalytic oxygen evolution reaction (oer) on ru, ir, and pt
+  catalysts: A comparative study of nanoparticles and bulk materials.
+\newblock \emph{ACS Catalysis}, 2\penalty0 (8):\penalty0 1765--1772, 2012.
+\newblock \doi{10.1021/cs3003098}.
+\newblock URL \url{http://dx.doi.org/10.1021/cs3003098}.
+
+\bibitem[Rifkin et~al.(1992)Rifkin, Becquart, Kim, and Clapp]{Rifkin1992}
+J.~A. Rifkin, C.~S. Becquart, D.~Kim, and P.~C. Clapp.
+\newblock \emph{Dislocation Generation and Crack Propagation in Metals Examined
+  in Molecular Dynamics Simulations}, volume 278 of \emph{MRS Symp. Proc.},
+  page 173.
+\newblock 1992.
+
+\bibitem[Rizzo et~al.(2000)Rizzo, Coriani, Halkier, and
+  H{\"a}ttig]{QuadrupoleCOCalc}
+A.~Rizzo, S.~Coriani, A.~Halkier, and C.~H{\"a}ttig.
+\newblock Ab initio study of the electric-field-gradient-indeuced birefringence
+  of a polar molecule: Co.
+\newblock \emph{J. Chem. Phys.}, 113:\penalty0 3077, May 2000.
+
+\bibitem[Russell and Epling(2011)]{Russell:2011fk}
+A.~Russell and W.~S. Epling.
+\newblock Diesel oxidation catalysts.
+\newblock \emph{Catalysis Reviews}, 53\penalty0 (4):\penalty0 337--423, 2011.
+\newblock \doi{10.1080/01614940.2011.596429}.
+\newblock URL \url{http://dx.doi.org/10.1080/01614940.2011.596429}.
+
+\bibitem[Sankaranarayanan et~al.(2005{\natexlab{a}})Sankaranarayanan,
+  Bhethanabotla, and Joseph]{Sankaranarayanan:2005lr}
+S.~Sankaranarayanan, V.~Bhethanabotla, and B.~Joseph.
+\newblock Molecular dynamics simulation study of the melting of pd-pt
+  nanoclusters.
+\newblock 71, 2005{\natexlab{a}}.
+\newblock \doi{ARTN 195415}.
+
+\bibitem[Sankaranarayanan et~al.(2005{\natexlab{b}})Sankaranarayanan,
+  Bhethanabotla, and Joseph]{Sankaranarayanan:2005bh}
+S.~K. R.~S. Sankaranarayanan, V.~R. Bhethanabotla, and B.~Joseph.
+\newblock Molecular dynamics simulation study of the melting of pd-pt
+  nanoclusters.
+\newblock \emph{Phys. Rev. B}, 71:\penalty0 195415, May 2005{\natexlab{b}}.
+\newblock \doi{10.1103/PhysRevB.71.195415}.
+\newblock URL \url{http://link.aps.org/doi/10.1103/PhysRevB.71.195415}.
+
+\bibitem[Sankaranarayanan et~al.(2005{\natexlab{c}})Sankaranarayanan,
+  Bhethanabotla, and Joseph]{Sankaranarayanan:2005qf}
+S.~K. R.~S. Sankaranarayanan, V.~R. Bhethanabotla, and B.~Joseph.
+\newblock Molecular dynamics simulations of the structural and dynamic
+  properties of graphite-supported bimetallic transition metal clusters.
+\newblock \emph{Phys. Rev. B}, 72:\penalty0 195405, Nov 2005{\natexlab{c}}.
+\newblock \doi{10.1103/PhysRevB.72.195405}.
+\newblock URL \url{http://link.aps.org/doi/10.1103/PhysRevB.72.195405}.
+
+\bibitem[Sankaranarayanan et~al.(2006)Sankaranarayanan, Bhethanabotla, and
+  Joseph]{sankaranarayanan:155441}
+S.~K. R.~S. Sankaranarayanan, V.~R. Bhethanabotla, and B.~Joseph.
+\newblock Molecular dynamics simulation study of the melting and structural
+  evolution of bimetallic pd-pt nanowires.
+\newblock 74\penalty0 (15):\penalty0 155441, 2006.
+\newblock URL \url{http://link.aps.org/abstract/PRB/v74/e155441}.
+
+\bibitem[Schweizer et~al.(1989)Schweizer, Persson, T{\"u}shaus, Hoge, and
+  Bradshaw]{Schweizer:1989fk}
+E.~Schweizer, B.~Persson, M.~T{\"u}shaus, D.~Hoge, and A.~Bradshaw.
+\newblock The potential energy surface, vibrational phase relaxation and the
+  order-disorder transition in the adsorption system pt{111}-co.
+\newblock \emph{Surface Science}, 213\penalty0 (1):\penalty0 49 -- 89, 1989.
+\newblock ISSN 0039-6028.
+\newblock \doi{http://dx.doi.org/10.1016/0039-6028(89)90252-5}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0039602889902525}.
+
+\bibitem[Shao et~al.(2013)Shao, He, Peles, Odell, Zeng, Su, Tao, Yu, Zhu, and
+  Xia]{Shao:2013rm}
+M.~Shao, G.~He, A.~Peles, J.~H. Odell, J.~Zeng, D.~Su, J.~Tao, T.~Yu, Y.~Zhu,
+  and Y.~Xia.
+\newblock {Manipulating the oxygen reduction activity of platinum shells with
+  shape-controlled palladium nanocrystal cores.}
+\newblock \emph{Chem. Comm.}, 49\penalty0 (79):\penalty0 9030--2, 2013.
+\newblock ISSN 1364-548X.
+\newblock \doi{10.1039/c3cc43276a}.
+\newblock URL \url{http://www.ncbi.nlm.nih.gov/pubmed/23982335}.
+
+\bibitem[Shastry and Farkas(1996)]{Shastry:1996qg}
+V.~Shastry and D.~Farkas.
+\newblock Molecular statics simulation of fracture in alpha-iron.
+\newblock \emph{Modelling and Simulation In Materials Science and Engineering},
+  4:\penalty0 473--492, 1996.
+
+\bibitem[Shastry and Farkas(1998)]{Shastry:1998dx}
+V.~Shastry and D.~Farkas.
+\newblock Atomistic simulation of fracture in coal and feal.
+\newblock \emph{Intermetallics}, 6:\penalty0 95--104, 1998.
+
+\bibitem[Shibata et~al.(2002)Shibata, Bunker, Zhang, Meisel, {Vardeman II}, and
+  Gezelter]{Shibata:2002hh}
+T.~Shibata, B.~Bunker, Z.~Zhang, D.~Meisel, C.~{Vardeman II}, and J.~Gezelter.
+\newblock Size-dependent spontaneous alloying of au-ag nanoparticles.
+\newblock 124:\penalty0 11989--11996, 2002.
+\newblock \doi{DOI 10.1021/ja025764r}.
+
+\bibitem[Silva et~al.(2006)Silva, Stampfl, and Scheffler]{Silva:2006fk}
+J.~L.~D. Silva, C.~Stampfl, and M.~Scheffler.
+\newblock Converged properties of clean metal surfaces by all-electron
+  first-principles calculations.
+\newblock \emph{Surf. Sci.}, 600\penalty0 (3):\penalty0 703 -- 715, 2006.
+\newblock ISSN 0039-6028.
+\newblock \doi{http://dx.doi.org/10.1016/j.susc.2005.12.008}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0039602805013154}.
+
+\bibitem[Sneed et~al.(2014)Sneed, Young, Jalalpoor, Golden, Mao, Jiang, Wang,
+  and Tsung]{Sneed:2014fj}
+B.~T. Sneed, A.~P. Young, D.~Jalalpoor, M.~C. Golden, S.~Mao, Y.~Jiang,
+  Y.~Wang, and C.-K. Tsung.
+\newblock Shaped pd--ni--pt core-sandwich-shell nanoparticles: Influence of ni
+  sandwich layers on catalytic electrooxidations.
+\newblock \emph{ACS Nano}, 8\penalty0 (7):\penalty0 7239--7250, 2014.
+\newblock \doi{10.1021/nn502259g}.
+\newblock URL \url{http://dx.doi.org/10.1021/nn502259g}.
+
+\bibitem[Stamenkovic et~al.(2007)Stamenkovic, Fowler, Mun, Wang, Ross, Lucas,
+  and Markovi{\'c}]{Stamenkovic:2007kk}
+V.~R. Stamenkovic, B.~Fowler, B.~S. Mun, G.~Wang, P.~N. Ross, C.~A. Lucas, and
+  N.~M. Markovi{\'c}.
+\newblock Improved oxygen reduction activity on \ce{Pt3Ni}(111) via increased
+  surface site availability.
+\newblock \emph{Science}, 315\penalty0 (5811):\penalty0 493--497, 2007.
+\newblock \doi{10.1126/science.1135941}.
+\newblock URL \url{http://www.sciencemag.org/content/315/5811/493.abstract}.
+
+\bibitem[Straub and Karplus(1991)]{Straub}
+J.~E. Straub and M.~Karplus.
+\newblock Molecular dynamics study of the photodissociation of carbon monoxide
+  from myoglobin: Ligand dynamics in the first 10 ps.
+\newblock \emph{Chem. Phys.}, 158:\penalty0 221--248, June 1991.
+
+\bibitem[Surnev et~al.(2000)Surnev, Sock, Ramsey, Netzer, Wiklund, Borg, and
+  Andersen]{Surnev:2000uk}
+S.~Surnev, M.~Sock, M.~Ramsey, F.~Netzer, M.~Wiklund, M.~Borg, and J.~Andersen.
+\newblock \ce{CO} adsorption on pd(111): a high-resolution core level
+  photoemission and electron energy loss spectroscopy study.
+\newblock \emph{Surf. Sci.}, 470\penalty0 (1--2):\penalty0 171 -- 185, 2000.
+\newblock ISSN 0039-6028.
+\newblock \doi{http://dx.doi.org/10.1016/S0039-6028(00)00853-0}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0039602800008530}.
+
+\bibitem[Sutton and Chen(1990)]{Chen90}
+A.~P. Sutton and J.~Chen.
+\newblock Long-range finnis sinclair potentials.
+\newblock \emph{Phil. Mag. Lett.}, 61:\penalty0 139--146, 1990.
+
+\bibitem[Szanyi et~al.(1992)Szanyi, Kuhn, and Goodman]{Szanyi:1992}
+J.~Szanyi, W.~K. Kuhn, and D.~W. Goodman.
+\newblock \ce{CO} adsorption on \ce{Pd}(111) and \ce{Pd(100)}: Low and high
+  pressure correlations.
+\newblock \emph{J. Vac. Sci. Technol. A}, 11\penalty0 (4):\penalty0 1969--1974,
+  1992.
+
+\bibitem[Tao and Salmeron(2011)]{Tao2011}
+F.~Tao and M.~Salmeron.
+\newblock In situ studies of chemistry and structure of materials in reactive
+  environments.
+\newblock \emph{Science}, 331:\penalty0 171, Jan 2011.
+
+\bibitem[Tao et~al.(2008{\natexlab{a}})Tao, Grass, Zhang, Butcher, Renzas, Liu,
+  Chung, Mun, Salmeron, and Somorjai]{Tao2008}
+F.~Tao, M.~E. Grass, Y.~Zhang, D.~R. Butcher, J.~R. Renzas, Z.~Liu, J.~Y.
+  Chung, B.~S. Mun, M.~Salmeron, and G.~A. Somorjai.
+\newblock Reaction-driven restructuring of rh-pd and pt-pd core-shell
+  nanoparticles.
+\newblock \emph{Science}, 322:\penalty0 932, November 2008{\natexlab{a}}.
+
+\bibitem[Tao et~al.(2008{\natexlab{b}})Tao, Grass, Zhang, Butcher, Renzas, Liu,
+  Chung, Mun, Salmeron, and Somorjai]{Tao:2008aa}
+F.~Tao, M.~E. Grass, Y.~Zhang, D.~R. Butcher, J.~R. Renzas, Z.~Liu, J.~Y.
+  Chung, B.~S. Mun, M.~Salmeron, and G.~A. Somorjai.
+\newblock Reaction-driven restructuring of rh-pd and pt-pd core-shell
+  nanoparticles.
+\newblock \emph{Science}, 322\penalty0 (5903):\penalty0 932--934,
+  2008{\natexlab{b}}.
+\newblock \doi{10.1126/science.1164170}.
+\newblock URL \url{http://www.sciencemag.org/content/322/5903/932.abstract}.
+
+\bibitem[Tao et~al.(2010{\natexlab{a}})Tao, Dag, Wang, Liu, Butcher, Bluhm,
+  Salmeron, and Somorjai]{Tao:2010}
+F.~Tao, S.~Dag, L.-W. Wang, Z.~Liu, D.~R. Butcher, H.~Bluhm, M.~Salmeron, and
+  G.~A. Somorjai.
+\newblock Break-up of stepped platinum catalyst surfaces by high co coverage.
+\newblock \emph{Science}, 327\penalty0 (5967):\penalty0 850--853,
+  2010{\natexlab{a}}.
+
+\bibitem[Tao et~al.(2010{\natexlab{b}})Tao, Dag, Wang, Liu, Butcher, Bluhm,
+  Salmeron, and Somorjai]{Tao:2010aa}
+F.~Tao, S.~Dag, L.-W. Wang, Z.~Liu, D.~R. Butcher, H.~Bluhm, M.~Salmeron, and
+  G.~A. Somorjai.
+\newblock Break-up of stepped platinum catalyst surfaces by high co coverage.
+\newblock \emph{Science}, 327\penalty0 (5967):\penalty0 850--853,
+  2010{\natexlab{b}}.
+\newblock \doi{10.1126/science.1182122}.
+\newblock URL \url{http://www.sciencemag.org/content/327/5967/850.abstract}.
+
+\bibitem[Thostrup et~al.(2001)Thostrup, Christoffersen, Lorensen, Jacobsen,
+  Besenbacher, and N{\o}rskov]{Thostrup:2001dn}
+P.~Thostrup, E.~Christoffersen, H.~T. Lorensen, K.~W. Jacobsen, F.~Besenbacher,
+  and J.~K. N{\o}rskov.
+\newblock {Adsorption-induced step formation.}
+\newblock \emph{Phys. Rev. Lett.}, 87\penalty0 (12):\penalty0 126102, 2001.
+\newblock ISSN 0031-9007.
+\newblock \doi{10.1103/PhysRevLett.87.126102}.
+
+\bibitem[Tuaev et~al.(2013)Tuaev, Rudi, Petkov, Hoell, and
+  Strasser]{Tuaev:2013fk}
+X.~Tuaev, S.~Rudi, V.~Petkov, A.~Hoell, and P.~Strasser.
+\newblock In situ study of atomic structure transformations of pt--ni
+  nanoparticle catalysts during electrochemical potential cycling.
+\newblock \emph{ACS Nano}, 7\penalty0 (7):\penalty0 5666--5674, 2013.
+\newblock \doi{10.1021/nn402406k}.
+\newblock URL \url{http://dx.doi.org/10.1021/nn402406k}.
+
+\bibitem[Tyson and Miller(1977)]{Tyson:1977xe}
+W.~Tyson and W.~Miller.
+\newblock Surface free energies of solid metals: Estimation from liquid surface
+  tension measurements.
+\newblock \emph{Surf. Sci.}, 62\penalty0 (1):\penalty0 267 -- 276, 1977.
+\newblock ISSN 0039-6028.
+\newblock \doi{http://dx.doi.org/10.1016/0039-6028(77)90442-3}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0039602877904423}.
+
+\bibitem[van Beurden et~al.(2002)van Beurden, Verhoeven, Kramer, and
+  Thijsse]{Beurden:2002ys}
+P.~van Beurden, H.~Verhoeven, G.~Kramer, and B.~Thijsse.
+\newblock Atomistic potential for adsorbate/surface systems: Co on pt.
+\newblock 66\penalty0 (23):\penalty0 235409, Dec. 2002.
+\newblock \doi{DOI 10.1103/PhysRevB.66.235409}.
+
+\bibitem[Voter(1995)]{Voter95a}
+A.~F. Voter.
+\newblock The embedded-atom method.
+\newblock \emph{Intermetallic Compounds: Principles and Practice}, 1:\penalty0
+  77, 1995.
+
+\bibitem[Voter(1994)]{Voter:1995fk}
+A.~F. Voter.
+\newblock \emph{The Embedded-Atom Method}, volume 1, Principles, chapter~4,
+  pages 77--90.
+\newblock John Wiley \& Sons Ltd., 1994.
+
+\bibitem[Wang et~al.(2005)Wang, Van~Hove, Ross, and Baskes]{Wang:2005qy}
+G.~Wang, M.~Van~Hove, P.~Ross, and M.~Baskes.
+\newblock Surface structures of cubo-octahedral pt-mo catalyst nanoparticles
+  from monte carlo simulations.
+\newblock 109:\penalty0 11683--11692, 2005.
+\newblock \doi{DOI 10.1021/jp050116n}.
+
+\bibitem[Williams(1994)]{Williams:1994}
+E.~D. Williams.
+\newblock Surface steps and surface morphology: understanding macroscopic
+  phenomena from atomic observations.
+\newblock \emph{Surface Science}, 299/300:\penalty0 502--524, 1994.
+
+\bibitem[Williams and Bartelt(1991)]{Williams:1991}
+E.~D. Williams and N.~C. Bartelt.
+\newblock Thermodynamics of surface morphology.
+\newblock \emph{Science}, 251:\penalty0 393--400, January 1991.
+
+\bibitem[Wong and Hoffmann(1991)]{Wong:1991ta}
+Y.~T. Wong and R.~Hoffmann.
+\newblock Chemisorption of carbon monoxide on three metal surfaces:
+  nickel(111), palladium(111), and platinum(111): a comparative study.
+\newblock \emph{J. Phys. Chem.}, 95\penalty0 (2):\penalty0 859--867, 1991.
+\newblock \doi{10.1021/j100155a069}.
+\newblock URL \url{http://dx.doi.org/10.1021/j100155a069}.
+
+\bibitem[Yang et~al.(2015)Yang, Zhao, Cui, Wu, and Cheng]{Yang:0pd}
+Y.~Yang, Z.~Zhao, R.~Cui, H.~Wu, and D.~Cheng.
+\newblock Structures, thermal stability, and chemical activity of
+  crown-jewel-structured pd--pt nanoalloys.
+\newblock \emph{J. Phys. Chem. C}, 2015.
+\newblock \doi{10.1021/jp5107108}.
+\newblock URL \url{http://dx.doi.org/10.1021/jp5107108}.
+
+\bibitem[Yeo et~al.(1997{\natexlab{a}})Yeo, Vattuone, and King]{Yeo}
+Y.~Y. Yeo, L.~Vattuone, and D.~A. King.
+\newblock Calorimetric heats for co and oxygen adsorption and for the catalytic
+  co oxidation reaction on pt{111}.
+\newblock \emph{J. Chem. Phys.}, 106:\penalty0 392--402, January
+  1997{\natexlab{a}}.
+
+\bibitem[Yeo et~al.(1997{\natexlab{b}})Yeo, Vattuone, and King]{Yeo:1997}
+Y.~Y. Yeo, L.~Vattuone, and D.~A. King.
+\newblock Calorimetric heats for \ce{CO} and oxygen adsorption and for the
+  catalytic \ce{CO} oxidation reaction on \ce{Pt}(111).
+\newblock \emph{J. Chem. Phys.}, 106:\penalty0 392--402, January
+  1997{\natexlab{b}}.
+
+\bibitem[Yu et~al.(2013)Yu, Guti{\'e}rrez, Haller, Colby, Kabius, van Veen,
+  Jentys, and Lercher]{Yu:2013fr}
+Y.~Yu, O.~Y. Guti{\'e}rrez, G.~L. Haller, R.~Colby, B.~Kabius, J.~R. van Veen,
+  A.~Jentys, and J.~A. Lercher.
+\newblock Tailoring silica--alumina-supported pt--pd as poison-tolerant
+  catalyst for aromatics hydrogenation.
+\newblock \emph{J. Catal.}, 304\penalty0 (0):\penalty0 135 -- 148, 2013.
+\newblock ISSN 0021-9517.
+\newblock \doi{http://dx.doi.org/10.1016/j.jcat.2013.04.009}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0021951713001322}.
+
+\bibitem[Zhang et~al.(2007{\natexlab{a}})Zhang, Sasaki, Sutter, and
+  Adzic]{Zhang:2007lq}
+J.~Zhang, K.~Sasaki, E.~Sutter, and R.~R. Adzic.
+\newblock Stabilization of platinum oxygen-reduction electrocatalysts using
+  gold clusters.
+\newblock \emph{Science}, 315\penalty0 (5809):\penalty0 220--222,
+  2007{\natexlab{a}}.
+\newblock \doi{10.1126/science.1134569}.
+\newblock URL \url{http://www.sciencemag.org/content/315/5809/220.abstract}.
+
+\bibitem[Zhang et~al.(2007{\natexlab{b}})Zhang, Sasaki, Sutter, and
+  Adzic]{Zhang:2007uq}
+J.~Zhang, K.~Sasaki, E.~Sutter, and R.~R. Adzic.
+\newblock Stabilization of platinum oxygen-reduction electrocatalysts using
+  gold clusters.
+\newblock \emph{Science}, 315\penalty0 (5809):\penalty0 220--222, 01
+  2007{\natexlab{b}}.
+\newblock URL \url{http://www.sciencemag.org/content/315/5809/220.abstract N2 -
+  We demonstrated that platinum (Pt) oxygen-reduction fuel-cell
+  electrocatalysts can be stabilized against dissolution under potential
+  cycling regimes (a continuing problem in vehicle applications) by modifying
+  Pt nanoparticles with gold (Au) clusters. This behavior was observed under
+  the oxidizing conditions of the O2 reduction reaction and potential cycling
+  between 0.6 and 1.1 volts in over 30,000 cycles. There were insignificant
+  changes in the activity and surface area of Au-modified Pt over the course of
+  cycling, in contrast to sizable losses observed with the pure Pt catalyst
+  under the same conditions. In situ x-ray absorption near-edge spectroscopy
+  and voltammetry data suggest that the Au clusters confer stability by raising
+  the Pt oxidation potential.}
+
+\bibitem[Zhang et~al.(2015{\natexlab{a}})Zhang, Hu, Li, Zhang, Zhou, Yu, Zhang,
+  Chen, Eichhorn, and Zhou]{Zhang:2015yq}
+P.~Zhang, Y.~Hu, B.~Li, Q.~Zhang, C.~Zhou, H.~Yu, X.~Zhang, L.~Chen,
+  B.~Eichhorn, and S.~Zhou.
+\newblock Kinetically stabilized pd@pt core--shell octahedral nanoparticles
+  with thin pt layers for enhanced catalytic hydrogenation performance.
+\newblock \emph{ACS Catalysis}, 5\penalty0 (2):\penalty0 1335--1343,
+  2015{\natexlab{a}}.
+\newblock \doi{10.1021/cs501612g}.
+\newblock URL \url{http://dx.doi.org/10.1021/cs501612g}.
+
+\bibitem[Zhang et~al.(2015{\natexlab{b}})Zhang, Yu, Qiao, Zheng, and
+  Liu]{Zhang:2015ys}
+X.~Zhang, S.~Yu, L.~Qiao, W.~Zheng, and P.~Liu.
+\newblock Stabilization of pt monolayer catalysts under harsh conditions of
+  fuel cells.
+\newblock \emph{The Journal of Chemical Physics}, 142\penalty0 (19):\penalty0
+  194710, 2015{\natexlab{b}}.
+\newblock \doi{http://dx.doi.org/10.1063/1.4921257}.
+\newblock URL
+  \url{http://scitation.aip.org/content/aip/journal/jcp/142/19/10.1063/1.4921257}.
+
+\bibitem[Zope and Mishin(2003)]{zope03:tial_ap}
+R.~R. Zope and Y.~Mishin.
+\newblock Interatomic potentials for atomistic simulations of the ti-al system.
+\newblock 68:\penalty0 024102, July 2003.
+\newblock URL \url{http://link.aps.org/abstract/PRB/v68/e024102}.
+
+\end{thebibliography}
