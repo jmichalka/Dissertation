@@ -1,5 +1,5 @@
 
-\chapter{STABILITY AND RECONSTRUCTIONS OF PT/PD BIMETALLIC NANOCUBES}
+\chapter{STABILITY AND RECONSTRUCTIONS OF PT/PD BIMETALLIC NANOCUBES EXPOSED TO CARBON MONOXIDE}
 
 While metal surfaces are used in various industrial processes, because of their
 poor surface area to volume ratio, many methods make use of roughened surfaces
@@ -15,30 +15,49 @@ preliminary results obtained before the project was shelved.
 Nanocubes with edge lengths of 6, 7, and 8 nm were constructed from an ideal Pd
 FCC lattice with a lattice constant of 3.89 \AA~  and cut so as to expose the
 {100}, {010}, and {001} facets. For each of these three sizes, the outermost 1,
-2, or 3 layers were further replaced with Pt to create nine total systems which are 
+2, or 3 layers were further replaced with Pt to create nine total systems which
+are depicted in table \ref{tab:systems}. Work by ?{\it et al.}\citep{} on the
+self-distillation of bimetallic nanostructures showed that when the outer shell
+of nanoparticles was composed of the metal with a higher melting temperature,
+it imposed stability on the confined inner metal. For this reason, Pt was
+chosen to compose the outer layers while keeping the core of the nanoparticle
+Pd. Additionally, the slightly more favorable Pd-CO interaction may provide a
+driving force for reconstructions that will be dependent on the thickness of
+the Pt.
 
 \begin{table}
+  \caption{PT/PD NANOCUBE COMPOSITION}
+  \centering
   \begin{threeparttable}
-  \begin{tabular}{ c cc c }
+  \begin{tabular}{ c ccc }
   \hline
   \hline
-  System & Pd & Pt & Composition (Pt/total) \\
+  \textbf{System} & \textbf{Pd} & \textbf{Pt} &  \textbf{(Pt/total)} \\
   \hline
-  6nm_1L & 10976 & 2524  & 18.7\% \\
-  6nm_2L & 8788  & 4712  & 34.9\% \\
-  6nm_3L & 6912  & 6588  & \\
-  7nm_1L & 19652 & 3676  & \\
-  7nm_2L & 16384 & 6944  & \\
-  7nm_3L & 13500 & 9828  & \\
-  8nm_1L & 27436 & 4564  & \\
-  8nm_2L & 23328 & 8672  & \\
-  8nm_3L & 19652 & 12348 & \\
+  6nm-1L & 10976 & 2524  & 0.187 \\
+  6nm-2L & 8788  & 4712  & 0.349 \\
+  6nm-3L & 6912  & 6588  & 0.488 \\
+  7nm-1L & 19652 & 3676  & 0.157 \\
+  7nm-2L & 16384 & 6944  & 0.298 \\
+  7nm-3L & 13500 & 9828  & 0.421 \\
+  8nm-1L & 27436 & 4564  & 0.143 \\
+  8nm-2L & 23328 & 8672  & 0.271 \\
+  8nm-3L & 19652 & 12348 & 0.386 \\
   \hline
   \hline
   \end{tabular}
-  \begin{tablenotes}
-
-  \end{tablenotes}
   \end{threeparttable}
 \label{tab:systems}
-\end{tabular}
+\end{table}
+
+Systems were constructed in a non-periodic box and then initially equilibrated
+at 300~K in to allow the slight strain of replacing Pd atoms with Pt in the
+outer layers to dissipate. Warming over ? ps was performed to bring all systems
+up to a simulation temperature of ?~K at which point various amounts of Carbon
+Monoxide was introduced into the system, corresponding to , , and ML of
+coverage. After another brief period of equilibration during which a
+significant amount of the CO adsorbed to the surface, the systems were then run
+in the microcanonical (NVE) ensemble for ? ns for data production.
+
+
+
