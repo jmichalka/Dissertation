@@ -1,10 +1,12 @@
 
 \chapter{STABILITY AND RECONSTRUCTIONS OF PT/PD BIMETALLIC NANOCUBES EXPOSED TO CARBON MONOXIDE}
 
+\section{Introduction}
+
 While metal surfaces are used in various industrial processes, because of their
 poor surface area to volume ratio, many methods make use of roughened surfaces
-or more preferrably dispersed nanoparticles. The size distribution of the
-nanoparticles varies but tends to be on the order of 10s to 100s of nanometers
+or more preferrably nanoparticles dispersed on a cheaper unreactive surface. The size distribution of the
+nanoparticles can vary but tends to be on the order of tens to hundredes of nanometers
 in size. Additionally, the morphology of these nanoparticles spans from simple
 cubes, to octahedra, pyramids, and numerous other morphologies.\citep{} As seen
 in previous work\cite{Michalka, Tao}, even fairly stable surfaces can undergo
@@ -12,10 +14,15 @@ large scale reconstructions under experimental conditions. This appendix
 provides information on the initial setup of bimetallic Pt/Pd nanocubes and the
 preliminary results obtained before the project was shelved. 
 
+\section{Methodology}
+
+\subsection{Interaction Parameters}
+
+\subsection{System Details}
 Nanocubes with edge lengths of 6, 7, and 8 nm were constructed from an ideal Pd
 FCC lattice with a lattice constant of 3.89 \AA~  and cut so as to expose the
 {100}, {010}, and {001} facets. For each of these three sizes, the outermost 1,
-2, or 3 layers were further replaced with Pt to create nine total systems which
+2, or 3 layers were further replaced with Pt to create nine total systems whose compositions
 are depicted in table \ref{tab:systems}. Work by ?{\it et al.}\citep{} on the
 self-distillation of bimetallic nanostructures showed that when the outer shell
 of nanoparticles was composed of the metal with a higher melting temperature,
@@ -23,10 +30,10 @@ it imposed stability on the confined inner metal. For this reason, Pt was
 chosen to compose the outer layers while keeping the core of the nanoparticle
 Pd. Additionally, the slightly more favorable Pd-CO interaction may provide a
 driving force for reconstructions that will be dependent on the thickness of
-the Pt.
+the Pt because Pd will want to migrate through the Pt to the surface.
 
 \begin{table}
-  \caption{PT/PD NANOCUBE COMPOSITION}
+  \caption{PT/PD NANOCUBE SIZES AND COMPOSITION}
   \centering
   \begin{threeparttable}
   \begin{tabular}{ c ccc }
@@ -51,13 +58,33 @@ the Pt.
 \end{table}
 
 Systems were constructed in a non-periodic box and then initially equilibrated
-at 300~K in to allow the slight strain of replacing Pd atoms with Pt in the
-outer layers to dissipate. Warming over ? ps was performed to bring all systems
-up to a simulation temperature of ?~K at which point various amounts of Carbon
+at 300~K to allow the slight strain of replacing Pd atoms with Pt in the outer
+layers to dissipate. Warming over ? ps was performed to bring all systems up to
+a simulation temperature of ?~K at which point various amounts of Carbon
 Monoxide was introduced into the system, corresponding to , , and ML of
 coverage. After another brief period of equilibration during which a
 significant amount of the CO adsorbed to the surface, the systems were then run
 in the microcanonical (NVE) ensemble for ? ns for data production.
 
+\section{Results \& Discussion}
+One of the challenges that ultimately led to this project being shelved is the
+size of the systems and the cocommitant increase in simulation time needed to
+capture the hypothesized restructuring processes. Nevertheless, preliminary
+results were gathered and are discussed below.
 
+\subsection{CO-Induced Reconstruction}
+As seen in previous work\citep{}, the presence of CO was again seen to play a
+role in the observed restructuring. However, unlike what was observed on the Pt
+(557) surface\citep{}, where CO was required for any large-scale reconstruction
+to occur, for these systems a significant portion of the reconstruction could
+be directly attributed to lower stability of the (100) facets when compared to
+(111) facets. As highlighted in Figure \ref{fig:reconstructed}, this system
+underwent this extreme amount of reconstruction despite no CO being present. 
 
+\section{Summary}
+The observed restructuring while informative, was primarily determined to be an
+artifact of the small systems sizes that were chosen for this investigation.
+Future simulations examining larger systems (>10 nm) may solve the buckling
+observed in a number of these systems. Additionally, an exploration into
+octahedral-type nanoparticles with their preponderence to exposed {111} facets
+may also help solve the stability issues and provide another direction to explore.
