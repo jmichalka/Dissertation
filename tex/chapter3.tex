@@ -248,6 +248,7 @@ various binding sites are shown in Table~\ref{tab:CO_energies}.
 \end{tabular}
 \begin{tablenotes}
   \item The energies are obtained using the potentials described in Table \ref{tab:CO_parameters}. These values are compared with electronic structure and experimental desorption data when available Note that the electronic structure values are for surface coverages of $\ge$ 0.25 ML, and experimental values are (in most cases) extrapolated to zero coverage from desorption energies at higher coverages.
+  \item References are in [ ]
   \item[a] All values are in eV
 \end{tablenotes}
 \end{threeparttable}
@@ -375,7 +376,7 @@ using nearest-neighbor similarity (i.e., the four nearest grid
 points). The resulting domain areas were averaged over 18~ns windows.
 A representative grid decomposition is shown in fig. \ref{fig:grid}.
 
-\begin{figure}
+\begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap3/coloredGrid.pdf}
   \caption{Analysis of the surface alloy to find surface domain sizes
     was carried out by mapping the surface composition (left) onto
@@ -409,7 +410,7 @@ speedup of \ce{Pt}-adatom diffusion, as well as a large-scale
 restructuring of the well-ordered surface into \ce{Pt}-rich islands.
 This surface will therefore be the focus of most of our analysis.
 
-\begin{figure}
+\begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap3/pinkGray.pdf}
   \caption{Snapshots of some of the simulated systems highlighting the
     (557) step edges (top) along with a diagonal view (bottom).
@@ -499,7 +500,7 @@ restructuring at 850~K, although both the rate and extent is
 significantly smaller than in the 0.25 and 0.50 monolayer (ML)
 systems.
 
-\begin{figure}
+\begin{figure}[p!]
 \includegraphics[width=\linewidth]{../figures/chap3/domains_Pd_110ns.pdf}
 \caption{Distributions of \ce{Pd} domain sizes at different \ce{CO}
   coverages and at different times after exposure to \ce{CO}.}
@@ -525,7 +526,7 @@ neighbors.  This is evidence for the formation of multi-layer \ce{Pt}
 features since single layers of \ce{Pt} are restricted to having 6
 \ce{Pt} nearest neighbors.
 
-\begin{figure}
+\begin{figure}[p!]
 \includegraphics[width=\linewidth]{../figures/chap3/domains_Pt_110ns.pdf}
 \caption{Distributions of \ce{Pt} domain sizes at different \ce{CO}
   coverages and at different times after exposure to \ce{CO}.}
@@ -541,7 +542,7 @@ supplied in the supporting information.  The integrated area of
 surface coverage for each time window is shown in Table
 \ref{tab:integratedArea}.
 
-\begin{figure}
+\begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap3/nn.pdf}
   \caption{Population of \ce{Pt} atoms with either 6 (solid), 9
     (dashed), or $\ge$ 10 (dot-dashed) \ce{Pt} nearest neighbors
@@ -666,7 +667,8 @@ bridge or hollow site, there is an even larger energetic barrier to
 overcome before the adatom can be released (see curves D, E, and F in
 Fig. \ref{fig:PdEnergy}).
 
-\begin{figure}
+\begin{landscape}
+\begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap3/PdEnergy_CO.pdf}
   \caption{The relative energies for moving a \ce{Pd} atom (marked
     with an asterisk) perpendicular to a (557) step edge. This atom is
@@ -677,6 +679,7 @@ Fig. \ref{fig:PdEnergy}).
     (curves D and E) or hollow (curve F) site, the barrier is
     increased.} \label{fig:PdEnergy}
 \end{figure}
+\end{landscape}
 
 This \ce{CO}-induced step stabilization is significantly different
 from the \ce{Pt\bond{-}CO} interaction which favors the atop binding
@@ -689,7 +692,8 @@ parameters in Ref. \citenum{Michalka:2013}, and figure
 can also disrupt step edges, providing an energetic benefit to
 increasing the exposed \ce{Pt} surface area.
 
-\begin{figure}
+\begin{landscape}
+\begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap3/PtEnergy_CO.pdf}
   \caption{The relative energies for moving a step-edge \ce{Pt} atom
     (marked with an asterisk) perpendicular to a (557) step edge.  As in
@@ -698,6 +702,7 @@ increasing the exposed \ce{Pt} surface area.
     at nearby sites can lower the energy for adatom formation
     (e.g. curves E, G, and H).} \label{fig:PtEnergy}
 \end{figure}
+\end{landscape}
 
 Based on the curves in Figs. \ref{fig:PdEnergy} and
 \ref{fig:PtEnergy}, the \ce{CO} adsorbates appear to increase the

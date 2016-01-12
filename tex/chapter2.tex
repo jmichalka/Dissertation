@@ -195,7 +195,7 @@ CHARGES FOR CO-CO INTERACTIONS}
 \hline \hline
 \end{tabular}
 \begin{tablenotes}
-  \item The CO model from Ref.\bibpunct{}{}{,}{n}{}{,} \protect\citep{Straub} was used without modification.
+  \item The CO model from Ref.\citep{Straub} was used without modification.
   \item[a] Distances are in \AA.
   \item[b] Energies are in kcal/mol.
   \item[c] Charges are in a.u.
@@ -301,10 +301,14 @@ an effect on binding energies and binding site preferences.
   \hline \hline
   & Calculated\tnote{a} & Experimental\tnote{a} \\
   \hline
-  \multirow{2}{*}{\textbf{Pt-CO}} & \multirow{2}{*}{-1.81} & -1.4 \bibpunct{}{}{,}{n}{}{,}
-  (Ref. \protect\citep{Kelemen:1979}) \\
- & &  -1.9 \bibpunct{}{}{,}{n}{}{,} (Ref. \protect\citep{Yeo}) \\ \hline
-  \textbf{Au-CO} & -0.39 & -0.40 \bibpunct{}{}{,}{n}{}{,}  (Ref. \protect\citep{TPDGold}) \\
+%  \multirow{2}{*}{\textbf{Pt-CO}} & \multirow{2}{*}{-1.81} & -1.4 \bibpunct{}{}{,}{n}{}{,}
+%  (Ref. \protect\citep{Kelemen:1979}) \\
+% & &  -1.9 \bibpunct{}{}{,}{n}{}{,} (Ref. \protect\citep{Yeo}) \\ \hline
+%  \textbf{Au-CO} & -0.39 & -0.40 \bibpunct{}{}{,}{n}{}{,}  (Ref. \protect\citep{TPDGold}) \\
+  \multirow{2}{*}{\textbf{Pt-CO}} & \multirow{2}{*}{-1.81} & -1.4
+  Ref. \citep{Kelemen:1979} \\
+ & &  -1.9 Ref. \citep{Yeo} \\ \hline
+  \textbf{Au-CO} & -0.39 & -0.40 Ref. \citep{TPDGold} \\
   \hline \hline
 \end{tabular}
 \begin{tablenotes}
@@ -321,7 +325,7 @@ potentials described in this work
 \subsection{Force field validation}
 The CO-Pt cross interactions were compared directly to DFT results
 found in the supporting information of reference
-{\bibpunct{}{}{,}{n}{}{,} \protect\citep{Tao:2010}}. These energies are
+\citep{Tao:2010}. These energies are
 estimates of the degree of stabilization provided to double-layer
 reconstructions of the M(557) surface by an overlayer of CO molecules
 in a $c (2 \times 4)$ pattern.  To make the comparison, five atom
@@ -364,7 +368,7 @@ systems. This is a quite dramatic shift, $\Delta\Delta E$ (the change
 in energy for going from single to double-layer structures upon
 addition of a CO layer) shifts by -0.5~kcal/mol per Pt atom. This
 result is in qualitative agreement with the DFT calculations in
-reference {\bibpunct{}{}{,}{n}{}{,} \protect\citep{Tao:2010}}, which
+reference \citep{Tao:2010}, which
 also showed that the addition of CO leads to a reversal in stability.
 
 The gold systems show a smaller energy difference between the clean
@@ -376,7 +380,7 @@ afforded by the $c (2 \times 4)$ pattern, so single-point energy
 comparisons are not as helpful.
 
 %Table of single step double step calculations
-\begin{table}[H]
+\begin{table}
 \caption{RELATIVE ENERGIES OF (S)INGLE M(557) AND (D)OUBLE-STEP RECONSTRUCTIONS}
 %  \caption{Relative energies (in kcal/mol) of (S)ingle M(557) and
 %    (D)ouble-step reconstructions. 50\% coverage by CO in a  $c(2
@@ -410,7 +414,7 @@ Au(557)-D & 480 & 48 &  -156.150 & -0.3253 \\
 
 Qualitatively, our classical force field for the metal-CO cross
 interactions reproduces the results predicted by DFT studies in
-reference {\bibpunct{}{}{,}{n}{}{,} \protect\citep{Tao:2010}}. Addition
+reference \citep{Tao:2010}. Addition
 of polarization effects, both in the CO and in the metal surfaces,
 could make the model significantly more accurate.  For example,
 because of the relatively large fixed charges, the current model will
@@ -424,7 +428,7 @@ numerical agreement with quantum mechanical calculations.
 
 \subsection{Pt(557) and Au(557) metal interfaces}
 Our Pt system is an orthorhombic periodic box of dimensions
-54.482~x~50.046~x~120.88~\AA~while our Au system has 
+54.482~x~50.046~x~120.88~\AA, while our Au system has 
 dimensions of 57.4~x~51.9285~x~100~\AA. The metal slabs 
 are 9 and 8 atoms deep respectively, corresponding to a slab 
 thickness of $\sim$21~\AA~ for Pt and $\sim$19~\AA~for Au.
@@ -525,7 +529,7 @@ interfaces, within the 40~ns time scale or the extended time of 150~ns
 for the 50\% Pt system, experienced this reconstruction.
 
 %Evolution of surface
-\begin{figure}[H]
+\begin{figure}[p!]
 \includegraphics[width=\linewidth]{../figures/chap2/doubleLayer.pdf}
 \caption{The Pt(557) / 50\% CO interface upon exposure to the CO: (a)
   258~ps, (b) 19~ns, (c) 31.2~ns, and (d) 86.1~ns after
@@ -596,7 +600,7 @@ barrier associated with sliding along an edge compared to breaking
 away to form an isolated adatom.
 
 %Diffusion graph
-\begin{figure}[H]
+\begin{figure}[p!]
 \includegraphics[width=\linewidth]{../figures/chap2/diffusion.pdf}
 \caption{Diffusion constants for mobile surface atoms along directions
   parallel ($\mathbf{D}_{\parallel}$) and perpendicular
@@ -732,7 +736,7 @@ opportunities for the crowded CO configurations shown in Figure
 propensity for step-edge breakup.
 
 %Sketch graphic of different configurations
-\begin{figure}[H]
+\begin{figure}[p!]
 \includegraphics[width=\linewidth]{../figures/chap2/COpaths.pdf}
 \caption{Configurations used to investigate the mechanism of step-edge
   breakup on Pt(557). In each case, the central (starred) atom was
@@ -747,7 +751,7 @@ propensity for step-edge breakup.
 \end{figure}
 
 %energy graph corresponding to sketch graphic
-\begin{figure}[H]
+\begin{figure}[p!]
 \includegraphics[width=\linewidth]{../figures/chap2/separation.pdf}
 \caption{Energies for displacing a single edge atom perpendicular to
   the step edge as a function of atomic displacement. Each of the
@@ -786,7 +790,7 @@ provides strong support for CO-mediated Pt-Pt interactions giving rise
 to the doubling reconstruction.
 
 %lambda progression of Pt -> shoving its way into the step
-\begin{figure}[H]
+\begin{figure}[p!]
 \includegraphics[width=\linewidth]{../figures/chap2/rxn.pdf}
 \caption{Points along a possible reaction coordinate for CO-mediated
   edge doubling. Here, a CO-bound adatom burrows into an established
@@ -833,7 +837,7 @@ possible that with longer simulation times, the (557) surface recovery
 observed by Tao {\it et al}.\citep{Tao:2010} could also be recovered.
 
 %breaking of the double layer upon removal of CO
-\begin{figure}[H]
+\begin{figure}[p!]
 \includegraphics[width=\linewidth]{../figures/chap2/layerBreaking.pdf}
 \caption{Behavior of an established (111) double step after removal of
   the adsorbed CO: (A) 0~ps, (B) 100~ps, and (C) 1~ns after the
