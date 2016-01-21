@@ -33,12 +33,12 @@
 Industrial catalysts usually consist of small particles that exhibit a
 high concentration of steps, kink sites, and vacancies at the edges of
 the facets.  These sites are thought to be the locations of catalytic
-activity.\citep{ISI:000083038000001,ISI:000083924800001} There is now
+activity.\citep{Jeong:1999ev, Larsen:1999le} There is now
 significant evidence that solid surfaces are often structurally,
 compositionally, and chemically modified by reactants under operating
-conditions.\citep{Tao2008,Tao:2010,Tao2011} The coupling between
+conditions.\citep{Tao:2008aa ,Tao:2010aa, Tao:2011aa} The coupling between
 surface oxidation states and catalytic activity for CO oxidation on
-Pt, for instance, is widely documented.\citep{Ertl08,Hendriksen:2002}
+Pt, for instance, is widely documented.\citep{Ertl:2008nz, Hendriksen:2002ay}
 Despite the well-documented role of these effects on reactivity, the
 ability to capture or predict them in atomistic models is somewhat
 limited.  While these effects are perhaps unsurprising on the highly
@@ -46,7 +46,7 @@ disperse, multi-faceted nanoscale particles that characterize
 industrial catalysts, they are manifest even on ordered, well-defined
 surfaces. The Pt(557) surface, for example, exhibits substantial and
 reversible restructuring under exposure to moderate pressures of
-carbon monoxide.\citep{Tao:2010}
+carbon monoxide.\citep{Tao:2010aa}
 
 This work is an investigation into the mechanism and timescale for the
 Pt(557) \& Au(557) surface restructuring using molecular simulation.
@@ -57,10 +57,10 @@ simulate the process of interest.  Since restructuring typically
 occurs as a result of specific interactions of the catalyst with
 adsorbates, in this work, two metal systems exposed to carbon monoxide
 were examined. The Pt(557) surface has already been shown to undergo a
-large scale reconstruction under certain conditions.\citep{Tao:2010}
+large scale reconstruction under certain conditions.\citep{Tao:2010aa}
 The Au(557) surface, because of weaker interactions with CO, is less
 likely to undergo this kind of reconstruction. However, Peters {\it et
-  al}.\citep{Peters:2000} and Piccolo {\it et al}.\citep{Piccolo:2004}
+  al}.\citep{Peters:2000zh} and Piccolo {\it et al}.\citep{Piccolo:2004os}
 have both observed CO-induced modification of reconstructions to the
 Au(111) surface. Peters {\it et al}. observed the Au(111)-($22 \times
 \sqrt{3}$) ``herringbone'' reconstruction relaxing slightly under CO
@@ -85,8 +85,8 @@ chemical interactions between the surface atoms and adsorbates.  Since
 the interfaces involved are quite large (10$^3$ - 10$^4$ atoms), have
 many electrons, and respond slowly to perturbations, {\it ab initio}
 molecular dynamics
-(AIMD),\citep{KRESSE:1993ve,KRESSE:1993qf,KRESSE:1994ul} Car-Parrinello
-methods,\citep{CAR:1985bh,Izvekov:2000fv,Guidelli:2000fy} and quantum
+(AIMD),\citep{Kresse:1993ve, Kresse:1993qf, Kresse:1994ul} Car-Parrinello
+methods,\citep{Car:1985bh, Izvekov:2000fv, Guidelli:2000fy} and quantum
 mechanical potential energy surfaces remain out of reach.
 Additionally, the ``bonds'' between metal atoms at a surface are
 typically not well represented in terms of classical pairwise
@@ -95,9 +95,9 @@ nor are they captured by simple non-directional interactions like the
 Coulomb potential.  For this work, we have used classical molecular
 dynamics with potential energy surfaces that are specifically tuned
 for transition metals.  In particular, we used the EAM potential for
-Au-Au and Pt-Pt interactions.\citep{Foiles86} The CO was modeled using
+Au-Au and Pt-Pt interactions.\citep{Foiles:1986ky} The CO was modeled using
 a rigid three-site model developed by Straub and Karplus for studying
-photodissociation of CO from myoglobin.\citep{Straub} The Au-CO and
+photodissociation of CO from myoglobin.\citep{Straub:1991no} The Au-CO and
 Pt-CO cross interactions were parameterized as part of this work.
   
 \subsection{Metal-metal interactions}
@@ -105,11 +105,11 @@ Many of the potentials used for modeling transition metals are based
 on a non-pairwise additive functional of the local electron
 density. The embedded atom method (EAM) is perhaps the best known of
 these
-methods,\citep{Daw84,Foiles86,Johnson89,Daw89,Plimpton93,Voter95a,Lu97,Alemany98}
-but other models like the Finnis-Sinclair\citep{Finnis84,Chen90} and
-the quantum-corrected Sutton-Chen method\citep{QSC,Qi99} have simpler
+methods,\citep{Daw:1984aq, Foiles:1986ky, Johnson:1989yr, Daw:1989ci, Plimpton:1993qi, Voter:1995ax, Lu:1997fv, Alemany:1998fp}
+but other models like the Finnis-Sinclair\citep{Finnis:1984hl, Sutton:1990rr} and
+the quantum-corrected Sutton-Chen method\citep{Goddard:1998qsc, Qi:1999dn} have simpler
 parameter sets. The glue model of Ercolessi {\it et
-  al}.\citep{Ercolessi88} is among the fastest of these density
+  al}.\citep{Ercolessi:1988uo} is among the fastest of these density
 functional approaches. In all of these models, atoms are treated as a
 positively charged core with a radially-decaying valence electron
 distribution. To calculate the energy for embedding the core at a
@@ -141,16 +141,16 @@ repulsive overlap of the two positively charged cores.
 The EAM, Finnis-Sinclair, and the Quantum Sutton-Chen (QSC) potentials
 have all been widely used by the materials simulation community for
 simulations of bulk and nanoparticle
-properties,\citep{Chui:2003fk,Wang:2005qy,Medasani:2007uq,mishin99:_inter}
-melting,\citep{Belonoshko00,sankaranarayanan:155441,Sankaranarayanan:2005lr}
-fracture,\citep{Shastry:1996qg,Shastry:1998dx,mishin01:cu} crack
-propagation,\citep{BECQUART:1993rg,Rifkin1992} and alloying
-dynamics.\citep{Shibata:2002hh,mishin02:b2nial,zope03:tial_ap,mishin05:phase_fe_ni}
+properties,\citep{Chui:2003fk, Wang:2005qy, Medasani:2007uq, Mishin:1999ew}
+melting,\citep{Belonoshko00, Sankaranarayanan:2006ye, Sankaranarayanan:2005bh}
+fracture,\citep{Shastry:1996qg, Shastry:1998dx, Mishin:01qt} crack
+propagation,\citep{Becquart:1993sr, Rifkin:1992ug} and alloying
+dynamics.\citep{Shibata:2002hh, Mishin:2002if, Zope:2003ai, Mishin:2005vc}
 One of EAM's strengths is its sensitivity to small changes in
 structure. This is due to the inclusion of up to the third nearest
-neighbor interactions during fitting of the parameters.\citep{Voter95a}
+neighbor interactions during fitting of the parameters.\citep{Voter:1995ax}
 In comparison, the glue model of Ercolessi {\it et
-  al}.\citep{Ercolessi88} was only parameterized to include
+  al}.\citep{Ercolessi:1988uo} was only parameterized to include
 nearest-neighbor interactions, EAM is a suitable choice for systems
 where the bulk properties are of secondary importance to low-index
 surface structures. Additionally, the similarity of EAM's functional
@@ -160,17 +160,17 @@ adsorbates somewhat easier.
 
 \subsection{Carbon Monoxide model}
 Previous explanations for the surface rearrangements center on the
-large linear quadrupole moment of carbon monoxide.\citep{Tao:2010} We
+large linear quadrupole moment of carbon monoxide.\citep{Tao:2010aa} We
 used a model first proposed by Karplus and Straub to study the
 photodissociation of CO from myoglobin because it reproduces the
-quadrupole moment well.\citep{Straub} The Straub and Karplus model
+quadrupole moment well.\citep{Straub:1991no} The Straub and Karplus model
 treats CO as a rigid three site molecule with a massless
 charge-carrying ``M'' site at the center of mass. The geometry and
 interaction parameters are reproduced in Table~\ref{tab:CO}. The
 effective dipole moment, calculated from the assigned charges, is
 still small (0.35 D) while the linear quadrupole (-2.40 D~\AA) is
-close to the experimental (-2.63 D~\AA)\citep{QuadrupoleCO} and quantum
-mechanical predictions (-2.46 D~\AA)\citep{QuadrupoleCOCalc}.
+close to the experimental (-2.63 D~\AA)\citep{Chetty:2011dp} and quantum
+mechanical predictions (-2.46 D~\AA)\citep{Rizzo:2000sp}.
 
 %CO Table
 \begin{table}[H]
@@ -195,7 +195,7 @@ CHARGES FOR CO-CO INTERACTIONS}
 \hline \hline
 \end{tabular}
 \begin{tablenotes}
-  \item The CO model from Ref.\citep{Straub} was used without modification.
+  \item The CO model from Ref.\citep{Straub:1991no} was used without modification.
   \item[a] Distances are in \AA.
   \item[b] Energies are in kcal/mol.
   \item[c] Charges are in a.u.
@@ -207,17 +207,17 @@ CHARGES FOR CO-CO INTERACTIONS}
 \subsection{Cross-Interactions between the metals and carbon monoxide}
 
 Since the adsorption of CO onto a Pt surface has been the focus
-of much experimental \citep{Yeo, Hopster:1978, Ertl:1977, Kelemen:1979}
+of much experimental \citep{Yeo:1997th, Hopster:1978yf, Ertl:1977cq, Kelemen:1979ad}
 and theoretical work
-\citep{Beurden:2002ys,Pons:1986,Deshlahra:2009,Feibelman:2001,Mason:2004}
+\citep{Beurden:2002ys, Korzeniewski:1986kl, Deshlahra:2009wu, Feibelman:2001qa, Mason:2004ix}
 there is a significant amount of data on adsorption energies for CO on
 clean metal surfaces. An earlier model by Korzeniewski {\it et
-  al.}\citep{Pons:1986} served as a starting point for our fits. The parameters were
+  al.}\citep{Korzeniewski:1986kl} served as a starting point for our fits. The parameters were
 modified to ensure that the Pt-CO interaction favored the atop binding
 position on Pt(111). These parameters are reproduced in Table~\ref{tab:co_parameters}.
 The modified parameters yield binding energies that are slightly higher
 than the experimentally-reported values as shown in Table~\ref{tab:co_energies}. Following Korzeniewski
-{\it et al}.,\citep{Pons:1986} the Pt-C interaction was fit to a deep
+{\it et al}.,\citep{Korzeniewski:1986kl} the Pt-C interaction was fit to a deep
 Lennard-Jones interaction to mimic strong, but short-ranged, partial
 binding between the Pt $d$ orbitals and the $\pi^*$ orbital on CO. The
 Pt-O interaction was modeled with a Morse potential with a large
@@ -226,7 +226,7 @@ over O as the surface-binding atom. In most geometries, the Pt-O parameterizatio
 repulsion which favors the atop site.  The resulting potential-energy
 surface suitably recovers the calculated Pt-C separation length
 (1.6~\AA)\citep{Beurden:2002ys} and affinity for the atop binding
-position.\citep{Deshlahra:2012, Hopster:1978}
+position.\citep{Deshlahra:2012aa, Hopster:1978yf}
 
 %where did you actually get the functionals for citation?
 %scf calculations, so initial relaxation was of the four layers, but two layers weren't kept fixed, I don't think
@@ -236,13 +236,13 @@ Morse potentials, respectively, to reproduce Au-CO binding energies.
 The limited experimental data for CO adsorption on Au required refining the fits against plane-wave DFT calculations.
 Adsorption energies were obtained from gas-surface DFT calculations with a
 periodic supercell plane-wave basis approach, as implemented in the
-Quantum ESPRESSO package.\citep{QE-2009} Electron cores were
+Quantum ESPRESSO package.\citep{Giannozzi:2009fe} Electron cores were
 described with the projector augmented-wave (PAW)
-method,\citep{PhysRevB.50.17953,PhysRevB.59.1758} with plane waves
+method,\citep{Blochl:1994vf, Kresse:1999by} with plane waves
 included to an energy cutoff of 20 Ry. Electronic energies are
 computed with the PBE implementation of the generalized gradient
 approximation (GGA) for gold, carbon, and oxygen that was constructed
-by Rappe, Rabe, Kaxiras, and Joannopoulos.\citep{Perdew_GGA,RRKJ_PP}
+by Rappe, Rabe, Kaxiras, and Joannopoulos.\citep{Perdew:1996fq, Rappe:1990tw}
 In testing the Au-CO interaction, Au(111) supercells were constructed of four layers of 4
 Au x 2 Au surface planes and separated from vertical images by six
 layers of vacuum space. The surface atoms were all allowed to relax 
@@ -250,7 +250,7 @@ before CO was added to the system. Electronic relaxations were
 performed until the energy difference between subsequent steps 
 was less than $10^{-8}$ Ry.   Nonspin-polarized supercell calculations 
 were performed with a 4~x~4~x~4 Monkhorst-Pack {\bf k}-point sampling of the first Brillouin
-zone.\citep{Monkhorst:1976} The relaxed gold slab was
+zone.\citep{Monkhorst:1976il} The relaxed gold slab was
 then used in numerous single point calculations with CO at various
 heights (and angles relative to the surface) to allow fitting of the
 empirical force field.
@@ -306,9 +306,9 @@ an effect on binding energies and binding site preferences.
 % & &  -1.9 \bibpunct{}{}{,}{n}{}{,} (Ref. \protect\citep{Yeo}) \\ \hline
 %  \textbf{Au-CO} & -0.39 & -0.40 \bibpunct{}{}{,}{n}{}{,}  (Ref. \protect\citep{TPDGold}) \\
   \multirow{2}{*}{\textbf{Pt-CO}} & \multirow{2}{*}{-1.81} & -1.4
-  Ref. \citep{Kelemen:1979} \\
+  Ref. \citep{Kelemen:1979ad} \\
  & &  -1.9 Ref. \citep{Yeo} \\ \hline
-  \textbf{Au-CO} & -0.39 & -0.40 Ref. \citep{TPDGold} \\
+  \textbf{Au-CO} & -0.39 & -0.40 Ref. \citep{Elliott:1984zt} \\
   \hline \hline
 \end{tabular}
 \begin{tablenotes}
@@ -325,7 +325,7 @@ potentials described in this work
 \subsection{Force field validation}
 The CO-Pt cross interactions were compared directly to DFT results
 found in the supporting information of reference
-\citep{Tao:2010}. These energies are
+\citep{Tao:2010aa}. These energies are
 estimates of the degree of stabilization provided to double-layer
 reconstructions of the M(557) surface by an overlayer of CO molecules
 in a $c (2 \times 4)$ pattern.  To make the comparison, five atom
@@ -368,7 +368,7 @@ systems. This is a quite dramatic shift, $\Delta\Delta E$ (the change
 in energy for going from single to double-layer structures upon
 addition of a CO layer) shifts by -0.5~kcal/mol per Pt atom. This
 result is in qualitative agreement with the DFT calculations in
-reference \citep{Tao:2010}, which
+reference \citep{Tao:2010aa}, which
 also showed that the addition of CO leads to a reversal in stability.
 
 The gold systems show a smaller energy difference between the clean
@@ -414,7 +414,7 @@ Au(557)-D & 480 & 48 &  -156.150 & -0.3253 \\
 
 Qualitatively, our classical force field for the metal-CO cross
 interactions reproduces the results predicted by DFT studies in
-reference \citep{Tao:2010}. Addition
+reference \citep{Tao:2010aa}. Addition
 of polarization effects, both in the CO and in the metal surfaces,
 could make the model significantly more accurate.  For example,
 because of the relatively large fixed charges, the current model will
@@ -423,7 +423,7 @@ inverted CO second layer on the surface.  The M-CO cross interactions
 would also be more accurate if they included the direct interactions
 between charges on the CO and their image charges inside the metal
 slab. These polarization effects have been shown to play an important
-role,\citep{Deshlahra:2012} and would be one way of improving the
+role,\citep{Deshlahra:2012aa} and would be one way of improving the
 numerical agreement with quantum mechanical calculations.
 
 \subsection{Pt(557) and Au(557) metal interfaces}
@@ -441,8 +441,8 @@ bare metal interfaces at temperatures ranging from 300~K to
 stability of the surfaces without a CO overlayer.  
 
 The different bulk melting temperatures predicted by EAM
-(1345~$\pm$~10~K for Au\citep{Au:melting} and $\sim$~2045~K for
-Pt\citep{Pt:melting}) suggest that any reconstructions should happen at
+(1345~$\pm$~10~K for Au\citep{Ahmed:2003lk} and $\sim$~2045~K for
+Pt\citep{Bhattacharya:2011bq}) suggest that any reconstructions should happen at
 different temperatures for the two metals.  The bare Au and Pt
 surfaces were initially run in the canonical (NVT) ensemble at 800~K
 and 1000~K respectively for 100 ps. The two surfaces were relatively
@@ -461,7 +461,7 @@ the microcanonical (NVE) ensemble for data collection. All of the
 systems examined had at least 40~ns in the data collection stage,
 although simulation times for some Pt of the systems exceeded 200~ns.
 Simulations were carried out using the open source molecular dynamics
-package, OpenMD.\citep{Ewald,OOPSE,openmd}
+package, OpenMD.\citep{Fennel:2006xq, Meineke:2005pt, openmd}
 
 
 % RESULTS
@@ -478,7 +478,7 @@ Pt systems experienced similar step edge wandering but to a greater
 extent. The 50\% coverage Pt system was unique among our simulations
 in that it formed well-defined and stable double layers through step
 coalescence, similar to results reported by Tao {\it et
-  al}.\citep{Tao:2010}
+  al}.\citep{Tao:2010aa}
 
 \subsubsection{Step wandering}
 The bare surfaces for both metals showed minimal step-wandering at
@@ -489,31 +489,31 @@ system where step coalescence occurred, the step-edges in the other
 simulations preferred to keep nearly the same distance between steps
 as in the original (557) lattice, $\sim$13\AA~for Pt and
 $\sim$14\AA~for Au.  Previous work by Williams {\it et
-  al}.\citep{Williams:1991, Williams:1994} highlights the repulsion
+  al}.\citep{Williams:1991qd, Williams:1994aa} highlights the repulsion
 that exists between step-edges even when no direct interactions are
 present in the system. This repulsion is caused by an entropic barrier
 that arises from the fact that steps cannot cross over one
 another. This entropic repulsion does not completely define the
 interactions between steps, however, so it is possible to observe step
-coalescence on some surfaces.\citep{Williams:1991} The presence and
+coalescence on some surfaces.\citep{Williams:1991qd} The presence and
 concentration of adsorbates, as shown in this work, can affect
 step-step interactions, potentially leading to a new surface structure
 as the thermodynamic equilibrium.
 
 \subsubsection{Double layers}
-Tao {\it et al}.\citep{Tao:2010} have shown experimentally that the
+Tao {\it et al}.\citep{Tao:2010aa} have shown experimentally that the
 Pt(557) surface undergoes two separate reconstructions upon CO
 adsorption.  The first involves a doubling of the step height and
 plateau length.  Similar behavior has been seen on a number of
 surfaces at varying conditions, including Ni(977) and
-Si(111).\citep{Williams:1994,Williams:1991,Pearl} Of the two systems we
+Si(111).\citep{Williams:1994aa, Williams:1991qd, Pearl:2001ca} Of the two systems we
 examined, the Pt system showed a greater propensity for reconstruction
 because of the larger surface mobility and the greater extent of step
 wandering.  The amount of reconstruction was strongly correlated to
 the amount of CO adsorbed upon the surface.  This appears to be
 related to the effect that adsorbate coverage has on edge breakup and
 on the surface diffusion of metal adatoms. Only the 50\% Pt surface
-underwent the doubling seen by Tao {\it et al}.\citep{Tao:2010} within
+underwent the doubling seen by Tao {\it et al}.\citep{Tao:2010aa} within
 the time scales studied here.  Over a longer time scale (150~ns) two
 more double layers formed on this surface. Although double layer
 formation did not occur in the other Pt systems, they exhibited more
@@ -522,7 +522,7 @@ step-wandering and roughening compared to their Au counterparts. The
 various times along the simulation showing the evolution of a double
 layer step-edge.
 
-The second reconstruction observed by Tao {\it et al}.\citep{Tao:2010}
+The second reconstruction observed by Tao {\it et al}.\citep{Tao:2010aa}
 involved the formation of triangular clusters that stretched across
 the plateau between two step-edges. Neither of the simulated metal
 interfaces, within the 40~ns time scale or the extended time of 150~ns
@@ -541,7 +541,7 @@ for the 50\% Pt system, experienced this reconstruction.
 \end{figure}
 
 \subsection{Dynamics}
-Previous experimental work by Pearl and Sibener\citep{Pearl}, using
+Previous experimental work by Pearl and Sibener\citep{Pearl:2001ca}, using
 STM, has been able to capture the coalescence of steps on Ni(977). The
 time scale of the image acquisition, $\sim$70~s/image, provides an
 upper bound for the time required for the doubling to occur. By
@@ -635,7 +635,7 @@ system, one double layer formed within the first 40~ns of simulation time,
 while two more were formed as the system was allowed to run for an 
 additional 110~ns (150~ns total). This suggests that this reconstruction 
 is a rapid process and that the previously mentioned upper bound is a 
-very large overestimate.\citep{Williams:1991,Pearl} In this system the first 
+very large overestimate.\citep{Williams:1991qd,Pearl:2001ca} In this system the first 
 appearance of a double layer appears at 19~ns into the simulation. 
 Within 12~ns of this nucleation event, nearly half of the step has formed 
 the double layer and by 86~ns the complete layer has flattened out. 
@@ -656,7 +656,7 @@ step-edge will likely take longer to ``zipper''.
 We have shown that a classical potential is able to model the initial
 reconstruction of the Pt(557) surface upon CO adsorption, and have
 reproduced the double layer structure observed by Tao {\it et
-  al}.\citep{Tao:2010}. Additionally, this reconstruction appears to be
+  al}.\citep{Tao:2010aa}. Additionally, this reconstruction appears to be
 rapid -- occurring within 100 ns of the initial exposure to CO.  Here
 we discuss the features of the classical potential that are
 contributing to the stability and speed of the Pt(557) reconstruction.
@@ -666,7 +666,7 @@ The perpendicular diffusion constant appears to be the most important
 indicator of double layer formation. As highlighted in Figure
 \ref{fig:reconstruct}, the formation of the double layer did not begin
 until a nucleation site appeared.  Williams {\it et
-  al}.\citep{Williams:1991,Williams:1994} cite an effective edge-edge
+  al}.\citep{Williams:1991qd, Williams:1994aa} cite an effective edge-edge
 repulsion arising from the inability of edge crossing.  This repulsion
 must be overcome to allow step coalescence.  A larger
 $\textbf{D}_\perp$ value implies more step-wandering and a larger
@@ -834,7 +834,7 @@ show how much mixing the edges experience as they split. These systems
 were only examined for 10~ns, and within that time despite the initial
 rapid splitting, the edges only moved another few \AA~apart. It is
 possible that with longer simulation times, the (557) surface recovery
-observed by Tao {\it et al}.\citep{Tao:2010} could also be recovered.
+observed by Tao {\it et al}.\citep{Tao:2010aa} could also be recovered.
 
 %breaking of the double layer upon removal of CO
 \begin{figure}[p!]

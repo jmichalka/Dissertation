@@ -288,10 +288,10 @@ metal surface, the presence of strong adsorbate-adsorbate interactions can lead
 to deviations from expected behavior. Again looking to CO on Pt (111), at low
 coverages ( $<$ 0.25 ML), CO has been observed to bind primarily to atop sites.
 As the coverage increases however, adsorbate-adsorbate repulsions cause the
-preferred binding to change to BRIDGE? Typically, adsorbate-adsorbate
-interactions are repulsive and can induce strain in the metal surface
- making it easier for the surface to overcome potential barriers to
-restructuring.
+preferred binding to change to a mix of atop and bridge sites. Typically,
+adsorbate-adsorbate interactions are repulsive which results in weaker overall
+binding and can induce strain in the metal surface making it easier for the
+surface to overcome potential barriers to restructuring.
 
 In certain circumstances adsorbate-adsorbate interactions can be cooperative.
 Scneider {\em et al.} performed DFT calculations of CO on Pt (111) at 0.5 ML
@@ -309,12 +309,20 @@ Spectroscopy), LEED (Low Energy Electron Diffraction), and other experimental
 techniques. The preferred binding sites, as mentioned earlier, are dependent on
 coverage, since the presence of bound adsorbates affects the energy levels of
 the surface. Thus, at different coverages, different patterns are observed. For
-example, \ce{CO} on \ce{Pd} at a quarter-monolayer coverage tends to be
-arranged in a NUMCROSSNUM pattern. However, as the coverage increases to a
-third-monolayer, the experimentally observed patterning now reveals a BLANK
-pattern. Finally, when a half-monolayer of \ce{CO} is present on the (111)
-surface, the preferred pattern is a c$(4\times2)$ pattern. These patterns are
+example, \ce{CO} on \ce{Pd} at $\theta = 1/3$ coverage tends to be
+arranged in a $(\sqrt{3}\times\sqrt{3})\textrm{R}30^o$ pattern. However, raising the coverage to a
+half-monolayer, $\theta = 1/2$, causes the experimentally observed patterning to change to a c$(4\times2)$
+pattern. If the coverage is further increased to three-quarters monolayer, $\theta = 3/4$, 
+the preferred pattern is a $(2\times2)$ pattern.\citep{Guo:1989} These patterns are
 all diagrammed in Figure \ref{fig:patterns}.
+
+\begin{figure}[p!]
+\centering
+  \includegraphics[width=0.5\linewidth]{../figures/chap1/pattern.pdf}
+  \caption{Adsorbate patterns of CO on Pd (111), (a)
+$(\sqrt{3}\times\sqrt{3})\textrm{R}30^o$, (b) c$(4\times2)$, (c) $(2\times2)$.}
+\label{fig:patterns}
+\end{figure}
 
 A good model of the adsorbate and adsorbate-metal interactions should be able
 to capture some of these different patterns; however, capturing every possible
@@ -345,28 +353,27 @@ reconstructions, they are often unable to identify the actual mechanisms of
 restructuring which could prove crucial in designing better catalysts.
 
 \subsection{Refaceting}
-%Williams papers on this, angle > ??? 
 If a bulk crystal is cut at too large of an angle, there may be a strong
 driving force to refacet. Barring large kinetic barriers that keep certain
-facets as metastable states, a surface facet will reconstruct so long as the
-orientation $\hat{n}_0$ of the facet is conserved and the overall tension $\gamma$ is
-reduced as shown in the relations derived by Herring\citep{}, where $A_i$ is the area of the surface of orientation $\hat{n}_i$.
+facets as metastable states, a surface facet will desire to reconstruct so long as the
+orientation $\hat{n}_0$ of the facet is conserved and the overall tension
+$\gamma$ is reduced as shown in the relations derived by Herring\citep{Herring:1951ta}, where
+$A_i$ is the area of the surface of orientation $\hat{n}_i$.
 
 \begin{equation}
 A_0\hat{n}_0 = A_a\hat{n}_a + A_b\hat{n}_b \\
 A_0\gamma(\hat{n}_0) > A_a\gamma(\hat{n}_a) + A_b\gamma(\hat{n}_b)
 \end{equation}
 
-%\citep{Jeong:1999aa} 
 This restructuring generally only occurs in the forward direction and while the
 presence of adsorbates can be sufficient to induce this reconstruction, a
 temperature increase can also allow this to refaceting to occur since it is
-most likely that there is simply a kinetic barrier that must be overcome. 
+most likely that there is simply a kinetic barrier that must be overcome.\citep{Williams:1994aa,Jeong:1999aa} 
 
 \subsubsection{Doubling}
 Work by Tao {\it et al.} on a \ce{Pt} (557) surface exposed to \ce{CO} observed
 a reversible reconstruction event that was directly dependent on the presence
-of \ce{CO} in the system. When \ce{CO} was introduced the step-edges doubled,
+of \ce{CO} in the system.\citep{Tao:2011aa} When \ce{CO} was introduced the step-edges doubled,
 but upon removal of the \ce{CO} the original (557) motif was recovered. This
 reversible reconstruction strongly implies that the presence of \ce{CO}
 temporarily modified the potential energy surface to prefer a new ground state
