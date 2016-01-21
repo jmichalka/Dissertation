@@ -285,15 +285,20 @@ especially since they are often coverage-dependent.
 \subsection{Coverage Dependence}
 While there might be one preferred binding site for a single adsorbate on a
 metal surface, the presence of strong adsorbate-adsorbate interactions can lead
-to deviations from expected behavior. While adsorbate-adsorbate interaction are
-often repulsive or induce strain in the metal surface making the binding
-weaker\citep{Deshlahra:2012aa} it has been shown that cooperative effects can also arise when
-adsorbates are absorbed in different electronic enivornments. It has been
-predicted that while \ce{CO} prefers the atop site on \ce{Pt} at low coverages,
-as the coverage approaches 0.5 monolayers the binding preference changes to a
-mixed atop/bridge (CHECK) configuration because of favorable dipole-dipole
-interactions that result due to non-equivalent charge transfer from the Pt back
-into the CO orbitals. Since the presence and configuration of adsorbates 
+to deviations from expected behavior. Again looking to CO on Pt (111), at low
+coverages ( $<$ 0.25 ML), CO has been observed to bind primarily to atop sites.
+As the coverage increases however, adsorbate-adsorbate repulsions cause the
+preferred binding to change to BRIDGE? Typically, adsorbate-adsorbate
+interactions are repulsive and can induce strain in the metal surface
+ making it easier for the surface to overcome potential barriers to
+restructuring.
+
+In certain circumstances adsorbate-adsorbate interactions can be cooperative.
+Scneider {\em et al.} performed DFT calculations of CO on Pt (111) at 0.5 ML
+coverage and observed that the preferred binding was a mix of atop and bridge
+sites.\citep{Deshlahra:2012aa} This configuration was a result of favorable
+dipole-dipole interactions that result due to non-equivalent $2\pi^*$
+back-donation from the Platinum to the CO.
 
 
 \subsubsection{Adsorbate Patterning}
@@ -307,13 +312,13 @@ the surface. Thus, at different coverages, different patterns are observed. For
 example, \ce{CO} on \ce{Pd} at a quarter-monolayer coverage tends to be
 arranged in a NUMCROSSNUM pattern. However, as the coverage increases to a
 third-monolayer, the experimentally observed patterning now reveals a BLANK
-pattern. Finally, one a half-monolayer of \ce{CO} is present on the (111)
-surface, the preferred pattern is a c$(4\times2)$ pattern. The previously
-mentioned patterns are highlighted in Figure \ref{fig:patterns}.
+pattern. Finally, when a half-monolayer of \ce{CO} is present on the (111)
+surface, the preferred pattern is a c$(4\times2)$ pattern. These patterns are
+all diagrammed in Figure \ref{fig:patterns}.
 
 A good model of the adsorbate and adsorbate-metal interactions should be able
-to capture some of these different patterns, however, capturing every possible
-``phase change'' is incredibly complex and beyond the scope of most
+to capture some of these different patterns; however, capturing every possible
+arrangement is incredibly complex and beyond the scope of most
 investigations.
 
 \section{Adsorbate Induced Reconstructions}
@@ -326,28 +331,37 @@ investigations.
 While metal surfaces often remain stable even when the environment is
 perturbed, some situations can arise where the presence of adsorbates
 sufficiently modify the potential energy surface so that a new facet is
-energetically preferred. This situation might even be commonplace, but altering
-the potential energy surface only solves part of the problem. The system must
-also be able to overcome any kinetic barriers that would prevent the
-restructuring from taking place. For systems that are started in a high-index
-configuration, e.g. nanocubes and nanosphers, that are only is these
-configuratios because of kinetic barriers, the introduction of adsorbates will
-likely lead to a restructuring to a lower-energy structure. 
+energetically favored. This situation might even be commonplace, but altering
+the potential energy surface does not ensure that a reconstruction will take
+place. The system must also be able to overcome any kinetic barriers that would
+trap the surface in a local minima.  For systems that are started far from a
+low surface energy state, ({\em i.e.} nanoparticles and
+roughened surfaces) the introduction of adsorbates will likely lead to a
+restructuring to a lower-energy structure. 
 
-The time and length scales of these reconstruction processes vary
-widely\citep{} and while current experimental techniques are able to observe
-and identify the reconstructions, they are often unable to identify the
-mechanisms of restructuring, which are important for designing catalysts.
+The time and length scales of these reconstruction processes can vary widely
+and while current experimental techniques are able to observe and identify the
+reconstructions, they are often unable to identify the actual mechanisms of
+restructuring which could prove crucial in designing better catalysts.
 
 \subsection{Refaceting}
 %Williams papers on this, angle > ??? 
-Surfaces will refacet if they were originally cut at too high of an angle. This
-has been explored previously for a number of systems\citep{Jeong:1999aa} and the refaceting
-will continue until RECPLACE WITH EQUATION ABOUT STABILITY. This restructuring
-typically only occurs in the forward direction while the presence of adsorbates
-can induce this reconstruction, a temperature increase will also likely allow
-this to occur since it is most likely that there is just a kinetic barrier that
-must be overcome. 
+If a bulk crystal is cut at too large of an angle, there may be a strong
+driving force to refacet. Barring large kinetic barriers that keep certain
+facets as metastable states, a surface facet will reconstruct so long as the
+orientation $\hat{n}_0$ of the facet is conserved and the overall tension $\gamma$ is
+reduced as shown in the relations derived by Herring\citep{}, where $A_i$ is the area of the surface of orientation $\hat{n}_i$.
+
+\begin{equation}
+A_0\hat{n}_0 = A_a\hat{n}_a + A_b\hat{n}_b \\
+A_0\gamma(\hat{n}_0) > A_a\gamma(\hat{n}_a) + A_b\gamma(\hat{n}_b)
+\end{equation}
+
+%\citep{Jeong:1999aa} 
+This restructuring generally only occurs in the forward direction and while the
+presence of adsorbates can be sufficient to induce this reconstruction, a
+temperature increase can also allow this to refaceting to occur since it is
+most likely that there is simply a kinetic barrier that must be overcome. 
 
 \subsubsection{Doubling}
 Work by Tao {\it et al.} on a \ce{Pt} (557) surface exposed to \ce{CO} observed
@@ -355,17 +369,17 @@ a reversible reconstruction event that was directly dependent on the presence
 of \ce{CO} in the system. When \ce{CO} was introduced the step-edges doubled,
 but upon removal of the \ce{CO} the original (557) motif was recovered. This
 reversible reconstruction strongly implies that the presence of \ce{CO}
-temporarilly modifies the potential energy surface to prefer a new ground state
+temporarily modified the potential energy surface to prefer a new ground state
 structure; however, the exact mechanism of this reconstruction was not deduced
 at the time. This dissertation originally started as an attempt to model this
-system and attemptto provide insights into the mechanism of reconstruction. 
+system and attempt to provide insights into the mechanism of reconstruction. 
 
-\subsection{Island Formation}
-Since catalytic reactions typically only occur at the surface, significant
+\subsection{Island Formation and Sintering}
+Since catalytic reactions typically only occur at the surface of metals, significant
 research has been devoted to increasing the surface area to bulk ratio of metal
 catalysts, either through catalyst supports, high-index nanostructures, or
-bimetallic near surface alloys. While these systems are typically stable at low
+bimetallic near-surface alloys. While these systems are typically stable at low
 temperatures and pressures, significant perturbations can lead to what is
 effectively sintering or island-formation of one of the metals on the surface.
 The interplay of surface energies and adsorbate interactions on two or more
-metal surfaces can lead to surprising results.
+metal surfaces allows for the creation of incredibly tuned catalysts.
