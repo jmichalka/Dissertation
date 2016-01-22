@@ -29,34 +29,34 @@
 
 Materials based on metallic \ce{Pt} and \ce{Pd} are important
 catalysts for the oxygen reduction
-(ORR)\citep{Lim:2009fk,Liu:2012bs,Limpattayanate:2014ij} and oxygen
-evolution reactions (OER).\citep{Stamenkovic:2007kk,Reier:2012uq} These
+(ORR)\citep{Lim:2009fk, Liu:2012bs, Limpattayanate:2014ij} and oxygen
+evolution reactions (OER).\citep{Stamenkovic:2007kk, Reier:2012uq} These
 reactions are important in proton-exchange membrane (PEM) fuel
-cells,\citep{Bliznakov:2012kx,Shao:2013rm} as well as in the charging
+cells,\citep{Bliznakov:2012kx, Shao:2013rm} as well as in the charging
 and discharging of \ce{Li}-air batteries.\citep{Lu:2011vn}
 Oxide-supported noble metal nanoparticles also play an important role in
-the water-gas shift reaction.\citep{Bunluesin:1998ys,Kugai:2011rt}
+the water-gas shift reaction.\citep{Bunluesin:1998ys, Kugai:2011rt}
 
 However, the expense of \ce{Pt} metal coupled to the slow kinetics of
 the ORR on pure \ce{Pt} or \ce{Pt}/\ce{C} systems remain barriers to
 large-scale implementation of fuel cells. Strategies involving
 bimetallic particles, surface alloys, and core-shell nanostructures
 are currently under investigation in hopes of eliminating these
-barriers.\citep{Gao:2009oj,Gao:2009wo,Kim:2013mi} The coupling of two
+barriers.\citep{Gao:2009oj, Gao:2009wo, Kim:2013mi} The coupling of two
 (or more) components in these structures allows for a large accesible
 design space for various catalytic properties, whether that be
-catalytic activity,\citep{Kim:2013mi,Sneed:2014fj,Gu:2015cr} thermal
-stability,\citep{Cao:2010gf,Yang:0pd,Huang:2012ul} or resistance to
-deactivation.\citep{Yu:2013fr,Zhang:2015yq} Specifically,
+catalytic activity,\citep{Kim:2013mi, Sneed:2014fj, Gu:2015cr} thermal
+stability,\citep{Cao:2010gf, Yang:0pd, Huang:2012ul} or resistance to
+deactivation.\citep{Yu:2013fr, Zhang:2015yq} Specifically,
 \ce{Pt\bond{-}Pd} nanoparticles have been shown to have increased
-activity for the ORR reaction,\citep{Lim:2009fk,Liu:2012bs,Shao:2013rm}
+activity for the ORR reaction,\citep{Lim:2009fk, Liu:2012bs, Shao:2013rm}
 while \ce{Pt\bond{-}Au} nanoparticles were reported as being more
-stable over repeated potential cycling.\citep{Zhang:2007yq}
+stable over repeated potential cycling.\citep{Zhang:2007uq}
 
 Bimetallic \ce{Pt}/\ce{Pd} mixtures also find widespread use in diesel
 oxidation catalysts (DOC) which complete the oxidation of carbon
 monoxide and partially-combusted hydrocarbons, and reduce the nitrogen
-oxides in combustion gases.\citep{Morlang:2005uq,Russell:2011fk}
+oxides in combustion gases.\citep{Morlang:2005uq, Russell:2011fk}
 \ce{Pd} is a particularly useful metal for diesel catalysts because it
 has a lower intrinsic \ce{SO2} oxidation activity than
 \ce{Pt}.\citep{Russell:2011fk} The \ce{Pt}/\ce{Pd} bimetallic catalyst
@@ -70,10 +70,10 @@ Of particular interest in diesel oxidation catalysis is carbon
 monoxide (\ce{CO}) and its strong binding affinity for \ce{Pt} and
 \ce{Pd}. Tao \textit{et al.} have shown that the presence of \ce{CO}
 can induce reversible surface reconstructions on a stepped
-\ce{Pt}(557) surface.\citep{Tao:2010} Significant experimental and
+\ce{Pt}(557) surface.\citep{Tao:2010aa} Significant experimental and
 theoretical work has been done to more fully characterize the effect
 adsorbed \ce{CO} has on
-\ce{Pt}.\citep{Batteas:1996rc,Thostrup:2001dn,McCarthy:2012qd,Michalka:2013,Carenco:2014}
+\ce{Pt}.\citep{Batteas:1996rc, Thostrup:2001dn, McCarthy:2012qd, Michalka:2013aa, Carenco:2014aa}
 
 This paper describes an investigation into the effects of carbon
 monoxide adsorption on surface restructuring of pure \ce{Pd}(557) and
@@ -91,11 +91,11 @@ ns) requires the use of empirical potentials. Cohesive and surface
 energies in metals are not reproduced with purely pairwise
 interactions, so a number of empirical potentials have been developed
 for modeling transition metals.  These include the embedded atom
-method (EAM)\citep{EAM}, Finnis-Sinclair,\citep{Finnis84} and
-Sutton-Chen-based models like QSC.\citep{QSC} These models describe an
+method (EAM)\citep{Foiles:1986ky}, Finnis-Sinclair,\citep{Finnis:1984hl} and
+Sutton-Chen-based models like QSC.\citep{Goddard:1998qsc} These models describe an
 atom as a positively charged core with a radially-decaying valence
 electron density.  Refinements include angle dependent EAM
-implementations,\citep{Baskes:1987} that treat BCC metals more
+implementations,\citep{Baskes:1987aa} that treat BCC metals more
 accurately.
 
 In EAM, the energy for embedding a metallic atom $i$ at a specific
@@ -122,7 +122,7 @@ explicitly non-pairwise additive quantity.
 
 The short-ranged repulsions are treated as a pairwise contribution
 that models the repulsive overlap of the positively-charged cores.
-For alloys, mixing rules as outlined by Johnson \citep{Johnson89} were
+For alloys, mixing rules as outlined by Johnson \citep{Johnson:1989yr} were
 used to compute the heterogenous pair potential,
 \begin{equation*} 
 \phi_{ab}(r) = \frac{1}{2}
@@ -137,24 +137,24 @@ used to compute the heterogenous pair potential,
 
 One of EAM's strengths is its sensitivity to small changes in local
 structure which is due to the inclusion of second and third nearest
-neighbor interactions during parameterization.\citep{Voter:1995fk}
+neighbor interactions during parameterization.\citep{Voter:1995ax}
 
 In this work, we have employed the embedded atom method (EAM) to
 describe the \ce{Pt} and \ce{Pd} electron densities, embedding
-functionals, and pair potentials,\citep{EAM} utilizing the Johnson
+functionals, and pair potentials,\citep{Foiles:1986ky} utilizing the Johnson
 mixing rules for the \ce{Pt\bond{-}Pd}
-cross-interactions.\citep{Johnson89}
+cross-interactions.\citep{Johnson:1989yr}
 
 The carbon monoxide (\ce{CO}) self-interactions were modeled using a
 rigid three-site model developed by Straub and Karplus for studying
-photodissociation of \ce{CO} from myoglobin.\citep{Straub} This model
+photodissociation of \ce{CO} from myoglobin.\citep{Straub:1991no} This model
 accurately captures the large linear quadrupole (and weak dipole) of
 the \ce{CO} molecule. The rigid CO molecules have complete
 translational and orientational mobility in our simulations.
 
 The \ce{Pt\bond{-}CO} interactions have been modified from previous
-fits~\citep{Michalka:2013} to account for recently-published DFT
-data.\citep{Deshlahra:2012} This modification yields a slightly weaker
+fits~\citep{Michalka:2013aa} to account for recently-published DFT
+data.\citep{Deshlahra:2012aa} This modification yields a slightly weaker
 \ce{Pt\bond{-}CO} binding energy, but maintains the atop site
 preference.  The potential energy for the interaction of one \ce{CO}
 molecule with one metal atom,
@@ -173,9 +173,9 @@ Both the \ce{Pd\bond{-}CO} and \ce{Pt\bond{-}CO} interaction
 potentials were parameterized as part of this work. The basic model,
 using a full Morse potential between the metal and oxygen site and a
 Lennard-Jones interaction between the metal and the carbon site, was
-introduced by Korzeniewski \textit{et al.}\citep{Pons:1986} One key
-difference from the potential in Refs.\citenum{Pons:1986} and our
-earlier fits in Refs.\citenum{Michalka:2013} is that the
+introduced by Korzeniewski \textit{et al.}\citep{Korzeniewski:1986kl} One key
+difference from the potential in Refs.\citenum{Korzeniewski:1986kl} and our
+earlier fits in Refs.\citenum{Michalka:2013aa} is that the
 \ce{M\bond{-}O} bond is modeled here using a purely repulsive Morse
 potential. The parameters were fit to reflect binding energies and
 binding site preferences on the \ce{M}(111) surfaces.  The functional
@@ -236,13 +236,13 @@ various binding sites are shown in Table~\ref{tab:CO_energies}.
   \hline
   & Site & This Model\tnote{a} & DFT\tnote{a} & Experimental\tnote{a} \\
   \hline
-  \textbf{\ce{Pt\bond{-}CO}} & atop   & -1.47 & -1.48\citep{Deshlahra:2012} & -1.39\citep{Kelemen:1979}, -1.43\citep{Ertl:1977}, -1.90\citep{Yeo:1997} \\
-                 & bridge & -1.13 & -1.47\citep{Deshlahra:2012} &  \\
-                 & hollow & -1.02 & -1.45\citep{Deshlahra:2012} &  \\
+  \textbf{\ce{Pt\bond{-}CO}} & atop   & -1.47 & -1.48\citep{Deshlahra:2012aa} & -1.39\citep{Kelemen:1979ad}, -1.43\citep{Ertl:1977cg}, -1.90\citep{Yeo:1997th} \\
+                 & bridge & -1.13 & -1.47\citep{Deshlahra:2012aa} &  \\
+                 & hollow & -1.02 & -1.45\citep{Deshlahra:2012aa} &  \\
 \hline
   \textbf{\ce{Pd\bond{-}CO}} & atop   & -1.54 & -1.44\citep{Honkala:2001sf} &  \\
                  & bridge & -1.65 & -1.83\citep{Honkala:2001sf} &  \\
-                 & hollow & -1.60 & -1.99\citep{Honkala:2001sf} & -1.30\citep{Szanyi:1992}, -1.47\citep{Ertl:1970}, -1.54\citep{Guo:1989} \\
+                 & hollow & -1.60 & -1.99\citep{Honkala:2001sf} & -1.30\citep{Szanyi:1992aa}, -1.47\citep{Ertl:1970aa}, -1.54\citep{Guo:1989aa} \\
   \hline
   \hline
 \end{tabular}
@@ -262,11 +262,11 @@ experimental situation is somewhat less clear.\citep{Wong:1991ta}
 Studies using low-energy electron diffraction (LEED) and
 \ce{C\bond{-}O} stretching frequencies of \ce{CO} bound to
 \ce{Pd}(111) suggest that the 3-fold hollow sites are preferred at low
-coverages,\citep{Bradshaw:1978uf,Conrad:1978fx,Ohtani:1987zh} where it
+coverages,\citep{Bradshaw:1978uf, Conrad:1978fx, Ohtani:1987zh} where it
 forms a $(\sqrt{3} \times \sqrt{3}) R~30^{\circ}$ pattern.  These
 observations are supported by temperature desorption
-spectroscopy,\citep{Guo:1989} and infrared absorption
-spectroscopy~\citep{Szanyi:1992} where binding energies have been
+spectroscopy,\citep{Guo:1989aa} and infrared absorption
+spectroscopy~\citep{Szanyi:1992aa} where binding energies have been
 reported to lie between -1.3 and -1.54 eV.
 
 At higher \ce{CO} coverages (e.g. $> 0.5$ ML), the preferred binding
@@ -302,7 +302,7 @@ Experimental work on CO on Pt(111) using LEED has suggested that the
 atop binding is 70 meV stronger than the bridge
 site~\citep{Schweizer:1989fk} and forms a
 $(\sqrt{3} \times \sqrt{3}) R~30^{\circ}$ structure on solely atop
-sites at low surface coverages.\citep{Kelemen:1979} Because our Pt-CO
+sites at low surface coverages.\citep{Kelemen:1979ad} Because our Pt-CO
 model uses relatively long-range repulsive Morse interactions to
 preserve the CO orientation on the surface, it overestimates the atop
 binding preference relative to the DFT calculations.  However, the
@@ -336,7 +336,7 @@ microcanonical (NVE) ensemble for 1~ns, and displayed minimal changes
 in the (557) structure during this period.  This temperature is well
 below previously simulated melting temperatures for \ce{Pt}/\ce{Pd}
 alloyed nanoparticles in both free and graphite-supported
-configurations.\citep{Sankaranarayanan:2005bh,Sankaranarayanan:2005qf,Fernandez:2013yg}
+configurations.\citep{Sankaranarayanan:2005bh, Sankaranarayanan:2005qf, Fernandez:2013yg}
 
 Ten systems were constructed, corresponding to five \ce{CO}-coverage
 levels for each metallic system.  The number of \ce{CO} molecules (0,
@@ -364,7 +364,7 @@ a minimum of 40~ns to collect statistics. The \ce{Pt}/\ce{Pd} surface
 alloy systems, which were observed to undergo significant
 restructuring, were each run for a total simulation time of 113~ns.
 All simulations were carried out with the open source molecular
-dynamics package, OpenMD.\citep{openmd,OOPSE}
+dynamics package, OpenMD.\citep{openmd, Meineke:2005pt}
  
 \subsection{Analysis of surface features and adatom diffusion}
 To analyze surface domain sizes, the exposed surfaces (both top and
@@ -398,7 +398,7 @@ after the initial exposure to \ce{CO}.
 \section{Results}
 \subsection{Structural changes}
 On \ce{Pt}(557), we previously observed \ce{CO}-induced restructuring
-into relatively clean double-layer structures.\citep{Michalka:2013} For
+into relatively clean double-layer structures.\citep{Michalka:2013aa} For
 the pure \ce{Pd}(557) studied here, the (557) facet retains the (111)
 plateaus and (100) steps with only minimal adatom movement, and with
 almost no surface reconstruction.  Higher \ce{CO} coverages appear to
@@ -603,7 +603,7 @@ insufficient data to predict rates from our simulations.
 
 \subsection{Structural changes}
 
-In our previous work on \ce{Pt}(557) surfaces,\citep{Michalka:2013} the
+In our previous work on \ce{Pt}(557) surfaces,\citep{Michalka:2013aa} the
 surface exhibited a \ce{CO}-induced structural transformation from
 single steps to double steps, where the (111) plateaus effectively
 doubled in size. The step coherence and orientation was preserved
@@ -617,10 +617,10 @@ information.
 
 The EAM potential predicts surface energies for \ce{Pd} (111), (100),
 and (110) facets that are roughly 84\% of the surface energies for the
-same facets on bare \ce{Pt}.\citep{EAM} Although the absolute EAM
+same facets on bare \ce{Pt}.\citep{Foiles:1986ky} Although the absolute EAM
 surface energies differ significantly from experimental values, the
 \ce{Pd}:\ce{Pt} surface energy ratio is similar to experimental
-results.\citep{Tyson:1977xe,De-Boer:1988tg} All-electron full potential
+results.\citep{Tyson:1977xe, De-Boer:1988tg} All-electron full potential
 linearized augmented plane-wave (FP-LAPW) calculations have also
 yielded a 0.84:1 ratio between the \ce{Pd}:\ce{Pt} (111) surface
 energies.\citep{Silva:2006fk} The (557) interface has broad steps of
@@ -638,7 +638,7 @@ diffusion.
 
 We note that on \ce{Pt}(557), \ce{CO} aids in double layer formation
 by lowering the barrier for an adatom on the lower plateau to burrow
-into a nearby step edge.\citep{Michalka:2013} This burrowing lifts one
+into a nearby step edge.\citep{Michalka:2013aa} This burrowing lifts one
 of the step edge atom onto the step above.  On the alloy surface, this
 same mechanism can explain the thickening of the \ce{Pt} island layers
 that is required by the 9-nearest neighbor clustering in
@@ -685,9 +685,9 @@ This \ce{CO}-induced step stabilization is significantly different
 from the \ce{Pt\bond{-}CO} interaction which favors the atop binding
 position. In the \ce{Pt\bond{-}CO} case, additional bound \ce{CO} on
 the surface and has previously been shown to facilitate surface
-roughening.\citep{Michalka:2013} The \ce{Pt\bond{-}CO} potential in
+roughening.\citep{Michalka:2013aa} The \ce{Pt\bond{-}CO} potential in
 table~\ref{tab:CO_parameters} has been altered from the original
-parameters in Ref. \citenum{Michalka:2013}, and figure
+parameters in Ref. \citenum{Michalka:2013aa}, and figure
 \ref{fig:PtEnergy} shows that for the new potential, adsorbed \ce{CO}
 can also disrupt step edges, providing an energetic benefit to
 increasing the exposed \ce{Pt} surface area.
@@ -742,7 +742,7 @@ largely to kinetics.  The lower barriers for \ce{Pt}-adatom formation
 effectively speed up the surface diffusion of \ce{Pt}.  Previous work
 on \ce{Pt}(557) surfaces showed that \ce{CO} also lowers the barrier
 for a step-burrowing mechanism that can increase the thickness of
-\ce{Pt} surface layers.\citep{Michalka:2013}
+\ce{Pt} surface layers.\citep{Michalka:2013aa}
 
 We note that there are other catalytically-active \ce{Pt}-alloys
 (notably \ce{PtNi3} and \ce{PtNi6} nanoparticles) that display
