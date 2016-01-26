@@ -5,21 +5,21 @@
 
 While metal surfaces are used in various industrial processes, because of their
 poor surface area to volume ratio, many methods make use of roughened surfaces
-or more preferrably nanoparticles dispersed on a cheaper unreactive surface. The size distribution of the
+or more preferrably nanoparticles dispersed on a cheaper unreactive surface.\cite{} The size distribution of the
 nanoparticles can vary but tends to be on the order of tens to hundredes of nanometers
-in size. Additionally, the morphology of these nanoparticles spans from simple
+in size.\citep{} Additionally, the morphology of these nanoparticles spans from simple
 cubes, to octahedra, pyramids, and numerous other morphologies.\citep{} As seen
-in previous work\citep{Michalka:2013aa, Michalka:2015aa, Tao:2010aa}, even fairly stable surfaces can undergo
+in previous work\citep{Tao:2010aa, Michalka:2013aa, Michalka:2015aa, Kim:2016cr}, even fairly stable surfaces can undergo
 large scale reconstructions under experimental conditions. This appendix
 provides information on the initial setup of bimetallic Pt/Pd nanocubes and the
 preliminary results obtained before the project was shelved. 
 
 \section{Methodology}
-
 \subsection{Interaction Parameters}
+The interaction potentials provided in Michalka {\em et al.}\citep{Michalka:2015aa} are used here unchanged. 
 
 \subsection{System Details}
-Nanocubes with edge lengths of 6, 7, and 8 nm were constructed from an ideal Pd
+Nanocubes with edge lengths of 6, 7, and 8 nm were constructed from an ideal \ce{Pd}
 FCC lattice with a lattice constant of 3.89 \AA~  and cut so as to expose the
 (100), (010), and (001) facets. For each of these three sizes, the outermost 1,
 2, or 3 layers were further replaced with Pt to create nine total systems whose compositions
@@ -30,7 +30,7 @@ it imposed stability on the confined inner metal. For this reason, Pt was
 chosen to compose the outer layers while keeping the core of the nanoparticle
 Pd. Additionally, the slightly more favorable Pd-CO interaction may provide a
 driving force for reconstructions that will be dependent on the thickness of
-the Pt because Pd will want to migrate through the Pt to the surface.
+the Pt since Pd will want to migrate through the Pt to the surface.
 
 \begin{table}
   \caption{PT/PD NANOCUBE SIZES AND COMPOSITION}
@@ -58,13 +58,51 @@ the Pt because Pd will want to migrate through the Pt to the surface.
 \end{table}
 
 Systems were constructed in a non-periodic box and then initially equilibrated
-at 300~K to allow the slight strain of replacing Pd atoms with Pt in the outer
-layers to dissipate. Warming over ? ps was performed to bring all systems up to
-a simulation temperature of ?~K at which point various amounts of Carbon
-Monoxide was introduced into the system, corresponding to , , and ML of
-coverage. After another brief period of equilibration during which a
+at 5~K to allow the slight strain of replacing Pd atoms with Pt in the outer
+layers to dissipate. Warming over approximately 3~ns was performed to bring all systems up to
+a simulation temperature of 1000~K at which point an amount of Carbon
+Monoxide equivalent to a 0.5 ML coverage was introduced into the system.
+After another brief period of equilibration during which a
 significant amount of the CO adsorbed to the surface, the systems were then run
-in the microcanonical (NVE) ensemble for ? ns for data production.
+in the microcanonical (NVE) ensemble for an additional 3~ns of data production.
+
+Figures \ref{fig:6nm}, \ref{fig:7nm}, and \ref{fig:8nm} highlight the nanocube
+systems after the initial strain relaxation and then after the systems have
+been warmed. The instability of the smaller systems as highlighted in Figure
+\ref{fig:6nm} is what led to the pausing of this project. Additionally, for the
+7nm-1L and 8nm-1L systems, only having one layer of \ce{Pt} led to an immediate
+reconstruction to a thin layer of (111) \ce{Pt} on top of the underlying (100)
+\ce{Pd}.
+
+
+
+\begin{landscape}
+\begin{figure}[p!]
+  \includegraphics[width=\linewidth]{../figures/appB/6nm.pdf}
+  \caption{}
+  \label{fig:6nm}
+\end{figure}
+\end{landscape}
+
+
+\begin{landscape}
+\begin{figure}[p!]
+  \includegraphics[width=\linewidth]{../figures/appB/7nm.pdf}
+  \caption{}
+  \label{fig:7nm}
+\end{figure}
+\end{landscape}
+
+
+\begin{landscape}
+\begin{figure}[p!]
+  \includegraphics[width=\linewidth]{../figures/appB/8nm.pdf}
+  \caption{}
+  \label{fig:8nm}
+\end{figure}
+\end{landscape}
+
+
 
 \section{Results \& Discussion}
 One of the challenges that ultimately led to this project being shelved is the
