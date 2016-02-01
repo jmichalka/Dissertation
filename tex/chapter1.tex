@@ -128,12 +128,12 @@ can also lead to different preferred binding sites and binding energies.
 The local structure of metals is quite important as it directly affects the
 electronic properties which in turn can modify the catalytic activity of the
 metal. To help visualize the structure, we can model metal atoms as equally
-sized small spheres. The highest packing density is achieved with either an ABC
+sized small spheres. The highest packing density can be achieved with either an ABC
 layer stacking which results in a face-centered cubic (FCC) crystal structure
 or an ABA layer stacking which results in the hexagonal close-packed (HCP)
 crystal structure. Both possibilities are displayed in Figure
 \ref{fig:packing}. While the bulk properties of metals are well-characterized,
-the majority of chemistry happens at the interfaces or surfaces of metals which
+the majority of chemistry happens at the surfaces of metals which
 are more complex. Specifically, while metals tend to have FCC or HCP packing,
 depending on the termination or ``slicing'' of the crystal a variety of exposed
 surface facets are possible.
@@ -150,8 +150,8 @@ stacking.}
 \end{figure}
 
 The three common low energy (high-stability) facets for FCC and HCP
-metals are shown in Figure \ref{fig:facets}. The facet descriptors, (100),
-(110), and (111) are the Miller indices of these surfaces and provide a
+metals are shown in Figure \ref{fig:facets}. The facet labels, (100),
+(110), and (111) represent the Miller indices of these surfaces and provide a
 prescription for ``slicing'' a bulk crystal to obtain that surface. For many
 metal surfaces, Platinum and Palladium especially, the surface energy of the
 (111) facet is the most stable and barring kinetic barriers, a higher-index,
@@ -168,43 +168,40 @@ terraces that are displaced by one atomic height.}
 \label{fig:facets}
 \end{figure}
 
-However, the presence of kinetic barriers coupled with the small size of
-nanoparticles requires that not every atom on the surface will be part of a
-(111) plane. As highlighted in Figure \ref{fig:facets}.d, one very common
-defect observed on large crystals is that of step-edges. The (111) motif is
-overwhelming present, however, there are also single atom height displacements
-between plateaus. The edge atoms because of their undercoordination will
-interact differently with adsorbates, potentially making those sites very
-catalytically active. 
+However, the presence of kinetic barriers coupled with the relatively large
+size of metal surfaces leads to one of the most commonly observed defects being
+step-edges which are highlighted in Figure \ref{fig:facets}.d.  The (111) motif
+is still present, however, there are also single atom height displacements
+between plateaus. Due to their undercoordination, these edge atoms will
+interact differently with adsorbates, potentially making those sites 
+catalytically active.
 
-Nanoparticles and nanospheres especially have a large number of edge, kink, and
-adatoms which are all of catalytic interest but are not seen on the low-index
-surfaces.  However, the size of nanoparticles makes simulating them costly and
-instead smaller surfaces with a large Miller index are used as a model for the
-more complicated nanoparticles. Having a working knowledge of the displayed
-low-energy structures is very important when considering how the metal will
-interact with adsorbates because the strength of the adsorption will depend on
-the displayed surfaced.
-
+There are additional surface atoms that are under-coordinated on metal surfaces
+and are often labeled as kink atoms, describing an atom that is at the vertex
+of two intersecting edges, or adatoms, free atoms sitting on an otherwise flat
+surface. These atoms, owing to their undercoordination are all promising
+candidates for enhanced catalytic activity and industrial catalysts attempt to
+increase the density of these sites. Nanoparticles and nanospheres owing to
+their curvature have a large number of edge, kink, and adatoms making them of
+significant industrial interest.  However, the size of nanoparticles makes
+simulating them costly and instead by ``slicing'' along certain Miller indices,
+much smaller surfaces can be constructed that still contain a large number of
+edge and kink atoms.
 
 \subsubsection{Bimetallic and Supported Systems}
-The displayed structure and binding properties of metal systems are directly
-tied to their electronic structure and anything that perturbs the ideal system
-will lead to deviations from bulk behavior. This deviation may be exactly what
-is needed to tune a material for a certain catalytic process and significant
-research has been directed at examining various bimetallic species including
-heterogenous alloys, core-shell nanoparticles, and near-surface alloys.
-Additionally, supported nanoparticles and metal surfaces can also be tuned
-somewhat. 
-
-By introducing another metal or a support that will donate or remove electron
-density from the system, the electronic structure can be tuned for the desired
-application. Figure \ref{fig:bimetallic} shows a number of ideal examples of
-these types of systems. While synthesizing these systems can be extremely
+In addition to the effect that local structure has on the electronic properties
+of metals, the introduction of other metals through alloying or of various
+supports that can donate or withdraw electron density will also affect the
+properties and adsorbate binding behavior of the metal. The ability to tune
+these deviations is of much interest and significant research has been directed
+at examining various bimetallic species, including heterogenous alloys,
+core-shell nanoparticles, and near-surface alloys so as to design more
+effective catalysts.  Figure \ref{fig:bimetallic} shows a number of ideal
+examples of these types of systems. While synthesizing these systems can be
 challenging, the ability to specifically tune the catalysts for certain
 reactions, resistance to poisoning\citep{Sharma:0ly, Yu:2013fr}, and cheaper
-costs\citep{Li:0hl, Zhao:0qf} provides a strong impetus for the characterization
-of these materials.
+costs\citep{Li:0hl, Zhao:0qf} provides a strong impetus for the
+characterization of these materials.
 
 \begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap1/bimetallic.pdf}
@@ -218,16 +215,17 @@ away to allow the thickness of the shell to be seen.}
 \end{figure}
 
 \subsection{Dynamics}
-Metal self-interactions tend to be strong enough so that at room temperature
-minimal movement of the metal atoms is observed. This is particularly true for
+Metal self-interactions are strong enough so that at room temperature minimal
+movement of the metal atoms is observed. This is particularly true for
 low-index facets since these surfaces tend to exist in relatively deep local
 minima on the potential energy surface. However, these systems are also less
-useful for applications, partially because of the stability of the surface
-atoms. Many industrial processes make use of high-index or roughenend
-nanopartciles so as to have a larger number of under \& over-coordinated
-surface atoms, because these atoms tend to be more active for catalytic
-processes.\citep{Calle-Vallejo:2015qq, Stephens:2011bv} This modification of
-the local environment creates additional binding possiblities on the surface
+useful for applications due to that same stability leading to a general
+weakening of the interactions between the metal surface and adsorbates.  Many
+industrial processes make use of high-index or roughenend nanoparticles taking
+advantage of their larger number of under- \& over-coordinated surface atoms,
+since these atoms are often more active for catalytic
+processes.\citep{Stephens:2011bv, Calle-Vallejo:2015qq} The increased density
+of edge and kink atoms creates additional binding possiblities on the surface
 and can also lead to easier adatom formation and surface mobility.
 Additionally, the presence of adsorbates can also strongly affect the dynamics
 of a metal surface because of the potential for strong interactions (primarily
@@ -304,7 +302,7 @@ especially since they are often coverage-dependent.
 While there might be one preferred binding site for a single adsorbate on a
 metal surface, the presence of strong adsorbate-adsorbate interactions can lead
 to deviations from expected behavior. Again looking to CO on Pt (111), at low
-coverages ( $<$ 0.25 ML), CO has been observed to bind primarily to atop sites.
+coverages $<$ 0.25 monolayer (ML), CO has been observed to bind primarily to atop sites.
 As the coverage increases however, adsorbate-adsorbate repulsions cause the
 preferred binding to change to a mix of atop and bridge sites.\citep{Deshlahra:2012aa} Typically,
 adsorbate-adsorbate interactions are repulsive which results in weaker overall
@@ -312,11 +310,15 @@ binding and can induce strain in the metal surface making it easier for the
 surface to overcome potential barriers to restructuring.
 
 In certain circumstances adsorbate-adsorbate interactions can be cooperative.
-Scneider {\em et al.} performed DFT calculations of CO on Pt (111) at 0.5 ML
+Schneider {\em et al.} performed DFT calculations of CO on Pt (111) at 0.5 ML
 coverage and observed that the preferred binding was a mix of atop and bridge
 sites.\citep{Deshlahra:2012aa} This configuration was a result of favorable
 dipole-dipole interactions that result due to non-equivalent $2\pi^*$
-back-donation from the Platinum to the CO.
+back-donation from the Platinum to the CO. Carbon monoxide bound to an atop
+site experienced less back-donation and was calculated to have a positive
+dipole moment while the carbon monoxide bound to the neighboring bridge site
+experienced a greater amount of electron donation and had a negative dipole
+moment.
 
 
 \subsubsection{Adsorbate Patterning}
