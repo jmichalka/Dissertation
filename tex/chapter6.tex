@@ -1,33 +1,85 @@
 \chapter{CONCLUSIONS}
 
-
 The surfaces of metals are a complex landscape and their study is of great
 importance for catalyst design. In this dissertation, the specifics of \ce{CO}
 induced reconstructions on \ce{Pt} was explored and a mechanism for the
 experimentally observed doubling was proposed. A more complicated bimetallic
 \ce{Pt\bond{-}Pd} near-surface-alloy was also modeled to determine the effects
 of different binding strengths on the stability of the outer \ce{Pt} layer.
-Carbon monoxide's interaction with \ce{Pt} was revisited by examining how the
-presence of different surface steps would affect the previously observed
-reconstruction. Finally, a new method for treating fluctuating charges
-(MM-flucQ) was proposed that would allow for metal surfaces to be charge
-responsive to impingent adsorbates.
+Carbon monoxide's interaction with \ce{Pt} was further elucidated by examining
+how the presence of different surface steps would affect the previously
+observed reconstruction. Finally, a new method for treating fluctuating charges
+(MM-flucQ) was proposed that would allow for metal surfaces dynamically respond
+to impinging charged adsorbates.
 
 In studying the induced reconstruction of \ce{Pt}, the \ce{Pt\bond{-}CO}
 interaction was newly parameterized to better capture the preferred atop
 binding site. The effects of coverage were also examined by exposing (557)
 \ce{Pt} surfaces to five different CO coverages [0, 0.05, 0.25, 0.33, 0.50].
 Additionally, the importance of the identity of the metal was tested by
-examining a similar system made of \ce{Au}. It was observed that the strong
+examining a similar system made of \ce{Au}. Throughout the simulations it was observed that the strong
 quadrupolar moment of \ce{CO}, along with its preferred atop binding site, was
 integral to the initial breaking of the clean (557) surface. The strong binding
-of \ce{Pt} to \ce{CO}, coupled with the large \ce{CO\bond{-}CO} repulsion led
+of \ce{CO} to \ce{Pt}, coupled with the large \ce{CO\bond{-}CO} repulsion led
 to an increase in \ce{Pt} adatom diffusion on the surface. The adatoms were
 observed to explore significant amounts of the surface as well as move up and
 down step-edges. These results allowed us to propose our mechanism that high
 coverages of \ce{CO} help break up the step-edges after which double layer
 formation results from stochastic step-wandering.
 
+Research into bimetallic systems and their high tunability led us to model a
+\ce{Pt\bond{-}Pd} near-surface-alloy (NSA) again under a \ce{CO} atmosphere. A
+pure \ce{Pd} system was also examined as a control case, where no
+reconstruction was observed over the simulation time. The bimetallic system
+however showed a significant amount of deviation from the initial (557) surface
+and the differing binding strengths betwen \ce{CO} and \ce{Pd} vs. \ce{CO} and
+\ce{Pt} played a central role in this process. The preferred bridge binding for
+\ce{Pd\bond{-}CO} had the effect of lowering its surface energy making it more
+stable, whereas the atop binding preference on \ce{Pt} had the effect of
+raising the surface energy making adatom formation and the concomitant increase
+in diffusion more favored. As observed in \ref{fig:nearestNeighbors}, the
+movement of the \ce{Pt} led to an increase in the number of \ce{Pt\bond{-}Pt}
+bonds which resulted in island formation on the surface of the underlying
+\ce{Pd}. The surface domain analysis, implemented for this study, was useful in
+measuring the change in domain size over time and as a function of \ce{CO}
+coverage which helped us conclude that the sintering we observed was primarily
+a kinetic barrier that needed to be overcome but that the presence of \ce{CO}
+sped up the process and allowed it to reach a separate equilibrium as compared
+to the system run without \ce{CO}.
+
+A further investigation into \ce{CO}'s effect on \ce{Pt} was carried out to
+better elucidate if the (557) structure of \ce{Pt} was unique in its
+restructuring or if other high-index surfaces would undergo similar
+reconstructions. The lengths of the (111) plateaus along with the type of step
+edge, straight or kinked, were both explored through the four systems that were
+examined [(112), (321), (557), (765)]. While significant adatom movement and
+step-edge wandering was observed in the majority of the systems, only the (321)
+system showed the predicted doubling. Most surprising was that the (557) system
+did not undergo doubling in the simulation time suggesting that either the
+stochastic nature of the process was not adequately sampled during the finite
+simulation or that the slight modification to the \ce{Pt\bond{-}CO} forcefield
+to reflect recent experiments\citep{Deshlahra:2012aa} was sufficient to modify
+the potential energy landscape away from a stable double step.
+
+% Section on MM-flucq, but don't have many results yet so...
+%
+%Accurately describing the interaction between adsorbates and metal surfaces led
+%us to rethink the current approaches for describing those interactions. The
+%majority of molecular dynamics simulations that include large metal clusters or
+%surfaces often ignore the electronic nature of the metal. 
+
+
+
+%Conclusion of my work
+As the need for clean energy and efficient synthesis of various products
+continues to grow, so to will catalyst design continue to increase in
+importance.  Improvements in experimental and theoretical techniques have led
+to the creation of single-atom catalysts,\citep{}, the bridging of the pressure
+and temperature gaps,\citep{} as well as elucidating mechanisms of adsorbate
+induced reconstructions.\citep{} This work has contributed to this endeavor by
+further characterizing \ce{Pt\bond{-}CO} systems while also developing new
+forcefields and approaches to more accurately treat metal-adsorbate charge
+interactions.
 
 
 
