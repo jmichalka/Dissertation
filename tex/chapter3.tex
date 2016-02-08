@@ -25,62 +25,75 @@
 %\end{abstract}
 
 
-\section{Introduction}
+In this chapter we explore a bimetallic \ce{Pt/Pd} near surface alloy (NSA)
+exposed to \ce{CO} through molecular dynamics simulations. A forcefield
+describing the \ce{Pd\bond{-}CO} was parameterized as a part of this work and
+a pure \ce{Pd} (557) system was modeled as a control. The differing binding
+characteristics of \ce{CO}, site and strength, on the two metals was
+hypothesized to lead to significant exposure of the underlying \ce{Pd}
+requiring the overlayer of \ce{Pt} to either bury itself or cluster into small
+nanostructures on the surface. The stability of the systems and specifically
+the \ce{Pt} overlayer was examined as a function of time and \ce{CO} coverage.
+Ultimately the binding preference of the \ce{CO} was discovered to play a
+primary role in describing the preferred equilibrium states of these systems.
 
-Materials based on metallic \ce{Pt} and \ce{Pd} are important
-catalysts for the oxygen reduction
-(ORR)\citep{Lim:2009fk, Liu:2012bs, Limpattayanate:2014ij} and oxygen
-evolution reactions (OER).\citep{Stamenkovic:2007kk, Reier:2012uq} These
-reactions are important in proton-exchange membrane (PEM) fuel
-cells,\citep{Bliznakov:2012kx, Shao:2013rm} as well as in the charging
-and discharging of \ce{Li}-air batteries.\citep{Lu:2011vn}
-Oxide-supported noble metal nanoparticles also play an important role in
-the water-gas shift reaction.\citep{Bunluesin:1998ys, Kugai:2011rt}
 
-However, the expense of \ce{Pt} metal coupled to the slow kinetics of
-the ORR on pure \ce{Pt} or \ce{Pt}/\ce{C} systems remain barriers to
-large-scale implementation of fuel cells. Strategies involving
-bimetallic particles, surface alloys, and core-shell nanostructures
-are currently under investigation in hopes of eliminating these
-barriers.\citep{Gao:2009oj, Gao:2009wo, Kim:2013mi} The coupling of two
-(or more) components in these structures allows for a large accesible
-design space for various catalytic properties, whether that be
-catalytic activity,\citep{Kim:2013mi, Sneed:2014fj, Gu:2015cr} thermal
-stability,\citep{Cao:2010gf, Yang:0pd, Huang:2012ul} or resistance to
-deactivation.\citep{Yu:2013fr, Zhang:2015yq} Specifically,
-\ce{Pt\bond{-}Pd} nanoparticles have been shown to have increased
-activity for the ORR reaction,\citep{Lim:2009fk, Liu:2012bs, Shao:2013rm}
-while \ce{Pt\bond{-}Au} nanoparticles were reported as being more
-stable over repeated potential cycling.\citep{Zhang:2007uq}
+%\section{Introduction}
 
-Bimetallic \ce{Pt}/\ce{Pd} mixtures also find widespread use in diesel
-oxidation catalysts (DOC) which complete the oxidation of carbon
-monoxide and partially-combusted hydrocarbons, and reduce the nitrogen
-oxides in combustion gases.\citep{Morlang:2005uq, Russell:2011fk}
-\ce{Pd} is a particularly useful metal for diesel catalysts because it
-has a lower intrinsic \ce{SO2} oxidation activity than
-\ce{Pt}.\citep{Russell:2011fk} The \ce{Pt}/\ce{Pd} bimetallic catalyst
-also significantly inhibits sintering of the particles at higher
-temperatures, relative to pure \ce{Pt} catalysts.\citep{Morlang:2005uq}
-
-Catalytic activity is dependent on the exposed structure of \ce{Pt} in
-many of these applications. Reconstruction of the exposed \ce{Pt} can
-therefore change the effectiveness of a given \ce{Pt}-\ce{M} species.
-Of particular interest in diesel oxidation catalysis is carbon
-monoxide (\ce{CO}) and its strong binding affinity for \ce{Pt} and
-\ce{Pd}. Tao \textit{et al.} have shown that the presence of \ce{CO}
-can induce reversible surface reconstructions on a stepped
-\ce{Pt}(557) surface.\citep{Tao:2010aa} Significant experimental and
-theoretical work has been done to more fully characterize the effect
-adsorbed \ce{CO} has on
-\ce{Pt}.\citep{Batteas:1996rc, Thostrup:2001dn, McCarthy:2012qd, Michalka:2013aa, Carenco:2014aa}
-
-This paper describes an investigation into the effects of carbon
-monoxide adsorption on surface restructuring of pure \ce{Pd}(557) and
-\ce{Pt}/\ce{Pd}(557) surface alloys using molecular dynamics
-simulations. Since the long-time dynamics of the restructuring process
-are of particular interest, classical force fields which balance
-computational efficiency against chemical accuracy were employed.
+%Materials based on metallic \ce{Pt} and \ce{Pd} are important
+%catalysts for the oxygen reduction
+%(ORR)\citep{Lim:2009fk, Liu:2012bs, Limpattayanate:2014ij} and oxygen
+%evolution reactions (OER).\citep{Stamenkovic:2007kk, Reier:2012uq} These
+%reactions are important in proton-exchange membrane (PEM) fuel
+%cells,\citep{Bliznakov:2012kx, Shao:2013rm} as well as in the charging
+%and discharging of \ce{Li}-air batteries.\citep{Lu:2011vn}
+%Oxide-supported noble metal nanoparticles also play an important role in
+%the water-gas shift reaction.\citep{Bunluesin:1998ys, Kugai:2011rt}
+%
+%However, the expense of \ce{Pt} metal coupled to the slow kinetics of
+%the ORR on pure \ce{Pt} or \ce{Pt}/\ce{C} systems remain barriers to
+%large-scale implementation of fuel cells. Strategies involving
+%bimetallic particles, surface alloys, and core-shell nanostructures
+%are currently under investigation in hopes of eliminating these
+%barriers.\citep{Gao:2009oj, Gao:2009wo, Kim:2013mi} The coupling of two
+%(or more) components in these structures allows for a large accesible
+%design space for various catalytic properties, whether that be
+%catalytic activity,\citep{Kim:2013mi, Sneed:2014fj, Gu:2015cr} thermal
+%stability,\citep{Cao:2010gf, Yang:0pd, Huang:2012ul} or resistance to
+%deactivation.\citep{Yu:2013fr, Zhang:2015yq} Specifically,
+%\ce{Pt\bond{-}Pd} nanoparticles have been shown to have increased
+%activity for the ORR reaction,\citep{Lim:2009fk, Liu:2012bs, Shao:2013rm}
+%while \ce{Pt\bond{-}Au} nanoparticles were reported as being more
+%stable over repeated potential cycling.\citep{Zhang:2007uq}
+%
+%Bimetallic \ce{Pt}/\ce{Pd} mixtures also find widespread use in diesel
+%oxidation catalysts (DOC) which complete the oxidation of carbon
+%monoxide and partially-combusted hydrocarbons, and reduce the nitrogen
+%oxides in combustion gases.\citep{Morlang:2005uq, Russell:2011fk}
+%\ce{Pd} is a particularly useful metal for diesel catalysts because it
+%has a lower intrinsic \ce{SO2} oxidation activity than
+%\ce{Pt}.\citep{Russell:2011fk} The \ce{Pt}/\ce{Pd} bimetallic catalyst
+%also significantly inhibits sintering of the particles at higher
+%temperatures, relative to pure \ce{Pt} catalysts.\citep{Morlang:2005uq}
+%
+%Catalytic activity is dependent on the exposed structure of \ce{Pt} in
+%many of these applications. Reconstruction of the exposed \ce{Pt} can
+%therefore change the effectiveness of a given \ce{Pt}-\ce{M} species.
+%Of particular interest in diesel oxidation catalysis is carbon
+%monoxide (\ce{CO}) and its strong binding affinity for \ce{Pt} and
+%\ce{Pd}. Tao \textit{et al.} have shown that the presence of \ce{CO}
+%can induce reversible surface reconstructions on a stepped
+%\ce{Pt}(557) surface.\citep{Tao:2010aa} Significant experimental and
+%theoretical work has been done to more fully characterize the effect
+%adsorbed \ce{CO} has on
+%\ce{Pt}.\citep{Batteas:1996rc, Thostrup:2001dn, McCarthy:2012qd, Michalka:2013aa, Carenco:2014aa}
+%
+%This paper describes an investigation into the effects of carbon
+%monoxide adsorption on surface restructuring of pure \ce{Pd}(557) and
+%\ce{Pt}/\ce{Pd}(557) surface alloys using molecular dynamics
+%simulations. Since the long-time dynamics of the restructuring process
+%are of particular interest, classical force fields which balance
+%computational efficiency against chemical accuracy were employed.
 
 \section{Methodology}
 \subsection{Interaction Potentials}
@@ -720,41 +733,54 @@ stronger than \ce{Pt\bond{-}CO}, island formation exposes more of the
 
 \section{Summary}
 
-Our primary conclusion is that the presence of chemisorbed carbon
-monoxide can speed up the formation of \ce{Pt} islands on the surface
-of a catalytically-interesting alloy, but that this effect is largely
-kinetic in nature.  The bare \ce{Pd} surface is stabilized by the
-\ce{CO} adsorbate, while stepped \ce{Pt} surfaces are roughened and
-destabilized by the presence of the same molecule. The larger surface
-energies of \ce{Pt} relative to \ce{Pd} already favor the segregation
-of \ce{Pt} into compact domains.  At elevated temperatures, we observe
-the beginnings of island formation even without the \ce{CO} adsorbate
-on the surface, which indicates that thermodynamics favors island
-formation on this surface.
+With the simulations we have performed on \ce{Pd} and \ce{Pt/Pd} (557)
+surfaces, we have been able to model the formation of \ce{Pt} islands on the
+surface of a catalyically interesting alloy. It was determined that the larger
+surface energies of \ce{Pt} relative to \ce{Pd} favor the segregation of
+\ce{Pt} into compact domains and the beginnings of island formation were
+observed even without the \ce{CO} adsorbate present on the surface. This
+restructuring was primarily kinetic in nature and the presence of \ce{CO}
+increased the restructuring rate by roughening the step-edges and
+destabilizing the surface which lowered the potential barriers. Conversely,
+the bare \ce{Pd} surface was stabilized by the \ce{CO} adsorbate because of
+the preferred bridge binding and thus maintained its (557) motif throughout
+the simulations.
 
-The energy profiles for step-edge adatom formation in the presence of
-adsorbed \ce{CO} (see figs. \ref{fig:PdEnergy} and \ref{fig:PtEnergy})
-would seem to bring the relative surface energies closer together in
-the presence of the adsorbed \ce{CO}. Thermodynamically, this should
-destabilize \ce{Pt} islands, so our observation that the 0.5 ML
-\ce{CO} speeds up the island-formation process appears to be due
-largely to kinetics.  The lower barriers for \ce{Pt}-adatom formation
-effectively speed up the surface diffusion of \ce{Pt}.  Previous work
-on \ce{Pt}(557) surfaces showed that \ce{CO} also lowers the barrier
-for a step-burrowing mechanism that can increase the thickness of
-\ce{Pt} surface layers.\citep{Michalka:2013aa}
-
-We note that there are other catalytically-active \ce{Pt}-alloys
-(notably \ce{PtNi3} and \ce{PtNi6} nanoparticles) that display
-dealloying of \ce{Pt} upon electrochemical cycling.\citep{Tuaev:2013fk}
-In analogy to the \ce{Pd} alloy studied here, the binding of \ce{CO}
-on \ce{Ni}(111) also prefers hollow sites in preference to atop
-locations.\citep{Campuzano:1979uq} However, the surface energies of
-\ce{Ni} are close to those of \ce{Pt}, so it is not clear if our
-conclusions about the \ce{Pd}/\ce{Pt} alloy would apply to this
-system.  Further research on these alloys would require adapting the
-\ce{M\bond{-}CO} models in order to predict whether carbon monoxide
-would be a generally effective tool for concentrating
-catalytically-active \ce{Pt} sites on surface alloys.
+%Our primary conclusion is that the presence of chemisorbed carbon
+%monoxide can speed up the formation of \ce{Pt} islands on the surface
+%of a catalytically-interesting alloy, but that this effect is largely
+%kinetic in nature.  The bare \ce{Pd} surface is stabilized by the
+%\ce{CO} adsorbate, while stepped \ce{Pt} surfaces are roughened and
+%destabilized by the presence of the same molecule. The larger surface
+%energies of \ce{Pt} relative to \ce{Pd} already favor the segregation
+%of \ce{Pt} into compact domains.  At elevated temperatures, we observe
+%the beginnings of island formation even without the \ce{CO} adsorbate
+%on the surface, which indicates that thermodynamics favors island
+%formation on this surface.
+%
+%The energy profiles for step-edge adatom formation in the presence of
+%adsorbed \ce{CO} (see figs. \ref{fig:PdEnergy} and \ref{fig:PtEnergy})
+%would seem to bring the relative surface energies closer together in
+%the presence of the adsorbed \ce{CO}. Thermodynamically, this should
+%destabilize \ce{Pt} islands, so our observation that the 0.5 ML
+%\ce{CO} speeds up the island-formation process appears to be due
+%largely to kinetics.  The lower barriers for \ce{Pt}-adatom formation
+%effectively speed up the surface diffusion of \ce{Pt}.  Previous work
+%on \ce{Pt}(557) surfaces showed that \ce{CO} also lowers the barrier
+%for a step-burrowing mechanism that can increase the thickness of
+%\ce{Pt} surface layers.\citep{Michalka:2013aa}
+%
+%We note that there are other catalytically-active \ce{Pt}-alloys
+%(notably \ce{PtNi3} and \ce{PtNi6} nanoparticles) that display
+%dealloying of \ce{Pt} upon electrochemical cycling.\citep{Tuaev:2013fk}
+%In analogy to the \ce{Pd} alloy studied here, the binding of \ce{CO}
+%on \ce{Ni}(111) also prefers hollow sites in preference to atop
+%locations.\citep{Campuzano:1979uq} However, the surface energies of
+%\ce{Ni} are close to those of \ce{Pt}, so it is not clear if our
+%conclusions about the \ce{Pd}/\ce{Pt} alloy would apply to this
+%system.  Further research on these alloys would require adapting the
+%\ce{M\bond{-}CO} models in order to predict whether carbon monoxide
+%would be a generally effective tool for concentrating
+%catalytically-active \ce{Pt} sites on surface alloys.
 
 

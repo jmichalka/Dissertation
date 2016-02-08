@@ -22,58 +22,65 @@
 %\newpage
 
 
-\section{Introduction}
-% Importance: catalytically active metals are important
-% 	Sub: Knowledge of how their surface structure affects their ability to catalytically facilitate certain reactions is growing, but is more reactionary than predictive
-%	Sub: Designing catalysis is the future, and will play an important role in numerous processes (ones that are currently seen to be impractical, or at least inefficient)
-% Theory can explore temperatures and pressures which are difficult to work with in experiments
-%	Sub: Also, easier to observe what is going on and provide reasons and explanations
-%
+In this chapter, \ce{Pt} and \ce{Au} (557) surfaces exposed to various
+coverages of \ce{CO} are simulated. The effect of \ce{CO}-\ce{CO} repulsion is
+examined as a possible cause for experimentally observed step-doubling of the
+\ce{Pt} (557) system. Additionally, the strong \ce{Pt\bond{-}CO} bond is also
+believed to play a role, whereas the \ce{Au\bond{-}CO} interaction is
+significantly weaker suggesting less possible reconstruction on the \ce{Au}
+surface. These simulations require an accurate description of cross
+interactions between the metal and \ce{CO} and forcefields describing these
+interactions have been parameterized as part of this work. An in-depth
+examination of surface dynamics focusing on adatom mobility is also performed.
 
-Industrial catalysts usually consist of small particles that exhibit a
-high concentration of steps, kink sites, and vacancies at the edges of
-the facets.  These sites are thought to be the locations of catalytic
-activity.\citep{Jeong:1999ev, Larsen:1999le} There is now
-significant evidence that solid surfaces are often structurally,
-compositionally, and chemically modified by reactants under operating
-conditions.\citep{Tao:2008aa, Tao:2010aa, Tao:2011aa} The coupling between
-surface oxidation states and catalytic activity for CO oxidation on
-Pt, for instance, is widely documented.\citep{Ertl:2008nz, Hendriksen:2002ay}
-Despite the well-documented role of these effects on reactivity, the
-ability to capture or predict them in atomistic models is somewhat
-limited.  While these effects are perhaps unsurprising on the highly
-disperse, multi-faceted nanoscale particles that characterize
-industrial catalysts, they are manifest even on ordered, well-defined
-surfaces. The Pt(557) surface, for example, exhibits substantial and
-reversible restructuring under exposure to moderate pressures of
-carbon monoxide.\citep{Tao:2010aa}
 
-This work is an investigation into the mechanism and timescale for the
-Pt(557) \& Au(557) surface restructuring using molecular simulation.
-Since the dynamics of the process are of particular interest, we
-employ classical force fields that represent a compromise between
-chemical accuracy and the computational efficiency necessary to
-simulate the process of interest.  Since restructuring typically
-occurs as a result of specific interactions of the catalyst with
-adsorbates, in this work, two metal systems exposed to carbon monoxide
-were examined. The Pt(557) surface has already been shown to undergo a
-large scale reconstruction under certain conditions.\citep{Tao:2010aa}
-The Au(557) surface, because of weaker interactions with CO, is less
-likely to undergo this kind of reconstruction. However, Peters {\it et
-  al}.\citep{Peters:2000zh} and Piccolo {\it et al}.\citep{Piccolo:2004os}
-have both observed CO-induced modification of reconstructions to the
-Au(111) surface. Peters {\it et al}. observed the Au(111)-($22 \times
-\sqrt{3}$) ``herringbone'' reconstruction relaxing slightly under CO
-adsorption. They argued that only a few Au atoms become adatoms,
-limiting the stress of this reconstruction, while allowing the rest to
-relax and approach the ideal (111) configuration.  Piccolo {\it et
-  al}. on the other hand, saw a more significant disruption of the
-Au(111)-($22 \times \sqrt{3}$) herringbone pattern as CO adsorbed on
-the surface. Both groups suggested that the preference CO shows for
-low-coordinated Au atoms was the primary driving force for the
-relaxation.  Although the Au(111) reconstruction was not the primary
-goal of our work, the classical models we have fit may be of future
-use in simulating this reconstruction.
+
+%\section{Introduction}
+
+%Industrial catalysts usually consist of small particles that exhibit a
+%high concentration of steps, kink sites, and vacancies at the edges of
+%the facets.  These sites are thought to be the locations of catalytic
+%activity.\citep{Jeong:1999ev, Larsen:1999le} There is now
+%significant evidence that solid surfaces are often structurally,
+%compositionally, and chemically modified by reactants under operating
+%conditions.\citep{Tao:2008aa, Tao:2010aa, Tao:2011aa} The coupling between
+%surface oxidation states and catalytic activity for CO oxidation on
+%Pt, for instance, is widely documented.\citep{Ertl:2008nz, Hendriksen:2002ay}
+%Despite the well-documented role of these effects on reactivity, the
+%ability to capture or predict them in atomistic models is somewhat
+%limited.  While these effects are perhaps unsurprising on the highly
+%disperse, multi-faceted nanoscale particles that characterize
+%industrial catalysts, they are manifest even on ordered, well-defined
+%surfaces. The Pt(557) surface, for example, exhibits substantial and
+%reversible restructuring under exposure to moderate pressures of
+%carbon monoxide.\citep{Tao:2010aa}
+
+%This work is an investigation into the mechanism and timescale for the
+%Pt(557) \& Au(557) surface restructuring using molecular simulation.
+%Since the dynamics of the process are of particular interest, we
+%employ classical force fields that represent a compromise between
+%chemical accuracy and the computational efficiency necessary to
+%simulate the process of interest.  Since restructuring typically
+%occurs as a result of specific interactions of the catalyst with
+%adsorbates, in this work, two metal systems exposed to carbon monoxide
+%were examined. The Pt(557) surface has already been shown to undergo a
+%large scale reconstruction under certain conditions.\citep{Tao:2010aa}
+%The Au(557) surface, because of weaker interactions with CO, is less
+%likely to undergo this kind of reconstruction. However, Peters {\it et
+%  al}.\citep{Peters:2000zh} and Piccolo {\it et al}.\citep{Piccolo:2004os}
+%have both observed CO-induced modification of reconstructions to the
+%Au(111) surface. Peters {\it et al}. observed the Au(111)-($22 \times
+%\sqrt{3}$) ``herringbone'' reconstruction relaxing slightly under CO
+%adsorption. They argued that only a few Au atoms become adatoms,
+%limiting the stress of this reconstruction, while allowing the rest to
+%relax and approach the ideal (111) configuration.  Piccolo {\it et
+%  al}. on the other hand, saw a more significant disruption of the
+%Au(111)-($22 \times \sqrt{3}$) herringbone pattern as CO adsorbed on
+%the surface. Both groups suggested that the preference CO shows for
+%low-coordinated Au atoms was the primary driving force for the
+%relaxation.  Although the Au(111) reconstruction was not the primary
+%goal of our work, the classical models we have fit may be of future
+%use in simulating this reconstruction.
 
 %Platinum molecular dynamics
 %gold molecular dynamics
@@ -836,7 +843,6 @@ rapid splitting, the edges only moved another few \AA~apart. It is
 possible that with longer simulation times, the (557) surface recovery
 observed by Tao {\it et al}.\citep{Tao:2010aa} could also be recovered.
 
-%breaking of the double layer upon removal of CO
 \begin{figure}[p!]
 \includegraphics[width=\linewidth]{../figures/chap2/layerBreaking.pdf}
 \caption{Behavior of an established (111) double step after removal of
@@ -849,60 +855,38 @@ observed by Tao {\it et al}.\citep{Tao:2010aa} could also be recovered.
 \end{figure}
 
 
-%Peaks!
-%\begin{figure}[H]
-%\includegraphics[width=\linewidth]{doublePeaks_noCO.png}
-%\caption{At the initial formation of this double layer  ( $\sim$ 37 ns) there is a degree
- %of roughness inherent to the edge. The next $\sim$ 40 ns show the edge with 
- %aspects of waviness and by 80 ns the double layer is completely formed and smooth. }
-%\label{fig:peaks}
-%\end{figure}
+\section{Summary}
+We have performed simulations of \ce{Pt} and \ce{Au} (557) systems under a
+\ce{CO} atmosphere to identify the mechanism of reconstruction. We showed that
+our \ce{Pt\bond{-}CO} forcefield was sufficient to capture the observed
+doubling of the \ce{Pt} step-edges. Additionally, we were able to propose a
+mechanism based on the strength and directionality of the \ce{Pt\bond{-}CO}
+binding interaction, as well as the large quadrupolar repulsion between
+atop-bound \ce{CO} molecules to explain the increase in surface mobility. The
+weaker \ce{Au\bond{-}CO} interaction resulted in significantly lower adatom
+diffusion constants, less step-wandering, and a lack of the double layer
+reconstruction on the \ce{Au} (557) surface. An in-depth examination of the
+energetics shows the important role \ce{CO} plays in increasing the
+step-breakup and in faciliating edge traversal which are both necessary for
+double layer formation.
 
 
-%Don't think I need this
-%clean surface...
-%\begin{figure}[H]
-%\includegraphics[width=\linewidth]{557_300K_cleanPDF}
-%\caption{}
+%\section{Conclusion}
+%The strength and directionality of the Pt-CO binding interaction, as
+%well as the large quadrupolar repulsion between atop-bound CO
+%molecules, help to explain the observed increase in surface mobility
+%of Pt(557) and the resultant reconstruction into a double-layer
+%configuration at the highest simulated CO-coverages.  The weaker Au-CO
+%interaction results in significantly lower adataom diffusion
+%constants, less step-wandering, and a lack of the double layer
+%reconstruction on the Au(557) surface.
+%
+%An in-depth examination of the energetics shows the important role CO
+%plays in increasing step-breakup and in facilitating edge traversal
+%which are both necessary for double layer formation.
 
-%\end{figure}
-%\label{fig:clean}
 
 
-\section{Conclusion}
-The strength and directionality of the Pt-CO binding interaction, as
-well as the large quadrupolar repulsion between atop-bound CO
-molecules, help to explain the observed increase in surface mobility
-of Pt(557) and the resultant reconstruction into a double-layer
-configuration at the highest simulated CO-coverages.  The weaker Au-CO
-interaction results in significantly lower adataom diffusion
-constants, less step-wandering, and a lack of the double layer
-reconstruction on the Au(557) surface.
 
-An in-depth examination of the energetics shows the important role CO
-plays in increasing step-breakup and in facilitating edge traversal
-which are both necessary for double layer formation.
-
-%Things I am not ready to remove yet
-
-%Table of Diffusion Constants
-%Add gold?M
-% \begin{table}[H]
-%   \caption{}
-%   \centering
-% \begin{tabular}{| c | cc | cc | }
-%   \hline
-%   &\multicolumn{2}{c|}{\textbf{Platinum}}&\multicolumn{2}{c|}{\textbf{Gold}} \\
-%   \hline
-%   \textbf{Surface Coverage} & $\mathbf{D}_{\parallel}$ & $\mathbf{D}_{\perp}$ & $\mathbf{D}_{\parallel}$ & $\mathbf{D}_{\perp}$  \\
-%   \hline
-%   50\% & 4.32(2) & 1.185(8)  & 1.72(2) & 0.455(6) \\
-%   33\% & 5.18(3)  & 1.999(5)  & 1.95(2) & 0.337(4)   \\
-%   25\% & 5.01(2)  & 1.574(4)  & 1.26(3) & 0.377(6) \\
-%   5\%   & 3.61(2)  & 0.355(2)  & 1.84(3)  & 0.169(4)  \\
-%   0\%   & 3.27(2)  & 0.147(4)  & 1.50(2)  & 0.194(2)   \\
-%   \hline 
-% \end{tabular}
-% \end{table}
 
 
