@@ -29,29 +29,21 @@ the initial creation of bimetallic Pt/Pd near-surface alloys and the
 preliminary results obtained before the project was shelved.
 
 \section{Methodology}
-The systems were initially equilibrated at 
+The (111) systems were initially thermalized at 200~K and warmed up in the
+canonical (NVT) ensemble  to 1000~K over 500 ps. They were then allowed to
+reach equilibrium at 1000~K over another 500 ps at which point they were dosed
+with a sufficient quantity of Carbon Monoxide (\ce{CO}) to correspond to either
+0, 0.25, or 0.5 monolayers (ML) of coverage. The systems were further
+equilibrated in the NVT ensemble for 500 ps before switching to the
+microcanonical (NVE) ensemble for 6 ns of data collection. The (100) systems
+were treated identically except that they were warmed and equilibrated at 600~K
+and kept at that temperature throughout the simulation.
 
 \subsection{Interaction Parameters}
 The interaction potentials provided in Michalka {\em et
-al.}\citep{Michalka:2015aa} are used here unchanged.
-
-
-
-
-\begin{landscape}
-\begin{figure}[p!]
-\centering
-  \includegraphics[width=0.8\linewidth]{../figures/appC/systems.pdf}
-  \caption{\ce{Pt} atoms are colored gray while \ce{Pd} are colored pink. The
-top row depicts near surface alloys with a sandwiched Pt (surface), Pd
-(subsurface), Pt (bulk) system before significant warming. Systems (a) and (b)
-display the low-energy (111) facets and only differ with number of layers of Pd
-with (a) having one layer and (b) having two layers. Systems (c) and (d)
-display the (100) facets on the surface and also are only different with regard
-to the number of Pd layers, one and two respectively.}
-\label{fig:biSystems}
-\end{figure}
-\end{landscape}
+al.}\citep{Michalka:2015aa} are used here unchanged. Important to note is that
+the \ce{Pd\bond{-}CO} interaction is slightly stronger than the
+\ce{Pt\bond{-}CO} interaction for this parameterization.
 
 \subsection{System Details}
 The systems were constructed from a FCC \ce{Pt} crystal that was ``sliced'' to
@@ -60,45 +52,91 @@ periodic in the {\em x} and {\em y} directions. The bulk of the crystal was
 kept as \ce{Pt} while one or two layers directly underneath the surface were
 converted to \ce{Pd}. The ideal systems are highlighted in the top row of
 Figure \ref{fig:biSystems}. The (111) systems have dimensions of
-$71.41\times82.44\times100$ while the (100) systems are
-$68.78\times68.78\times100$. \ce{Pd} was chosen as the subsurface layer because
-of its stronger binding to \ce{CO}. During preliminary simulations, a variety
-of possible systems that switched the order of the metals or the number of
-layers at the surface or beneath the surface and the presence of \ce{Pd} on the
-surface led to no reconstruction because there was a lack of any driving force.
-When \ce{Pt} is on the surface, there are two effects that could lead to
-restructuring, \ce{Pt}'s higher surface energy, {\em i.e.} desire to be in a
-bulk environment, and the greater strength of the \ce{Pd\bond{-}CO} compared to
-the \ce{Pt\bond{-}CO} interaction.
+$71.41\times82.44\times100$ \AA\textsuperscript{3}, while the (100) systems are
+$68.78\times68.78\times100$ \AA\textsuperscript{3}. \ce{Pd} was chosen as the
+subsurface layer because of its stronger binding to \ce{CO}. During preliminary
+simulations, a variety of possible systems that switched the order of the
+metals or the number of layers at the surface or beneath the surface led to no
+reconstruction because of a lack of any driving force.  However, when \ce{Pt}
+is on the surface, there are two effects that lead to restructuring, \ce{Pt}'s
+higher surface energy, {\em i.e.} desire to be in a bulk environment, and the
+greater strength of the \ce{Pd\bond{-}CO} compared to the \ce{Pt\bond{-}CO}
+interaction.
 
-The systems were initially equilibrated at ?~K over a period of ? ns, after
-which they were dosed with enough Carbon Monoxide (CO) to correspond to 0,
-0.25, or 0.5 monolayers (ML) of coverage. The systems were further equilibrated
-in the canonical (NVT) ensemble at ?~K before switching to the microcanonical
-(NVE) ensemble for data collection. 
+\begin{table}
+  \caption{PT/PD NEAR SURFACE ALLOY SIZES AND COMPOSITION}
+  \centering
+  \begin{threeparttable}
+  \begin{tabular}{ c ccc }
+  \hline
+  \hline
+  \textbf{System} & \textbf{Pt} & \textbf{Pd} &  \textbf{(Pd/total)} \\
+  \hline
+  100-1Pt-1Pd & 7776 & 1296  & 0.143 \\
+  100-1Pt-2Pd & 6480  & 2592  & 0.286 \\
+  111-1Pt-1Pd & 10800  & 1800  & 0.143 \\
+  111-1Pt-2Pd & 9000 & 3600  & 0.286 \\
+  \hline
+  \hline
+  \end{tabular}
+  \end{threeparttable}
+\label{tab:systems}
+\end{table}
+
+
+\begin{landscape}
+\begin{figure}[p!]
+\centering
+  \includegraphics[width=0.8\linewidth]{../figures/appC/systems.pdf}
+  \caption{Depictions of the (111) and (100) systems. \ce{Pt} atoms are colored
+gray while \ce{Pd} are colored pink. The top row depicts near surface alloys
+with a sandwiched Pt (surface), Pd (subsurface), Pt (bulk) system before
+significant warming. Systems (a) and (b) display the low-energy (111) facets
+and only differ with number of layers of Pd with (a) having one layer and (b)
+having two layers. Systems (c) and (d) display the (100) facets on the surface
+and also are only different with regard to the number of Pd layers, one and two
+respectively.}
+\label{fig:biSystems}
+\end{figure}
+\end{landscape}
 
 \section{Results \& Discussion}
 The (100) surfaces were inherently unstable at any CO-coverage and the surface
 \ce{Pt} collapsed to domains of (111) which exposed the underlying (100)
-\ce{Pd} which did remain fairly stable. As shown in figure
+\ce{Pd} which did remain fairly stable. As shown in Figure
 \ref{fig:biSystems}.c and \ref{fig:biSystems}.d the initially (100) surface
-restructures to the lower energy (111) domains. Additionally, because of the
-way adsorbate coverage was initially calculated, this restructuring creates
-more surface sites for the \ce{CO} to bind too which can be seen by comparing
-the (111) to the (100) systems and seeing the large amount of \ce{CO} that is
-not adsorbed in the (111) systems.
+restructures to the lower energy (111) domains. This is shown a bit more cleary
+in Figure \ref{fig:surfaceGrid} although a small portion of the surface did
+retain the original (100) motif. Additionally, because of the way adsorbate
+coverage was initially calculated, this restructuring creates more surface
+sites for the \ce{CO} to bind too which can be seen by comparing the (111) to
+the (100) systems in Figure \ref{fig:biSystems} and seeing the large amount of
+\ce{CO} that is not adsorbed in the (111) systems.
 
+\subsection{Inversion}
 
+\begin{figure}[p!]
+\centering
+\includegraphics[width=\linewidth]{../figures/appC/inversion.pdf}
+\caption{}
+\label{fig:inversion}
+\end{figure}
+\end{landscape}
+
+\subsection{Domain Formation}
+
+\begin{landscape}
 \begin{figure}[p!]
 \centering
   \includegraphics[width=\linewidth]{../figures/appC/grid_small.pdf}
   \caption{Analysis of the roughened surface to find surface domain sizes was
-carried out by mapping the surface composition (left) onto a \AA spaced grit
+carried out by mapping the surface composition (left) onto \AA\ spaced grid
 points (center). Contiguous domains were identified and have been shown in
 distinct colors (right), and the distribution of the domain areas was collected
 over 15 ns time windows.}
 \label{fig:surfaceGrid}
 \end{figure}
+\end{landscape}
 
 
 \begin{figure}[p!]
@@ -121,3 +159,15 @@ systems.}
 \end{figure}
 
 \section{Summary}
+The reconstruction that was observed on these systems was ultimately attributed
+to the unstableness of the (100) surface facet rather than to any primarily
+\ce{CO} induced effect. However, the presence of \ce{CO} did appear to
+facilitate some of this reconstruction as shown in the domain plots and
+inversion figures. Similar to what was seen in Chapter 3, the stronger
+\ce{Pd\bond{-}CO} interaction coupled with the preference for \ce{Pt} to
+maximize nearest neighbors provided the main driving force for these
+reconstructions, but the presence of \ce{CO} also played a small role by
+weakening the metal-metal bonds speeding up many of these processes. Future
+simulations that ensure the stability of the bare surfaces may be able to speak
+more clearly about the effects of \ce{CO} on these systems.
+
