@@ -11,14 +11,14 @@ however the majority of effective catalysts are composed of expensive metals
 such as \ce{Pt}, \ce{Pd}, \ce{Rh}, \ce{Au}, and \ce{Ag}.  In order to address
 this issue of costly catalytic materials there has been an impetus to design
 and characterize new bimetallic materials,\citep{Yu:2012by, Han:2015qr}
-near-surface alloys (NSA),\citep{Jan-Kundsen:2007fe, Stephens:2011bv} and
+near-surface alloys (NSA),\citep{Jan-Knudsen:2007fe, Stephens:2011bv} and
 dispersed nanostructures\citep{Shibata:2002hh,Kugai:2011rt} from cheaper
 materials.  These catalysts have the potential to be finely-tuned for specific
 reactions while reducing the needed amount of the expensive metal by replacing
 it with a cheaper one. As an example \ce{Pt3Ni} catalysts have been created
 that show an increased activity for the oxygen reduction reaction while
 replacing a portion of \ce{Pt} with the much cheaper
-\ce{Ni}.\cite{Stamenkovic:2007kk,Tuaev:2013fk} The stability of these types of
+\ce{Ni}.\citep{Stamenkovic:2007kk,Tuaev:2013fk} The stability of these types of
 materials is called into question however as Tao {\em et al.} show in their
 study of \ce{Pd/Rh} core-shell nanoparticles which experienced large-scale
 inversions of material depending on the oxidizing or reducing nature of the
@@ -114,16 +114,57 @@ the (100) systems in Figure \ref{fig:biSystems} and seeing the large amount of
 \ce{CO} that is not adsorbed in the (111) systems.
 
 \subsection{Inversion}
+One mechanism for surface restructuring is that of atom inversion, where an
+atom from a subsurface layer exchanges positions with an atom on the surface.
+This process strongly depends on the stability of the surface and the strength
+of metal-metal interactions as many of those bonds will need to be broken or
+weakened for this process to occur.  The \ce{Pt/Pd} systems modeled in this
+study showed some evidence of this process over the short amount of simulation
+time, specifically on the higher \ce{CO} coverage systems. As highlighted in
+Figure \ref{fig:inversion}, over a period of 5 ns (left image 1 ns, right image
+6 ns) an additional 6 \ce{Pt} atoms were replaced with the subsurface \ce{Pd}.
+This process is energetically favorable because the \ce{Pt\bond{-}Pt} andd
+\ce{Pt\bond{-}Pd} bonds are stronger than the \ce{Pd\bond{-}Pd} interactions.
+However, the kinetic barrier for this process is large since it requires some
+amount of lifting or compressing of the surface atom as well as a small vacancy
+formation at some point in the subsurface. Henkelman {\em et al.} modeling
+(111) and (100) \ce{Au/Pd} surfaces observed that the presence of a vacany on
+the surface drastically increased the rates of surface
+segregation.\citep{Kim:2013mi} The presence of \ce{CO} appears to slightly
+lower the barrier as the systems with \ce{CO} were observed to have a greater
+number of \ce{Pd} on the surface at the end of our simulations. If the systems
+had been run for significantly longer, it is likely that small domains or
+patches of \ce{Pd} would have formed on the surface, as those sites with their
+weaker cross-interactions would be more energetically favorable for additional
+inversion events. While inversion events were observed to occurr on the (100)
+surfaces, the loss of a complete surface coverage of \ce{Pt} because of the
+refaceting from (100) to (111) makes exact characterization of such events more difficult.
+
 
 \begin{figure}[p!]
 \centering
 \includegraphics[width=\linewidth]{../figures/appC/inversion.pdf}
-\caption{}
+\caption{Observed inversion events on the 111-1\ce{Pt}-1\ce{Pt} surface with a
+0.5 ML coverage of \ce{CO}. The left image (a) is after one nanosecond of data
+collection while the right image (b) is taken at the end of six nanoseconds.
+Pink atoms on the surface are \ce{Pd} atoms that have undergone an inversion
+event with the surface \ce{Pt}.}
 \label{fig:inversion}
 \end{figure}
-\end{landscape}
 
 \subsection{Domain Formation}
+Using the same methodology as developed in reference \citep{Michalka:2015aa},
+the surfaces of the systems were projected onto a two-dimensional grid which
+was then digitized and analyzed to collect distributions of domain sizes of
+\ce{Pd} and \ce{Pt}. An example of this process is illustrated in Figure
+\ref{fig:surfaceGrid}. Also of interest in this figure is the presence of a
+small diamond-shaped patch of (100) \ce{Pt} sitting on top of the rest of the
+\ce{Pt} surface. The distribution of domain sizes can then be plotted as a
+function of time and \ce{CO} coverage as illustrated in Figures
+\ref{fig:ds100Pt} and \ref{fig:ds100Pd}. This analysis was also run on the
+(111) systems, and while the presence of inversion events does lead to a number
+of ``small'' \ce{Pd} domains, the surfaces remain overwhelming \ce{Pt}, at
+least during our simulation time.
 
 \begin{landscape}
 \begin{figure}[p!]
@@ -138,8 +179,16 @@ over 15 ns time windows.}
 \end{figure}
 \end{landscape}
 
+Figure \ref{fig:ds100Pt} identifies the strong effect \ce{CO} has on the size
+of the \ce{Pt} domains on the 100-1Pt-2Pd systems. When no \ce{CO} was present,
+the size of the domains are essentially the size of the entire system, the
+presence of two distinct peaks is due to the binning and averaging that must be
+done to display the data in this format. The 0.25 ML and 0.5 ML systems
+conversely, do show significant changes over the 6 ns of data collection and
+the decrease in \ce{Pt} domain sizes is matched, as expected by an increase in
+\ce{Pd} domain sizes as highlighted in Figure \ref{fig:ds100Pd}. 
 
-\begin{figure}[p!]
+\begin{figure}
 \centering
   \includegraphics[width=\linewidth]{../figures/appC/ds_100_1Pt_2Pd_Pt.pdf}
   \caption{Distributions of Pt domain sizes at different CO coverages and at
@@ -149,14 +198,23 @@ systems.}
 \end{figure}
 
 
-\begin{figure}[p!]
+\begin{figure}
 \centering
   \includegraphics[width=\linewidth]{../figures/appC/ds_100_1Pt_2Pd_Pd.pdf}
   \caption{Distributions of Pd domain sizes at different CO coverages and at
 different times after exposure to \ce{CO} for the 100-1\ce{Pt}-2\ce{Pd}
 systems.}
-\label{fig:ds100Pt}
+\label{fig:ds100Pd}
 \end{figure}
+
+Similar to the inversion events, one of the driving forces for this
+reconstruction is the stronger \ce{Pd\bond{-}CO} interaction which encourages
+\ce{Pd} exposure at the alloy surface. However, the primary cause for these
+domain formations is the inherent instability of the (100) overlayer when
+compared to the lower energ (111) surface. Nevertheless, the formation of
+domains of the underlying \ce{Pd} exposed to the surface is of particular
+interest because it opens up avenues for designing catalysts that could hide or
+protect the active layer when not under reaction conditions.
 
 \section{Summary}
 The reconstruction that was observed on these systems was ultimately attributed
