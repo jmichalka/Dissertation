@@ -1,6 +1,6 @@
 
-\chapter{Reconstruction of Pt/Pd Bimetallic Near Surface Alloys Exposed to Carbon Monoxide}
-
+%\chapter{Reconstruction of Pt/Pd Bimetallic Near Surface Alloys Exposed to Carbon Monoxide}
+\chapter{RECONSTRUCTION OF PT/PD BIMETALLIC NEAR SURFACE ALLOYS EXPOSED TO CARBON MONOXIDE}
 
 \section{Introduction}
 
@@ -39,13 +39,13 @@ microcanonical (NVE) ensemble for 6 ns of data collection. The (100) systems
 were treated identically except that they were warmed and equilibrated at 600~K
 and kept at that temperature throughout the simulation.
 
-\subsection{Interaction Parameters}
+\subsection{Interaction Potentials}
 The interaction potentials provided in Michalka {\em et
 al.}\citep{Michalka:2015aa} are used here unchanged. Important to note is that
 the \ce{Pd\bond{-}CO} interaction is slightly stronger than the
 \ce{Pt\bond{-}CO} interaction for this parameterization.
 
-\subsection{System Details}
+\subsection{System details}
 The systems were constructed from a FCC \ce{Pt} crystal that was ``sliced'' to
 display either a (111) or (100) facet in the {\em z}-direction while being
 periodic in the {\em x} and {\em y} directions. The bulk of the crystal was
@@ -91,8 +91,9 @@ interaction.
   \caption{Depictions of the (111) and (100) systems. \ce{Pt} atoms are colored
 gray while \ce{Pd} are colored pink. The top row depicts near surface alloys
 with a sandwiched Pt (surface), Pd (subsurface), Pt (bulk) system before
-significant warming. Systems (a) and (b) display the low-energy (111) facets
-and only differ with number of layers of Pd with (a) having one layer and (b)
+significant warming while the bottom row depicts the same systems after six ns of
+exposure to CO. Systems (a) and (b) display the low-energy (111) facets and
+only differ with number of layers of Pd with (a) having one layer and (b)
 having two layers. Systems (c) and (d) display the (100) facets on the surface
 and also are only different with regard to the number of Pd layers, one and two
 respectively.}
@@ -144,15 +145,14 @@ refaceting from (100) to (111) makes exact characterization of such events more 
 \begin{figure}[p!]
 \centering
 \includegraphics[width=\linewidth]{../figures/appC/inversion.pdf}
-\caption{Observed inversion events on the 111-1\ce{Pt}-1\ce{Pt} surface with a
-0.5 ML coverage of \ce{CO}. The left image (a) is after one nanosecond of data
-collection while the right image (b) is taken at the end of six nanoseconds.
-Pink atoms on the surface are \ce{Pd} atoms that have undergone an inversion
-event with the surface \ce{Pt}.}
+\caption{Observed inversion events on the 111-1\ce{Pt}-1\ce{Pd} surface with a
+0.5 ML coverage of \ce{CO}. The left image (a) is of the surface after one ns
+of data collection while the right image (b) is taken at the end of six ns.
+\ce{Pd} atoms are shown in pink and \ce{Pt} atoms are shown in gray.}
 \label{fig:inversion}
 \end{figure}
 
-\subsection{Domain Formation}
+\subsection{Domain formation}
 Using the same methodology as developed in reference \citep{Michalka:2015aa},
 the surfaces of the systems were projected onto a two-dimensional grid which
 was then digitized and analyzed to collect distributions of domain sizes of
@@ -171,10 +171,10 @@ least during our simulation time.
 \centering
   \includegraphics[width=\linewidth]{../figures/appC/grid_small.pdf}
   \caption{Analysis of the roughened surface to find surface domain sizes was
-carried out by mapping the surface composition (left) onto \AA\ spaced grid
+carried out by mapping the surface (left) onto 1-\AA\ spaced grid
 points (center). Contiguous domains were identified and have been shown in
-distinct colors (right), and the distribution of the domain areas was collected
-over 15 ns time windows.}
+distinct colors (right), while the distribution of the domain areas was collected
+over 1.5 ns time windows.}
 \label{fig:surfaceGrid}
 \end{figure}
 \end{landscape}
