@@ -3,49 +3,50 @@
 The surfaces of metals are a complex landscape and their study is of great
 importance for catalyst design. In this dissertation, the specifics of \ce{CO}
 induced reconstructions on \ce{Pt} was explored and a mechanism for the
-experimentally observed doubling was proposed. A more complicated bimetallic
-\ce{Pt\bond{-}Pd} near-surface-alloy was also modeled to determine the effects
-of different binding strengths on the stability of the outer \ce{Pt} layer.
-Carbon monoxide's interaction with \ce{Pt} was further elucidated by examining
-how the presence of different surface steps would affect the previously
-observed reconstruction. Finally, a new method for treating fluctuating charges
-(MM-flucQ) was proposed that would allow for metal surfaces dynamically respond
-to impinging charged adsorbates.
+experimentally observed step-edge doubling was proposed. A more complicated
+bimetallic \ce{Pt\bond{-}Pd} near-surface-alloy was also modeled to determine
+the effects of different binding strengths on the stability of the outer
+\ce{Pt} layer.  Carbon monoxide's interaction with \ce{Pt} was further
+elucidated by examining how the presence of different surface steps would
+affect the previously observed reconstruction. Finally, a new method for
+treating fluctuating charges (MM-flucQ) was proposed that would allow for metal
+surfaces to dynamically respond to impinging charged adsorbates.
 
 In studying the induced reconstruction of \ce{Pt}, the \ce{Pt\bond{-}CO}
 interaction was newly parameterized to better capture the preferred atop
 binding site. The effects of coverage were also examined by exposing (557)
-\ce{Pt} surfaces to five different CO coverages [0, 0.05, 0.25, 0.33, 0.50].
-Additionally, the importance of the identity of the metal was tested by
-examining a similar system made of \ce{Au}. Throughout the simulations it was observed that the strong
-quadrupolar moment of \ce{CO}, along with its preferred atop binding site, was
-integral to the initial breaking of the clean (557) surface. The strong binding
-of \ce{CO} to \ce{Pt}, coupled with the large \ce{CO\bond{-}CO} repulsion led
-to an increase in \ce{Pt} adatom diffusion on the surface. The adatoms were
-observed to explore significant amounts of the surface as well as move up and
-down step-edges. These results allowed us to propose our mechanism that high
-coverages of \ce{CO} help break up the step-edges after which double layer
-formation results from stochastic step-wandering.
+\ce{Pt} surfaces to five different CO coverages (0 ML, 0.05 ML, 0.25 ML, 0.33
+ML, 0.50 ML).  Additionally, the importance of the identity of the metal was
+tested by examining a similar system made of \ce{Au}. Throughout the
+simulations it was observed that the strong quadrupolar moment of \ce{CO},
+along with its preferred atop binding site, was integral to the initial
+breaking of the clean (557) surface. The strong binding of \ce{CO} to \ce{Pt},
+coupled with the large \ce{CO\bond{-}CO} repulsion led to an increase in
+\ce{Pt} adatom diffusion on the surface. The adatoms were observed to explore
+significant amounts of the surface as well as traverse up and down step-edges.
+These results allowed us to propose a mechanism that depends on high coverages
+of \ce{CO} helping to break up step-edges after which double layer formation
+results from stochastic step-wandering ``zippering''.
 
 Research into bimetallic systems and their high tunability led us to model a
 \ce{Pt\bond{-}Pd} near-surface-alloy (NSA) again under a \ce{CO} atmosphere. A
 pure \ce{Pd} system was also examined as a control case, where no
 reconstruction was observed over the simulation time. The bimetallic system
 however showed a significant amount of deviation from the initial (557) surface
-and the differing binding strengths betwen \ce{CO} and \ce{Pd} vs. \ce{CO} and
+and the differing binding strengths between \ce{CO} and \ce{Pd} vs. \ce{CO} and
 \ce{Pt} played a central role in this process. The preferred bridge binding for
-\ce{Pd\bond{-}CO} had the effect of lowering its surface energy making it more
-stable, whereas the atop binding preference on \ce{Pt} had the effect of
+\ce{Pd\bond{-}CO} also had the effect of lowering its surface energy making it
+more stable, whereas the atop binding preference on \ce{Pt} had the effect of
 raising the surface energy making adatom formation and the concomitant increase
-in diffusion more favored. As observed in figure \ref{fig:nearestNeighbors}, the
-movement of the \ce{Pt} led to an increase in the number of \ce{Pt\bond{-}Pt}
-bonds which resulted in island formation on the surface of the underlying
-\ce{Pd}. The surface domain analysis, implemented for this study, was useful in
-measuring the change in domain size over time and as a function of \ce{CO}
-coverage which helped us conclude that the sintering we observed was primarily
-a kinetic barrier that needed to be overcome but that the presence of \ce{CO}
-sped up the process and allowed it to reach a separate equilibrium as compared
-to the system run without \ce{CO}.
+in diffusion more favored. As observed in Figure \ref{fig:nearestNeighbors},
+the movement of the \ce{Pt} led to an increase in the number of
+\ce{Pt\bond{-}Pt} bonds which resulted in island formation on the surface of
+the underlying \ce{Pd}. The surface domain analysis, implemented for this
+study, was useful in measuring the change in domain size over time and as a
+function of \ce{CO} coverage which helped us conclude that the sintering we
+observed was primarily a result of a a kinetic barrier that needed to be
+overcome, but that the presence of \ce{CO} sped up the process and allowed it
+to reach a separate equilibrium as compared to the system run without \ce{CO}.
 
 A further investigation into \ce{CO}'s effect on \ce{Pt} was carried out to
 better elucidate if the (557) structure of \ce{Pt} was unique in its
@@ -54,12 +55,13 @@ reconstructions. The lengths of the (111) plateaus along with the type of step
 edge, straight or kinked, were both explored through the four systems that were
 examined [(112), (321), (557), (765)]. While significant adatom movement and
 step-edge wandering was observed in the majority of the systems, only the (321)
-system showed the predicted doubling. Most surprising was that the (557) system
-did not undergo doubling in the simulation time suggesting that either the
-stochastic nature of the process was not adequately sampled during the finite
-simulation or that the slight modification to the \ce{Pt\bond{-}CO} forcefield
-to reflect recent experiments\citep{Deshlahra:2012aa} was sufficient to modify
-the potential energy landscape away from a stable double step.
+system showed the hypothesized doubling during our simulations. Most surprising
+was that the (557) system did not undergo doubling in the simulation time
+suggesting that either the stochastic nature of the process was not adequately
+sampled during the finite simulation or that the slight modification to the
+\ce{Pt\bond{-}CO} forcefield to reflect recent
+experiments\citep{Deshlahra:2012aa} was sufficient to modify the potential
+energy landscape away from a stable double step.
 
 % Section on MM-flucq, but don't have many results yet so...
 %
@@ -67,19 +69,20 @@ the potential energy landscape away from a stable double step.
 %us to rethink the current approaches for describing those interactions. The
 %majority of molecular dynamics simulations that include large metal clusters or
 %surfaces often ignore the electronic nature of the metal. 
-
+MM-FlucQ...
 
 
 %Conclusion of my work
-As the need for clean energy and efficient synthesis of various products
-continues to grow, so to will catalyst design continue to increase in
+As the need for clean sources of energy and efficient synthesis of various
+products continues to grow, so to will catalyst design continue to increase in
 importance.  Improvements in experimental and theoretical techniques have led
-to the creation of single-atom catalysts,\citep{Qiao:2011zp, Yang:2013sf}, the bridging of the pressure
-and temperature gaps,\citep{Tao:2010aa, Eren:2016qt} as well as elucidating mechanisms of adsorbate
-induced reconstructions.\citep{Michalka:2013aa,Kim:2016cr} This work has contributed to this endeavor by
-further characterizing \ce{Pt\bond{-}CO} systems while also developing new
-forcefields and approaches to more accurately treat metal-adsorbate charge
-interactions.
+to the creation of single-atom catalysts,\citep{Qiao:2011zp, Yang:2013sf}, the
+bridging of the pressure and temperature gaps,\citep{Tao:2010aa, Eren:2016qt}
+as well as elucidating mechanisms of adsorbate induced
+reconstructions.\citep{Michalka:2013aa,Kim:2016cr} This work has contributed to
+this endeavor by further characterizing \ce{Pt\bond{-}CO} systems while also
+developing new forcefields and approaches to more accurately treat
+metal-adsorbate charge interactions.
 
 
 
@@ -99,8 +102,8 @@ Despite \ce{Pt\bond{-}Pd} bimetallic catalysts being of considerable interest,
 both components are relatively expensive and significant effort is being
 expended to tailor \ce{Pt\bond{-}M} surfaces and nanoparticles.
 \ce{Pt\bond{-}Ni} is of immense interest because of its increased activity for
-the oxygen reduction reaction and would be of much interest to
-model.\citep{Tuaev:2013fk, Stamenkovic:2007kk,Sneed:2014fj}
+the oxygen reduction reaction and would be a good candidate for future
+simulations.\citep{Tuaev:2013fk, Stamenkovic:2007kk,Sneed:2014fj}
 
 As the Multiple Minima Fluctuating Charge method is continually refined, many
 avenues for exploration are opened, especially those involving charged
@@ -108,5 +111,5 @@ adsorbates on metal surfaces. Many systems and processes of interest, including
 \ce{H2O} on \ce{Pt},\citep{Xu:0dz} metallic-oxide
 formation,\citep{Streitz:1994mw, Fantauzzi:2014pb, Lloyd:2016jt}, and various
 biological molecules on metal surfaces,\citep{Padmos:0qf, Mete:2015rc} which
-have been studied at differing levels of theory would be benefitted by more
+have been studied at differing levels of theory would be benefited by more
 fully treating the electrostatic interactions present in the system. 
