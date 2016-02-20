@@ -22,7 +22,14 @@
 %\newpage
 
 
-In this chapter...
+In this chapter we explore four facets of \ce{Pt} exposed to \ce{CO} through
+molecular dynamics simulations. The facets were chosen to explore the effects
+plateau length and step-edge, flat or kinked, have on previously identified
+reconstruction processes. The rougher kinked (321) and (765) systems are
+hypothesized to undergo greater amounts of step-wandering while also
+experiencing step-edge doubling at a faster rate than the previously modeled
+(557) systems. The change in the local environment was also examined as the
+surfaces underwent reconstruction. 
 
 %\section{Introduction}
 %Industrial catalysts often consist of supported metal nanoparticles or
@@ -97,7 +104,7 @@ Modeling the surface reconstruction of a solid/gas interface requires large
 systems.  To observe events such as step doubling and step wandering, systems
 need to contain on the order of 10\textsuperscript{3} - 10\textsuperscript{4}
 atoms. The large number of electrons involved with this many atoms means that
-these interfaces cannot be modeled through ab initio molecular dynamics
+these interfaces cannot be modeled through ab {\em ab initio} molecular dynamics
 (AIMD),\citep{Kresse:1993qf, Kresse:1993ve, Kresse:1994ul} Car-Parrinello
 methods, \citep{Car:1985bh, Izvekov:2000fv, Guidelli:2000fy} or quantum
 mechanical potential energy surfaces.  In addition, the interactions between
@@ -150,7 +157,7 @@ Sankaranarayanan:2006ye, Sankaranarayanan:2005bh} fracture,
 \citep{Shastry:1996qg, Shastry:1998dx, Mishin:2001qt} crack propagation,
 \citep{Becquart:1993sr} and alloying dynamics.  \citep{Shibata:2002hh,
 Mishin:2002if, Zope:2003ai, Mishin:2005vc} EAM's parameterization included
-second and third nearest-neighbor interactions which makes it particulary
+second and third nearest-neighbor interactions which makes it particularly
 suited to systems that are expected to deviate from low-energy (111) surfaces,
 which is why it was chosen to describe the \ce{Pt\bond{-}Pt} interactions of
 our high-index surfaces.  \citep{Foiles:1986ky} 
@@ -168,18 +175,30 @@ linear quadrupole (-2.40 D\AA) close to both experiment (-2.63 D\AA)
 \citep{Chetty:2011dp} and quantum mechanical predictions (-2.46 D\AA).
 \citep{Rizzo:2000sp}
 
-\begin{table}[ht]
-\caption{Positions, Lennard-Jones parameters ($\sigma$ and $\epsilon$) and charges for \ce{CO\bond{-}CO} interactions}
+\begin{table}
+\caption{PARAMETERS FOR THE CO MODEL}
+%\caption{Positions, Lennard-Jones parameters ($\sigma$ and $\epsilon$) and charges for \ce{CO\bond{-}CO} interactions}
+\centering
+\begin{threeparttable}
 \centering
 \begin{tabular}{c c c c c}
-\hline\hline
- & z (\AA) & $\sigma$ (\AA) & $\epsilon$ (kcal/mol) & q ($e^{-}$) \\
+\hline
+\hline
+ & z \tnote{a} & $\sigma$ \tnote{a} & $\epsilon$ \tnote{b} & q \tnote{c}\\
  \hline
  C & -0.6457 & 3.83 & 0.0262 & -0.75 \\
  O & 0.4843 & 3.12 & 0.1591 & -0.85 \\
  M & 0.0 & & & 1.6 \\
- \hline
+\hline
+\hline
  \end{tabular}
+\begin{tablenotes}
+  \item \ce{CO\bond{-}CO} cross-interactions are modeled with Lennard-Jones potentials.
+  \item[a] Positions are given in \AA
+  \item[b] Energies are given in kcal/mol
+  \item[c] Charges are given in elementary units, $e^{-}$
+\end{tablenotes}
+\end{threeparttable}
 \label{tab:parameters}
 \end{table}
 
@@ -207,32 +226,55 @@ V_{r} = 4\epsilon\bigg(\Big(\frac{\sigma}{r_{Pt-C}}\Big)^{12} - \Big(\frac{\sigm
 Table \ref{table:pt-co} shows the parameters for the above potential, while
 Table \ref{table:sites} provides the binding energies for the various sites
 based on these parameters and compares them to DFT\citep{Deshlahra:2012aa} and
-experimentla data.\citep{}
+experimental data.\citep{}
 
-\begin{table}[ht]
-\caption{Parameters for Pt-CO Interaction}
+\begin{table}
+\caption{PARAMETERS FOR THE METAL-CO CROSS-INTERACTIONS}
+%\caption{Parameters for Pt-CO Interaction}
+\centering
+\begin{threeparttable}
 \centering
 \begin{tabular}{c c c c c}
-\hline\hline
+\hline
+\hline
 \multicolumn{2}{c}{Pt-C} & \multicolumn{3}{c}{Pt-O}  \\
-$\sigma$ & $\epsilon$ & $r_{e}$ & $\mathrm{D}_e$ & $\gamma$ \\
+\hline
+$\sigma$\tnote{a} & $\epsilon$\tnote{b} & $r_{e}$\tnote{a} & $\mathrm{D}_e$\tnote{b} & $\gamma$ (\AA\textsuperscript{-1}) \\
+\hline
 1.68 & 52.25 & 5.15 & 0.03 & 1.7 \\
 \hline
+\hline
 \end{tabular}
+\begin{tablenotes}
+  \item Metal-C interactions are modeled with Lennard-Jones potentials, while the metal-O interactions were fit to Morse potentials.
+  \item[a] Distances are given in \AA
+  \item[b] Energies are given in kcal/mol
+\end{tablenotes}
+\end{threeparttable}
 \label{table:pt-co}
 \end{table}
 
-\begin{table}[ht]
-\caption{Pt-CO Binding Site Preferences (eV)}
+\begin{table}
+\caption{PT-CO BINDING ENERGIES}
+%\caption{Pt-CO Binding Site Preferences (eV)}
+\centering
+\begin{threeparttable}
 \centering
 \begin{tabular}{c c c c}
-\hline\hline
+\hline
+\hline
 & Atop & Bridge & Hollow \\
+\hline
 This work & -1.49 & -1.36 & -1.32 \\
 DFT \citep{Deshlahra:2012aa} & -1.48 & -1.47 & -1.45 \\
 Experimental\citep{} & & & \\
 \hline
+\hline
 \end{tabular}
+\begin{tablenotes}
+  \item All binding energies are given in eV.
+\end{tablenotes}
+\end{threeparttable}
 \label{table:sites}
 \end{table}
 
@@ -240,12 +282,13 @@ Experimental\citep{} & & & \\
 \subsection{Systems}
 
 The various \ce{Pt} systems were created so as to be of a similar size, and fit
-properly in an orthorhombic periodic box. The four original cuts were
-doubled in either the $x$ or the $y$ direction so that the effect of step
-lengths could also be investigated and were identified as LS, for systems with longer steps, and MS, for systems with more steps. The system dimensions, number of atoms, and
-surface coverages are enumerated in Table \ref{tab:dimensions}. Each system began
-as a FCC crystal and was cut to expose the desired face in the extended $z$ axis,
-while staying periodic along the $x$ and $y$ axis.
+properly in an orthorhombic periodic box. The four original cuts were doubled
+in either the $x$ or the $y$ direction so that the effect of step lengths could
+also be investigated and were identified as LS, for systems with longer steps,
+and MS, for systems with more steps. The system dimensions, number of atoms,
+and surface coverages are enumerated in Table \ref{tab:dimensions}. Each system
+began as a FCC crystal and was cut to expose the desired face in the extended
+$z$ axis, while staying periodic along the $x$ and $y$ axis.
 %the pt(112) systems were
 %8 layers thick, had a slab thickness of $\sim$18 \aa~and were in boxes of 65.70
 %x 54.24 x 100 \aa~and 32.82 x 108.4 x 100 \aa.  the pt(557)
@@ -257,23 +300,33 @@ while staying periodic along the $x$ and $y$ axis.
 %thickness of $\sim$19 \aa~and were in boxes of 58.36 x 50.19 x 100 \aa~
 %and 28.72 x 100.5 x 100 \aa.  
 
-\begin{table}[ht]
-\caption{Dimensions}
+\begin{table}
+\caption{SYSTEM DIMENSIONS}
+%\caption{Dimensions}
 \centering
-\begin{tabular}{c c c c c c}
+\begin{threeparttable}
+\centering
+\begin{tabular}{c c c c c}
 \hline\hline
-Surface & Atoms & Layers & Surface Atoms & Dimensions 1 (x, y, z) (\AA) & Dimensions 2 (x, y, z) (\AA)\\
+Surface & Atoms & Surface Atoms & \multicolumn{2}{c}{System dimensions (1 \& 2) (\AA)}  \\ 
 \hline
-(321) & 4440 & 8 & 720 & 71.70 x 47.71 x 100 & 35.82 x 95.49 x 100\\
-(112) & 4608 & 8 & 768 & 32.874 x 108.51 x 100 & 65.748 x 54.253 x 100\\
-(765) & 3744 & 9 & 792 & 58.36 x 50.19 x 100 & 28.72 x 100.5 x 100\\
-(557) & 3888 & 10 & 720 & 55.27 x 49.48 x 100 & 110.6 x 24.76 x 100\\
+(321) & 4440 & 720 & 71.7 x 47.7 x 100 & 35.8 x 95.5 x 100\\
+(112) & 4608 & 768 & 32.9 x 108.5 x 100 & 65.8 x 54.3 x 100\\
+(765) & 3744 & 792 & 58.4 x 50.2 x 100 & 28.7 x 100.5 x 100\\
+(557) & 3888 & 720 & 55.3 x 49.5 x 100 & 110.6 x 24.8 x 100\\
+\hline
 \hline
 \end{tabular}
+\begin{tablenotes}
+  \item Systems were replicated in either the $x$ or $y$ dimension at the
+beginning of the simulations to examine the effect of edge length and quantity
+of steps on the reconstruction process.
+\end{tablenotes}
+\end{threeparttable}
 \label{tab:dimensions}
 \end{table}
 
-The systems were then run in the canonical (NVT) ensamble, gradually raising
+The systems were then run in the canonical (NVT) ensemble, gradually raising
 the temperature to either 700\ ~K or 1000\ ~K depending on the initial
 stability of the pure system.  The systems with longer plateaus were more
 stable and were run at 1000\ ~K to hasten the dynamics in the system so that
@@ -282,7 +335,7 @@ Various amounts of CO, corresponding to 0.25 ML or 0.5 ML, were placed in the
 vacuum region and then allowed to absorb to the surface. The systems were then
 re-equilibrated for approximately one nanosecond before data collection was
 begun.  Data was collected by running the systems in the microcanonical (NVE)
-ensamble for 100 ns.  Simulations were performed using the open source
+ensemble for 100 ns.  Simulations were performed using the open source
 molecular dynamics package, OpenMD.\citep{Fennell:2006xq, Meineke:2005pt,
 openmd} 
 
@@ -304,7 +357,7 @@ have observed that including the first and second nearest neighbor counts in
 their description of coordination allowed for a better description of an atom's
 local environment.\citep{Calle-Vallejo:2015qq} With this information, similar to
 volcano plots, they were able to create ``coordination-activity plots'' that
-related an atoms coordination with its catalyic activity. Since they needed to
+related an atoms coordination with its catalytic activity. Since they needed to
 include information about second nearest neighbors, they introduced a new term,
 the generalized coordinate number (GCN) as a useful measure of the various
 binding environments on metal surfaces or nanoparticles. The GCN is a
@@ -322,7 +375,7 @@ coordination number.
   \label{eq:gcn}
 \end{equation}
 
-\begin{figure}
+\begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap4/321_ideal_gcn.pdf}
   \caption{A graph of the generalized coordinate numbers of an ideal Pt(321)
 system colored to match the inset figure. Other than the bulk (GCN=12), the
@@ -345,11 +398,11 @@ atoms with a GCN of $7.5=(6\times9 + 3\times12)/12$, this implies that surfaces
 that display some amount of concavity may be necessary to achieve the highest
 catalytic activities. Another color-coded graph of an ideal \ce{Pt} (557)
 system is included in the supporting information as Figure S1 to highlight the
-differences between a high-index surface, (321), to a comparitively flat and
+differences between a high-index surface, (321), to a comparatively flat and
 regular surface, (557).
 
 In Figure \ref{fig:LS321GCNF}, we see GCN data from the \ce{Pt} (321) systems
-which are focused on the surface and subsurfaces layers, i.e. non-bulk, for the
+which are focused on the surface and subsurface layers, i.e. non-bulk, for the
 three examined coverages at  the beginning and end of the simulation times. The
 growth in the peaks around 7.5, as highlighted with the blue bar, suggest that
 the surface is reconstructing so as to display a greater amount of (111)
@@ -359,7 +412,7 @@ further evidence of the system moving to a lower energy displayed facet. While
 not as helpful to surface catalytic reactions, the growth in the peak at a GCN
 of 11.2 shows how the subsurface layers are becoming more bulk-like.
 
-\begin{figure}
+\begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap4/321ls_GCNF.pdf}
   \caption{Plots of the average GCN for the non-bulk atoms of the \ce{Pt} (321)
 LS systems.  Solid lines represent the averaged GCN during the first 10
@@ -381,7 +434,7 @@ simulation. There is a slight decrease around 5.5 which is consistent with the
 slight step sinking that was observed on some of these systems. Representative GCN plots
 of the other systems are included in the supporting information as S2-S?.
 
-\begin{figure}
+\begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap4/112ls_GCNF.pdf}
   \caption{Plots of the average GCN for the non-bulk atoms of the Pt (112) LS
 systems. Solid lines represent the averaged GCN during the first 10 nanoseconds
@@ -395,7 +448,7 @@ barely perturbed.}
 
 \subsection{Edge wandering}
 All of the surfaces experienced some amount of step-wandering which will be
-discuseed by surface facet below.
+discussed by surface facet below.
 
 \subsubsection{557}
 Starting with the (557) surfaces which have been explored more fully in
@@ -425,13 +478,14 @@ limited step-edge reconstructions were observed as again a couple of the steps
 on each system sunk into the bulk making adatom formation difficult.  The bare
 surface maintained its displayed (112) step-edges macroscopically, but if the
 individual atoms are colored, it is observed that there is actually a
-significant amount of adatom ejection and readsorption on the surface. The
+significant amount of adatom ejection and re-adsorption on the surface. The
 presence of \ce{CO} increased the disruption of the step-edges and the largest
 amount of restructuring in these systems was observed on the 0.5 ML system were
 three steps coalesced into a mini-(111) facet which is highlighted in Figure
 \ref{fig:tripleStep}.
 
 \begin{figure}
+\centering
   \includegraphics[width=0.8\linewidth]{../figures/chap4/112_tripleStep.pdf}
   \caption{Top-down view of the (112) 0.5 ML surface extended to display longer
 steps. (a) depicts the system at the beginning of the run when minimal
@@ -473,6 +527,7 @@ length of the system, whereas numerous examples of partial double steps can be
 found.
 
 \begin{figure}
+\centering
 \includegraphics[width=0.6\linewidth]{../figures/chap4/321_partialDoubleLayer.pdf}
 \caption{Images of the (321) 0.5 ML long-step systems at the (a) beginning and
 (b) end of the simulation time. Before \ce{CO} is added to the system the
@@ -495,6 +550,7 @@ step edges may suggest a possible reason for the pausing at this configuration
 and will be explored in more detail in the discussion.
 
 \begin{figure}
+\centering
 \includegraphics[width=0.6\linewidth]{../figures/chap4/321MiniDiamonds.pdf}
 \caption{The (321) LS 0.25 ML system at (a) the beginning of the simulation and
 (b) at the end. The green diamonds highlight the repeated (111) domains formed
@@ -534,22 +590,27 @@ were calculated in this experiment are compared to those calculated in previous
 EAM experimentation \citep{Foiles:1986ky} as well as against experimental
 surface energy values in Table \ref{table:lit_surface_energy}.
 
-\begin{table}[ht]
-\caption{Surface Energy Verification}
+\begin{table}
+\caption{SURFACE ENERGY VERIFICATION}
+%\caption{Surface Energy Verification}
+\centering
+\begin{threeparttable}
 \centering
 \begin{tabular}{c c c c}
-\hline\hline
-Facet & Surface Energy (J/$\mathrm{m}^{2}$) & Literature\citep{Foiles:1986ky} (J/$\mathrm{m}^{2}$) & Experimental\citep{}(J/$\mathrm{m}^{2}$)\\
 \hline
-%pt(111) & 1.433596521 & 1.44 \\
-%pt(100) & 1.625896392 & 1.65 \\
-%pt(110) & 1.75108677 & 1.75 \\
+\hline
+Facet & Surface Energy & Literature\citep{Foiles:1986ky}  & Experimental\citep{} \\
+\hline
 \ce{Pt} (111) & 1.43 & 1.44 & 0.977\\
 \ce{Pt} (100) & 1.63 & 1.65 & 1.286\\
 \ce{Pt} (110) & 1.75 & 1.75 & 1.553\\
 \hline
 \hline
 \end{tabular}
+\begin{tablenotes}
+  \item All energies are given in J/$\textrm{m}^2$
+\end{tablenotes}
+\end{threeparttable}
 \label{table:lit_surface_energy}
 \end{table}
 
@@ -562,12 +623,16 @@ facet being displayed. This suggests that the higher surface energy systems
 will be more amendable to reconstruction so as to display a greater proportion
 of (111) domains.
 
-\begin{table}[ht]
-\caption{Surface Energy}
+\begin{table}
+\caption{SURFACE ENERGY}
+%\caption{Surface Energy}
+\centering
+\begin{threeparttable}
 \centering
 \begin{tabular}{c c c}
-\hline\hline
-Facet & Energy (J/$\mathrm{m}^{2}$) & Distance between Steps (\AA) \\
+\hline
+\hline
+Facet & Energy\tnote{a} & Distance between Steps\tnote{b} \\
 \hline
 %pt(765) & 1.525686968 & 16.79333333 \\
 %pt(557) & 1.546605208 & 13.785 \\
@@ -578,9 +643,16 @@ Facet & Energy (J/$\mathrm{m}^{2}$) & Distance between Steps (\AA) \\
 \ce{Pt} (112) & 1.67 & 6.79 \\
 \ce{Pt} (321) & 1.76 & 5.90 \\
 \hline
+\hline
 \end{tabular}
+\begin{tablenotes}
+  \item[a] Energies are given in J/$\textrm{m}^2$
+  \item[b] Distances are given in \AA
+\end{tablenotes}
+\end{threeparttable}
 \label{table:surface_energy}
 \end{table}
+
 \subsubsection{Plateau length}
 In addition to the plateau length providing a good measure of the surface
 energy of these facets, the length of the plateau also plays a role in the
@@ -609,7 +681,7 @@ configurations, as had been done previously.  \citep{Michalka:2015aa,
 Michalka:2013aa} These calculations were performed at various displacements as
 the atoms of interest were moved perpendicular to the step edge along the
 plateau as shown in Figures \ref{fig:112_557_ES} and \ref{fig:321_765_ES}. The
-strong quadropolar repulsion between aligned \ce{CO} leads to this process of
+strong quadrupolar repulsion between aligned \ce{CO} leads to this process of
 adatom formation becoming energetically favorable at high coverages. For the
 faceted (112) and (557) systems, configurations e, g, and h, highlighted in
 Figure \ref{fig:112_557_ES}, make the initial formation of an adatom an
@@ -617,31 +689,36 @@ energetically favorable process. The (321) and (765) facets examined in Figure
 \ref{fig:321_765_ES}, owing primarily to their rougher step edges, show that
 configurations e, f, g, and h are all favorable for adatom formation.
 
-\begin{figure}
+\begin{landscape}
+\begin{figure}[p!]
+  \centering
   \includegraphics[width=\linewidth]{../figures/chap4/112_557_EnergySeparation.pdf}
-  \caption{Energies for displacing a single edge atom (*) perpendicullary from
-the step edge as a function of atom displacement. The top graph contains data from the
-(112) surface while the bottom graph depicts results from the (557) surface.
-Each of the energy curves corresponds to the labeled configuration to the right of the curves
-and are referenced to the unperturbed step edge. The white atoms represent Pt
-atoms on the upper step, while the dark grey atoms are Pt on the lower step.
-The colored atoms (blue) on the upper step represent a Pt atom with a CO
-molecule adsorbed at an atop site. Certain configurations of CO, notably g and
-h, can lower the energetic barrier for creating an adatom relative to the bare
-surface, e.g. configuration a.}
+  \caption{Energies for displacing an edge atom (*) perpendicularly from the
+step edge. The top graph contains data for the (112) surface while the bottom
+graph depicts results for the (557) surface.  Each of the energy curves
+corresponds to one of the labeled configuration to the right and are referenced
+to the unperturbed step edge. The white spheres represent Pt atoms on the upper
+step, while the dark grey spheres are Pt on the lower step.  The colored atoms
+(blue) on the upper step represent a Pt atom with a CO molecule adsorbed at an
+atop site. Certain configurations of CO, notably g and h, can lower the
+energetic barrier for creating an adatom.}
 \label{fig:112_557_ES}
 \end{figure}
+\end{landscape}
 
-\begin{figure}
+\begin{landscape}
+\begin{figure}[p!]
+  \centering
   \includegraphics[width=\linewidth]{../figures/chap4/321_765_EnergySeparation.pdf}
   \caption{Similar to Figure \ref{fig:112_557_ES}, these graphs depict the
-energies for displacing an edge atom perpendicullary from either the (321) or
-(765) step eddges. The configurations to the right of the graphs represent the
+energies for displacing an edge atom perpendicularly from either the (321) or
+(765) step edges. The configurations to the right of the graphs represent the
 rougher kinked step edges of these facets. The rougher steps lower the 
 energetic barrier for adatom creation when compared to the flat steps of the
 (112) and (557) surfaces.}
 \label{fig:321_765_ES}
 \end{figure}
+\end{landscape}
 
 In general, this analysis provides several helpful results. First, removing an
 atom from a (321) or (765) step is more energetically favorable than from a
@@ -685,7 +762,7 @@ surface. While the presence of \ce{CO} provides some of the driving force for
 this hopping, the resultant increase in (111) domain size on the surface
 combined with the numerous nucleation sites that are formed between steps leads
 to this patterning existing as a metastable state in many of our simulations of
-the (321) surface. In constrast, the straight steps on the (112) and (557)
+the (321) surface. In contrast, the straight steps on the (112) and (557)
 surfaces, while sources for adatoms, did not provide any benefit to doubling.
 
 \begin{figure}
@@ -694,7 +771,7 @@ surfaces, while sources for adatoms, did not provide any benefit to doubling.
 surfaces.  One of the most commonly observed adatom movements on the surface
 involves one of the kink atoms hopping to a nearby edge binding site. This is
 predicted to happen in one of two ways, (a) the highlighted blue atom is
-ejected and traverses in a curvilinear path to its end point or (b) the blue
+ejected and traverses in a curvi-linear path to its end point or (b) the blue
 atom dislocates the green atom resulting in the same final configuration. The
 formation of longer (100) segments of the step-edge slightly lowers the surface
 energy leading to a more stable surface.}
@@ -709,7 +786,7 @@ raised about previously reported calorimetric heats of adsorption for the
 \ce{Pt\bond{-}CO} interaction.\citep{Yeo:1997th} As the decrease in this binding
 energy is immediately realized by fewer CO being adsorbed at any given instant
 in the simulations, this also apparently led to a decrease in adatom formation
-and concomittantly a decrease in step-edge wandering. For the surfaces that had
+and concomitantly a decrease in step-edge wandering. For the surfaces that had
 short plateaus, this decrease did not appear to affect the doubling as the
 edges did not have to wander as far to still meet, but for the (557) and (765)
 surfaces,  doubling was not observed for this specific parameter set.
@@ -774,16 +851,16 @@ partially dependent on the presence of adsorbates, here \ce{CO}, that can first
 disrupt the step-edges and then stabilize the formation of double steps. An in-depth
 examination of the energetics of step-edge breakup shows that the ``kinked''
 surfaces (321) and (765) are especially favorable for formation of adatoms
-because of the under-coordination of the kined edge atoms. The stochastic
+because of the under-coordination of the kinked edge atoms. The stochastic
 mechanism proposed in earlier work which stated that the meeting up of two
 edges was ultimately a stochastic process and then double layer formation would
-typically proceed in a ``zippering'' fashion is strengthed here as a number of
+typically proceed in a ``zippering'' fashion is strengthened here as a number of
 systems with shorter plateaus ended up in frustrated double layer formations.
 
 The lack of any double steps forming on the (557) surface despite being seen
 experimentally and in an earlier set of simulations suggest that either a
 trajectory that would lead to that reconstruction was not sampled or more
-likely that the reparameterization of the \ce{Pt\bond{-}CO} interaction to
+likely that the re-parameterization of the \ce{Pt\bond{-}CO} interaction to
 better match reported experimental values over-weakened the interaction for
 this specific case. While significant step-wandering was still observed on
 these systems, the density of adatoms was not sufficient to stochastically form
