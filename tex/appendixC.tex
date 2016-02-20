@@ -1,235 +1,201 @@
 
-%\chapter{Reconstruction of Pt/Pd Bimetallic Near Surface Alloys Exposed to Carbon Monoxide}
-\chapter{RECONSTRUCTION OF PT/PD BIMETALLIC NEAR SURFACE ALLOYS EXPOSED TO CARBON MONOXIDE}
+\chapter{STABILITY AND RECONSTRUCTIONS OF PT/PD BIMETALLIC NANOCUBES EXPOSED TO CARBON MONOXIDE}
 
 \section{Introduction}
 
-
-%intro line about catalysts
-Catalysts are at the center of numerous industrial and scientific processes;
-however many of the most effective catalysts are composed of expensive metals
-such as \ce{Pt}, \ce{Pd}, \ce{Rh}, \ce{Au}, and \ce{Ag}.  In order to address
-this issue of cost, there has been a push to design and characterize new
-bimetallic materials,\citep{Han:2015qr, Yu:2012by} near-surface alloys
-(NSA),\citep{Stephens:2011bv, Jan-Knudsen:2007fe} and dispersed
-nanostructures\citep{Shibata:2002hh, Kugai:2011rt} from less expensive metals
-and other materials.  The goal is for these catalysts to still be highly active
-while reducing the cost of the catalyst. This can be done by replacing a
-significant amount of the expensive metal with a cheaper one.  As an example
-\ce{Pt3Ni} catalysts have been created that show an increased activity for the
-oxygen reduction reaction while replacing a portion of \ce{Pt} with the much
-cheaper \ce{Ni}.\citep{Tuaev:2013fk, Stamenkovic:2007kk} The stability of these
-types of materials is called into question however as Tao {\em et al.} showed
-in their study of \ce{Pd/Rh} core-shell nanoparticles, which experienced
-large-scale inversions of material depending on the oxidizing or reducing
-nature of the environment.\citep{Tao:2008aa} That is, under an oxidizing
-atmosphere, \ce{Rh} made up the outer shell of the nanoparticle while under a
-reducing atmosphere, \ce{Pd} migrated to the surface instead. This appendix
-provides information on the initial creation of bimetallic Pt/Pd near-surface
-alloys and the preliminary results obtained.
+Metals are used as catalysts in various industrial processes and because of the
+importance of maximizing reactions ({\em i.e.} surface area to volume ratio),
+many of these processes make use of roughened surfaces or nanoparticles
+dispersed on a cheaper unreactive surface.\citep{Munnik:2015qf, Graham:2007ng}
+The size distribution of nanoparticles tends to be on the order of tens to
+hundreds of nanometers in size, which results in efficient utilization of the
+material compared to a flat surface.\citep{Zhang:2011ne, Liu:2013hf}
+Additionally, the morphology of these nanoparticles plays a role in their
+activity and includes simple cubes, octahedra, pyramids, and numerous other
+morphologies.\citep{Ahmadi:2015os, Wang:2015qb, Wang:2016dg} The different
+morphologies can be somewhat characterized by their displayed stable facets;
+however, as seen in previous work\citep{Tao:2010aa, Michalka:2013aa,
+Michalka:2015aa, Kim:2016cr}, even fairly stable surfaces can undergo large
+scale reconstructions under experimental conditions. This appendix provides
+information on the initial setup of bimetallic Pt/Pd nanocubes and the
+preliminary results obtained. 
 
 \section{Methodology}
-Two main systems were examined differing only by the displayed surface facet,
-(111) or (100).  The (111) systems were initially thermalized at 200~K and
-warmed up in the canonical (NVT) ensemble  to 1000~K over 500 ps. They were
-then allowed to reach equilibrium at this temperature over another 500 ps at
-which point they were dosed with a sufficient quantity of \ce{CO} to correspond
-to either 0, 0.25, or 0.5 monolayers (ML) of coverage. The systems were further
-equilibrated in the NVT ensemble for another 500 ps before switching to the
-microcanonical (NVE) ensemble for 6 ns of data collection. The (100) systems
-were treated identically except that they were warmed and equilibrated at 600~K
-and kept at that temperature throughout the simulation.
-
 \subsection{Interaction Potentials}
 The interaction potentials provided in Michalka {\em et
-al.}\citep{Michalka:2015aa} are used here unchanged. Important to note is that
-the \ce{Pd\bond{-}CO} interaction is slightly more favorable by 0.2 kcal/mole
-when compared to the \ce{Pt\bond{-}CO} interaction in this parameterization.
+al.}\citep{Michalka:2015aa} are used here unchanged. It is important to note
+that with the potential the \ce{Pd\bond{-}CO} binding interaction is 0.2
+kcal/mole more favorable than the \ce{Pt\bond{-}CO} interaction. Additionally,
+the treatment of the metal interactions results in \ce{Pt\bond{-}Pt} bonds
+being stronger than \ce{Pt\bond{-}Pd} bonds, which are stronger than
+\ce{Pd\bond{-}Pd} bonds.
 
 \subsection{System details}
-The systems were constructed from a FCC \ce{Pt} crystal that was ``sliced'' to
-display either a (111) or (100) facet in the {\em z}-direction while being
-periodic in the {\em x} and {\em y} directions. The bulk of the crystal was
-kept as \ce{Pt} while one or two layers directly underneath the surface were
-converted to \ce{Pd}. The ideal systems, before the addition of \ce{CO}, are
-highlighted in the top row of Figure \ref{fig:biSystems}. The (111) systems
-have dimensions of $71.41\times82.44\times100$ \AA\textsuperscript{3}, while
-the (100) systems have $68.78\times68.78\times100$ \AA\textsuperscript{3}.
-Knowing that the \ce{Pd\bond{-}CO} interaction is stronger, it was chosen as
-the subsurface layer. Additionally, when \ce{Pt} is on the surface, there are
-two effects that could encourage restructuring, \ce{Pt}'s higher cohesive
-energy, ({\em i.e.} desire to be in a bulk environment), and the greater
-strength of the \ce{Pd\bond{-}CO} compared to the \ce{Pt\bond{-}CO}
-interaction.
+Nanocubes with edge lengths of 6, 7, and 8 nm were constructed from an ideal
+\ce{Pd} FCC lattice with a lattice constant of 3.89 \AA~  and cut so as to
+expose the (100), (010), and (001) facets. For each of these three sizes, the
+outermost 1, 2, or 3 layers were further replaced with Pt to create nine total
+systems whose compositions are reported in Table \ref{tab:systems}. Work by Cao
+{\it et al.}\citep{Cao:2010gf} on the self-distillation of bimetallic
+nanostructures (\ce{Rh/Pt}) showed that when the outer shell of the particle
+was composed of the higher melting metal (\ce{Rh}) there was an imposed stability on the
+confined inner metal (\ce{Pt}). For our systems, \ce{Pt} ($T_m = 2041 K$) is the higher melting
+metal and was chosen to compose the outer layers while keeping the core of the
+nanoparticle Pd ($T_m = 1828 K$). 
+
+%Additionally, the slightly more favorable Pd-CO interaction may provide a driving force for reconstructions that will be dependent on the thickness of the Pt since Pd will want to migrate through the Pt to the surface.
 
 \begin{table}
-  \caption{PT/PD NEAR SURFACE ALLOY SIZES AND COMPOSITION}
+  \caption{PT/PD NANOCUBE SIZES AND COMPOSITION}
   \centering
   \begin{threeparttable}
   \begin{tabular}{ c ccc }
   \hline
   \hline
-  \textbf{System} & \textbf{Pt} & \textbf{Pd} &  \textbf{(Pd/total)} \\
+  \textbf{System} & \textbf{Pd} & \textbf{Pt} &  \textbf{(Pt/total)} \\
   \hline
-  100-1Pt-1Pd & 7776 & 1296  & 0.143 \\
-  100-1Pt-2Pd & 6480  & 2592  & 0.286 \\
-  111-1Pt-1Pd & 10800  & 1800  & 0.143 \\
-  111-1Pt-2Pd & 9000 & 3600  & 0.286 \\
+  6nm-1L & 10976 & 2524  & 0.187 \\
+  6nm-2L & 8788  & 4712  & 0.349 \\
+  6nm-3L & 6912  & 6588  & 0.488 \\
+  7nm-1L & 19652 & 3676  & 0.157 \\
+  7nm-2L & 16384 & 6944  & 0.298 \\
+  7nm-3L & 13500 & 9828  & 0.421 \\
+  8nm-1L & 27436 & 4564  & 0.143 \\
+  8nm-2L & 23328 & 8672  & 0.271 \\
+  8nm-3L & 19652 & 12348 & 0.386 \\
   \hline
   \hline
   \end{tabular}
   \end{threeparttable}
-\label{tab:systems1}
+\label{tab:systems}
 \end{table}
 
+Systems were constructed in a orthorhombic periodic box of greater size that
+the nanocubes that were contained within. The systems were then initially
+equilibrated at 5~K to allow the slight strain of replacing Pd atoms with Pt in
+the outer layers to dissipate while maintaining the nanocube morphology.
+Warming over approximately 3~ns was performed to bring all systems up to a
+simulation temperature of 1000~K at which point an amount of CO equivalent to a
+0.5 ML coverage was introduced into the system.  After another brief period of
+equilibration during which a significant amount of the CO adsorbed to the
+surface, the systems were run for an additional 3~ns of
+data collection.
+
+Figures \ref{fig:6nm}, \ref{fig:7nm}, and \ref{fig:8nm} highlight the different
+nanocube systems after the initial strain relaxation and then after the systems
+have been warmed but before the CO was added. The instability of the smaller
+systems as highlighted in Figures \ref{fig:6nm}, \ref{fig:7nm}.a, and
+\ref{fig:8nm}.a is one the reasons this project was paused.  Specifically, the
+6 nm systems underwent extreme distortions from the nanocube morphology during
+the warming procedure and even at 750~K (before warming was complete) as
+displayed in the image, the original (100) surface has almost entirely been
+replaced with the more stable (111) surface. The larger mass of the 7 and 8 nm
+systems allowed for a greater amount of stability; however, the 1L systems for
+both sizes still experienced an extremely large amount of non \ce{CO}-induced
+restructuring.
 
 \begin{landscape}
 \begin{figure}[p!]
 \centering
-  \includegraphics[width=0.8\linewidth]{../figures/appC/systems.pdf}
-  \caption{Depictions of the (111) and (100) systems. \ce{Pt} atoms are colored
-gray while \ce{Pd} are colored pink. The top row depicts near surface alloys
-with a sandwiched Pt (surface), Pd (subsurface), Pt (bulk) system before
-significant warming while the bottom row depicts the same systems after six ns of
-exposure to CO. Systems (a) and (b) display the low-energy (111) facets and
-only differ with number of layers of Pd with (a) having one layer and (b)
-having two layers. Systems (c) and (d) display the (100) facets on the surface
-and are only different with regard to the number of Pd layers, one and two
-respectively.}
-\label{fig:biSystems}
+  \includegraphics[width=0.8\linewidth]{../figures/appB/6nm.pdf}
+  \caption{The top row displays the 6 nm nanocubes at 300~K in the midst of the
+warming procedure.  \ce{Pt} atoms are shown in gray while \ce{Pd} atoms are
+shown in pink.  There is a slight transparency of the front \ce{Pt} face to
+show the inner \ce{Pd} atoms. The bottom row depicts the same systems after
+warming to 750~K.  (a) corresponds to the one-layer (1L) system while (b) and
+(c) correspond to the 2L and 3L systems respectively.}
+  \label{fig:6nm}
 \end{figure}
 \end{landscape}
+
+\begin{landscape}
+\begin{figure}[p!]
+\centering
+  \includegraphics[width=0.8\linewidth]{../figures/appB/7nm.pdf}
+  \caption{The top row displays the 7 nm nanocubes at 300~K in the midst of the warming procedure.
+The bottom row depicts the same systems after warming to
+1000~K.  (a) corresponds to the one-layer (1L) system while (b) and (c)
+correspond to the 2L and 3L systems respectively. The 7nm-1L system is somewhat
+unstable and shows significant deviations away from the original (100) facets.}
+  \label{fig:7nm}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[p!]
+\centering
+  \includegraphics[width=0.8\linewidth]{../figures/appB/8nm.pdf}
+  \caption{The top row displays the 8 nm nanocubes after at 300~K in the midst of the warming procedure. 
+The bottom row depicts the same systems after warming to
+1000~K.  (a) corresponds to the one-layer (1L) system while (b) and (c)
+correspond to the 2L and 3L systems respectively. Similar to the 7nm-1L system,
+the 8nm-1L nanocube undergoes significant restructuring to maximize the
+formation of (111) domains on the surface.}
+  \label{fig:8nm}
+\end{figure}
+\end{landscape}
+
+
 
 \section{Results \& Discussion}
-The (100) \ce{Pt} surfaces were inherently unstable at the temperatures
-simulated regardless of CO-coverage as the surface \ce{Pt} collapsed to domains
-of (111). This had the effect of exposing the underlying (100) \ce{Pd} which
-remained stable during the simulation. This change is highlighted in Figures
-\ref{fig:biSystems}.c and \ref{fig:biSystems}.d, where the initially (100)
-surface restructures to the lower energy (111) domains exposing large patches
-of \ce{Pd} to the \ce{CO} in the system. This is shown a bit more clearly in
-Figure \ref{fig:surfaceGrid} although a small portion of the surface did retain
-the original (100) motif (highlighted in yellow). Additionally, because of the
-way adsorbate coverage was initially calculated, this restructuring of the
-(100) surface creates more binding sites for the \ce{CO} to bind too which can
-be seen by comparing the (111) to the (100) systems in Figure
-\ref{fig:biSystems} and seeing the large amount of \ce{CO} that is not adsorbed
-in the (111) systems.
-
-\subsection{Inversion}
-One mechanism for surface restructuring is that of atom inversion or surface
-segregation, where an atom from a subsurface layer exchanges positions with an
-atom on the surface.  This process strongly depends on the stability of the
-surface and specifically on  the strength of metal-metal interactions as many
-of these bonds will need to be broken or weakened for this process to occur.
-The \ce{Pt/Pd} systems modeled in this study showed some evidence of this
-process over the short amount of simulation time, specifically on the higher
-\ce{CO} coverage systems. As highlighted in Figure \ref{fig:inversion}, over a
-period of 5 ns (left image 1 ns, right image 6 ns) an additional 6 \ce{Pt}
-surface atoms were replaced with the subsurface \ce{Pd}.  This process is
-energetically favorable because the \ce{Pt\bond{-}Pt} and \ce{Pt\bond{-}Pd}
-bonds are stronger than the \ce{Pd\bond{-}Pd} interactions.  However, the
-kinetic barrier for this process is large since it requires some amount of
-lifting or compressing of the surface atom as well as a small vacancy formation
-at some point in the subsurface. Henkelman {\em et al.} modeling (111) and
-(100) \ce{Au/Pd} surfaces observed that the presence of a vacancy on the surface
-drastically increased the rates of surface segregation.\citep{Kim:2013mi} The
-presence of \ce{CO} appears to slightly lower the barriers needed for this
-process as the systems with \ce{CO} were observed to have a greater number of
-\ce{Pd} on the surface at the end of the simulations. If the systems had been
-run for significantly longer, it is likely that small domains or patches of
-\ce{Pd} would have formed on the surface, as the most energetically favored
-sites for inversion would be those that already had a \ce{Pd} atom nearby.
-While inversion events were observed to occur on the (100) surfaces, the loss
-of a complete surface coverage of \ce{Pt} because of the refaceting from (100)
-to (111) makes exact characterization of such events difficult.
+One of the challenges that led to this project being shelved is the size of the
+systems and the concomitant increase in simulation time needed to capture the
+hypothesized restructuring processes. The 3 nanoseconds that were simulated
+provided us with the following results which are discussed below.
 
 
-\begin{figure}[p!]
-\centering
-\includegraphics[width=\linewidth]{../figures/appC/inversion.pdf}
-\caption{Observed inversion events on the 111-1\ce{Pt}-1\ce{Pd} surface with a
-0.5 ML coverage of \ce{CO}. The left image (a) is of the surface after one ns
-of data collection while the right image (b) is taken at the end of six ns.
-\ce{Pd} atoms are shown in pink and \ce{Pt} atoms are shown in gray.}
-\label{fig:inversion}
-\end{figure}
+\subsection{CO-Induced reconstruction}
+As concluded in our previous work\citep{Michalka:2013aa}, the presence of CO was again
+seen to play a role in the observed restructuring. However, unlike what was
+observed on the \ce{Pt} (557) surface, where \ce{CO} was
+required for any large-scale reconstruction to occur, for these systems a
+significant portion of the reconstruction could be directly attributed to the lower
+stability of the (100) facets when compared to (111) facets. As highlighted in
+Figure \ref{fig:6nm}, these systems underwent an extreme amount of
+reconstruction despite no \ce{CO} being present. 
 
-\subsection{Domain formation}
-Using the same methodology as developed in reference \citep{Michalka:2015aa},
-the surfaces of the systems were projected onto a two-dimensional grid which
-was then digitized and analyzed to collect distributions of domain sizes of
-\ce{Pt} and \ce{Pd}. An example of this process is illustrated in Figure
-\ref{fig:surfaceGrid}. 
-The distribution of domain sizes can then be plotted as a
-function of time and \ce{CO} coverage as illustrated in Figures
-\ref{fig:ds100Pt} and \ref{fig:ds100Pd}. This analysis was also run on the
-(111) systems, and while the presence of inversion events does lead to a number
-of ``small'' \ce{Pd} domains, the surfaces remain overwhelming \ce{Pt}, at
-least during the performed simulation time.
+However, Figure \ref{fig:8nmCO}.b does show that the more favorable
+\ce{Pd\bond{-}CO} binding does lead to an inversion or surface segregation of
+the inner Pd to the surface of the nanocube. \ce{Pd} was preferentially found
+to have segregated to the surface near the edges and corners of the cubes which
+is easily explained as the surface atoms at those sites tend to be
+undercoordinated and thus are easier to break their surface bonds.
+
+Surface energy arguments can also be made to explain some of the restructuring.
+As mentioned in the system details, the EAM forcefield that is being used to
+describe the metal-metal interactions results in a Pt-Pd bond that is more
+favorable than a Pd-Pd bond.  Thus, given sufficient time and energy to
+overcome kinetic barriers, all of the Pt on the surface would prefer to be
+subsumed underneath the Pd. However, there is a competing process which could
+cause surface \ce{Pt} to sinter so as to maximize Pt-Pt bonds. While this may
+result in a lower overall energy for the system, the potential barrier is quite
+high as there would have to be numerous ``lifting'' processes to build up the
+multiple layers of \ce{Pt} needed to maximize the number of \ce{Pt\bond{-}Pt}
+interactions. Additionally, this would expose a significant amount of the
+buried \ce{Pd}, which will \ce{CO} would prefer this, it would also increase
+the total surface area of the system which is an energetically unfavorable
+process.
+
 
 \begin{landscape}
 \begin{figure}[p!]
 \centering
-  \includegraphics[width=\linewidth]{../figures/appC/grid_small.pdf}
-  \caption{Analysis of the roughened surface to find surface domain sizes was
-carried out by mapping the surface (left) onto 1-\AA\ spaced grid
-points (center). Contiguous domains were identified and have been shown in
-distinct colors (right), while the distribution of the domain areas was collected
-over 1.5 ns time windows.}
-\label{fig:surfaceGrid}
+  \includegraphics[width=0.8\linewidth]{../figures/appB/8nm_CO.pdf}
+  \caption{The top row depicts the 8 nm nanocubes surrounded by the equivalent
+of 0.5 ML of CO. The bottom row shows the same systems after 3 ns.  The small
+amount of rotation is due to an improperly sampled velocity distribution of the
+CO which upon adsorption and collision with the nanocube imparted a slight
+rotation.}
+  \label{fig:8nmCO}
 \end{figure}
 \end{landscape}
 
-As displayed in Figure \ref{fig:ds100Pt} \ce{CO} has a strong effect on the
-size of the \ce{Pt} domains on the 100-1Pt-2Pd systems. When no \ce{CO} was
-present, the size of the domains are essentially the size of the entire system,
-the presence of two distinct peaks is due to the binning and averaging of both
-top and bottom domain sizes that must be done to display the data in this
-format. The 0.25 ML and 0.5 ML systems conversely, do show significant changes
-over the 6 ns of data collection and the decrease in \ce{Pt} domain sizes is
-matched, as expected by an increase in \ce{Pd} domain sizes as highlighted in
-Figure \ref{fig:ds100Pd}. 
-
-\begin{figure}
-\centering
-  \includegraphics[width=\linewidth]{../figures/appC/ds_100_1Pt_2Pd_Pt.pdf}
-  \caption{Distributions of Pt domain sizes at different CO coverages and at
-different times after exposure to \ce{CO} for the 100-1\ce{Pt}-2\ce{Pd}
-systems.}
-\label{fig:ds100Pt}
-\end{figure}
-
-
-\begin{figure}
-\centering
-  \includegraphics[width=\linewidth]{../figures/appC/ds_100_1Pt_2Pd_Pd.pdf}
-  \caption{Distributions of Pd domain sizes at different CO coverages and at
-different times after exposure to \ce{CO} for the 100-1\ce{Pt}-2\ce{Pd}
-systems.}
-\label{fig:ds100Pd}
-\end{figure}
-
-Similar to the inversion events, one of the driving forces for this
-reconstruction is the stronger \ce{Pd\bond{-}CO} interaction which encourages
-\ce{Pd} exposure at the alloy surface. However, the primary cause for these
-domain formations is the inherent instability of the (100) overlayer when
-compared to the lower energy (111) surface. However, as mentioned earlier and
-highlighted in Figure \ref{fig:surfaceGrid}, despite the majority of the
-surface \ce{Pt} collapsing to (111) domains, some of the \ce{Pt} atoms are
-raised higher on the surface and retain the original (100) faceting.
 
 
 \section{Summary}
-The reconstruction that was observed on these systems was ultimately attributed
-to the instability of the (100) surface facet rather than to any primarily
-\ce{CO} induced effect. However, the presence of \ce{CO} did facilitate some of
-this reconstruction as shown in the domain plots and inversion figures. Similar
-to what was seen in Chapter \ref{chap:island}, the stronger \ce{Pd\bond{-}CO}
-interaction coupled with the preference for \ce{Pt} to maximize nearest
-neighbors provided the main driving forces for these reconstructions. The
-presence of \ce{CO} also played a small role by weakening the metal-metal
-bonds, speeding up many of these processes. Future simulations that ensure the
-stability of the bare surfaces may be able to speak more clearly about the
-effects of \ce{CO} on these systems.
-
+The observed restructuring while informative, was primarily determined to be an
+artifact of the small system sizes that were chosen for this investigation.
+Future simulations examining larger systems ($>10$ nm) may solve the buckling
+observed in a number of these systems. Additionally, an exploration into
+octahedral-type nanoparticles with their preferred (111) facets may also help
+solve the stability issues and provide another direction to explore.
