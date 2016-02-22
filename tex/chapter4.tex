@@ -25,11 +25,12 @@
 In this chapter we explore four facets of \ce{Pt} exposed to \ce{CO} through
 molecular dynamics simulations. The facets were chosen to explore the effects
 plateau length and step-edge, flat or kinked, have on previously identified
-reconstruction processes. The rougher kinked (321) and (765) systems are
-hypothesized to undergo greater amounts of step-wandering while also
-experiencing step-edge doubling at a faster rate than the previously modeled
-(557) systems. The change in the local environment was also examined as the
-surfaces underwent reconstruction. 
+reconstruction processes. The rougher, {\em i.e.} kinked, (321) and (765)
+systems are hypothesized to undergo greater amounts of step-wandering while
+also experiencing step-edge doubling at a faster rate than the previously
+modeled, flat, (557) systems. The change in the local environment was also
+examined as the surfaces underwent reconstruction as this is an important
+descriptor of potential catalytic activity. 
 
 %\section{Introduction}
 %Industrial catalysts often consist of supported metal nanoparticles or
@@ -104,27 +105,27 @@ Modeling the surface reconstruction of a solid/gas interface requires large
 systems.  To observe events such as step doubling and step wandering, systems
 need to contain on the order of 10\textsuperscript{3} - 10\textsuperscript{4}
 atoms. The large number of electrons involved with this many atoms means that
-these interfaces cannot be modeled through ab {\em ab initio} molecular dynamics
-(AIMD),\citep{Kresse:1993qf, Kresse:1993ve, Kresse:1994ul} Car-Parrinello
-methods, \citep{Car:1985bh, Izvekov:2000fv, Guidelli:2000fy} or quantum
-mechanical potential energy surfaces.  In addition, the interactions between
-the individual metal atoms is poorly represented by classical pairwise
+these interfaces cannot be modeled through ab {\em ab initio} molecular
+dynamics (AIMD),\citep{Kresse:1993ve, Kresse:1993qf, Kresse:1994ul}
+Car-Parrinello methods, \citep{Car:1985bh, Izvekov:2000fv, Guidelli:2000fy} or
+quantum mechanical potential energy surfaces.  In addition, the interactions
+between the individual metal atoms is poorly represented by classical pairwise
 interactions.  Therefore, the Embedded Atom Method (EAM) \citep{Foiles:1986ky}
 was used to model the \ce{Pt\bond{-}Pt} interactions.  The molecular model for
 carbon monoxide (\ce{CO}) was developed by Straub and
 Karplus,\citep{Straub:1991no} and it treats the \ce{CO} as a rigid, three-site
 body. It was chosen primarily because it describes \ce{CO}'s strong linear
 quadrupole accurately.  The \ce{Pt\bond{-}CO} interaction was modeled to match
-a combination of experimental \citep{Yeo:1997th, Ertl:1977cg, Kelemen:1979ad}
-and theoretical \citep{Deshlahra:2012aa, Korzeniewski:1986kl, Beurden:2002ys,
-Deshlahra:2009wu, Feibelman:2001qa, Mason:2004ix} data. 
+a combination of experimental \citep{Ertl:1977cg, Kelemen:1979ad, Yeo:1997th}
+and theoretical \citep{Feibelman:2001qa, Deshlahra:2009wu, Beurden:2002ys,
+Deshlahra:2012aa, Korzeniewski:1986kl, Mason:2004ix} data. 
 
 \subsection{Platinum-Platinum interactions}
 Since classical force fields often do not work well for transition metal
 systems, several methods have been developed that use a non-pairwise additive
 function of the local electron density.  Some of these methods include the
 embedded atom method (EAM) \citep{Foiles:1986ky, Daw:1984aq, Johnson:1989yr,
-Daw:1989ci, Plimpton:1993qi, Lu:1997fv, Alemany:1998fp, Voter:1995ax}, the
+Daw:1989ci, Plimpton:1993qi, Voter:1995ax, Lu:1997fv, Alemany:1998fp}, the
 Finnis-Sinclair method \citep{Finnis:1984hl, Sutton:1990rr} and the
 quantum-corrected Sutton Chen method \citep{Qi:1999dn}.  In general, these
 methods treat the atom as a positive core surrounded by a radially decaying
@@ -163,55 +164,61 @@ which is why it was chosen to describe the \ce{Pt\bond{-}Pt} interactions of
 our high-index surfaces.  \citep{Foiles:1986ky} 
 
 \subsection{Carbon Monoxide model}
-The large linear quadrupole moment of \ce{CO} is believed to play a primary
-role in the reconstruction of \ce{Pt} (557)\citep{Tao:2010aa, Michalka:2013aa}
-and since Karplus and Straub's model captures that quadrupole it was chosen for
-this work.\citep{Straub:1991no} This model consists of three rigid sites, 2
-atomic describing the \ce{C} and \ce{O} both with an attached negative charge
-and a massless site at the center of mass that carries a large positive charge.
-The necessary parameters are shown in Table \ref{tab:parameters}.  These
-parameters still produce a small dipole moment of 0.35 D while keeping the
-linear quadrupole (-2.40 D\AA) close to both experiment (-2.63 D\AA)
-\citep{Chetty:2011dp} and quantum mechanical predictions (-2.46 D\AA).
-\citep{Rizzo:2000sp}
+The carbon monoxide model developed by Karplus and Straub\citep{Straub:1991no},
+which was discussed in Chapter \ref{chap:PtAu} and shown in Table \ref{tab:CO}
+is used here without change.
+%The large linear quadrupole moment of \ce{CO} is believed to play a primary
+%role in the reconstruction of \ce{Pt} (557)\citep{Tao:2010aa, Michalka:2013aa}
+%and since Karplus and Straub's model captures that quadrupole it was chosen for
+%this work.\citep{Straub:1991no} This model consists of three rigid sites, 2
+%atomic describing the \ce{C} and \ce{O} both with an attached negative charge
+%and a massless site at the center of mass that carries a large positive charge.
+%The necessary parameters are shown in Table \ref{tab:parameters}.  These
+%parameters still produce a small dipole moment of 0.35 D while keeping the
+%linear quadrupole (-2.40 D\AA) close to both experiment (-2.63 D\AA)
+%\citep{Chetty:2011dp} and quantum mechanical predictions (-2.46 D\AA).
+%\citep{Rizzo:2000sp}
 
-\begin{table}
-\caption{PARAMETERS FOR THE CO MODEL}
-%\caption{Positions, Lennard-Jones parameters ($\sigma$ and $\epsilon$) and charges for \ce{CO\bond{-}CO} interactions}
-\centering
-\begin{threeparttable}
-\centering
-\begin{tabular}{c c c c c}
-\hline
-\hline
- & z \tnote{a} & $\sigma$ \tnote{a} & $\epsilon$ \tnote{b} & q \tnote{c}\\
- \hline
- C & -0.6457 & 3.83 & 0.0262 & -0.75 \\
- O & 0.4843 & 3.12 & 0.1591 & -0.85 \\
- M & 0.0 & & & 1.6 \\
-\hline
-\hline
- \end{tabular}
-\begin{tablenotes}
-  \item \ce{CO\bond{-}CO} cross-interactions are modeled with Lennard-Jones potentials.
-  \item[a] Positions are given in \AA
-  \item[b] Energies are given in kcal/mol
-  \item[c] Charges are given in elementary units, $e^{-}$
-\end{tablenotes}
-\end{threeparttable}
-\label{tab:parameters}
-\end{table}
+%\begin{table}
+%\caption{PARAMETERS FOR THE CO MODEL}
+%%\caption{Positions, Lennard-Jones parameters ($\sigma$ and $\epsilon$) and charges for \ce{CO\bond{-}CO} interactions}
+%\centering
+%\begin{threeparttable}
+%\centering
+%\begin{tabular}{c c c c c}
+%\hline
+%\hline
+% & z \tnote{a} & $\sigma$ \tnote{a} & $\epsilon$ \tnote{b} & q \tnote{c}\\
+% \hline
+% C & -0.6457 & 3.83 & 0.0262 & -0.75 \\
+% O & 0.4843 & 3.12 & 0.1591 & -0.85 \\
+% M & 0.0 & & & 1.6 \\
+%\hline
+%\hline
+% \end{tabular}
+%\begin{tablenotes}
+%  \item \ce{CO\bond{-}CO} cross-interactions are modeled with Lennard-Jones potentials.
+%  \item[a] Positions are given in \AA
+%  \item[b] Energies are given in kcal/mol
+%  \item[c] Charges are given in elementary units, $e^{-}$
+%\end{tablenotes}
+%\end{threeparttable}
+%\label{tab:parameters}
+%\end{table}
 
-\subsection{Platinum-Carbon Monoxide interactions}
-The extensive experimental \citep{Yeo:1997th, Ertl:1977cg, Kelemen:1979ad,
-?,?,?} and theoretical \citep{Deshlahra:2012aa, Korzeniewski:1986kl,
-Beurden:2002ys, Deshlahra:2009wu, Feibelman:2001qa, Mason:2004ix} work on
+
+
+
+\subsection{Platinum-Carbon Monoxide interactions} The extensive experimental
+\citep{Ertl:1977cg, Kelemen:1979ad, Ertl:1989, Schweizer:1989fk, Szanyi:1992aa,
+Yeo:1997th} and theoretical \citep{Feibelman:2001qa, Deshlahra:2009wu,
+Beurden:2002ys, Deshlahra:2012aa, Korzeniewski:1986kl, Mason:2004ix} work on
 \ce{Pt\bond{-}CO} allows for significant data upon which to parameterize this
 interaction.  Due to recent research the \ce{Pt\bond{-}CO} interaction has been
 modified from previous models\citep{Michalka:2013aa, Michalka:2015aa} to better
-capture the difference in energy between the preferred atop and bridge
-sites as described by DFT calculations.\citep{Deshlahra:2012aa} This model has
-also been modified to use a purely repulsive Morse potential to represent the
+capture the difference in energy between the preferred atop and bridge sites as
+described by DFT calculations.\citep{Deshlahra:2012aa} This model has also been
+modified to use a purely repulsive Morse potential to represent the
 \ce{Pt\bond{-}O} interaction in contrast to previous
 implementations.\citep{Korzeniewski:1986kl, Michalka:2013aa} Using a purely
 repulsive Morse prevents unphysical \ce{O} first binding to the surface.
@@ -226,10 +233,10 @@ V_{r} = 4\epsilon\bigg(\Big(\frac{\sigma}{r_{Pt-C}}\Big)^{12} - \Big(\frac{\sigm
 Table \ref{table:pt-co} shows the parameters for the above potential, while
 Table \ref{table:sites} provides the binding energies for the various sites
 based on these parameters and compares them to DFT\citep{Deshlahra:2012aa} and
-experimental data.\citep{}
+experimental data.\citep{Ertl:1977cg, Kelemen:1979ad}
 
 \begin{table}
-\caption{PARAMETERS FOR THE METAL-CO CROSS-INTERACTIONS}
+\caption{REFIT PARAMETERS FOR THE PT-CO CROSS-INTERACTIONS}
 %\caption{Parameters for Pt-CO Interaction}
 \centering
 \begin{threeparttable}
@@ -239,7 +246,7 @@ experimental data.\citep{}
 \hline
 \multicolumn{2}{c}{Pt-C} & \multicolumn{3}{c}{Pt-O}  \\
 \hline
-$\sigma$\tnote{a} & $\epsilon$\tnote{b} & $r_{e}$\tnote{a} & $\mathrm{D}_e$\tnote{b} & $\gamma$ (\AA\textsuperscript{-1}) \\
+$\sigma$\tnote{a} & $\epsilon$\tnote{b} & $r_{e}$\tnote{a} & $\mathrm{D}_e$\tnote{b} & $\gamma$\tnote{c} \\
 \hline
 1.68 & 52.25 & 5.15 & 0.03 & 1.7 \\
 \hline
@@ -249,13 +256,14 @@ $\sigma$\tnote{a} & $\epsilon$\tnote{b} & $r_{e}$\tnote{a} & $\mathrm{D}_e$\tnot
   \item Metal-C interactions are modeled with Lennard-Jones potentials, while the metal-O interactions were fit to Morse potentials.
   \item[a] Distances are given in \AA
   \item[b] Energies are given in kcal/mol
+  \item[c] $\gamma$ is given in units of \AA\textsuperscript{-1}
 \end{tablenotes}
 \end{threeparttable}
 \label{table:pt-co}
 \end{table}
 
 \begin{table}
-\caption{PT-CO BINDING ENERGIES}
+\caption{ADSORPTION ENERGIES FOR CO ON PT(111) WITH NEW PARAMETERIZATION}
 %\caption{Pt-CO Binding Site Preferences (eV)}
 \centering
 \begin{threeparttable}
@@ -266,13 +274,15 @@ $\sigma$\tnote{a} & $\epsilon$\tnote{b} & $r_{e}$\tnote{a} & $\mathrm{D}_e$\tnot
 & Atop & Bridge & Hollow \\
 \hline
 This work & -1.49 & -1.36 & -1.32 \\
-DFT \citep{Deshlahra:2012aa} & -1.48 & -1.47 & -1.45 \\
-Experimental\citep{} & & & \\
+DFT\tnote{a} & -1.48 & -1.47 & -1.45 \\
+Experimental\tnote{b} & -1.43 & & \\
 \hline
 \hline
 \end{tabular}
 \begin{tablenotes}
   \item All binding energies are given in eV.
+  \item[a] Ref. \citep{Deshlahra:2012aa}
+  \item[b] Refs. \citep{Ertl:1977cg, Kelemen:1979ad}
 \end{tablenotes}
 \end{threeparttable}
 \label{table:sites}
@@ -301,14 +311,14 @@ $z$ axis, while staying periodic along the $x$ and $y$ axis.
 %and 28.72 x 100.5 x 100 \aa.  
 
 \begin{table}
-\caption{SYSTEM DIMENSIONS}
+\caption{SYSTEM DIMENSIONS FOR THE MODELED PT SURFACES}
 %\caption{Dimensions}
 \centering
 \begin{threeparttable}
 \centering
 \begin{tabular}{c c c c c}
 \hline\hline
-Surface & Atoms & Surface Atoms & \multicolumn{2}{c}{System dimensions (1 \& 2) (\AA)}  \\ 
+Surface & Atoms & Surface Atoms & \multicolumn{2}{c}{System dimensions\tnote{a} (1 \& 2)}  \\ 
 \hline
 (321) & 4440 & 720 & 71.7 x 47.7 x 100 & 35.8 x 95.5 x 100\\
 (112) & 4608 & 768 & 32.9 x 108.5 x 100 & 65.8 x 54.3 x 100\\
@@ -321,6 +331,7 @@ Surface & Atoms & Surface Atoms & \multicolumn{2}{c}{System dimensions (1 \& 2) 
   \item Systems were replicated in either the $x$ or $y$ dimension at the
 beginning of the simulations to examine the effect of edge length and quantity
 of steps on the reconstruction process.
+  \item[a] Box dimensions are given in \AA
 \end{tablenotes}
 \end{threeparttable}
 \label{tab:dimensions}
@@ -392,12 +403,12 @@ an ideal \ce{Pt} (321) surface color coded to match the encompassing GCN graph.
 The bulk atoms (GCN=12) make up the majority of the system, however, there is a
 wide range of potentially catalytically active sites on this surface owing to
 its roughness. Specifically, Calle-Vallejo {\em et al.} argued that for the
-Oxygen Reduction Reaction (ORR) a \ce{Pt} atom with a GCN of \~8.3 would be the
+Oxygen Reduction Reaction (ORR) a \ce{Pt} atom with a GCN of $\sim$8.3 would be the
 most catalytically active site. Since an ideal (111) surface in composed of
 atoms with a GCN of $7.5=(6\times9 + 3\times12)/12$, this implies that surfaces
 that display some amount of concavity may be necessary to achieve the highest
 catalytic activities. Another color-coded graph of an ideal \ce{Pt} (557)
-system is included in the supporting information as Figure S1 to highlight the
+system is included in Appendix \ref{app:SI2} as Figure S1 to highlight the
 differences between a high-index surface, (321), to a comparatively flat and
 regular surface, (557).
 
@@ -432,7 +443,7 @@ less reconstruction, which is born out in their GCN plots. Figure
 systems and the minimal changes that the system underwent during the
 simulation. There is a slight decrease around 5.5 which is consistent with the
 slight step sinking that was observed on some of these systems. Representative GCN plots
-of the other systems are included in the supporting information as S2-S?.
+of the other systems are included in Appendix \ref{app:SI2} as Figures \ref{fig:} through \ref{fig:}.
 
 \begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap4/112ls_GCNF.pdf}
@@ -450,7 +461,7 @@ barely perturbed.}
 All of the surfaces experienced some amount of step-wandering which will be
 discussed by surface facet below.
 
-\subsubsection{557}
+\subsubsection{\ce{Pt} (557)}
 Starting with the (557) surfaces which have been explored more fully in
 previous papers,\citep{Tao:2010aa, Michalka:2013aa} we must  report
 that no doubling was observed during the simulation time despite their being
@@ -464,12 +475,12 @@ explanations as there was significant step-wandering, but the key event of two
 step-edges meeting did not occur for any of the (557) systems simulated in this
 study.
 
-\subsubsection{112}
+\subsubsection{\ce{Pt} (112)}
 The (112) MS surfaces underwent a small restructuring to relieve a slight
-tension in the pressure tensor (true?) that resulted in a number of the
+tension in the pressure tensor that resulted in a number of the
 originally (100) step edges sinking slightly into the surface and shifting
 sideways to display a sunken (111) step edge which is highlighted in Figure
-S2(CHANGE) in  the supporting information.  Adatom formation from these (111)
+\ref{fig:} in Appendix \ref{app:SI2}.  Adatom formation from these (111)
 steps is minimal and so the total amount of adatom creation and movement on
 these systems was much less than on the (112) systems with longer steps. 
 
@@ -494,15 +505,15 @@ had begun to coalesce into a triple step, highlighted in yellow.}
   \label{fig:tripleStep}
 \end{figure}
 
-\subsubsection{765}
+\subsubsection{\ce{Pt} (765)}
 The (765) surfaces, while undergoing significant amounts of step-wandering did
 not experience any clear instances of step-edge doubling during the
 simulations. The MS systems, those extended to display a greater quantity of
 steps maintained the (765) motif over the entire simulation barring one
 incident on the 0.5 ML system. What appears to be starting out as a doubling
 event, results in portions of both involved edges sinking into the surface of
-the metal. This process is depicted in Figure S3 (CHANGE) in the supporting
-information.
+the metal. This process is depicted in Figure \ref{fig:} in Appendix \ref{app:SI2}.
+
 
 The LS systems also experienced significant step-wandering. While no doubling
 was observed, connections between separate edges were seen. However, these
@@ -510,7 +521,7 @@ connections led to some of the steps rotating on the surface of the metal.
 Despite the apparent stability of the (765) motif for the MS systems, the 0 and
 0.5 ML LS systems appeared to undergo some amount of surface melting.
 
-\subsubsection{321}
+\subsubsection{\ce{Pt} (321)}
 The (321) steps showed the most interesting behavior with numerous instances of
 step doubling being observed on both the MS and LS 0.5 ML systems. The 0.25 ML
 systems also showed a small amount of reconstruction, although little doubling
@@ -583,7 +594,7 @@ was used to calculate the surface energy.  The values calculated for the
 low-energy surfaces matched previous values calculated using EAM, which is
 expected as they were one of many experimental variables that were used to
 parameterize the EAM forcefields.\citep{Foiles:1986ky} These values differ
-slightly from experimental\citep{De-Boer:1988tg, Tyson:1977xe} and
+slightly from experimental\citep{Tyson:1977xe, De-Boer:1988tg, Galeev:1980pt} and
 DFT\citep{Vitos:1998qq} sources, but match in terms of proportions between the
 various surfaces.  The surface energies of Pt(111), Pt(110), and Pt(100) that
 were calculated in this experiment are compared to those calculated in previous
@@ -591,7 +602,7 @@ EAM experimentation \citep{Foiles:1986ky} as well as against experimental
 surface energy values in Table \ref{table:lit_surface_energy}.
 
 \begin{table}
-\caption{SURFACE ENERGY VERIFICATION}
+\caption{SURFACE ENERGY VERIFICATION OF LOW-INDEX PT SURFACES}
 %\caption{Surface Energy Verification}
 \centering
 \begin{threeparttable}
@@ -599,7 +610,7 @@ surface energy values in Table \ref{table:lit_surface_energy}.
 \begin{tabular}{c c c c}
 \hline
 \hline
-Facet & Surface Energy & Literature\citep{Foiles:1986ky}  & Experimental\citep{} \\
+Facet & Surface Energy & EAM\tnote{a} & Experimental\tnote{b} \\
 \hline
 \ce{Pt} (111) & 1.43 & 1.44 & 0.977\\
 \ce{Pt} (100) & 1.63 & 1.65 & 1.286\\
@@ -609,6 +620,8 @@ Facet & Surface Energy & Literature\citep{Foiles:1986ky}  & Experimental\citep{}
 \end{tabular}
 \begin{tablenotes}
   \item All energies are given in J/$\textrm{m}^2$
+  \item[a] Ref. \citep{Foiles:1986ky}
+  \item[b] Ref. \citep{Galeev:1980pt}
 \end{tablenotes}
 \end{threeparttable}
 \label{table:lit_surface_energy}
@@ -624,7 +637,7 @@ will be more amendable to reconstruction so as to display a greater proportion
 of (111) domains.
 
 \begin{table}
-\caption{SURFACE ENERGY}
+\caption{SURFACE ENERGY AND STEP-LENGTH CALCULATIONS FOR MODELED PT SURFACES}
 %\caption{Surface Energy}
 \centering
 \begin{threeparttable}
@@ -632,7 +645,7 @@ of (111) domains.
 \begin{tabular}{c c c}
 \hline
 \hline
-Facet & Energy\tnote{a} & Distance between Steps\tnote{b} \\
+Facet & SurfaceEnergy\tnote{a} & Step Separation\tnote{b} \\
 \hline
 %pt(765) & 1.525686968 & 16.79333333 \\
 %pt(557) & 1.546605208 & 13.785 \\
@@ -677,8 +690,8 @@ would likely lead to a larger amount of step doubling.
 \subsection{Energy to separate from edge}
 As the formation of adatoms is essential for step-wandering and step-doubling,
 energy curves describing this process were computed for several \ce{CO}
-configurations, as had been done previously.  \citep{Michalka:2015aa,
-Michalka:2013aa} These calculations were performed at various displacements as
+configurations, as had been done previously.  \citep{Michalka:2013aa,
+Michalka:2015aa} These calculations were performed at various displacements as
 the atoms of interest were moved perpendicular to the step edge along the
 plateau as shown in Figures \ref{fig:112_557_ES} and \ref{fig:321_765_ES}. The
 strong quadrupolar repulsion between aligned \ce{CO} leads to this process of
@@ -692,7 +705,7 @@ configurations e, f, g, and h are all favorable for adatom formation.
 \begin{landscape}
 \begin{figure}[p!]
   \centering
-  \includegraphics[width=\linewidth]{../figures/chap4/112_557_EnergySeparation.pdf}
+  \includegraphics[width=0.9\linewidth]{../figures/chap4/112_557_EnergySeparation.pdf}
   \caption{Energies for displacing an edge atom (*) perpendicularly from the
 step edge. The top graph contains data for the (112) surface while the bottom
 graph depicts results for the (557) surface.  Each of the energy curves
@@ -709,7 +722,7 @@ energetic barrier for creating an adatom.}
 \begin{landscape}
 \begin{figure}[p!]
   \centering
-  \includegraphics[width=\linewidth]{../figures/chap4/321_765_EnergySeparation.pdf}
+  \includegraphics[width=0.9\linewidth]{../figures/chap4/321_765_EnergySeparation.pdf}
   \caption{Similar to Figure \ref{fig:112_557_ES}, these graphs depict the
 energies for displacing an edge atom perpendicularly from either the (321) or
 (765) step edges. The configurations to the right of the graphs represent the
