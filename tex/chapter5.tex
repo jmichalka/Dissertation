@@ -5,7 +5,7 @@
 
 In this chapter a brief overview of charge transfer methods will be presented
 alongside the initial development of the mm-FlucQ potential.  Preliminary
-results of charged species approaching the \ce{Pt} surface will also be
+results of charged species approaching a \ce{Pt} surface will also be
 examined. Finally, current challenges and future directions will be discussed.
 
 
@@ -14,24 +14,25 @@ Metal surfaces and interfaces play a key role in a number of chemical and
 technological processes; however, the tendency of oxide layers to form on these
 interfaces requires a better treatment of metal-adsorbate interactions when
 simulating these systems\citep{Streitz:1994mw, Duin:2010dk, Devine:2011bk,
-Fantauzzi:2014pb}.  The modified atomistic structure of these surface after
-oxide formation is expected to affect many properties of the interface,
-especially the local electric field, and also diffusion and adsorption on the
-surface.\citep{Streitz:1994mw, Getman:2008sp, Bray:2011hq,Small:2012dw}
+Fantauzzi:2014pb}.  The modified atomistic structure and electronic environment
+of these surfaces after oxide formation is expected to affect many properties
+of the interface, especially the local electric field, and also diffusion and
+adsorption on the surface.\citep{Streitz:1994mw, Getman:2008sp,
+Bray:2011hq,Small:2012dw}
 
 Treating the electrodynamics of such a system within molecular dynamics is a
 challenging problem. Whereas non-metallic species can be modeled satisfactorily
 with static point charges, metal-adsorbate, metal oxide, and more generally
-metal interactions require a more complicated description of electrostatic
-interactions to accurately capture the behavior of charged species near a
-conductor. The idea of electronegativity equalization introduced by
-Sanderson\citep{Sanderson:1951mz} provides a conceptual framework that
+metal-metal interactions require a more complicated description of their
+electrostatic interactions to accurately capture the behavior of charged
+species near a conductor. The idea of electronegativity equalization introduced
+by Sanderson\citep{Sanderson:1951mz} provides a conceptual framework that
 describes charge transfer between both atomic and molecular species. In this
 formalism, as a species gains negative charge in response to its local
 environment, its electronegativity decreases; similarly, if an atomic site has
 lost charge, then it has an increased electronegativity. The system would then
-only be at equilibrium if all of the electronegativities were equal. It is
-helpful to remember that the electronegativity, $\chi_A$, as defined by
+only be considered at equilibrium if all of the electronegativities were equal.
+It is helpful to remember that the electronegativity, $\chi_A$, as defined by
 Mulliken\citep{Mulliken:1934wt} is equal to the negative of the chemical
 potential of the valence electron gas around a positive nucleus, $\mu_A$, as
 argued by Iczkowski and Margrave\citep{Iczkowski:1961wq}.
@@ -40,23 +41,24 @@ argued by Iczkowski and Margrave\citep{Iczkowski:1961wq}.
 \chi_A = -\mu_A = -\frac{\partial E}{\partial N}
 \end{equation}
 
-In this equation $E$ is the ground state energy of the atom while $N = n - Z$
-where $Z$ is the atomic number and $n$ is the number of electrons around the
-nucleus. Thus $N = 0$ for the neutral species, $+1$ for the positive ion, and
-$-1$ for the negative ion.  This description implies that upon movement of the
-nuclei, the electrons will undergo charge transfer so as to equilibrate the
-electrochemical potential of the system. While having this formalism is
-helpful, it still requires a method of implementation.  Streitz and Mintmire,
-using the idea of electronegativity equalization developed a potential for
-modeling aluminum oxide. They calculated the minimum charges at each time step
-by taking the inverse of an $n\times n$ matrix, which while accurate,
-drastically increases the expense of their method.\citep{Streitz:1994mw} A
-different method proposed by Rick {\it et al.} in their work on fluctuating
-charge water were able to avoid matrices by allowing the atomic charges to
-fluctuate dynamically. This was accomplished by coupling the electronegativity
-equalization method with a fictitious charge variable on each atomic site. This
-charge variable $Q_A$ was then propagated with the rest of the dynamics of the
-system by using an extended Lagrangian approach.\citep{Rick:1994ss}.
+In this equation $E$ is the ground state energy of the atom while $N$, the net
+charge of the atom, is equal to $n - Z$ where $Z$ is the atomic number and $n$
+is the number of electrons around the nucleus. Thus $N = 0$ for the neutral
+species, $+1$ for the positive ion, and $-1$ for the negative ion.  This
+description implies that upon movement of the nuclei, the electrons will
+undergo charge transfer so as to equilibrate the electrochemical potential of
+the system. While having this formalism is helpful, it still requires a method
+of implementation.  Streitz and Mintmire, using the idea of electronegativity
+equalization, developed a potential for modeling aluminum oxide. They
+calculated the minimum charges at each time step by taking the inverse of an
+$n\times n$ matrix, which while accurate, drastically increases the expense of
+their method.\citep{Streitz:1994mw} A different method proposed by Rick {\it et
+al.} in their work on fluctuating charge water were able to avoid matrices by
+allowing the atomic charges to fluctuate dynamically. This was accomplished by
+coupling the electronegativity equalization method with a fictitious charge
+variable on each atomic site. This charge variable $Q_A$ was then propagated
+with the rest of the dynamics of the system by using an extended Lagrangian
+approach.\citep{Rick:1994ss}.
 
 The basic idea of a dynamic fluctuating charge model is to allow partial
 charges on atomic sites to become dynamical variables.  Each atomic site
@@ -82,7 +84,7 @@ electronic hardness, $J$, as derived below,
 & = E_{A_0} + \bigg (\frac{\partial E}{\partial Q}\bigg)_{A_0} + \frac{1}{2}\bigg(\frac{\partial^2E}{\partial Q^2}\bigg)_{A_0} - E_{A_0} \\
 \mathrm{EA} &= E_A(0) - E_A(-1) \\
 & = E_{A_0} - E_{A_0} + \bigg (\frac{\partial E}{\partial Q}\bigg)_{A_0} - \frac{1}{2}\bigg(\frac{\partial^2E}{\partial Q^2}\bigg)_{A_0}  \\
-\bigg (\frac{\partial E}{\partial Q}\bigg)_{A_0} &= \frac{\mathrm{IP+EA}}{2} = \chi_A \qquad \bigg (\frac{\partial^2 E}{\partial Q^2}\bigg)_{A_0} = \mathrm{IP-EA} = J_A
+\bigg (\frac{\partial E}{\partial Q}\bigg)_{A_0} &= \frac{\mathrm{IP+EA}}{2} = \chi_A ,\qquad \bigg (\frac{\partial^2 E}{\partial Q^2}\bigg)_{A_0} = \mathrm{IP-EA} = J_A
 \end{align*}
 
 where IP is the ionization potential and EA is the electron affinity of species
@@ -100,7 +102,7 @@ definition of electronic hardness is best understood using Rapp\'e and
 Goddard's approach, where $J$ is equal to the Coulomb overlap integral between
 Slater orbitals centered on each atomic site\citep{Rappe:1991dq}.
 
-This harmonic self energy, shown in eq. \ref{eq:harmonic} is enormously useful.
+The harmonic self energy, shown in eq. \ref{eq:harmonic} is enormously useful.
 Even in large systems of coupled fluctuating charge sites, the charges move on
 a purely harmonic ``bowl'' where the minimum energy state for the system of
 charges can be determined uniquely. Charge conservation constraints can be
@@ -151,7 +153,7 @@ Lagrangian allows us to enforce charge conservation in the system.
 The potential energy term $U[(\mathbf{Q}),(\vec{\mathbf{r}})]$ contains the
 expected pieces from standard molecular dynamics simulations,
 $U_{\text{bonds}}, U_{\text{bends}}, U_{\text{torsions}},
-U_{\text{electrostatic}}, U_{\text{Lennard Jones}}$ etc. It also contains the
+U_{\text{electrostatics}}, U_{\text{Lennard Jones}}$ etc. It also contains the
 new self energy term necessary for modeling dynamic fluctuating charges. This
 term, instead of using the harmonic approximation, includes multiple diabatic
 states,
@@ -171,7 +173,7 @@ seen below,
 V_i(Q) = \frac{1}{2}k(Q - Q_i)^2 + V_i
 \end{equation*}
 
-Each diabatic state, $V_i(Q)$ treats the local energy around a stable charge
+For each diabatic state, $V_i(Q)$ treats the local energy around a stable charge
 site, $Q_i$, as a harmonic function that is scaled by $k$ and offset by $V_i$.
 However, by constructing our self-potential energy landscape out of many
 diabatic states, we are able to create a surface with multiple charge minima.
@@ -213,12 +215,12 @@ environment.
 \end{equation*}
 
 \subsubsection{Platinum \& Oxygen}
-A more complicated example then the above ideal surface, is the charge surfaces
+A more complicated example then the above ideal surface, is the electronic surfaces
 of oxygen and platinum in a platinum-oxide system.  The ``stable'' charge
 position of the wells were obtained from a set of DFT calculations performed on
 the platinum oxide surface. Bader charge analysis was performed and a histogram
 was generated based on the populations of oxygen and platinum in various charge
-states. The population analysis of both species is shown in figure
+states. The population analysis of both species is shown in Figure
 \ref{fig:population} and a first attempt at the interaction potentials were
 then created and are shown in Figures \ref{fig:Ocharge} and \ref{fig:PtCharge}.
 The current approach attempts to minimize the effects of the bulk \ce{Pt} when
@@ -279,7 +281,9 @@ described below,
 \begin{figure}
   \centering
   \includegraphics[width=0.75\linewidth]{../figures/chap5/determineK2.png}
-  \caption{}
+  \caption{An ideal system of two particles with a forced charge separation of
+$Q$ separated by a distance $a_o$. Constructing the Hamiltonian of this system
+allows for a derivation of $k$.}
 \label{fig:kSketch}
 \end{figure}
 
@@ -339,7 +343,7 @@ parameterization rather than as fixed points since the system used to derive
 these values is an idealized model and not fully descriptive of the systems we
 examined.
 
-\section{Preliminary Results}
+\section{Preliminary results}
 As full parameterization is still underway, what follows is preliminary results
 obtained during attempted parameterizations of forcefields for platinum oxide
 systems. Specifically, one of the systems we model is composed of a negatively
@@ -367,7 +371,7 @@ $\vec{\mathbf{r}}_i$.
 As seen in Figure \ref{fig:chargeVol}, which depicts an \ce{O-} ion approaching
 a charge responsive \ce{Pt} surface, most of the metal atoms experience minimal
 disruption away from the neutral ground state, whereas the metal directly
-beneath the \ce{O-} ion gains a signififcant amount of positive charge. The
+beneath the \ce{O-} ion gains a significant amount of positive charge. The
 units of charge density are 0.001 $e^-$/\AA\textsuperscript{3} as calculated from the
 above gaussian. Figure \ref{fig:chargeHistogram} provides another view of this
 system by looking at the charge population of the \ce{Pt} at various times over
@@ -376,10 +380,10 @@ the simulation length.
 \begin{landscape}
 \begin{figure}
   \centering
-  \includegraphics[width=0.75\linewidth]{../figures/chap5/PtOChargeVolume.pdf}
+  \includegraphics[width=0.7\linewidth]{../figures/chap5/PtOChargeVolume.pdf}
   \caption{As the \ce{O-} approaches the surface, the \ce{Pt} directly beneath
 the \ce{O-} loses electron density leading to a favorable interaction between
-the \ce{Pt} and \ce{O-}. Units are in $0.001 e^-$/\AA\textsuperscript{3},
+the \ce{Pt} and \ce{O-}. Units are in $0.001\ e^-$/\AA\textsuperscript{3},
 however only the extremes of charge are rendered.}
 \label{fig:chargeVol}
 \end{figure}
@@ -397,17 +401,16 @@ out over a handful of \ce{Pt} atoms, each one tends to approach 0.02 $e^-$.}
 \label{fig:chargeHistogram}
 \end{figure}
 
-\section{Future Directions}
+\section{Future directions}
 While this method has succeeded in capturing the movement and accumulation of
 charge in a metal surface in response to an incoming ion, accurate
 parameterization of the numerous parameters is still on-going. Additionally,
-the build-up of charge at the surface, rather than at a depth $d$, where $d$ is
-the distance of the charged adsorbate away from the surface, as predicted by
-the method of images, suggests that further work is needed to properly
-incorporate the electric potential being constant at the surface of a
-conductor. This work is on-going and when completed opens up a large realm of
-possible directions of studies, specifically, oxide formation on platinum is of
-immense interest. Additional interactions with metal surfaces will also be
+the build-up of charge at the surface rather than at some depth $d$, appears to
+be in violation of the method of images. Further work is thus needed to
+properly incorporate the electrical potential being constant at the surface of
+a conductor.  This work is on-going and when completed opens up a large realm
+of possible directions of studies, specifically, oxide formation on platinum is
+of immense interest. Additional interactions with metal surfaces will also be
 explored with this technique and will include small molecules, {\em i.e.}
 \ce{CO}, \ce{H2O}, \ce{NO}, etc., metal ions, and small biological analogs like
 that amino acids and short peptide chains.
