@@ -1,5 +1,5 @@
 
-\chapter{CO-INDUCED ISLAND FORMATION ON PT/PD(557) SURFACE ALLOYS: A MOLECULAR DYNAMICS STUDY}
+\chapter{CARBON MONOXIDE-INDUCED ISLAND FORMATION ON PT/PD(557) SURFACE ALLOYS: A MOLECULAR DYNAMICS STUDY}
 \label{chap:island}
 
 
@@ -98,45 +98,50 @@ primary role in describing the preferred equilibrium states of these systems.
 \section{Methodology}
 \subsection{Interaction potentials}
 
-Modeling large metallic interfaces (10\textsuperscript{3}-
-10\textsuperscript{4} atoms) over relatively long time scales (10-100
-ns) requires the use of empirical potentials. Cohesive and surface
-energies in metals are not reproduced with purely pairwise
-interactions, so a number of empirical potentials have been developed
-for modeling transition metals.  These include the embedded atom
-method (EAM)\citep{Foiles:1986ky}, Finnis-Sinclair,\citep{Finnis:1984hl} and
-Sutton-Chen-based models like QSC.\citep{Goddard:1998qsc} These models describe an
-atom as a positively charged core with a radially-decaying valence
-electron density.  Refinements include angle dependent EAM
-implementations,\citep{Baskes:1987aa} that treat BCC metals more
-accurately.
+%Modeling large metallic interfaces (10\textsuperscript{3}-
+%10\textsuperscript{4} atoms) over relatively long time scales (10-100
+%ns) requires the use of empirical potentials. Cohesive and surface
+%energies in metals are not reproduced with purely pairwise
+%interactions, so a number of empirical potentials have been developed
+%for modeling transition metals.  These include the embedded atom
+%method (EAM)\citep{Foiles:1986ky}, Finnis-Sinclair,\citep{Finnis:1984hl} and
+%Sutton-Chen-based models like QSC.\citep{Goddard:1998qsc} These models describe an
+%atom as a positively charged core with a radially-decaying valence
+%electron density.  Refinements include angle dependent EAM
+%implementations,\citep{Baskes:1987aa} that treat BCC metals more
+%accurately.
+%
+%In EAM, the energy for embedding a metallic atom $i$ at a specific
+%location in the system requires the electron density at that location,
+%\begin{equation*}
+%\rho_i = \sum_{j\neq i} \rho_j(r_{ij}).
+%\end{equation*}
+%This density at site $i$, $\rho_i$ depends on the contributions to the
+%electron density from all other atoms in the system.  Here,
+%$\rho_j(r)$ describes the distance dependence of the valence electron
+%distribution of atom $j$.  Atom $i$'s contribution to the potential
+%energy can then be obtained from an embedding functional, $F_i\left[
+%  \rho_i \right]$, that depends on $\rho_i$, as well as from a sum of
+%pairwise interactions,
+%\begin{equation*}
+%  V_i =  F[ \rho_i ]  + \sum_{j \neq i} \phi_{ij}(r_{ij})
+%\end{equation*}
+%
+%The embedding energy functional is parameterized for each metallic
+%atom type, and depends only on the local electron density, $\rho_i$.
+%Thus, the cohesive energy for atom $i$ depends on collective
+%contributions from all of the surrounding metal atoms, and is an
+%explicitly non-pairwise additive quantity.
+As in Chapter \ref{chap:PtAu}, the Embedded-Atom-Method (EAM) was used to model
+the metal-metal interactions while the Karplus and Straub model of carbon
+monoxide was used to describe the \ce{CO} self interactions. Due to its development, the EAM
+method is effective at modeling alloys as the density portion is unchanged
+and only the short-ranged repulsions, $\phi$, need to be modified. EAM treats
+short-range repulsions as a pairwise contribution that models the repulsive
+overlap of the positively-charged cores. For alloys, mixing rules as outlined
+by Johnson \citep{Johnson:1989yr} were used to compute the heterogenous pair
+potential,
 
-In EAM, the energy for embedding a metallic atom $i$ at a specific
-location in the system requires the electron density at that location,
-\begin{equation*}
-\rho_i = \sum_{j\neq i} \rho_j(r_{ij}).
-\end{equation*}
-This density at site $i$, $\rho_i$ depends on the contributions to the
-electron density from all other atoms in the system.  Here,
-$\rho_j(r)$ describes the distance dependence of the valence electron
-distribution of atom $j$.  Atom $i$'s contribution to the potential
-energy can then be obtained from an embedding functional, $F_i\left[
-  \rho_i \right]$, that depends on $\rho_i$, as well as from a sum of
-pairwise interactions,
-\begin{equation*}
-  V_i =  F[ \rho_i ]  + \sum_{j \neq i} \phi_{ij}(r_{ij})
-\end{equation*}
-
-The embedding energy functional is parameterized for each metallic
-atom type, and depends only on the local electron density, $\rho_i$.
-Thus, the cohesive energy for atom $i$ depends on collective
-contributions from all of the surrounding metal atoms, and is an
-explicitly non-pairwise additive quantity.
-
-The short-ranged repulsions are treated as a pairwise contribution
-that models the repulsive overlap of the positively-charged cores.
-For alloys, mixing rules as outlined by Johnson \citep{Johnson:1989yr} were
-used to compute the heterogenous pair potential,
 \begin{equation*} 
 \phi_{ab}(r) = \frac{1}{2}
 \bigg\{ \bigg(
@@ -148,25 +153,13 @@ used to compute the heterogenous pair potential,
 \bigg\}
 \end{equation*} 
 
-One of EAM's strengths is its sensitivity to small changes in local
-structure which is due to the inclusion of second and third nearest
-neighbor interactions during parameterization.\citep{Voter:1995ax}
+In this work, we have employed the embedded atom method (EAM) to describe the
+\ce{Pt} and \ce{Pd} electron densities, embedding functionals, and pair
+potentials,\citep{Foiles:1986ky} utilizing the Johnson mixing rules for the
+\ce{Pt\bond{-}Pd} cross-interactions.\citep{Johnson:1989yr}
 
-In this work, we have employed the embedded atom method (EAM) to
-describe the \ce{Pt} and \ce{Pd} electron densities, embedding
-functionals, and pair potentials,\citep{Foiles:1986ky} utilizing the Johnson
-mixing rules for the \ce{Pt\bond{-}Pd}
-cross-interactions.\citep{Johnson:1989yr}
-
-The carbon monoxide (\ce{CO}) self-interactions were modeled using a
-rigid three-site model developed by Straub and Karplus for studying
-photodissociation of \ce{CO} from myoglobin.\citep{Straub:1991no} This model
-accurately captures the large linear quadrupole (and weak dipole) of
-the \ce{CO} molecule. The rigid CO molecules have complete
-translational and orientational mobility in our simulations.
-
-The \ce{Pt\bond{-}CO} interactions have been modified from previous
-fits~\citep{Michalka:2013aa} to account for recently-published DFT
+The \ce{Pt\bond{-}CO} interactions have been modified from 
+fits in Chapter \ref{chap:PtAu} to account for recently-published DFT
 data.\citep{Deshlahra:2012aa} This modification yields a slightly weaker
 \ce{Pt\bond{-}CO} binding energy, but maintains the atop site
 preference.  The potential energy for the interaction of one \ce{CO}
@@ -187,8 +180,8 @@ potentials were parameterized as part of this work. The basic model,
 using a full Morse potential between the metal and oxygen site and a
 Lennard-Jones interaction between the metal and the carbon site, was
 introduced by Korzeniewski \textit{et al.}\citep{Korzeniewski:1986kl} One key
-difference from the potential in Refs.\citenum{Korzeniewski:1986kl} and our
-earlier fits in Refs.\citenum{Michalka:2013aa} is that the
+difference from the potential in Refs.\citep{Korzeniewski:1986kl} and our
+earlier fits in Refs.\citep{Michalka:2013aa} is that the
 \ce{M\bond{-}O} bond is modeled here using a purely repulsive Morse
 potential. The parameters were fit to reflect binding energies and
 binding site preferences on the \ce{M}(111) surfaces.  The functional
@@ -261,7 +254,6 @@ various binding sites are shown in Table~\ref{tab:CO_energies}.
 \end{tabular}
 \begin{tablenotes}
   \item The energies are obtained using the potentials described in Table \ref{tab:CO_parameters}. These values are compared with electronic structure and experimental desorption data when available Note that the electronic structure values are for surface coverages of $\ge$ 0.25 ML, and experimental values are (in most cases) extrapolated to zero coverage from desorption energies at higher coverages.
-  \item References are in [ ]
   \item[a] All values are in eV
 \end{tablenotes}
 \end{threeparttable}
@@ -308,8 +300,8 @@ Although the weak preference for hollow vs. bridge sites at low
 coverage is not captured by the \ce{Pd\bond{-}CO} fit, at low
 temperatures on \ce{Pd}(111), a 0.5 ML coverage of \ce{CO} interacting
 with the potential in Table \ref{tab:CO_parameters} does produce
-domains with the $c(4\times2)$ ordered structure (see supporting
-information in appendix \ref{app:SI}).
+domains with the $c(4\times2)$ ordered structure (see 
+appendix \ref{app:SI}).
 
 Experimental work on CO on Pt(111) using LEED has suggested that the
 atop binding is 70 meV stronger than the bridge
@@ -320,8 +312,8 @@ model uses relatively long-range repulsive Morse interactions to
 preserve the CO orientation on the surface, it overestimates the atop
 binding preference relative to the DFT calculations.  However, the
 model is able to reproduce small domains of the
-$(\sqrt{3} \times \sqrt{3}) R~30^{\circ}$ structures (see supporting
-information in appendix \ref{app:SI}).
+$(\sqrt{3} \times \sqrt{3}) R~30^{\circ}$ structures (see 
+appendix \ref{app:SI}).
 
 \subsection{(557) Interfaces and surface alloys}
 The \ce{Pd}(557) model is contained in an orthorhombic periodic box
@@ -701,7 +693,7 @@ position. In the \ce{Pt\bond{-}CO} case, additional bound \ce{CO} on
 the surface and has previously been shown to facilitate surface
 roughening.\citep{Michalka:2013aa} The \ce{Pt\bond{-}CO} potential in
 table~\ref{tab:CO_parameters} has been altered from the original
-parameters in Ref. \citenum{Michalka:2013aa}, and figure
+parameters in Ref. \citep{Michalka:2013aa}, and figure
 \ref{fig:PtEnergy} shows that for the new potential, adsorbed \ce{CO}
 can also disrupt step edges, providing an energetic benefit to
 increasing the exposed \ce{Pt} surface area.
