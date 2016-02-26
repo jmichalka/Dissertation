@@ -1,5 +1,5 @@
 
-\chapter{DEVELOPMENT OF A MULTIPLE-MINIMA FLUCTUATING CHARGE (MM-FLUCQ) POTENTIAL FOR PT-OXIDE FORMATION}
+\chapter{DEVELOPMENT OF A MULTIPLE-MINIMA FLUCTUATING CHARGE (MM-FLUCQ) POTENTIAL FOR PLATINUM-OXIDE FORMATION}
 \label{chap:mmFlucQ}
 
 
@@ -102,7 +102,7 @@ definition of electronic hardness is best understood using Rapp\'e and
 Goddard's approach, where $J$ is equal to the Coulomb overlap integral between
 Slater orbitals centered on each atomic site\citep{Rappe:1991dq}.
 
-The harmonic self energy, shown in eq. \ref{eq:harmonic} is enormously useful.
+The harmonic self energy, shown in equation \ref{eq:harmonic} is enormously useful.
 Even in large systems of coupled fluctuating charge sites, the charges move on
 a purely harmonic ``bowl'' where the minimum energy state for the system of
 charges can be determined uniquely. Charge conservation constraints can be
@@ -131,10 +131,10 @@ of the local slope, and harmonic wells that are overly broad.
 The method we present here builds on the fluctuating charge method of Rick {\it
 et al.}\citep{Rick:1994ss}, but models the self energy more generally using
 multiple stable ionic states.  This multiple-minimum fluctuating charge method
-(mm-flucq) effectively allows for charge transfer between ionic and metallic
+(mm-FlucQ) effectively allows for charge transfer between ionic and metallic
 species.
 
-\section{Development of methodoloy}
+\section{Development of methodology}
 
 As we present the development of this approach, it is helpful to see how it
 will fit into the total Lagrangian of the system. Similar to Rick {\it et
@@ -214,7 +214,7 @@ environment.
 \text{Parameters} = [Q_0 \dots Q_n, V_0 \dots V_n, k, c] = \text{2n+2}
 \end{equation*}
 
-\subsubsection{Platinum \& Oxygen}
+\subsubsection{Platinum \& Oxygen self-potentials}
 A more complicated example then the above ideal surface, is the electronic surfaces
 of oxygen and platinum in a platinum-oxide system.  The ``stable'' charge
 position of the wells were obtained from a set of DFT calculations performed on
@@ -243,7 +243,7 @@ unperturbed by surface \ce{O}.}
   \caption{A self-interaction oxygen charge potential. The parameters to
 generate this potential are $[Q_0 = -0.85, Q_1 = -0.75, Q_2 = -0.45, Q_3 = 0,
 V_0 = 0.25, V_1 = 0, V_2 = 2, V_3 = 2, k = 280, c = 3]$. As oxygen has a
-favorable first ionization energy, it was decided that the globabl minimum
+favorable first ionization energy, it was decided that the global minimum
 would be located around that point in this fit.}
 \label{fig:Ocharge}
 \end{figure}
@@ -263,7 +263,7 @@ experimental justification and is tuned to ensure that a smooth potential is
 obtained to minimize issues with integrating the dynamics. The scaling constant
 $k$ has been obtained from the atomic/molecular polarizability by using an
 ideal two particle system and is explained more fully in the next section.
-Finally, the relative energies $V_n$ are currently being arbitrarilly set until
+Finally, the relative energies $V_n$ are currently being arbitrarily set until
 we are able to provide theoretical or experimental justifications.
 
 While the potentials in Figure \ref{fig:Ocharge} and \ref{fig:PtCharge} capture
@@ -274,7 +274,7 @@ purposes self-energy potentials with 2 and 3 diabatic states are being used for
 \subsection{Derivation of k}
 To determine the value for $k$, the scaling parameter in this scheme, we first
 created an ideal two-particle system separated by $a_o$, as illustrated in
-Figure \ref{fig:kSketch}.  We then arbitrarilly shifted one unit of charge
+Figure \ref{fig:kSketch}.  We then arbitrarily shifted one unit of charge
 between the otherwise identical atoms. The Hamiltonian of the system is
 described below,
 
@@ -353,10 +353,10 @@ as point charges on the atomic sites, for the time being, anisotropy is not bein
 
 To visualize the charge density in these systems we begin by defining a uniform
 grid of points (spacing approximately 1 \AA) spread throughout the simulation
-box. The electron density as contributed by neary atomic sites, assuming a
-gaussian distribution, is summed at each grid point and then assembled touse in
+box. The electron density as contributed by nearby atomic sites, assuming a
+Gaussian distribution, is summed at each grid point and then assembled to use in
 a volume rendering program, {\em e.g.} Amira. With regards to the electron
-density, we treat density at a site $i$ with a three dimensional gaussian
+density, we treat density at a site $i$ with a three dimensional Gaussian
 function as shown below,
 
 \begin{equation*}
@@ -373,7 +373,7 @@ a charge responsive \ce{Pt} surface, most of the metal atoms experience minimal
 disruption away from the neutral ground state, whereas the metal directly
 beneath the \ce{O-} ion gains a significant amount of positive charge. The
 units of charge density are 0.001 $e^-$/\AA\textsuperscript{3} as calculated from the
-above gaussian. Figure \ref{fig:chargeHistogram} provides another view of this
+above Gaussian. Figure \ref{fig:chargeHistogram} provides another view of this
 system by looking at the charge population of the \ce{Pt} at various times over
 the simulation length.
 
