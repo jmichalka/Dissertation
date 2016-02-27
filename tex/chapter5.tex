@@ -8,11 +8,14 @@ alongside the initial development of the mm-FlucQ potential.  Preliminary
 results of charged species approaching a \ce{Pt} surface will also be
 examined. Finally, current challenges and future directions will be discussed.
 
+%polarization near metal surfaces
+% drude model
+% charge transfer
 
 \section{Introduction}
 Metal surfaces and interfaces play a key role in a number of chemical and
 technological processes; however, the tendency of oxide layers to form on these
-interfaces requires a better treatment of metal-adsorbate interactions when
+interfaces requires a chemically-realistic treatment of metal-adsorbate interactions when
 simulating these systems\citep{Streitz:1994mw, Duin:2010dk, Devine:2011bk,
 Fantauzzi:2014pb}.  The modified atomistic structure and electronic environment
 of these surfaces after oxide formation is expected to affect many properties
@@ -20,11 +23,11 @@ of the interface, especially the local electric field, and also diffusion and
 adsorption on the surface.\citep{Streitz:1994mw, Getman:2008sp,
 Bray:2011hq,Small:2012dw}
 
-Treating the electrodynamics of such a system within molecular dynamics is a
+Treating the charge transfer dynamics of such a system within molecular dynamics is a
 challenging problem. Whereas non-metallic species can be modeled satisfactorily
 with static point charges, metal-adsorbate, metal oxide, and more generally
 metal-metal interactions require a more complicated description of their
-electrostatic interactions to accurately capture the behavior of charged
+electronic interactions to accurately capture the behavior of charged
 species near a conductor. The idea of electronegativity equalization introduced
 by Sanderson\citep{Sanderson:1951mz} provides a conceptual framework that
 describes charge transfer between both atomic and molecular species. In this
@@ -38,27 +41,26 @@ potential of the valence electron gas around a positive nucleus, $\mu_A$, as
 argued by Iczkowski and Margrave\citep{Iczkowski:1961wq}.
 
 \begin{equation}
-\chi_A = -\mu_A = -\frac{\partial E}{\partial N}
+\chi_A = -\mu_A = -\frac{\partial E}{\partial q}
 \end{equation}
 
-In this equation $E$ is the ground state energy of the atom while $N$, the net
+In this equation $E$ is the ground state energy of the atom while $q$, the net
 charge of the atom, is equal to $n - Z$ where $Z$ is the atomic number and $n$
-is the number of electrons around the nucleus. Thus $N = 0$ for the neutral
+is the number of electrons around the nucleus. Thus $q = 0$ for the neutral
 species, $+1$ for the positive ion, and $-1$ for the negative ion.  This
 description implies that upon movement of the nuclei, the electrons will
 undergo charge transfer so as to equilibrate the electrochemical potential of
-the system. While having this formalism is helpful, it still requires a method
+the system. While this formalism is helpful, it still requires a method
 of implementation.  Streitz and Mintmire, using the idea of electronegativity
 equalization, developed a potential for modeling aluminum oxide. They
 calculated the minimum charges at each time step by taking the inverse of an
-$n\times n$ matrix, which while accurate, drastically increases the expense of
-their method.\citep{Streitz:1994mw} A different method proposed by Rick {\it et
-al.} in their work on fluctuating charge water were able to avoid matrices by
+$n\times n$ matrix, which while accurate, drastically increases the expense of a simulation.\citep{Streitz:1994mw} A method proposed by Rick {\it et
+al.} in their work on fluctuating charge water models is able to avoid matrix inversion by
 allowing the atomic charges to fluctuate dynamically. This was accomplished by
 coupling the electronegativity equalization method with a fictitious charge
 variable on each atomic site. This charge variable $Q_A$ was then propagated
 with the rest of the dynamics of the system by using an extended Lagrangian
-approach.\citep{Rick:1994ss}.
+approach.\citep{Rick:1994ss}
 
 The basic idea of a dynamic fluctuating charge model is to allow partial
 charges on atomic sites to become dynamical variables.  Each atomic site
@@ -66,7 +68,7 @@ therefore has four ``position'' variables, $\{\vec{\mathbf{r}}_A, Q_A\}$, and
 four velocities, $\{\dot{\vec{\mathbf{r}}}_A, \dot{Q}_A\}$.   In addition to
 standard electrostatic interactions between the fluctuating charges, there is a
 self energy term that must be taken into account. Similar to Rapp\'e and
-Goddard\citep{Rappe:1991dq} we make use of a Taylor expansion around the
+Goddard\citep{Rappe:1991dq} we can make use of a Taylor expansion around the
 neutral atomic species with respect to charge.  This self term through second
 order leads to,
 
@@ -88,16 +90,17 @@ electronic hardness, $J$, as derived below,
 \end{align*}
 
 where IP is the ionization potential and EA is the electron affinity of species
-$A$.  This description allows us to rewrite equation \ref{eqn:selfenergy} as
-the following,
+$A$.  Note that this approach assumes the surface is smooth in the +1
+\rightarrow -1 charge domain. This description allows us to rewrite equation
+\ref{eqn:selfenergy} as the following,
 
 \begin{equation}
 E_A(Q_A) = E_{A_0} + \chi_A Q_A + \frac{1}{2} J_{A} Q_A^2
 \label{eq:harmonic}
 \end{equation}
 
-The electronegativity $\chi$ when described as the average of the ionization
-potential and electron affinity enjoy some intuitive understanding; whereas a
+The electronegativity $\chi$, when described as the average of the ionization
+potential and electron affinity, enjoys some agreement with experimentally-derived properties; whereas a
 definition of electronic hardness is best understood using Rapp\'e and
 Goddard's approach, where $J$ is equal to the Coulomb overlap integral between
 Slater orbitals centered on each atomic site\citep{Rappe:1991dq}.
@@ -125,8 +128,9 @@ $J$.  In many charge partitioning schemes (and in most classical force fields),
 the partial charges assigned to condensed phase atoms are significantly smaller
 than the unit charges required to produce the gas phase ions, e.g. the \ce{H}
 in \ce{H2O} in TIP4P is assigned a charge of +0.52.\citep{Jorgensen:1983tp}
-This results in electronegativity and hardness terms that may be poor estimates
-of the local slope, and harmonic wells that are overly broad.
+This results in electronegativity and hardness terms that may estimate the
+local slope and harmonic constants leading to construction of a charge surface
+that is overly broad.
 
 The method we present here builds on the fluctuating charge method of Rick {\it
 et al.}\citep{Rick:1994ss}, but models the self energy more generally using
@@ -146,20 +150,19 @@ L = \sum^{N_{molec}}_{i=1}\sum^{N_{atom}}_{\alpha = 1} \frac{1}{2}m_{\alpha} \do
 
 where the mass of an atomic site $\alpha$ is defined as $m_\alpha$ and $M_Q$ is
 the fictitious charge mass with units of $\frac{\mathrm{energy\times
-time}^2}{\mathrm{charge}^2}$, or more specifically, $\frac{\mathrm{kcal\times
-fs}^2}{\mathrm{mol\times e}^2}$. The $\lambda$ term at the end of the
-Lagrangian allows us to enforce charge conservation in the system.
+time}^2}{\mathrm{charge}^2}$.  The $\lambda$ term at the end of the Lagrangian
+allows us to enforce total charge conservation in the system.
 
 The potential energy term $U[(\mathbf{Q}),(\vec{\mathbf{r}})]$ contains the
 expected pieces from standard molecular dynamics simulations,
 $U_{\text{bonds}}, U_{\text{bends}}, U_{\text{torsions}},
-U_{\text{electrostatics}}, U_{\text{Lennard Jones}}$ etc. It also contains the
+U_{\text{electrostatics}}, U_{\text{van der Waals}}$ etc. It also contains the
 new self energy term necessary for modeling dynamic fluctuating charges. This
 term, instead of using the harmonic approximation, includes multiple diabatic
-states,
+charge states,
 
 \begin{equation}
-U(Q)_{\text{mm-flucq}} =
+U(Q) =
 \begin{Bmatrix}
  V_0(Q) & c  \\
  c   & V_1(Q)
@@ -174,12 +177,11 @@ V_i(Q) = \frac{1}{2}k(Q - Q_i)^2 + V_i
 \end{equation*}
 
 For each diabatic state, $V_i(Q)$ treats the local energy around a stable charge
-site, $Q_i$, as a harmonic function that is scaled by $k$ and offset by $V_i$.
-However, by constructing our self-potential energy landscape out of many
+site, $Q_i$, as a harmonic function with local curvature $k$ and offset by $V_i$.
+By constructing our self-potential energy landscape out of many
 diabatic states, we are able to create a surface with multiple charge minima.
 An ideal multiple-well potential is shown in Figure \ref{fig:multipleDiabat}.
-This method can be trivially extended by adding more diabatic states, however
-parameterization becomes increasingly difficult.
+This method can be trivially extended by adding more diabatic states.
 
 \begin{figure}
   \centering
@@ -203,12 +205,10 @@ $[Q_0 = 0, Q_1 = 0.5, Q_2 = 1, V_0 = 0, V_1 = 5, V_2 = 10, k = 280, c = 3.5]$}
 
 \subsection{Parameterization}
 One weakness of this proposed method is the need for a large number of
-parameters.  Currently, even with assumptions made about the coupling constant
-$c$ not differing between states and there being no coupling between states
-when $|i-j| > 1$  and $k$ being the same for all of the individual diabatic
-states there will still need to be $2n+2$ parameters depending on the number, $n$, of
-diabatic states the system requires to properly model its electronic
-environment.
+parameters.  Currently, even with assumptions made about a single coupling
+constant $c$, no coupling between states when $|i-j| > 1$, and $k$ being the
+same for all of the individual diabatic states, there will still need to be
+$2n+2$ parameters for $n$ diabatic states. 
 
 \begin{equation*}
 \text{Parameters} = [Q_0 \dots Q_n, V_0 \dots V_n, k, c] = \text{2n+2}
