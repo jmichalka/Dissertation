@@ -90,8 +90,8 @@ electronic hardness, $J$, as derived below,
 \end{align*}
 
 where IP is the ionization potential and EA is the electron affinity of species
-$A$.  Note that this approach assumes the surface is smooth in the +1
-\rightarrow -1 charge domain. This description allows us to rewrite equation
+$A$.  Note that this approach assumes the surface is smooth in the
+$+1 \rightarrow -1$ charge domain. This description allows us to rewrite equation
 \ref{eqn:selfenergy} as the following,
 
 \begin{equation}
@@ -210,14 +210,11 @@ constant $c$, no coupling between states when $|i-j| > 1$, and $k$ being the
 same for all of the individual diabatic states, there will still need to be
 $2n+2$ parameters for $n$ diabatic states. 
 
-\begin{equation*}
-\text{Parameters} = [Q_0 \dots Q_n, V_0 \dots V_n, k, c] = \text{2n+2}
-\end{equation*}
 
 \subsubsection{Platinum \& Oxygen self-potentials}
-A more complicated example then the above ideal surface, is the electronic surfaces
-of oxygen and platinum in a platinum-oxide system.  The ``stable'' charge
-position of the wells were obtained from a set of DFT calculations performed on
+A more complicated example is the electronic surfaces
+of oxygen and platinum in a platinum-oxide system.  The ``stable'' charge minima of the diabatic wells
+were obtained from a set of DFT calculations performed on
 the platinum oxide surface. Bader charge analysis was performed and a histogram
 was generated based on the populations of oxygen and platinum in various charge
 states. The population analysis of both species is shown in Figure
@@ -231,7 +228,7 @@ determining relative barrier heights between charge states.
   \includegraphics[width=0.75\linewidth]{../figures/chap5/chgDist_PtO.pdf}
   \caption{Histogram of oxygen (black, solid) and platinum (red, dashed)
 charges obtained from a sampling of platinum oxide DFT calculations.
-Normalization is proportional to number of atoms in the simulation, hence the
+Normalization is proportional to the number of atoms in the simulation, hence the
 large peak centered around 0 for \ce{Pt}, since the majority of the metal is
 unperturbed by surface \ce{O}.}
 \label{fig:population}
@@ -240,10 +237,10 @@ unperturbed by surface \ce{O}.}
 \begin{figure}
   \centering
   \includegraphics[width=0.75\linewidth]{../figures/chap5/Oxygen_Charge_Testing.pdf}
-  \caption{A self-interaction oxygen charge potential. The parameters to
+  \caption{The self-interaction oxygen potential. The parameters to
 generate this potential are $[Q_0 = -0.85, Q_1 = -0.75, Q_2 = -0.45, Q_3 = 0,
 V_0 = 0.25, V_1 = 0, V_2 = 2, V_3 = 2, k = 280, c = 3]$. As oxygen has a
-favorable first ionization energy, it was decided that the global minimum
+favorable first electron affinity, it was decided that the global minimum
 would be located around that point in this fit.}
 \label{fig:Ocharge}
 \end{figure}
@@ -251,7 +248,7 @@ would be located around that point in this fit.}
 \begin{figure}
   \centering
   \includegraphics[width=0.75\linewidth]{../figures/chap5/Pt_Charge_Testing.pdf}
-  \caption{A self-interaction platinum charge potential. The parameters to
+  \caption{The self-interaction platinum potential. The parameters to
 generate this potential are $[q_0 = 0, q_1 = 0.2, q_2 = 0.45, q_3 = 0.8, q_4 =
 1.2, V_0 = 0, V_1 = 1, V_2 = 2, V_3 = 3, V_4 = 4, k = 316, c = 2.5]$.}
 \label{fig:PtCharge}
@@ -272,7 +269,7 @@ purposes self-energy potentials with 2 and 3 diabatic states are being used for
 \ce{O} and \ce{Pt} to minimize the number of needed parameters.
 
 \subsection{Derivation of k}
-To determine the value for $k$, the scaling parameter in this scheme, we first
+To estimate a value for $k$, the self-charge force constant parameter in this scheme, we first
 created an ideal two-particle system separated by $a_o$, as illustrated in
 Figure \ref{fig:kSketch}.  We then arbitrarily shifted one unit of charge
 between the otherwise identical atoms. The Hamiltonian of the system is
@@ -309,21 +306,13 @@ following,
 H = T + Q^2\bigg(k - \frac{1}{4 \pi\varepsilon_o a_o}\bigg) - Q\cdot a_o \cdot \vec{E}
 \end{equation*}
 
-The right two terms can be expressed as a shifted harmonic oscillator and can be solved in the
-following manner after replacing $k-\frac{1}{4\pi\varepsilon_o a_o}$ with $a$
-and $a_o\cdot \vec{E}$ with $b$.
+The right two terms can be expressed as a shifted harmonic oscillator and can be solved by completing the square,
 
 \begin{equation*}
-T + aQ^2 - bQ  = T + a\bigg(Q^2 - \frac{b}{a}Q\bigg) = T + a\bigg(\bigg(Q^2 - \frac{b}{a}Q + \frac{b^2}{4a^2}\bigg) - \frac{b^2}{4a^2}\bigg)
+H = T + a\bigg(Q - \frac{a_oE}{2k - \frac{1}{4\pi\varepsilon_o a_o}}\bigg)^2 + const.
 \end{equation*}
 
-Taking the derivative of $H$ with respect to $Q$ to find the minimum results in $Q = \frac{b}{2a}$,
-which when replacing $a$ and $b$ with their original values provides us with
-the following equation for $Q_{\text{min}}$.
-
-\begin{equation*}
-Q_{\text{min}} = \frac{a_o \cdot \vec{E}}{2(k - \frac{1}{4\pi\varepsilon_o a_o})}
-\end{equation*}
+with $a = k - \frac{1}{4\pi\varepsilon_o a_o}$.
 
 Recalling that the effective dipole moment is equal to $\mu_{\text{eff}} =
 Q_{\text{min}}\cdot a_o$ and $\mu = \alpha\vec{E}$ where $\alpha$ is the atomic
@@ -338,7 +327,7 @@ and a nearest neighbor distance of $2.77$ \AA~ for bulk platinum we obtained a
 value for $k$ of 316 $\frac{\text{kcal}}{\mathrm{mol\times e}^2}$. Various
 polarizabilities and distances can be obtained for oxygen binding to platinum,
 all leading to values for $k$ around 280 $\frac{\text{kcal}}{\mathrm{mol\times
-e}^2}$.  These values are meant to be used as starting points for the
+e}^2}$.  These values are starting points for the
 parameterization rather than as fixed points since the system used to derive
 these values is an idealized model and not fully descriptive of the systems we
 examined.
@@ -355,7 +344,7 @@ To visualize the charge density in these systems we begin by defining a uniform
 grid of points (spacing approximately 1 \AA) spread throughout the simulation
 box. The electron density as contributed by nearby atomic sites, assuming a
 Gaussian distribution, is summed at each grid point and then assembled to use in
-a volume rendering program, {\em e.g.} Amira. With regards to the electron
+a volume rendering program. With regards to the electron
 density, we treat density at a site $i$ with a three dimensional Gaussian
 function as shown below,
 
@@ -381,10 +370,10 @@ the simulation length.
 \begin{figure}
   \centering
   \includegraphics[width=0.7\linewidth]{../figures/chap5/PtOChargeVolume.pdf}
-  \caption{As the \ce{O-} approaches the surface, the \ce{Pt} directly beneath
+  \caption{As the oxide ion (\ce{O-}) approaches the surface, the \ce{Pt} directly beneath
 the \ce{O-} loses electron density leading to a favorable interaction between
 the \ce{Pt} and \ce{O-}. Units are in $0.001\ e^-$/\AA\textsuperscript{3},
-however only the extremes of charge are rendered.}
+however only the extremes of charge density are rendered.}
 \label{fig:chargeVol}
 \end{figure}
 \end{landscape}
@@ -396,7 +385,7 @@ however only the extremes of charge are rendered.}
 depicted in Figure \ref{fig:chargeVol}. As the bulk of the metal is unaffected, a
 logarithmic $y$-axis is utilized to highlight the atoms that deviate from 0
 charge. As \ce{O-} approaches the surface, small peaks corresponding to surface
-\ce{Pt} atoms with a slightly positive charge appear. As the charge is smeared
+\ce{Pt} atoms with a positive charge appear. As the charge is smeared
 out over a handful of \ce{Pt} atoms, each one tends to approach 0.02 $e^-$.}
 \label{fig:chargeHistogram}
 \end{figure}

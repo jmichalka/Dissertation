@@ -212,9 +212,9 @@ is used here without change.
 %\end{table}
 
 \subsection{Platinum-Carbon Monoxide interactions} The extensive experimental
-\citep{Ertl:1977cg, Kelemen:1979ad, Ertl:1989, Schweizer:1989fk, Szanyi:1992aa,
-Yeo:1997th} and theoretical \citep{Feibelman:2001qa, Deshlahra:2009wu,
-Beurden:2002ys, Deshlahra:2012aa, Korzeniewski:1986kl, Mason:2004ix} work on
+\citep{Ertl:1977cg, Kelemen:1979ad, Yeo:1997th, Szanyi:1992aa, Schweizer:1989fk, Ertl:1989}
+and theoretical \citep{Feibelman:2001qa, Deshlahra:2009wu,
+Deshlahra:2012aa, Beurden:2002ys, Korzeniewski:1986kl, Mason:2004ix} work on
 \ce{Pt\bond{-}CO} allows for significant data upon which to parameterize this
 interaction.  The \ce{Pt\bond{-}CO} interaction has been
 modified from previous models\citep{Michalka:2013aa, Michalka:2015aa} to better
@@ -358,7 +358,7 @@ package, OpenMD.\citep{Fennell:2006xq, Meineke:2005pt, openmd}
 %Additionally, when double steps (or partial double steps form) there is not as much movement afterwards, so that is a possible explanation as well
 % Try to show a count of mobile atoms (as a function of time maybe)
 
-\subsection{Generalized coordinate number}
+\subsection{Generalized coordination number}
 Many catalytic reactions have a degree of structural sensitivity such that only
 a subset of the displayed atoms on a roughened surface or nanoparticle are
 actually catalytically active. While the coordination number of individual
@@ -379,15 +379,15 @@ binding environments on metal surfaces or nanoparticles.
 
 The GCN is a straight-forward extension of a nearest-neighbor analysis with the
 primary difference being that the GCN of an atom $i$, $\overline{CN}(i)$,  is
-calculated from the average of the coordination numbers, $cn(j)/cn_\term{max}$,
+calculated from the average of the coordination numbers, $cn(j)/cn_\textrm{max}$,
 of its nearest neighbors.  The sum is over atom $i$'s first nearest neighbors
 and $cn_\textrm{max}$ is a normalization term and for an FCC crystal is equal
 to 12, the bulk coordination number.
 
 \begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap4/321_ideal_gcn.pdf}
-  \caption{A graph of the generalized coordinate numbers of an ideal Pt(321)
-system colored to match the inset figure. Other than the bulk (GCN=12), the
+  \caption{A graph of the generalized coordination number of an ideal Pt (321)
+system colored to match the inset figure. Other than the bulk (GCN = 12), the
 ideal (321) surface displays a wide variety of environments for its surface
 atoms.  The edge atoms (red) have the lowest GCN because they are 
 under-coordinated, whereas the plateau atoms have GCN's around the ideal
@@ -424,7 +424,7 @@ shows how the subsurface layers are becoming more bulk-like.
   \includegraphics[width=\linewidth]{../figures/chap4/321ls_GCNF.pdf}
   \caption{Plots of the average GCN for the non-bulk atoms of the \ce{Pt} (321)
 LS systems.  Solid lines represent the averaged GCN during the first 10
-nanoseconds of simulation time, while the dotted lines corresponds to a time near
+nanoseconds of simulation time, while the dotted lines correspond to a time near
 the end of the simulations. Black lines indicate the bare 0 ML system, while
 green and magenta depict the 0.25 ML and 0.5 ML systems respectively. The blue
 bar is aligned at a GCN=7.5 which corresponds to the GCN of a surface atom in
@@ -533,11 +533,11 @@ of the system, whereas numerous examples of partial double steps can be found.
 \begin{figure}
 \centering
 \includegraphics[width=0.6\linewidth]{../figures/chap4/321_partialDoubleLayer.pdf}
-\caption{Images of the (321) 0.5 ML long-step systems at the (a) beginning and
+\caption{Images of the (321) 0.5 ML LS systems at the (a) beginning and
 (b) end of the simulation time. Before \ce{CO} is added to the system the
 kinked edges are well maintained barring slight dislocations. After a
-significant amount of simulation time, \ce{CO} induces double step formation.
-The plateaus are narrow enough that the initial step of this process, forming a
+significant amount of simulation time, \ce{CO} induced double step formation.
+The plateaus are suficiently narrow that the initial step of this process, forming a
 ``nucleation'' site can happen numerous times between separate steps.
 Highlighted in (b) are frustrated double layers, where any ``zippering'' that
 would be expected to finish the formation of a double layer is hindered by the
@@ -556,8 +556,8 @@ and will be explored in more detail in the discussion.
 \begin{figure}
 \centering
 \includegraphics[width=0.6\linewidth]{../figures/chap4/321MiniDiamonds.pdf}
-\caption{The (321) LS 0.25 ML system at (a) the beginning of the simulation and
-(b) at the end. The green diamonds highlight the repeated (111) domains formed
+\caption{The (321) 0.25 ML LS system at the (a) beginning and
+(b) end of the simulation. The green diamonds highlight the repeated (111) domains formed
 between the initially regular steps. The presence of so many nucleation sites,
 where two edges touch at one to two atoms may purely be a result of energetics
 of the (321) step surface.}
@@ -603,7 +603,7 @@ surface energy values in Table \ref{table:lit_surface_energy}.
 \begin{tabular}{c c c c c }
 \hline
 \hline
-Facet & Surface Energy & EAM\tnote{a} & Experimental\tnote{b} & Simulated/Experimental\\
+Facet & Surface Energy & EAM\tnote{a} & Experimental\tnote{b} & Sim./Exp.\\
 \hline
 \ce{Pt} (111) & 1.43 & 1.44 & 0.977 & 1.46 \\
 \ce{Pt} (100) & 1.63 & 1.65 & 1.286 & 1.27 \\
@@ -762,8 +762,8 @@ formed between steps. Most of these diamonds share corners corresponding to
 nucleation sites between steps from which zippering into double steps is
 observed primarily on the 0.5 ML surfaces. The initial formation of these
 diamonds however is of fairly low cost. Principally, the hopping
-diagrammed in Figure \ref{fig:kinkSketch} has a barrier of approximately ?
-kcal/mole while the resulting structure is within 0.1 kcal/mole of the original
+diagrammed in Figure \ref{fig:kinkSketch} has a barrier of approximately 40
+kcal/mole in the worst case, while the resulting structure is within 0.1 kcal/mole of the original
 surface. While the presence of \ce{CO} provides some of the driving force for
 this hopping, the resultant increase in (111) domain size on the surface
 combined with the numerous nucleation sites that are formed between steps leads

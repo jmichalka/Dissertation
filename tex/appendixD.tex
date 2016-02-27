@@ -19,7 +19,7 @@ while reducing the cost of the catalyst. This can be done by replacing a
 significant amount of the expensive metal with a cheaper one.  As an example
 \ce{Pt3Ni} catalysts have been created that show an increased activity for the
 oxygen reduction reaction while replacing a portion of \ce{Pt} with the much
-cheaper \ce{Ni}.\citep{Tuaev:2013fk, Stamenkovic:2007kk} The stability of these
+cheaper \ce{Ni}.\citep{Stamenkovic:2007kk, Tuaev:2013fk} The stability of these
 types of materials is called into question however as Tao {\em et al.} showed
 in their study of \ce{Pd/Rh} core-shell nanoparticles, which experienced
 large-scale inversions of material depending on the oxidizing or reducing
@@ -42,9 +42,9 @@ were treated identically except that they were warmed and equilibrated at 600~K
 and kept at that temperature throughout the simulation.
 
 \subsection{Interaction potentials}
-The interaction potentials provided in Michalka {\em et
-al.}\citep{Michalka:2015aa} are used here unchanged. Important to note is that
-the \ce{Pd\bond{-}CO} interaction is slightly more favorable by 0.2 kcal/mole
+The interaction potentials provided in Chapter \ref{chap:island} are used here unchanged.
+\citep{Michalka:2015aa} Important to note is that
+the \ce{Pd\bond{-}CO} interaction is slightly more favorable by 0.2 eV 
 when compared to the \ce{Pt\bond{-}CO} interaction in this parameterization.
 
 \subsection{System details}
@@ -72,10 +72,10 @@ interaction.
   \hline
   \textbf{System} & \textbf{Pt} & \textbf{Pd} &  \textbf{(Pd/total)} \\
   \hline
-  100-1Pt-1Pd & 7776 & 1296  & 0.143 \\
-  100-1Pt-2Pd & 6480  & 2592  & 0.286 \\
-  111-1Pt-1Pd & 10800  & 1800  & 0.143 \\
-  111-1Pt-2Pd & 9000 & 3600  & 0.286 \\
+  (100)-1Pt-1Pd & 7776 & 1296  & 0.143 \\
+  (100)-1Pt-2Pd & 6480  & 2592  & 0.286 \\
+  (111)-1Pt-1Pd & 10800  & 1800  & 0.143 \\
+  (111)-1Pt-2Pd & 9000 & 3600  & 0.286 \\
   \hline
   \hline
   \end{tabular}
@@ -149,7 +149,7 @@ to (111) makes exact characterization of such events difficult.
 \begin{figure}[p!]
 \centering
 \includegraphics[width=\linewidth]{../figures/appD/inversion.pdf}
-\caption{Observed inversion events on the 111-1\ce{Pt}-1\ce{Pd} surface with a
+\caption{Observed inversion events on the (111)-1\ce{Pt}-1\ce{Pd} surface with a
 0.5 ML coverage of \ce{CO}. The left image (a) is of the surface after one ns
 of data collection while the right image (b) is taken at the end of six ns.
 \ce{Pd} atoms are shown in pink and \ce{Pt} atoms are shown in gray.}
@@ -157,7 +157,7 @@ of data collection while the right image (b) is taken at the end of six ns.
 \end{figure}
 
 \subsection{Domain formation}
-Using the same methodology as developed in reference \citep{Michalka:2015aa},
+Using the same methodology as developed in Chapter \ref{chap:island},
 the surfaces of the systems were projected onto a two-dimensional grid which
 was then digitized and analyzed to collect distributions of domain sizes of
 \ce{Pt} and \ce{Pd}. An example of this process is illustrated in Figure
@@ -182,21 +182,21 @@ over 1.5 ns time windows.}
 \end{figure}
 \end{landscape}
 
-As displayed in Figure \ref{fig:ds100Pt} \ce{CO} has a strong effect on the
-size of the \ce{Pt} domains on the 100-1Pt-2Pd systems. When no \ce{CO} was
+As displayed in Figure \ref{fig:ds100Pt}, \ce{CO} has a strong effect on the
+size of the \ce{Pt} domains on the (100)-1Pt-2Pd systems. When no \ce{CO} was
 present, the size of the domains are essentially the size of the entire system,
 the presence of two distinct peaks is due to the binning and averaging of both
 top and bottom domain sizes that must be done to display the data in this
 format. The 0.25 ML and 0.5 ML systems conversely, do show significant changes
 over the 6 ns of data collection and the decrease in \ce{Pt} domain sizes is
-matched, as expected by an increase in \ce{Pd} domain sizes as highlighted in
+matched by an increase in \ce{Pd} domain sizes as highlighted in
 Figure \ref{fig:ds100Pd}. 
 
 \begin{figure}
 \centering
   \includegraphics[width=\linewidth]{../figures/appD/ds_100_1Pt_2Pd_Pt.pdf}
   \caption{Distributions of Pt domain sizes at different CO coverages and at
-different times after exposure to \ce{CO} for the 100-1\ce{Pt}-2\ce{Pd}
+different times after exposure to \ce{CO} for the (100)-1\ce{Pt}-2\ce{Pd}
 systems.}
 \label{fig:ds100Pt}
 \end{figure}
@@ -206,7 +206,7 @@ systems.}
 \centering
   \includegraphics[width=\linewidth]{../figures/appD/ds_100_1Pt_2Pd_Pd.pdf}
   \caption{Distributions of Pd domain sizes at different CO coverages and at
-different times after exposure to \ce{CO} for the 100-1\ce{Pt}-2\ce{Pd}
+different times after exposure to \ce{CO} for the (100)-1\ce{Pt}-2\ce{Pd}
 systems.}
 \label{fig:ds100Pd}
 \end{figure}
@@ -215,10 +215,9 @@ Similar to the inversion events, one of the driving forces for this
 reconstruction is the stronger \ce{Pd\bond{-}CO} interaction which encourages
 \ce{Pd} exposure at the alloy surface. However, the primary cause for these
 domain formations is the inherent instability of the (100) overlayer when
-compared to the lower energy (111) surface. However, as mentioned earlier and
-highlighted in Figure \ref{fig:surfaceGrid}, despite the majority of the
-surface \ce{Pt} collapsing to (111) domains, some of the \ce{Pt} atoms are
-raised higher on the surface and retain the original (100) faceting.
+compared to the lower energy (111) surface. Nevertheless, some of the (100)
+domains were maintained with one instance being highlighted in Figure
+\ref{fig:surfaceGrid}.
 
 
 \section{Summary}
@@ -227,8 +226,8 @@ to the instability of the (100) surface facet rather than to any primarily
 \ce{CO} induced effect. However, the presence of \ce{CO} did facilitate some of
 this reconstruction as shown in the domain plots and inversion figures. Similar
 to what was seen in Chapter \ref{chap:island}, the stronger \ce{Pd\bond{-}CO}
-interaction coupled with the preference for \ce{Pt} to maximize nearest
-neighbors provided the main driving forces for these reconstructions. The
+interaction coupled with the preference for \ce{Pt} to maximize its coordination
+provided the main driving forces for these reconstructions. The
 presence of \ce{CO} also played a small role by weakening the metal-metal
 bonds, speeding up many of these processes. Future simulations that ensure the
 stability of the bare surfaces may be able to speak more clearly about the
