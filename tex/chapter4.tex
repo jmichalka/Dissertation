@@ -27,10 +27,10 @@ In this chapter we explore four facets of \ce{Pt} exposed to \ce{CO} through
 molecular dynamics simulations. The facets were chosen to explore the effects
 plateau length and step-edge, flat or kinked, have on previously identified
 reconstruction processes. The rougher, {\em i.e.} kinked, (321) and (765)
-systems are hypothesized to undergo greater amounts of step-wandering while
+systems might be expected to undergo greater amounts of step-wandering while
 also experiencing step-edge doubling at a faster rate than the previously
-modeled, flat, (557) systems. The change in the local environment was also
-examined as the surfaces underwent reconstruction as this is an important
+modeled, flat (557) systems. The change in the local coordination environment was also
+examined as the surfaces underwent reconstruction, as this is an important
 descriptor of potential catalytic activity. 
 
 %\section{Introduction}
@@ -102,67 +102,71 @@ descriptor of potential catalytic activity.
 %nanoseconds.
 
 \section{Methodology}
-Modeling the surface reconstruction of a solid/gas interface requires large
-systems.  To observe events such as step doubling and step wandering, systems
-need to contain on the order of 10\textsuperscript{3} - 10\textsuperscript{4}
-atoms. The large number of electrons involved with this many atoms means that
-these interfaces cannot be modeled through ab {\em ab initio} molecular
-dynamics (AIMD),\citep{Kresse:1993ve, Kresse:1993qf, Kresse:1994ul}
-Car-Parrinello methods, \citep{Car:1985bh, Izvekov:2000fv, Guidelli:2000fy} or
-quantum mechanical potential energy surfaces.  In addition, the interactions
-between the individual metal atoms is poorly represented by classical pairwise
-interactions.  Therefore, the Embedded Atom Method (EAM) \citep{Foiles:1986ky}
-was used to model the \ce{Pt\bond{-}Pt} interactions.  The molecular model for
-carbon monoxide (\ce{CO}) was developed by Straub and
-Karplus,\citep{Straub:1991no} and it treats the \ce{CO} as a rigid, three-site
-body. It was chosen primarily because it describes \ce{CO}'s strong linear
-quadrupole accurately.  The \ce{Pt\bond{-}CO} interaction was modeled to match
-a combination of experimental \citep{Ertl:1977cg, Kelemen:1979ad, Yeo:1997th}
-and theoretical \citep{Feibelman:2001qa, Deshlahra:2009wu, Beurden:2002ys,
-Deshlahra:2012aa, Korzeniewski:1986kl, Mason:2004ix} data. 
+Platinum-platinum interactions were modeled with the Embedded-Atom-Method (EAM)
+which is described more fully in Chapters \ref{chap:PtAu} and
+\ref{chap:island}.\citep{Foiles:1986ky}
 
-\subsection{Platinum-Platinum interactions}
-Since classical force fields often do not work well for transition metal
-systems, several methods have been developed that use a non-pairwise additive
-function of the local electron density.  Some of these methods include the
-embedded atom method (EAM) \citep{Foiles:1986ky, Daw:1984aq, Johnson:1989yr,
-Daw:1989ci, Plimpton:1993qi, Voter:1995ax, Lu:1997fv, Alemany:1998fp}, the
-Finnis-Sinclair method \citep{Finnis:1984hl, Sutton:1990rr} and the
-quantum-corrected Sutton Chen method \citep{Qi:1999dn}.  In general, these
-methods treat the atom as a positive core surrounded by a radially decaying
-negative charge density due to valence electrons.  The energy necessary to
-place a core at location $i$ requires knowing the electron density, $\rho_i$,
-at that point as contributed by all other metallic atoms in the system and is
-represented below, 
-
-\begin{equation}
-\rho_{i} = \sum_{j \ne i}\rho_{j}(\mathbf{r}_{ij})
-\end{equation}
-
-In the equation above, $\rho_{j}(\mathbf{r}_{ij})$ describes how the valence
-electron distribution of atom $j$ varies with the radius.  The potential from
-embedding the atom $i$ at the location in question becomes
-
-\begin{equation}
-V_{i} = F[\rho_{i}] + \sum_{j \ne i} \phi_{ij}(\mathbf{r}_{ij})
-\end{equation}
-
-In equation (2), $F[\rho_{i}]$ is a functional which describes the primarily
-attractive force between the positive core and the electron density surrounding
-the other atoms while $\phi_{ij}(\mathbf{r}_{ij})$ represents the pair-wise
-repulsion between the positively charged cores.  Potentials similar to the ones
-shown above are used in the EAM, Finnis-Sinclair, and the Quantum Sutton Chen
-methods.  These methods have been used for a variety of purposes such as
-examining bulk and nanoparticle properties, \citep{Chui:2003fk, Wang:2005qy,
-Medasani:2007uq, Mishin:1999ew} melting,\citep{Belonoshko:2000jk,
-Sankaranarayanan:2006ye, Sankaranarayanan:2005bh} fracture,
-\citep{Shastry:1996qg, Shastry:1998dx, Mishin:2001qt} crack propagation,
-\citep{Becquart:1993sr} and alloying dynamics.  \citep{Shibata:2002hh,
-Mishin:2002if, Zope:2003ai, Mishin:2005vc} EAM's parameterization included
-second and third nearest-neighbor interactions which makes it particularly
-suited to systems that are expected to deviate from low-energy (111) surfaces,
-which is why it was chosen to describe the \ce{Pt\bond{-}Pt} interactions of
-our high-index surfaces.  \citep{Foiles:1986ky} 
+%Modeling the surface reconstruction of a solid/gas interface requires large
+%systems.  To observe events such as step doubling and step wandering, systems
+%need to contain on the order of 10\textsuperscript{3} - 10\textsuperscript{4}
+%atoms. The large number of electrons involved with this many atoms means that
+%these interfaces cannot be modeled through ab {\em ab initio} molecular
+%dynamics (AIMD),\citep{Kresse:1993ve, Kresse:1993qf, Kresse:1994ul}
+%Car-Parrinello methods, \citep{Car:1985bh, Izvekov:2000fv, Guidelli:2000fy} or
+%quantum mechanical potential energy surfaces.  In addition, the interactions
+%between the individual metal atoms is poorly represented by classical pairwise
+%interactions.  Therefore, the Embedded Atom Method (EAM) \citep{Foiles:1986ky}
+%was used to model the \ce{Pt\bond{-}Pt} interactions.  The molecular model for
+%carbon monoxide (\ce{CO}) was developed by Straub and
+%Karplus,\citep{Straub:1991no} and it treats the \ce{CO} as a rigid, three-site
+%body. It was chosen primarily because it describes \ce{CO}'s strong linear
+%quadrupole accurately.  The \ce{Pt\bond{-}CO} interaction was modeled to match
+%a combination of experimental \citep{Ertl:1977cg, Kelemen:1979ad, Yeo:1997th}
+%and theoretical \citep{Feibelman:2001qa, Deshlahra:2009wu, Beurden:2002ys,
+%Deshlahra:2012aa, Korzeniewski:1986kl, Mason:2004ix} data. 
+%
+%\subsection{Platinum-Platinum interactions}
+%Since classical force fields often do not work well for transition metal
+%systems, several methods have been developed that use a non-pairwise additive
+%function of the local electron density.  Some of these methods include the
+%embedded atom method (EAM) \citep{Foiles:1986ky, Daw:1984aq, Johnson:1989yr,
+%Daw:1989ci, Plimpton:1993qi, Voter:1995ax, Lu:1997fv, Alemany:1998fp}, the
+%Finnis-Sinclair method \citep{Finnis:1984hl, Sutton:1990rr} and the
+%quantum-corrected Sutton Chen method \citep{Qi:1999dn}.  In general, these
+%methods treat the atom as a positive core surrounded by a radially decaying
+%negative charge density due to valence electrons.  The energy necessary to
+%place a core at location $i$ requires knowing the electron density, $\rho_i$,
+%at that point as contributed by all other metallic atoms in the system and is
+%represented below, 
+%
+%\begin{equation}
+%\rho_{i} = \sum_{j \ne i}\rho_{j}(\mathbf{r}_{ij})
+%\end{equation}
+%
+%In the equation above, $\rho_{j}(\mathbf{r}_{ij})$ describes how the valence
+%electron distribution of atom $j$ varies with the radius.  The potential from
+%embedding the atom $i$ at the location in question becomes
+%
+%\begin{equation}
+%V_{i} = F[\rho_{i}] + \sum_{j \ne i} \phi_{ij}(\mathbf{r}_{ij})
+%\end{equation}
+%
+%In equation (2), $F[\rho_{i}]$ is a functional which describes the primarily
+%attractive force between the positive core and the electron density surrounding
+%the other atoms while $\phi_{ij}(\mathbf{r}_{ij})$ represents the pair-wise
+%repulsion between the positively charged cores.  Potentials similar to the ones
+%shown above are used in the EAM, Finnis-Sinclair, and the Quantum Sutton Chen
+%methods.  These methods have been used for a variety of purposes such as
+%examining bulk and nanoparticle properties, \citep{Chui:2003fk, Wang:2005qy,
+%Medasani:2007uq, Mishin:1999ew} melting,\citep{Belonoshko:2000jk,
+%Sankaranarayanan:2006ye, Sankaranarayanan:2005bh} fracture,
+%\citep{Shastry:1996qg, Shastry:1998dx, Mishin:2001qt} crack propagation,
+%\citep{Becquart:1993sr} and alloying dynamics.  \citep{Shibata:2002hh,
+%Mishin:2002if, Zope:2003ai, Mishin:2005vc} EAM's parameterization included
+%second and third nearest-neighbor interactions which makes it particularly
+%suited to systems that are expected to deviate from low-energy (111) surfaces,
+%which is why it was chosen to describe the \ce{Pt\bond{-}Pt} interactions of
+%our high-index surfaces.  \citep{Foiles:1986ky} 
 
 \subsection{Carbon Monoxide model}
 The carbon monoxide model developed by Karplus and Straub\citep{Straub:1991no},
@@ -207,22 +211,19 @@ is used here without change.
 %\label{tab:parameters}
 %\end{table}
 
-
-
-
 \subsection{Platinum-Carbon Monoxide interactions} The extensive experimental
 \citep{Ertl:1977cg, Kelemen:1979ad, Ertl:1989, Schweizer:1989fk, Szanyi:1992aa,
 Yeo:1997th} and theoretical \citep{Feibelman:2001qa, Deshlahra:2009wu,
 Beurden:2002ys, Deshlahra:2012aa, Korzeniewski:1986kl, Mason:2004ix} work on
 \ce{Pt\bond{-}CO} allows for significant data upon which to parameterize this
-interaction.  Due to recent research the \ce{Pt\bond{-}CO} interaction has been
+interaction.  The \ce{Pt\bond{-}CO} interaction has been
 modified from previous models\citep{Michalka:2013aa, Michalka:2015aa} to better
 capture the difference in energy between the preferred atop and bridge sites as
-described by DFT calculations.\citep{Deshlahra:2012aa} This model has also been
+described by DFT calculations.\citep{Deshlahra:2012aa} The model has also been
 modified to use a purely repulsive Morse potential to represent the
-\ce{Pt\bond{-}O} interaction in contrast to previous
+\ce{Pt\bond{-}O} interaction in contrast with previous
 implementations.\citep{Korzeniewski:1986kl, Michalka:2013aa} Using a purely
-repulsive Morse prevents unphysical \ce{O} first binding to the surface.
+repulsive Morse prevents unphysical \ce{O} binding to the surface.
 Combining the Lennard-Jones \ce{Pt\bond{-}C} interaction with the repulsive
 Morse describing the \ce{Pt\bond{-}O} interaction, provides the following
 potential form for the \ce{Pt\bond{-}CO} interaction,
@@ -292,8 +293,8 @@ Experimental\tnote{b} & -1.43 & & \\
 
 \subsection{Systems}
 
-The various \ce{Pt} systems were created so as to be of a similar size, and fit
-properly in an orthorhombic periodic box. The four original cuts were doubled
+The stepped \ce{Pt} systems were created so as to be of a similar size, and fit
+properly in an orthorhombic periodic box. The four surface cuts were doubled
 in either the $x$ or the $y$ direction so that the effect of step lengths could
 also be investigated and were identified as LS, for systems with longer steps,
 and MS, for systems with more steps. The system dimensions, number of atoms,
@@ -312,19 +313,19 @@ $z$ axis, while staying periodic along the $x$ and $y$ axis.
 %and 28.72 x 100.5 x 100 \aa.  
 
 \begin{table}
-\caption{SYSTEM DIMENSIONS FOR THE MODELED PT SURFACES}
+\caption{SYSTEM DIMENSIONS FOR THE STEPPED PT SURFACES}
 %\caption{Dimensions}
 \centering
 \begin{threeparttable}
 \centering
 \begin{tabular}{c c c c c}
 \hline\hline
-Surface & Atoms & Surface Atoms & \multicolumn{2}{c}{System dimensions\tnote{a} (1 \& 2)}  \\ 
+Surface & Atoms & Surface Atoms & \multicolumn{2}{c}{System dimensions\tnote{a} (MS \& LS)}  \\ 
 \hline
-(321) & 4440 & 720 & 71.7 x 47.7 x 100 & 35.8 x 95.5 x 100\\
-(112) & 4608 & 768 & 32.9 x 108.5 x 100 & 65.8 x 54.3 x 100\\
-(765) & 3744 & 792 & 58.4 x 50.2 x 100 & 28.7 x 100.5 x 100\\
-(557) & 3888 & 720 & 55.3 x 49.5 x 100 & 110.6 x 24.8 x 100\\
+(321) & 4440 & 720 & 71.7 x 47.7 x 100 & 35.8 x 95.5 x 100  \\
+(112) & 4608 & 768 & 32.9 x 108.5 x 100 & 65.8 x 54.3 x 100 \\
+(765) & 3744 & 792 & 28.7 x 100.5 x 100 & 58.4 x 50.2 x 100 \\
+(557) & 3888 & 720 & 110.6 x 24.8 x 100 & 55.3 x 49.5 x 100 \\
 \hline
 \hline
 \end{tabular}
@@ -341,15 +342,14 @@ of steps on the reconstruction process.
 The systems were then run in the canonical (NVT) ensemble, gradually raising
 the temperature to either 700\ ~K or 1000\ ~K depending on the initial
 stability of the pure system.  The systems with longer plateaus were more
-stable and were run at 1000\ ~K to hasten the dynamics in the system so that
-reconstructions would be more likely to occur during the simulation time.
-Various amounts of CO, corresponding to 0.25 ML or 0.5 ML, were placed in the
-vacuum region and then allowed to absorb to the surface. The systems were then
-re-equilibrated for approximately one nanosecond before data collection was
-begun.  Data was collected by running the systems in the microcanonical (NVE)
-ensemble for 100 ns.  Simulations were performed using the open source
-molecular dynamics package, OpenMD.\citep{Fennell:2006xq, Meineke:2005pt,
-openmd} 
+stable and were run at 1000\ ~K to bring reconstruction dynamics into the
+domain of typical simulation times.  Gas phase CO molecules, corresponding to
+0.25 ML or 0.5 ML surface coverage were placed in the vacuum region and then
+allowed to adsorb on the surface. The systems were then re-equilibrated for
+approximately one nanosecond before data collection was begun.  Data was
+collected by running the systems in the microcanonical (NVE) ensemble for 100
+ns.  Simulations were performed using the open source molecular dynamics
+package, OpenMD.\citep{Fennell:2006xq, Meineke:2005pt, openmd} 
 
 \section{Results}
 
@@ -357,8 +357,6 @@ openmd}
 %Make a table... hopefully the burrowing will explain most of this
 %Additionally, when double steps (or partial double steps form) there is not as much movement afterwards, so that is a possible explanation as well
 % Try to show a count of mobile atoms (as a function of time maybe)
-
-
 
 \subsection{Generalized coordinate number}
 Many catalytic reactions have a degree of structural sensitivity such that only
@@ -371,28 +369,27 @@ local environment.\citep{Calle-Vallejo:2015qq} With this information, similar to
 volcano plots, they were able to create ``coordination-activity plots'' that
 related an atoms coordination with its catalytic activity. Since they needed to
 include information about second nearest neighbors, they introduced a new term,
-the generalized coordinate number (GCN) as a useful measure of the various
-binding environments on metal surfaces or nanoparticles. The GCN is a
-straight-forward extension of a nearest-neighbor analysis with the primary
-difference being that the GCN of an atom $i$ is calculated from the average of
-the coordination numbers of its nearest neighbors. This can be expressed as
-seen in equation \ref{eq:gcn} where $\overline{CN}$ is the generalized
-coordinate number of atom $i$, while $cn(j)$ is the coordinate number of atom
-$j$. The sum is over atom $i$'s first nearest neighbors and $cn_\textrm{max}$
-is a normalization term and for an FCC crystal is equal to 12, the bulk
-coordination number.
+the generalized coordination number (GCN) as a useful measure of the various
+binding environments on metal surfaces or nanoparticles. 
 
 \begin{equation}
   \overline{CN}(i) = \sum_{j=1}^{n_i}\frac{cn(j)}{cn_{\textrm{max}}}
   \label{eq:gcn}
 \end{equation}
 
+The GCN is a straight-forward extension of a nearest-neighbor analysis with the
+primary difference being that the GCN of an atom $i$, $\overline{CN}(i)$,  is
+calculated from the average of the coordination numbers, $cn(j)/cn_\term{max}$,
+of its nearest neighbors.  The sum is over atom $i$'s first nearest neighbors
+and $cn_\textrm{max}$ is a normalization term and for an FCC crystal is equal
+to 12, the bulk coordination number.
+
 \begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap4/321_ideal_gcn.pdf}
   \caption{A graph of the generalized coordinate numbers of an ideal Pt(321)
 system colored to match the inset figure. Other than the bulk (GCN=12), the
 ideal (321) surface displays a wide variety of environments for its surface
-atoms.  The edge atoms (red) have the lowest GCN because they are extremely
+atoms.  The edge atoms (red) have the lowest GCN because they are 
 under-coordinated, whereas the plateau atoms have GCN's around the ideal
 surface number of 7.5. Subsurface atoms (yellow, greens, and blues) have a
 larger GCN then the surface, but are still less than the bulk GCN of 12.  }
@@ -402,27 +399,26 @@ larger GCN then the surface, but are still less than the bulk GCN of 12.  }
 The concept is further illustrated in Figure \ref{fig:ideal321GCN} where we see
 an ideal \ce{Pt} (321) surface color coded to match the encompassing GCN graph.
 The bulk atoms (GCN=12) make up the majority of the system, however, there is a
-wide range of potentially catalytically active sites on this surface owing to
-its roughness. Specifically, Calle-Vallejo {\em et al.} argued that for the
-Oxygen Reduction Reaction (ORR) a \ce{Pt} atom with a GCN of $\sim$8.3 would be the
-most catalytically active site. Since an ideal (111) surface in composed of
-atoms with a GCN of $7.5=(6\times9 + 3\times12)/12$, this implies that surfaces
-that display some amount of concavity may be necessary to achieve the highest
+wide range of potentially catalytically active sites on the surface.
+Specifically, Calle-Vallejo {\em et al.} argued that for the Oxygen Reduction
+Reaction (ORR) a \ce{Pt} atom with a GCN of $\sim$8.3 would be the most
+catalytically active site. Since an ideal (111) surface in composed of atoms
+with a GCN of $7.5=(6\times9 + 3\times12)/12$, this implies that surfaces that
+display some amount of concavity may be necessary to achieve the highest
 catalytic activities. Another color-coded graph of an ideal \ce{Pt} (557)
-system is included in Appendix \ref{app:SI2} as Figure \ref{fig:557GCN} to highlight the
-differences between a high-index surface, (321), to a comparatively flat and
-regular surface, (557).
+system is included in Appendix \ref{app:SI2} as Figure \ref{fig:557GCN} to
+highlight the differences between a rough surface, (321), to a comparatively
+flat surface, (557).
 
 In Figure \ref{fig:LS321GCNF}, we see GCN data from the \ce{Pt} (321) systems
 which are focused on the surface and subsurface layers, i.e. non-bulk, for the
 three examined coverages at  the beginning and end of the simulation times. The
 growth in the peaks around 7.5, as highlighted with the blue bar, suggest that
-the surface is reconstructing so as to display a greater amount of (111)
-domains and that the amount of CO present in the system plays a direct role in
-this reconstruction. Additionally, the decrease in peaks at 4.5 and 6.2 provide
-further evidence of the system moving to a lower energy displayed facet. While
-not as helpful to surface catalytic reactions, the growth in the peak at a GCN
-of 11.2 shows how the subsurface layers are becoming more bulk-like.
+the surface is reconstructing, displaying larger (111) domains. The amount of
+CO present in the system plays a direct role in this reconstruction.
+Additionally, the decrease in peaks at 4.5 and 6.2 provide evidence of the
+system moving to a lower energy facet.  The growth in the peak at a GCN of 11.2
+shows how the subsurface layers are becoming more bulk-like.
 
 \begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap4/321ls_GCNF.pdf}
@@ -438,13 +434,14 @@ activity.\citep{Calle-Vallejo:2015qq}}
 \label{fig:LS321GCNF}
 \end{figure}
 
-As mentioned earlier, the other systems examined in this study experienced much
-less reconstruction, which is born out in their GCN plots. Figure
-\ref{fig:LS112GCNF} shows the calculated GCN's of the \ce{Pt} (112) LS
-systems and the minimal changes that the system underwent during the
-simulation. There is a slight decrease around 5.5 which is consistent with the
-slight step sinking that was observed on some of these systems. Representative GCN plots
-of the other systems are included in Appendix \ref{app:SI2} as Figures \ref{fig:557lsGCN} through \ref{fig:765msGCN}.
+The other systems examined in this study experienced much less reconstruction,
+as evidenced in their GCN plots. Figure \ref{fig:LS112GCNF} shows the
+calculated GCN's of the \ce{Pt} (112) LS systems and the minimal changes that
+the system exhibited during the simulation. There is a slight reduction of
+population around 5.5 which is consistent with the step sinking that was
+observed on some of these systems. Representative GCN plots of the other
+systems are included in Appendix \ref{app:SI2} as Figures \ref{fig:557lsGCN}
+through \ref{fig:765lsGCN}.
 
 \begin{figure}[p!]
   \includegraphics[width=\linewidth]{../figures/chap4/112ls_GCNF.pdf}
@@ -460,40 +457,36 @@ barely perturbed.}
 
 \subsection{Edge wandering}
 All of the surfaces experienced some amount of step-wandering which will be
-discussed by surface facet below.
+discussed by facet below.
 
 \subsubsection{Pt (557)}
-Starting with the (557) surfaces which have been explored more fully in
-previous papers,\citep{Tao:2010aa, Michalka:2013aa} we must  report
-that no doubling was observed during the simulation time despite their being
-large amounts of step wandering. The two most likely explanations include the
-posited stochastic nature of this reconstruction and despite simulating for
-100 ns, not sampling the needed trajectory. Additionally, in response to
-recent literature\citep{Deshlahra:2012aa}, the \ce{Pt\bond{-}CO} interaction had
-been weakened slightly when compared to the fit in the previous
-paper.\citep{Michalka:2013aa} It is likely a combination of both of these
-explanations as there was significant step-wandering, but the key event of two
-step-edges meeting did not occur for any of the (557) systems simulated in this
-study.
+The (557) surfaces have been explored more fully in previous
+papers,\citep{Tao:2010aa, Michalka:2013aa}, but we must  report that no
+doubling was observed during the simulation time despite the large degree of
+step wandering. The two most likely explanations include the stochastic nature
+of this reconstruction. Additionally, the \ce{Pt\bond{-}CO} interaction has
+been weakened compared to the fit in the previous paper.\citep{Michalka:2013aa}
+It is likely that both of these explanations are contributing factors as there
+was significant step-wandering, but the key event (two step-edges meeting) did
+not occur for any of the (557) systems simulated in this study.
 
 \subsubsection{Pt (112)}
-The (112) MS surfaces underwent a small restructuring to relieve a slight
-tension in the pressure tensor that resulted in a number of the
-originally (100) step edges sinking slightly into the surface and shifting
-sideways to display a sunken (111) step edge which is highlighted in Figure
+The (112) MS surfaces exhibited restructuring to relieve residual surface tension.
+This resulted in a number of the
+originally (100) step edges sinking into the surface and shifting
+sideways to display a sunken (111) step edge. This is highlighted in Figure
 \ref{fig:112sunken} in Appendix \ref{app:SI2}.  Adatom formation from these (111)
-steps is minimal and so the total amount of adatom creation and movement on
+steps was minimal and the total amount of adatom creation and movement on
 these systems was much less than on the (112) systems with longer steps. 
 
-The (112) LS surfaces underwent a moderate amount of step-wandering, although
-limited step-edge reconstructions were observed as again a couple of the steps
-on each system sunk into the bulk making adatom formation difficult.  The bare
-surface maintained its displayed (112) step-edges macroscopically, but if the
-individual atoms are colored, it is observed that there is actually a
-significant amount of adatom ejection and re-adsorption on the surface. The
-presence of \ce{CO} increased the disruption of the step-edges and the largest
-amount of restructuring in these systems was observed on the 0.5 ML system were
-three steps coalesced into a mini-(111) facet which is highlighted in Figure
+The (112) LS surfaces exhibited moderate step-wandering, although limited
+step-edge reconstructions were observed. Some of the steps on each system sunk
+into the bulk, making adatom formation difficult.  The bare surface maintained
+its displayed (112) step-edges macroscopically.  We also observed that there
+was significant adatom ejection and re-adsorption on the surface. The presence
+of \ce{CO} increased the disruption of the step-edges and the largest amount of
+restructuring in these systems was observed on the 0.5 ML system.  Three steps
+in this system coalesced into a mini-(111) facet, highlighted in Figure
 \ref{fig:tripleStep}.
 
 \begin{figure}
@@ -509,34 +502,33 @@ had begun to coalesce into a triple step, highlighted in yellow.}
 \subsubsection{Pt (765)}
 The (765) surfaces, while undergoing significant amounts of step-wandering did
 not experience any clear instances of step-edge doubling during the
-simulations. The MS systems, those extended to display a greater quantity of
-steps maintained the (765) motif over the entire simulation barring one
-incident on the 0.5 ML system. What appears to be starting out as a doubling
-event, results in portions of both involved edges sinking into the surface of
-the metal. This process is depicted in Figure \ref{fig:765Edge} in Appendix \ref{app:SI2}.
-
+simulations. The MS systems, those extended to display wider steps maintained
+the (765) motif over the entire simulation (barring one incident on the 0.5 ML
+system). What appears to be the initial stages of a doubling event results in
+portions of both involved edges sinking into the surface of the metal. This
+process is shown in Figure \ref{fig:765Edge} in Appendix \ref{app:SI2}.
 
 The LS systems also experienced significant step-wandering. While no doubling
 was observed, connections between separate edges were seen. However, these
 connections led to some of the steps rotating on the surface of the metal.
 Despite the apparent stability of the (765) motif for the MS systems, the 0 and
-0.5 ML LS systems appeared to undergo some amount of surface melting.
+0.5 ML LS systems appeared to undergo an unstructured reconstruction that lead
+to an increase of the GCN at 6.8 highlighted in Figure \ref{fig:765lsGCN}.
 
 \subsubsection{Pt (321)}
-The (321) steps showed the most interesting behavior with numerous instances of
-step doubling being observed on both the MS and LS 0.5 ML systems. The 0.25 ML
-systems also showed a small amount of reconstruction, although little doubling
+The (321) steps showed the most interesting behavior. Numerous instances of
+step doubling were observed on both the MS and LS 0.5 ML systems. The 0.25 ML
+systems also showed minor reconstruction, although little doubling
 was observed. The 0 ML systems did experience a small amount of step-wandering,
 likely due to the high energy of the surface and the elevated temperatures the
 systems were run at.
 
 An interesting case of frustrated double layer formation is highlighted in
-Figure \ref{fig:partialDoubleLayer} where three double layers have begun to form,
-but the center double layer highlighted in green is preventing the blue or
-yellow double layer from completing themselves. The 0.5 ML LS systems within
-our simulation time were not observed to form a double step that stretched the
-length of the system, whereas numerous examples of partial double steps can be
-found.
+Figure \ref{fig:partialDoubleLayer} where three double layers have begun to
+form, but the center double layer highlighted in green is preventing the blue
+or yellow double layer from coalescing. Within our simulation time, the 0.5 ML
+LS systems were not observed to form a double step that encompassed the length
+of the system, whereas numerous examples of partial double steps can be found.
 
 \begin{figure}
 \centering
@@ -579,10 +571,10 @@ double-layer reconstruction. While the amount of step-wandering was significant
 for the majority of the systems exposed to \ce{CO}, only the (321) surfaces
 demonstrated repeated step-edge doubling. One explanation for this surprising
 result is that our modification of the \ce{Pt\bond{-}CO} forcefield to bring it
-closer to experimental results weakened our description of these systems. Here
-we will discuss the features of the forcefield and the studied systems that are
-leading to this disparity in \ce{CO}-induced reconstruction while also
-examining the effects of step type and plateau length on step-wandering.
+closer to experimental results weakened the \ce{Pt\bond{-}CO} step energetics
+in these systems. Here we will discuss the features of the forcefield and the
+studied systems while also examining the effects of step type and plateau
+length on step-wandering.
 
 \subsection{Surface energy}
 Surface energies were calculated for every system that was studied, as well as
@@ -608,14 +600,14 @@ surface energy values in Table \ref{table:lit_surface_energy}.
 \centering
 \begin{threeparttable}
 \centering
-\begin{tabular}{c c c c}
+\begin{tabular}{c c c c c }
 \hline
 \hline
-Facet & Surface Energy & EAM\tnote{a} & Experimental\tnote{b} \\
+Facet & Surface Energy & EAM\tnote{a} & Experimental\tnote{b} & Simulated/Experimental\\
 \hline
-\ce{Pt} (111) & 1.43 & 1.44 & 0.977\\
-\ce{Pt} (100) & 1.63 & 1.65 & 1.286\\
-\ce{Pt} (110) & 1.75 & 1.75 & 1.553\\
+\ce{Pt} (111) & 1.43 & 1.44 & 0.977 & 1.46 \\
+\ce{Pt} (100) & 1.63 & 1.65 & 1.286 & 1.27 \\
+\ce{Pt} (110) & 1.75 & 1.75 & 1.553 & 1.13 \\
 \hline
 \hline
 \end{tabular}
@@ -631,11 +623,11 @@ Facet & Surface Energy & EAM\tnote{a} & Experimental\tnote{b} \\
 The same methodology was used to calculate surface energies for the \ce{Pt}
 (765), \ce{Pt} (557), \ce{Pt} (112), and \ce{Pt} (321) surfaces and are shown
 in Table \ref{table:surface_energy}.  The surface energy of these systems is
-inversely correlated to the distance between step-edges which seems reasonable
-as the larger distance corresponds to a larger amount of the low-energy (111)
+inversely correlated to the distance between step-edges. This is reasonable as
+the larger step length corresponds to a larger amount of the low-energy (111)
 facet being displayed. This suggests that the higher surface energy systems
-will be more amendable to reconstruction so as to display a greater proportion
-of (111) domains.
+will be more amendable to reconstruction as they can then display a greater
+proportion of (111) domains.
 
 \begin{table}
 \caption{SURFACE ENERGY AND STEP-LENGTH CALCULATIONS FOR MODELED PT SURFACES}
@@ -677,15 +669,15 @@ two step-edges meeting and forming a stable nucleation site from which a
 meeting of two step-edges is primarily a stochastic process, anything that
 makes the initial meeting less likely, like increasing the distance between
 steps, will make the reconstruction process more difficult to capture with our
-finite simulation times. We believe this, combined with our retuning of the
+finite simulation times. This combined with the retuning of the
 \ce{Pt\bond{-}CO} forcefield, explains why despite seeing significant
 step-wandering on the (557) and (765) systems little to no reconstruction was
-observed during the 100 ns of simulation, whereas the (321) surfaces underwent
-numerous doubling events. This would suggest that the (112) surface should also
+observed during the 100 ns of simulation, whereas the (321) surfaces exhibited 
+many doubling events. This would suggest that the (112) surface should also
 have seen significant doubling, and while there was one instance of a triple
 step beginning to form, the slight reconstruction that sunk a number of the
 step-edges made any sort of adatom formation on those surfaces difficult.
-Recreating the (112) systems and ensuring the step-edges remain as (100) steps
+Recreating the (112) systems and relieving residual surface tension 
 would likely lead to a larger amount of step doubling.
 
 \subsection{Energy to separate from edge}
@@ -736,7 +728,7 @@ energetic barrier for adatom creation when compared to the flat steps of the
 
 In general, this analysis provides several helpful results. First, removing an
 atom from a (321) or (765) step is more energetically favorable than from a
-(112) or (557) step as expected because of the lower coordination of atoms in
+(112) or (557) step. This is due to the lower coordination of atoms in
 the kinked edges. This trend is clearly shown in Figures \ref{fig:112_557_ES}
 and \ref{fig:321_765_ES} for configuration a where no CO is present on the
 surface. In these instances, removing an atom from a kinked step edge is 10
@@ -758,18 +750,18 @@ quadrupolar repulsive force directly away from the step edge, thus lowering the
 energetic barrier for adatom formation.  This conclusion can be demonstrated by
 comparing configurations d and e in both figures. In configuration e, the
 \ce{CO} are located along a vector which is aimed perpendicularly away from the
-step, while in configuration d the0 repulsive force generated by the \ce{CO} is
+step, while in configuration d the repulsive force generated by the \ce{CO} is
 either completely or mostly parallel to the step edge. As the coverage
 increases, the likelihood of a higher energy configuration also increases,
 which leads to more step-edge breakup and a larger surface diffusion.
 
-\subsubsection{Straight \& Kinked edges}
+\subsubsection{Straight vs. Kinked edges}
 As highlighted in Figure \ref{fig:diamonds}, one of the partial reconstructions
 observed on the (321) surface are the small diamonds composed of (111) domains
 formed between steps. Most of these diamonds share corners corresponding to
 nucleation sites between steps from which zippering into double steps is
 observed primarily on the 0.5 ML surfaces. The initial formation of these
-diamonds however is of fairly low energy cost. Principally, the hopping
+diamonds however is of fairly low cost. Principally, the hopping
 diagrammed in Figure \ref{fig:kinkSketch} has a barrier of approximately ?
 kcal/mole while the resulting structure is within 0.1 kcal/mole of the original
 surface. While the presence of \ce{CO} provides some of the driving force for
@@ -795,18 +787,18 @@ energy leading to a more stable surface.}
 \subsection{CO binding energy}
 %Coverage, temperature of system (compare to original data?)
 The decrease in the parameterized \ce{Pt\bond{-}CO} interaction was made in
-response to recent DFT results\citep{Deshlahra:2012aa} and questions that were
-raised about previously reported calorimetric heats of adsorption for the
-\ce{Pt\bond{-}CO} interaction.\citep{Yeo:1997th} As the decrease in this binding
-energy is immediately realized by fewer CO being adsorbed at any given instant
-in the simulations, this also apparently led to a decrease in adatom formation
-and concomitantly a decrease in step-edge wandering. For the surfaces that had
-short plateaus, this decrease did not appear to affect the doubling as the
-edges did not have to wander as far to still meet, but for the (557) and (765)
-surfaces,  doubling was not observed for this specific parameter set.
+response to recent DFT results\citep{Deshlahra:2012aa} and uncertainties about
+previously reported calorimetric heats of adsorption for the \ce{Pt\bond{-}CO}
+interaction.\citep{Yeo:1997th} As the decrease in this binding energy results
+in fewer CO being adsorbed at any given instant in the simulations, this also
+leads to a decrease in adatom generation and concomitantly a decrease in
+step-edge wandering. For the surfaces that had short plateaus, this decrease
+did not appear to affect the doubling as the edges did not have to wander as
+far to still meet, but for the (557) and (765) surfaces,  doubling was not
+observed for this parameter set.
 
 \subsection{Mechanisms of structural changes}
-Similar to our previous work on \ce{Pt} (557) the presence of \ce{CO} initially
+Our previous work on \ce{Pt} (557) revealed that the presence of \ce{CO} initially
 destabilizes the step-edges leading to rapid formation of adatoms and
 step-wandering on the surface. If significant step-wandering occurs such that
 two edges connect, they often form a ``nucleation'' site, a location that
@@ -817,36 +809,36 @@ of the two edges into a double step.
 This mechanism initially depends on the stochastic meeting of two step edges
 which is well-correlated with the density of adatom formation. Increased
 thermal energy is one method to increase the number of adatoms on stepped
-surfaces, however is these simulations we attempted to limit this cause through
-our temperature choices for the systems. Thus, the presence of \ce{CO} is
-playing a similar role to an increased temperature by weakening the
-\ce{Pt\bond{-}Pt} bonds in the step-edge.
+surfaces, however is these simulations we attempted to limit this through
+lowered simulation temperatures.  The presence of \ce{CO} is playing a similar
+role to an increased temperature by weakening the \ce{Pt\bond{-}Pt} bonds in
+the step-edge.
 
 The density of adatoms is one factor in determining the likelihood of step-edge
 meeting, while the other primary factor is that of plateau length. The (112)
-and (321) systems had shorter plateau lengths which made the chance of
-step-edges meeting more likely and is evidenced by the numerous instances of
-step-edge doubling seen on these systems. Whereas in our previous work, where
+and (321) systems have shorter plateau lengths which makes the chance of
+step-edges meeting more likely.  In our previous work on the (557) surface,
 only one nucleation site formed per observed step-edge doubling, for some of
 the systems explored in this study, numerous nucleation sites were created
-before the steps could finish doubling, which in some cases led to
-frustrated partially doubled step edges, as highlighted in Figure
-\ref{fig:partialDoubleLayer}.
+before the steps could finish doubling, which in some cases led to partially
+doubled step edges, highlighted in Figure \ref{fig:partialDoubleLayer}.
 
 Further evidence of the importance of plateau length was elucidated from the
-observed differences between the different (321) systems. The systems that had
-longer steps tended to have more instances of partially formed double layers as
-a result of numerous nucleation sites having formed preventing the full
+observed differences between the different (321) systems. The
+longer steps tended to have more partially formed double layers as
+a result of numerous nucleation sites. This prevented the full
 zippering mechanism from occurring. In contrast, the (321) steps that were
-extended in the other direction to display a greater number of steps had a few
-instances of complete step edge doubling, although here too were some
-frustrated partial double layers.
+extended to display a greater number of steps had a few
+instances of complete step edge doubling.
 
-Admittedly, all surfaces, even those without \ce{CO} present showed some amount
-of surface roughening and reconstruction suggesting that the surface is only
-quasi-stable at high temperatures. However, the presence of \ce{CO} at 0.25 and
-0.5 ML coverages did lead to significantly more step-wandering intermediate
+All surfaces, even those without \ce{CO} present showed some amount of surface
+roughening and reconstruction suggesting that the surface is only quasi-stable
+at high temperatures. However, the presence of \ce{CO} at 0.25 and 0.5 ML
+coverages did lead to significantly more step-wandering intermediate
 reconstructions and partial and full double layer formation.
+
+%Dynamics of GCN for surfaces
+
 
 %The slight refaceting of the surfaces led to an artificially low diffusion
 %constant for these systems (true?) because the majority of steps have become
@@ -860,8 +852,8 @@ reconstructions and partial and full double layer formation.
 
 \section{Summary}
 The mechanism of reconstructions on \ce{Pt} surfaces, specifically step-edge
-doubling, is dependent on the displayed surface facet as hypothesized and also
-partially dependent on the presence of adsorbates, here \ce{CO}, that can first
+doubling, is dependent on the displayed surface facet. It is also
+partially dependent on the presence of adsorbates, here \ce{CO}, that can 
 disrupt the step-edges and then stabilize the formation of double steps. An in-depth
 examination of the energetics of step-edge breakup shows that the ``kinked''
 surfaces (321) and (765) are especially favorable for formation of adatoms
@@ -871,22 +863,21 @@ edges was ultimately a stochastic process and then double layer formation would
 typically proceed in a ``zippering'' fashion is strengthened here as a number of
 systems with shorter plateaus ended up in frustrated double layer formations.
 
-The lack of any double steps forming on the (557) surface despite being seen
-experimentally and in an earlier set of simulations suggest that either a
-trajectory that would lead to that reconstruction was not sampled or more
-likely that the re-parameterization of the \ce{Pt\bond{-}CO} interaction to
-better match reported experimental values over-weakened the interaction for
-this specific case. While significant step-wandering was still observed on
-these systems, the density of adatoms was not sufficient to stochastically form
-a nucleation site during the simulation time.
+The lack of any double steps forming on the (557) surface despite being seen in
+an earlier set of simulations suggests that the re-parameterization of the
+\ce{Pt\bond{-}CO} interaction to better match reported experimental values has
+altered the dynamics of the step-doubling process.  While significant
+step-wandering was still observed on these systems, the density of adatoms was
+not sufficient to stochastically form a nucleation site during the simulation
+time.
 
 Recent work on \ce{CO}-induced nanostructure formation on a \ce{Cu} (111) has
 shown that when the metal-metal binding interactions are weaker, the presence
 of strong repulsive adsorbates can be sufficient to disrupt even flat
-surfaces.\citep{Eren:2016qt} We have reached a similar conclusion with the \ce{Pt} systems
-explored for this investigation, such that surfaces that have a higher surface
-energy and more sites where adatoms can be easily formed, ({\em i.e.}
-weakly-bonded atoms) are more likely to experience reconstruction in general
-and doubling of the step-edges specifically as this greatly increases the
-amount of the surface that is occupied by the more stable (111) domains.
+surfaces.\citep{Eren:2016qt} We have reached a similar conclusion with the
+\ce{Pt} systems explored for this investigation, such that surfaces that have a
+higher surface energy and more sites where adatoms can be easily formed, ({\em
+i.e.} weakly-bonded atoms) are more likely to experience reconstruction in
+general and doubling of the step-edges specifically as this greatly increases
+the amount of the surface that is occupied by the more stable (111) domains.
 
