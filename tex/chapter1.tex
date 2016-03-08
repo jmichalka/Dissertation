@@ -432,3 +432,206 @@ can lead to what is effectively sintering or island-formation of one of the
 metals on the surface.  The interplay of surface energies and adsorbate
 interactions on two or more metal surfaces allows for the creation of
 highly tuned catalysts.
+
+\section{Modeling metals}
+The modeling of molecular systems, and metals in particular, requires an
+accurate description of the particles present in the system and most
+importantly the interactions they have with each other. Depending on what
+properties are being searched for, the accuracy and the associated expense of
+these interactions can vary drastically. For instance, modeling catalytically
+activated chemical reactions on a metal surface with the intent of mapping
+reaction pathways requires a higher level of theory when compared to modeling
+large-scale reconstructions of metals as a result of high temperature and
+pressure.
+
+Generally, simulations can be broken up between two main classes, those that
+require an accurate treatment of electron movement and transfer and those that
+can suffice with a minimal amount of electron treatment.  Metals are at an
+interesting junction between these two domains as their electronic nature does
+play an important role in their interactions with adsorbates; however,
+capturing the reconstructions observed on metal surfaces requires large system
+sizes that can not currently be treated at such a high level of theory. Thus,
+for the systems examined in this dissertation, the metal-metal and metal-CO
+interactions will be represented with a simpler model so that the size of the
+systems and length of the simulations can be expanded to capture reconstruction
+events.
+
+\subsection{Molecular Dynamics}
+In constrast to Density Functional Theory and other methods that attempt to
+solve the electronic wavefunctions within a molecular system, most
+implementations of molecular dynamics sacrifice this portion of the molecular
+description in order to gain the ability to model larger systems ($>$1000s of
+atoms) for longer times ($>$1e6 fs). At a minimum, a molecular dynamics
+implementation requires knowledge of the positions, $\mathbf{r}$, and
+velocities, $\mathbf{v}$, of all $N$ particles in the system along with a
+complete description of the cross-interactions between all pairs of particles.
+The accumulation of the different interaction potentials is also known as a
+``forcefield''. With this knowledge and a suitably chosen timestep ($\sim$ 1-2
+fs), the system can be evolved through time by integrating Newton's equations
+of motion. A general approach for the procedure is shown below.
+
+%list
+\begin{enumerate}
+\item Given initial $\mathbf{r}$ and $\mathbf{v}$, set the time $t=0$ and
+$\Delta t$ to something suitably short.
+
+\item Move atoms based on current positions and velocities.
+
+\begin{equation*}
+r_i(t + \Delta t) = r_i(t) + v_i(t)*\Delta t + a_i(t)*\Delta t^2 + ...
+\end{equation*}
+
+\item Update velocities.
+\begin{equation*}
+v_i(t + \Delta t) = v_i(t) + a_i(t)*\Delta t^2 + ...
+\end{equation*}
+
+\item Calculate forces from updated positions.
+\begin{equation*}
+F_i = -\nabla V(\mathbf{r})
+\end{equation*}
+
+\item Correct positions, velocities, etc. with new force information.
+\item Apply conditions (thermostats, barostats, etc.).
+\item Measure properties of interest.
+\item Repeat steps 2-8 until some pre-establishted condition is met.
+\end{enumerate}
+
+The specific implementation of position and velocity integration as briefly
+mentioned in numbers 2 and 3 can vary and numerous algorithms exist including
+verlet\citep{Verlet:1967aa} and velocity-verlet
+integration.\citep{Dullweber:1997aa} The conditions mentioned in number 6 are
+in reference to methods that can ensure that the system is maintained at a
+given temperature or pressure and while important, go beyond our introduction
+to molecular dynamics, but further resources can be found in References
+\citep{Hoover:1985aa, Melchionna:1993aa, Leach:2001aa}.
+
+While all of the above mentioned steps are important in some way, number 4, the
+calculation of forces is potentially the most important as it deals with all of
+the interactions in the system. As the forces are obtained from the interaction
+potential, a brief overview of metal-metal and metal-CO potentials
+will conclude our introduction to molecular dynamics simulations.
+
+\subsubsection{Metal-Metal interaction potentials}
+Many of the potentials used for modeling transition metals are based
+on a non-pairwise additive functional of the local electron
+density. The embedded atom method (EAM) is perhaps the best known of
+these
+methods,\citep{Foiles:1986ky, Daw:1984aq, Johnson:1989yr, Daw:1989ci, Plimpton:1993qi, Voter:1995ax, Lu:1997fv, Alemany:1998fp}
+but other models like the Finnis-Sinclair\citep{Finnis:1984hl, Sutton:1990rr} and
+the quantum-corrected Sutton-Chen method\citep{Goddard:1998qsc, Qi:1999dn} have simpler
+parameter sets. The glue model of Ercolessi {\it et
+  al}.\citep{Ercolessi:1988uo} is among the fastest of these density
+functional approaches. In all of these models, atoms are treated as a
+positively charged core with a radially-decaying valence electron
+distribution. To calculate the energy for embedding the core at a
+particular location, the electron density due to the valence electrons
+at all of the other atomic sites is computed at atom $i$'s location,
+\begin{equation}
+\bar{\rho}_i = \sum_{j\neq i} \rho_j(r_{ij})
+\end{equation}
+Here, $\rho_j(r_{ij})$ is the function that describes the distance
+dependence of the valence electron distribution of atom $j$. The
+contribution to the potential that comes from placing atom $i$ at that
+location is then
+\begin{equation}
+V_i =  F[ \bar{\rho}_i ]  + \sum_{j \neq i} \phi_{ij}(r_{ij})
+\end{equation}
+where $F[ \bar{\rho}_i ]$ is an energy embedding functional, and
+$\phi_{ij}(r_{ij})$ is a pairwise term that is meant to represent the
+repulsive overlap of the two positively charged cores.  
+
+% The {\it modified} embedded atom method (MEAM) adds angular terms to
+% the electron density functions and an angular screening factor to the
+% pairwise interaction between two
+% atoms.\citep{BASKES:1994fk,Lee:2000vn,Thijsse:2002ly,Timonova:2011ve}
+% MEAM has become widely used to simulate systems in which angular
+% interactions are important (e.g. silicon,\citep{Timonova:2011ve} bcc
+% metals,\citep{Lee:2001qf} and also interfaces.\citep{Beurden:2002ys})
+% MEAM presents significant additional computational costs, however.
+
+The EAM, Finnis-Sinclair, and the Quantum Sutton-Chen (QSC) potentials
+have all been widely used by the materials simulation community for
+simulations of bulk and nanoparticle
+properties,\citep{Chui:2003fk, Wang:2005qy, Medasani:2007uq, Mishin:1999ew}
+melting,\citep{Belonoshko:2000jk, Sankaranarayanan:2006ye, Sankaranarayanan:2005bh}
+fracture,\citep{Shastry:1996qg, Shastry:1998dx, Mishin:2001qt} crack
+propagation,\citep{Becquart:1993sr, Rifkin:1992ug} and alloying
+dynamics.\citep{Shibata:2002hh, Mishin:2002if, Zope:2003ai, Mishin:2005vc}
+One of EAM's strengths is its sensitivity to small changes in
+structure. This is due to the inclusion of up to the third nearest
+neighbor interactions during fitting of the parameters.\citep{Voter:1995ax}
+In comparison, the glue model of Ercolessi {\it et
+  al}.\citep{Ercolessi:1988uo} was only parameterized to include
+nearest-neighbor interactions. EAM is thus a suitable choice for systems
+where the bulk properties are of secondary importance to low-index
+surface structures. Additionally, the similarity of EAM's functional
+treatment of the embedding energy to standard density functional
+theory (DFT) makes fitting DFT-derived cross potentials with
+adsorbates somewhat easier.
+
+\subsubsection{Lennard Jones \& Morse potentials}
+Accurately modeling the charge-transfer associated with bond formation between
+adsorbates and metal surfaces requires either a reactive forcefield or a
+quantum mechanical treatment of the system, both of which are too computationally expensive
+for the size of the simulations explored in this dissertation. Assuming minimal effects
+from charge transfer, which to first order is satisfactory, formation
+of a metal-adsorbate bond can be sufficiently represented by a combination of
+Lennard Jones and Morse potentials, see equations \ref{eq:lj} and \ref{eq:mp}.
+
+\begin{equation}
+V(r) = 4\epsilon\bigg(\bigg(\frac{\sigma}{r}\bigg)^12 - \bigg(\frac{\sigma}{r}\bigg)^6\bigg)
+\label{eq:lj}
+\end{equation}
+
+\begin{equation}
+V(r) = D_e(1-e^{-\gamma(r-r_e)})^2
+\label{eq:mp}
+\end{equation}
+
+
+Both potentials describe the energy of two particles as they approach each
+other. The Lennard Jones potential is parameterized by two variables, $\sigma$,
+which describes the ``size'' of the atom, and $\epsilon$, which scales the
+strength of the interaction, while the Morse potential is composed of three
+variables, $D_e$, an energy scaling term, $r_e$, the minimum energy separation
+distance and, $\gamma$, a knob on which to tune the tightness of the well.
+
+Both potentials, along with their sum are displayed in Figure
+\ref{fig:potentials}. The Lennard Jones potential which is used to describe the
+Pt-C interaction is highlighted in orange. This potential is composed of two
+pieces, a $\frac{1}{r^{12}}$ term that is responsible for the large repulsive
+wall at short distances and a $\frac{1}{r^{6}}$ term that is attractive and has
+its basis in instantaneous dipole-dipole interactions.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{../figures/chap1/bindingEnergy.pdf}
+\caption{This figure represents one of the parameterizations for the Pt-CO
+interaction split into its component Lennard-Jones and Morse potential pieces.
+The blue solid curve represents the Pt-CO potential provided in Chapter
+\ref{chap:island} while the orange dashed curve represents just the
+Lennard-Jones interaction between Pt and C. The repulsive Pt-O interaction is
+represented by the green dashed curve.}
+\label{fig:potentials}
+\end{figure}
+
+The \ce{Pt\bond{-}O} interaction was initially represented with a Morse
+potential for the work performed in Chapter \ref{chap:PtAu} but was changed to
+the form below because of artificial oxygen first binding that was observed
+infrequently on the highest coverage systems. This modification ensures that
+the \ce{Pt\bond{-}O} bond is purely repulsive so that only \ce{Pt\bond{-}C}
+binding is observed.
+
+\begin{equation}
+V(r) = D_e(e^{-2\gamma(r-r_e)})
+\end{equation}
+
+The only interactions not yet mentioned are the carbon monoxide self
+interactions, which are being used unchanged from Karplus and
+Straub.\citep{Straub:1991no} As the role of the strong CO-CO quadrupole
+interaction is quite important in the reconstruction of some metal
+systems,\citep{Tao:2010aa, Eren:2016qt} an in-depth examination of this model
+is provided in Chapter \ref{chap:PtAu}.
+

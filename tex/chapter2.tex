@@ -107,65 +107,12 @@ Au-Au and Pt-Pt interactions.\citep{Foiles:1986ky} The CO was modeled using
 a rigid three-site model developed by Straub and Karplus for studying
 photodissociation of CO from myoglobin.\citep{Straub:1991no} The Au-CO and
 Pt-CO cross interactions were parameterized as part of this work.
-  
+ 
 \subsection{Metal-metal interactions}
-Many of the potentials used for modeling transition metals are based
-on a non-pairwise additive functional of the local electron
-density. The embedded atom method (EAM) is perhaps the best known of
-these
-methods,\citep{Foiles:1986ky, Daw:1984aq, Johnson:1989yr, Daw:1989ci, Plimpton:1993qi, Voter:1995ax, Lu:1997fv, Alemany:1998fp}
-but other models like the Finnis-Sinclair\citep{Finnis:1984hl, Sutton:1990rr} and
-the quantum-corrected Sutton-Chen method\citep{Goddard:1998qsc, Qi:1999dn} have simpler
-parameter sets. The glue model of Ercolessi {\it et
-  al}.\citep{Ercolessi:1988uo} is among the fastest of these density
-functional approaches. In all of these models, atoms are treated as a
-positively charged core with a radially-decaying valence electron
-distribution. To calculate the energy for embedding the core at a
-particular location, the electron density due to the valence electrons
-at all of the other atomic sites is computed at atom $i$'s location,
-\begin{equation*}
-\bar{\rho}_i = \sum_{j\neq i} \rho_j(r_{ij})
-\end{equation*}
-Here, $\rho_j(r_{ij})$ is the function that describes the distance
-dependence of the valence electron distribution of atom $j$. The
-contribution to the potential that comes from placing atom $i$ at that
-location is then
-\begin{equation*}
-V_i =  F[ \bar{\rho}_i ]  + \sum_{j \neq i} \phi_{ij}(r_{ij})
-\end{equation*}
-where $F[ \bar{\rho}_i ]$ is an energy embedding functional, and
-$\phi_{ij}(r_{ij})$ is a pairwise term that is meant to represent the
-repulsive overlap of the two positively charged cores.  
-
-% The {\it modified} embedded atom method (MEAM) adds angular terms to
-% the electron density functions and an angular screening factor to the
-% pairwise interaction between two
-% atoms.\citep{BASKES:1994fk,Lee:2000vn,Thijsse:2002ly,Timonova:2011ve}
-% MEAM has become widely used to simulate systems in which angular
-% interactions are important (e.g. silicon,\citep{Timonova:2011ve} bcc
-% metals,\citep{Lee:2001qf} and also interfaces.\citep{Beurden:2002ys})
-% MEAM presents significant additional computational costs, however.
-
-The EAM, Finnis-Sinclair, and the Quantum Sutton-Chen (QSC) potentials
-have all been widely used by the materials simulation community for
-simulations of bulk and nanoparticle
-properties,\citep{Chui:2003fk, Wang:2005qy, Medasani:2007uq, Mishin:1999ew}
-melting,\citep{Belonoshko:2000jk, Sankaranarayanan:2006ye, Sankaranarayanan:2005bh}
-fracture,\citep{Shastry:1996qg, Shastry:1998dx, Mishin:2001qt} crack
-propagation,\citep{Becquart:1993sr, Rifkin:1992ug} and alloying
-dynamics.\citep{Shibata:2002hh, Mishin:2002if, Zope:2003ai, Mishin:2005vc}
-One of EAM's strengths is its sensitivity to small changes in
-structure. This is due to the inclusion of up to the third nearest
-neighbor interactions during fitting of the parameters.\citep{Voter:1995ax}
-In comparison, the glue model of Ercolessi {\it et
-  al}.\citep{Ercolessi:1988uo} was only parameterized to include
-nearest-neighbor interactions. EAM is a suitable choice for systems
-where the bulk properties are of secondary importance to low-index
-surface structures. Additionally, the similarity of EAM's functional
-treatment of the embedding energy to standard density functional
-theory (DFT) makes fitting DFT-derived cross potentials with
-adsorbates somewhat easier.
-
+Our justifications for using the Embedded Atom Method are more fully explained
+in Chapter \ref{chap:intro} and revolve around the inclusion of third nearest
+neighbors interactions during fitting of the parameters.\citep{Voter:1995ax}
+ 
 \subsection{Carbon monoxide model}
 Previous explanations for the surface rearrangements center on the
 large linear quadrupole moment of carbon monoxide.\citep{Tao:2010aa} We
