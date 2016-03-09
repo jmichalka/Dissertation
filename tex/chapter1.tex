@@ -580,7 +580,7 @@ of a metal-adsorbate bond can be sufficiently represented by a combination of
 Lennard Jones and Morse potentials, see equations \ref{eq:lj} and \ref{eq:mp}.
 
 \begin{equation}
-V(r) = 4\epsilon\bigg(\bigg(\frac{\sigma}{r}\bigg)^12 - \bigg(\frac{\sigma}{r}\bigg)^6\bigg)
+V(r) = 4\epsilon\bigg(\bigg(\frac{\sigma}{r}\bigg)^{12} - \bigg(\frac{\sigma}{r}\bigg)^6\bigg)
 \label{eq:lj}
 \end{equation}
 
@@ -597,9 +597,9 @@ strength of the interaction, while the Morse potential is composed of three
 variables, $D_e$, an energy scaling term, $r_e$, the minimum energy separation
 distance and, $\gamma$, a knob on which to tune the tightness of the well.
 
-Both potentials, along with their sum are displayed in Figure
-\ref{fig:potentials}. The Lennard Jones potential which is used to describe the
-Pt-C interaction is highlighted in orange. This potential is composed of two
+The potentials, along with their sum are displayed in Figure
+\ref{fig:potentials}. The Lennard Jones potential describes the Pt-C
+interaction and is highlighted in orange. This potential is composed of two
 pieces, a $\frac{1}{r^{12}}$ term that is responsible for the large repulsive
 wall at short distances and a $\frac{1}{r^{6}}$ term that is attractive and has
 its basis in instantaneous dipole-dipole interactions.
@@ -608,12 +608,12 @@ its basis in instantaneous dipole-dipole interactions.
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{../figures/chap1/bindingEnergy.pdf}
-\caption{This figure represents one of the parameterizations for the Pt-CO
+\caption{These potential curves represent one of the parameterizations for the Pt-CO
 interaction split into its component Lennard-Jones and Morse potential pieces.
-The blue solid curve represents the Pt-CO potential provided in Chapter
-\ref{chap:island} while the orange dashed curve represents just the
+The solid blue curve represents the Pt-CO potential provided in Chapter
+\ref{chap:island} while the dashed orange curve represents the
 Lennard-Jones interaction between Pt and C. The repulsive Pt-O interaction is
-represented by the green dashed curve.}
+represented by the dashed green curve.}
 \label{fig:potentials}
 \end{figure}
 
@@ -628,8 +628,8 @@ binding is observed.
 V(r) = D_e(e^{-2\gamma(r-r_e)})
 \end{equation}
 
-The only interactions not yet mentioned are the carbon monoxide self
-interactions, which are being used unchanged from Karplus and
+The only interactions not yet mentioned are the CO self
+interactions which are being used unchanged from Karplus and
 Straub.\citep{Straub:1991no} As the role of the strong CO-CO quadrupole
 interaction is quite important in the reconstruction of some metal
 systems,\citep{Tao:2010aa, Eren:2016qt} an in-depth examination of this model
