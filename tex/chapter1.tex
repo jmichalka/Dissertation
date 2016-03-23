@@ -356,7 +356,7 @@ Figure \ref{fig:patterns}.
 \centering
   \includegraphics[width=0.5\linewidth]{../figures/chap1/pattern.pdf}
   \caption{Adsorbate patterns of CO (black dots) on Pd (111) (white spheres), (a)
-$(\sqrt{3}\times\sqrt{3})\textrm{R}30^o$, (b) c$(4\times2)$, (c) $(2\times2)$.}
+$(\sqrt{3}\times\sqrt{3})\textrm{R}30^o$ at $\theta=1/3$, (b) c$(4\times2)$ at $\theta=1/2$, (c) $(2\times2)$ at $\theta=3/4$.}
 \label{fig:patterns}
 \end{figure}
 
@@ -442,7 +442,7 @@ these interactions can vary drastically. For instance, modeling catalytically
 activated chemical reactions on a metal surface with the intent of mapping
 reaction pathways requires a higher level of theory when compared to modeling
 large-scale reconstructions of metals because of the need to capture charge
-transfer and bond formations and breakages.
+transfer and bond formations and breakages throughout the reactions.
 
 Generally, simulations can be broken up between two main classes, those that
 require an accurate treatment of electron movement and transfer and those that
@@ -460,13 +460,13 @@ events.
 In constrast to Density Functional Theory and other methods that attempt to
 solve the electronic wavefunctions within a molecular system, most
 implementations of molecular dynamics sacrifice this portion of the molecular
-description in order to gain the ability to model larger systems ($>$1000s of
+description in order to gain the ability to model larger systems ($>$1e3
 atoms) for longer times ($>$1e6 fs). At a minimum, a molecular dynamics
 implementation requires knowledge of the positions, $\mathbf{r}$, and
 velocities, $\mathbf{v}$, of all $N$ particles in the system along with a
 complete description of the cross-interactions between all types of particles.
 The accumulation of the different interaction potentials is also known as a
-``forcefield''. With this knowledge and a suitably chosen timestep ($\sim$ 1-2
+``forcefield''. With this knowledge and a suitably chosen timestep ($\sim$1-2
 fs), the system can be evolved through time by integrating Newton's equations
 of motion. A general approach for the procedure is shown below.
 
@@ -475,7 +475,8 @@ of motion. A general approach for the procedure is shown below.
 \item Given initial $\mathbf{r}$ and $\mathbf{v}$, set the time $t=0$ and
 $\Delta t$ to something suitably short.
 
-\item Move atoms based on current positions and velocities.
+\item Move atoms based on current positions and velocities, and potentially
+higher-order terms like acceleration ($a_i$).
 
 \begin{equation*}
 r_i(t + \Delta t) = r_i(t) + v_i(t)*\Delta t + a_i(t)*\Delta t^2 + ...
@@ -502,7 +503,7 @@ mentioned in numbers 2 and 3 can vary and numerous algorithms exist including
 verlet\citep{Verlet:1967aa} and velocity-verlet
 integration.\citep{Dullweber:1997aa} The conditions mentioned in number 6 are
 in reference to methods that can ensure that the system is maintained at a
-given temperature or pressure and while important, go beyond our introduction
+given temperature or pressure and while important, go beyond our brief introduction
 to molecular dynamics, but further resources can be found in References
 \citep{Hoover:1985aa, Melchionna:1993aa, Leach:2001aa}.
 
@@ -557,7 +558,7 @@ simulations of bulk and nanoparticle
 properties,\citep{Chui:2003fk, Wang:2005qy, Medasani:2007uq, Mishin:1999ew}
 melting,\citep{Belonoshko:2000jk, Sankaranarayanan:2006ye, Sankaranarayanan:2005bh}
 fracture,\citep{Shastry:1996qg, Shastry:1998dx, Mishin:2001qt} crack
-propagation,\citep{Becquart:1993sr, Rifkin:1992ug} and alloying
+propagation, \citep{Becquart:1993sr, Rifkin:1992ug} and alloying
 dynamics.\citep{Shibata:2002hh, Mishin:2002if, Zope:2003ai, Mishin:2005vc}
 One of EAM's strengths is its sensitivity to small changes in
 structure. This is due to the inclusion of up to the third nearest
@@ -578,7 +579,7 @@ quantum mechanical treatment of the system, both of which are too computationall
 for the size of the simulations explored in this dissertation. Assuming minimal effects
 from charge transfer, which to first order is satisfactory, formation
 of a metal-adsorbate bond can be sufficiently represented by a combination of
-Lennard Jones and Morse potentials, see equations \ref{eq:lj} and \ref{eq:mp}.
+Lennard Jones and Morse potentials, shown in equations \ref{eq:lj} and \ref{eq:mp}.
 
 \begin{equation}
 V(r) = 4\epsilon\bigg(\bigg(\frac{\sigma}{r}\bigg)^{12} - \bigg(\frac{\sigma}{r}\bigg)^6\bigg)
@@ -629,10 +630,9 @@ binding is observed.
 V(r) = D_e(e^{-2\gamma(r-r_e)})
 \end{equation}
 
-The only interactions not yet mentioned are the CO self
-interactions which are being used unchanged from Karplus and
-Straub.\citep{Straub:1991no} As the role of the strong CO-CO quadrupole
-interaction is quite important in the reconstruction of some metal
-systems,\citep{Tao:2010aa, Eren:2016qt} an in-depth examination of this model
-is provided in Chapter \ref{chap:PtAu}.
+The remaining CO self-interactions, which are being used unchanged from work
+performed by Karplus and Straub,\citep{Straub:1991no} will be discuseed in
+Chapter \ref{chap:PtAu} as the large CO-CO quadrupole interaction is believed
+to be quite important to the reconstruction of metal systems.\citep{Tao:2010aa,
+Eren:2016qt}
 

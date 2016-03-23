@@ -1,13 +1,11 @@
 In the introduction add a section on molecular dynamics
 rough outline:
-  Modeling Metals
-    Interactions
-      Metal-Metal (EAM), take out EAM in chapter 2 (and more)
-      Metal-Adsorbate, LJ, Morse
-      Electrostatics
-	Drude
-	Fluctuating
-    Integrator/Dynamics
+  Figure 1.5 ____   
+  Modeling Metals __y__
+    Interactions __y___
+      Metal-Metal (EAM), take out EAM in chapter 2 (and more) __partial__
+      Metal-Adsorbate, LJ, Morse ___y___
+    Integrator/Dynamics __y___
 
 Chapter 4
   Include new data for 112
@@ -17,6 +15,8 @@ Chapter 4
 Chapter 5
   Introduce polarizability in general
     Drude, charge transfer, gaussians (Siepmann and Klein?)
-
+      Electrostatics
+	Drude
+	Fluctuating
   Check, completing the square
 

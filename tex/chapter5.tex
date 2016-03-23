@@ -23,6 +23,15 @@ of the interface, especially the local electric field, and also diffusion and
 adsorption on the surface.\citep{Streitz:1994mw, Getman:2008sp,
 Bray:2011hq,Small:2012dw}
 
+There have been numerous attempts to include polarization within molecular
+simulations, each with their own strengths and weaknesses.\citep{} One of the first is
+the Drude model\citep{}, where the static charge of atom $i$ is decomposed into two
+portions, generally a larger portion that is retained at the atomic location,
+and the remaining portion that is allowed to move ``freely'' around the atomic site, typically
+constrained by either a fixed distance $r$ or a standard restoring force with
+an equilibrium distance of $r_e$. This approach allows local polarization of the atom in response to the electronic environment, but typically does not include charge transfer. This method has been utilized by Iori and Corni in their modeling of biological adsorption on gold surfaces.\citep{} 
+
+
 Treating the charge transfer dynamics of such a system within molecular dynamics is a
 challenging problem. Whereas non-metallic species can be modeled satisfactorily
 with static point charges, metal-adsorbate, metal oxide, and more generally
