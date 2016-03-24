@@ -15,69 +15,95 @@ examined. Finally, current challenges and future directions will be discussed.
 \section{Introduction}
 Metal surfaces and interfaces play a key role in a number of chemical and
 technological processes; however, the tendency of oxide layers to form on these
-interfaces requires a chemically-realistic treatment of metal-adsorbate interactions when
-simulating these systems\citep{Streitz:1994mw, Duin:2010dk, Devine:2011bk,
-Fantauzzi:2014pb}.  The modified atomistic structure and electronic environment
-of these surfaces after oxide formation is expected to affect many properties
-of the interface, especially the local electric field, and also diffusion and
-adsorption on the surface.\citep{Streitz:1994mw, Getman:2008sp,
-Bray:2011hq,Small:2012dw}
+interfaces requires a chemically-realistic treatment of metal-adsorbate
+interactions when simulating these systems\citep{Streitz:1994mw, Duin:2010dk,
+Devine:2011bk, Fantauzzi:2014pb}.  The modified atomistic structure and
+electronic environment of these surfaces after oxide formation is expected to
+affect many properties of the interface, especially the local electric field,
+the polarization of the surface, and also diffusion and adsorption on the
+surface.\citep{Streitz:1994mw, Getman:2008sp, Bray:2011hq,Small:2012dw}
 
-There have been numerous attempts to include polarization within molecular
-simulations, each with their own strengths and weaknesses.\citep{} One of the
-first is the Drude model\citep{}, where the static charge of atom $i$ is
-decomposed into two portions, generally a larger portion that is retained at
-the atomic location, and the remaining portion that is allowed to move
-``freely'' around the atomic site, typically constrained by either a fixed
-distance $r$ or a standard restoring force with an equilibrium distance of
-$r_e$. If the atom is neutral, a small positive charge at the atomic site will
-often be balanced by an equally small negative charge so that a simple dipole
-moment is created. 
+There have been numerous attempts to include charge transfer and polarization
+within molecular simulations.\citep{Rick:1994ss, Streitz:1994mw,
+Siepmann:1995es, Iori:2008ic, Iori:2009au} Depending on whether atomic or
+molecular polarizability is desired, different implementations are more or less
+appropriate. The polarization of molecules and metals is often treated using
+various charge transfer methods, whereas atomic polarizability is typically
+reliant on a dynamic multipole representation of the charge density of the
+atom.
 
-This approach allows for polarization of the atom in response to the electronic
-environment, and can be extended to molecular and larger systems with minimal
-modifications.  A version of this method has been recently utilized by Iori and
-Corni in their modeling of biological adsorption on gold surfaces.\citep{} Each
-gold atom was assigned a small positive charge which was balanced with an
-equally small negative charge a short distance away. When there were no
-perturbations present, the system dipole averaged to zero, but when charged
-adsorbates approached the surface, a net dipole moment was formed in response.
+One of the simplest ways to include atomic polarizability is with the use of
+Drude particles, which are loosely based on Drude's model electrical
+conductionthat he proposed in 1900.\citep{Drude:1900aa, Drude:1900bb}. In the
+description of these particles, the static charge of atom $i$ is decomposed
+into two portions, generally a larger portion that is retained at the atomic
+location, and the remaining portion that is allowed to move ``freely'' around
+the atomic site, typically constrained by either a fixed distance $r$ or a
+standard restoring force with an equilibrium distance of $r_e$. If the atom is
+neutral, the creation of a small dipole moment by placing a positive charge at
+the atomic site and a negative charge at the end of the rod or spring can lead
+to an effective treatment of the anisotropic atomic polarization. This method
+can be expanded to molecular systems and has been used by Roux {\em et al.} to
+describe a simple polarizable model for water.\citep{Roux:2003ho}
+
+A further modified version of this method has been recently utilized by Iori
+and Corni in their modeling of biological adsorption on gold
+surfaces.\citep{Iori:2008ic, Iori:2009au} Each gold atom was assigned a small
+negative charge which was balanced with an equally small positive charge a
+short distance away. When there were no perturbations present, the system
+dipole averaged to zero, but when charged adsorbates approached the surface, a
+net dipole moment was formed in response.
 
 Polarization can also be included by incorporating charge transfer into the
 description of the system. While atomic level polarizability is not inherently
-retained in this approach, for larger molecular systems, allowing
+present in this approach, for larger molecular systems, allowing
 intramolecular charge transfer can still capture a significant amount of
 observed polarization. Rick, Stuart, and Berne, in their fluctuating charge
 model of water made use of intra- and inter-molecular charge transfer to more
-accurately describe condensed phase properties of water.\citep{} One of the
+accurately describe condensed phase properties of water.\citep{Rick:1994ss} One of the
 strengths of their approach was their treatment of atomic charge as a dynamical
 variable that would gain and lose velocity as a result of the local electronic
 environment. This allowed them to avoid large matrix calculations every time
-step, which has been used previously to ensure a charge minimum in simulated
+step, which had been used previously to ensure a charge minimum in simulated
 molecular systems. 
 
 A similar approach, but expanded to describe metals was proposed by Siepmann
 and Sprik where they described the charge on a metal as a gaussian density
 where the charge variables were again included in an extended lagrangian so
-that a constraint on the surface potential could be enforced.\citep{} This
-restriction on the potential led to an accurate capturing of the image charge
-formalism often used in continuum electrostatics. Their investigation of water
-ordering on metal surfaces did not include any charge transfer between the
-water and the metal which is somewhat unreasonable. 
+that a constraint on the surface potential could be
+enforced.\citep{Siepmann:1995es} This restriction on the potential led to an
+accurate capturing of the image charge formalism often used in continuum
+electrostatics. Their investigation of water ordering on metal surfaces did not
+include any charge transfer between the water and the metal. Instead they
+described the primary interactions between the metal surface and the water
+molecules with a generalized interaction potential shown below,
 
-Treating the charge transfer dynamics of any of the above systems within molecular dynamics is a
-challenging problem. Whereas non-metallic species can be modeled satisfactorily
-with static point charges, metal-adsorbate, metal oxide, and more generally
-metal-metal interactions require a more complicated description of their
-electronic interactions to accurately capture the behavior of charged
-species near a conductor. The idea of electronegativity equalization introduced
-by Sanderson\citep{Sanderson:1951mz} provides a conceptual framework that
-describes charge transfer between both atomic and molecular species. In this
-formalism, as a species gains negative charge in response to its local
-environment, its electronegativity decreases; similarly, if an atomic site has
-lost charge, then it has an increased electronegativity. The system would then
-only be considered at equilibrium if all of the electronegativities were equal.
-It is helpful to remember that the electronegativity, $\chi_A$, as defined by
+\begin{equation}
+\nu_2(r_{ij}) = \frac{A}{r_{ij}^\alpha} - \frac{C}{r_{ij}^6} - \frac{Df_2(r_{ij})}{r_{ij}^3}\Phi_{ij}(\phi_{ij})
+\end{equation}
+
+where, $A, C, D, $ and $\alpha$ are tunable parameters. The first term captures
+the isotropic soft-core repulsion, while the second term on the right captures
+the disperion attraction. The third term is composed of a cutoff, $f_2(r) =
+e^{\frac{B}{r-r_{\mathrm{cut}}}}$, and angle dependent piece based on the
+Stillinger-Weber model\citep{Stillinger:1985tb} which helps capture some of the
+chemical binding that leads to an atop-preference.
+
+Treating the charge transfer dynamics of any of the above systems within
+molecular dynamics is a challenging problem and while non-metallic species can
+be modeled satisfactorily with static point charges, metal-adsorbate, metal
+oxide, and more generally metal-metal interactions require a more complicated
+description of their electronic interactions to accurately capture the behavior
+of charged species near a conductor. One helpful idea that has been of great
+use in implementing charge transfer schemes is that of electronegativity
+equalization. Introduced by Sanderson\citep{Sanderson:1951mz},
+electronegativity equalization provides a conceptual framework that describes
+charge transfer between both atomic and molecular species. In this formalism,
+as a species gains negative charge in response to its local environment, its
+electronegativity decreases; similarly, if an atomic site has lost charge, then
+it has an increased electronegativity. The system would then only be considered
+at equilibrium if all of the electronegativities were equal.  It is helpful to
+remember that the electronegativity, $\chi_A$, as defined by
 Mulliken\citep{Mulliken:1934wt} is equal to the negative of the chemical
 potential of the valence electron gas around a positive nucleus, $\mu_A$, as
 argued by Iczkowski and Margrave\citep{Iczkowski:1961wq}.
@@ -92,14 +118,15 @@ is the number of electrons around the nucleus. Thus $q = 0$ for the neutral
 species, $+1$ for the positive ion, and $-1$ for the negative ion.  This
 description implies that upon movement of the nuclei, the electrons will
 undergo charge transfer so as to equilibrate the electrochemical potential of
-the system. While this formalism is helpful, it still requires a method
-of implementation.  Streitz and Mintmire, using the idea of electronegativity
+the system. While this formalism is helpful, it still requires a method of
+implementation.  Streitz and Mintmire, using the idea of electronegativity
 equalization, developed a potential for modeling aluminum oxide. They
 calculated the minimum charges at each time step by taking the inverse of an
-$n\times n$ matrix, which while accurate, drastically increases the expense of a simulation.\citep{Streitz:1994mw} A method proposed by Rick {\it et
-al.} in their work on fluctuating charge water models is able to avoid matrix inversion by
-allowing the atomic charges to fluctuate dynamically. This was accomplished by
-coupling the electronegativity equalization method with a fictitious charge
+$n\times n$ matrix, which while accurate, drastically increases the expense of
+a simulation.\citep{Streitz:1994mw} A method proposed by Rick {\it et al.} in
+their work on fluctuating charge water models is able to avoid matrix inversion
+by allowing the atomic charges to fluctuate dynamically. This was accomplished
+by coupling the electronegativity equalization method with a fictitious charge
 variable on each atomic site. This charge variable $Q_A$ was then propagated
 with the rest of the dynamics of the system by using an extended Lagrangian
 approach.\citep{Rick:1994ss}
