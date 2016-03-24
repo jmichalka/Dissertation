@@ -24,15 +24,48 @@ adsorption on the surface.\citep{Streitz:1994mw, Getman:2008sp,
 Bray:2011hq,Small:2012dw}
 
 There have been numerous attempts to include polarization within molecular
-simulations, each with their own strengths and weaknesses.\citep{} One of the first is
-the Drude model\citep{}, where the static charge of atom $i$ is decomposed into two
-portions, generally a larger portion that is retained at the atomic location,
-and the remaining portion that is allowed to move ``freely'' around the atomic site, typically
-constrained by either a fixed distance $r$ or a standard restoring force with
-an equilibrium distance of $r_e$. This approach allows local polarization of the atom in response to the electronic environment, but typically does not include charge transfer. This method has been utilized by Iori and Corni in their modeling of biological adsorption on gold surfaces.\citep{} 
+simulations, each with their own strengths and weaknesses.\citep{} One of the
+first is the Drude model\citep{}, where the static charge of atom $i$ is
+decomposed into two portions, generally a larger portion that is retained at
+the atomic location, and the remaining portion that is allowed to move
+``freely'' around the atomic site, typically constrained by either a fixed
+distance $r$ or a standard restoring force with an equilibrium distance of
+$r_e$. If the atom is neutral, a small positive charge at the atomic site will
+often be balanced by an equally small negative charge so that a simple dipole
+moment is created. 
 
+This approach allows for polarization of the atom in response to the electronic
+environment, and can be extended to molecular and larger systems with minimal
+modifications.  A version of this method has been recently utilized by Iori and
+Corni in their modeling of biological adsorption on gold surfaces.\citep{} Each
+gold atom was assigned a small positive charge which was balanced with an
+equally small negative charge a short distance away. When there were no
+perturbations present, the system dipole averaged to zero, but when charged
+adsorbates approached the surface, a net dipole moment was formed in response.
 
-Treating the charge transfer dynamics of such a system within molecular dynamics is a
+Polarization can also be included by incorporating charge transfer into the
+description of the system. While atomic level polarizability is not inherently
+retained in this approach, for larger molecular systems, allowing
+intramolecular charge transfer can still capture a significant amount of
+observed polarization. Rick, Stuart, and Berne, in their fluctuating charge
+model of water made use of intra- and inter-molecular charge transfer to more
+accurately describe condensed phase properties of water.\citep{} One of the
+strengths of their approach was their treatment of atomic charge as a dynamical
+variable that would gain and lose velocity as a result of the local electronic
+environment. This allowed them to avoid large matrix calculations every time
+step, which has been used previously to ensure a charge minimum in simulated
+molecular systems. 
+
+A similar approach, but expanded to describe metals was proposed by Siepmann
+and Sprik where they described the charge on a metal as a gaussian density
+where the charge variables were again included in an extended lagrangian so
+that a constraint on the surface potential could be enforced.\citep{} This
+restriction on the potential led to an accurate capturing of the image charge
+formalism often used in continuum electrostatics. Their investigation of water
+ordering on metal surfaces did not include any charge transfer between the
+water and the metal which is somewhat unreasonable. 
+
+Treating the charge transfer dynamics of any of the above systems within molecular dynamics is a
 challenging problem. Whereas non-metallic species can be modeled satisfactorily
 with static point charges, metal-adsorbate, metal oxide, and more generally
 metal-metal interactions require a more complicated description of their
