@@ -1,6 +1,6 @@
 In the introduction add a section on molecular dynamics
 rough outline:
-  Figure 1.5 ____   
+  Figure 1.5 __y__   
   Modeling Metals __y__
     Interactions __y___
       Metal-Metal (EAM), take out EAM in chapter 2 (and more) __partial__
@@ -14,7 +14,7 @@ Chapter 4
 
 Chapter 5
   Introduce polarizability in general
-    Drude, charge transfer, gaussians (Siepmann and Klein?)
+    Drude, charge transfer, gaussians (Siepmann and Klein?) __y__
       Electrostatics
 	Drude
 	Fluctuating

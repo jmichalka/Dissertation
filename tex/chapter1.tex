@@ -142,7 +142,8 @@ depending on the termination or ``slicing'' of the crystal a variety of exposed
 surface facets are possible.
 
 \begin{figure}[p!]
-  \includegraphics[width=\linewidth]{../figures/chap1/packing.pdf}
+  \centering
+  \includegraphics[width=0.8\linewidth]{../figures/chap1/packing.pdf}
   \caption{Depiction of A-B-C and A-B-A layer stacking for FCC and HCP crystal
 structures. The lowest layer of atoms compose an ``A'' layer, while the middle
 atoms (gray) represent the ``B'' layer. The atoms in the third layer can sit
@@ -162,6 +163,7 @@ metal surfaces, and for platinum and palladium in particular, the surface energy
 {\em i.e.} rougher, surface will be more energetically expensive than the (111) facet.
 
 \begin{figure}[p!]
+  \centering
   \includegraphics[width=\linewidth]{../figures/chap1/facets.pdf}
   \caption{On the left are displayed face-down views of common low-index facets
 of metals (a) (100), (b) (110), and (c) (111). The dotted lines represent a
@@ -210,6 +212,7 @@ costs\citep{Li:0hl, Zhao:0qf}, etc. provides a strong impetus for the
 characterization of these materials.
 
 \begin{figure}[p!]
+  \centering
   \includegraphics[width=\linewidth]{../figures/chap1/bimetallic.pdf}
 \caption{The top two systems are Pt\textsubscript{0.5}Pd\textsubscript{0.5}
 homogeneous alloys (Pt are shown in gray and Pd in pink), with the left
@@ -285,6 +288,7 @@ helpful. On a (111) surface there are three primary binding sites, the 1-fold
 Figure \ref{fig:binding}. 
 
 \begin{figure}[p!]
+  \centering
   \includegraphics[width=\linewidth]{../figures/chap1/binding.pdf}
   \caption{The atop (green), bridge (blue), and three-fold hollow (red)
 adsorption sites are the three most common binding sites for small molecules on
@@ -457,8 +461,8 @@ systems and length of the simulations can be expanded to capture reconstruction
 events.
 
 \subsection{Molecular Dynamics}
-In constrast to Density Functional Theory and other methods that attempt to
-solve the electronic wavefunctions within a molecular system, most
+In contrast to Density Functional Theory and other methods that attempt to
+solve the electronic wave functions within a molecular system, most
 implementations of molecular dynamics sacrifice this portion of the molecular
 description in order to gain the ability to model larger systems ($>$1e3
 atoms) for longer times ($>$1e6 fs). At a minimum, a molecular dynamics
@@ -466,7 +470,7 @@ implementation requires knowledge of the positions, $\mathbf{r}$, and
 velocities, $\mathbf{v}$, of all $N$ particles in the system along with a
 complete description of the cross-interactions between all types of particles.
 The accumulation of the different interaction potentials is also known as a
-``forcefield''. With this knowledge and a suitably chosen timestep ($\sim$1-2
+``forcefield''. With this knowledge and a suitably chosen time-step ($\sim$1-2
 fs), the system can be evolved through time by integrating Newton's equations
 of motion. A general approach for the procedure is shown below.
 
@@ -495,12 +499,12 @@ F_i = -\nabla V(\mathbf{r})
 \item Correct positions, velocities, etc. with new force information.
 \item Apply conditions (thermostats, barostats, etc.).
 \item Measure properties of interest.
-\item Repeat steps 2-8 until some pre-establishted condition is met.
+\item Repeat steps 2-8 until some pre-established condition is met.
 \end{enumerate}
 
 The specific implementation of position and velocity integration as briefly
 mentioned in numbers 2 and 3 can vary and numerous algorithms exist including
-verlet\citep{Verlet:1967aa} and velocity-verlet
+Verlet\citep{Verlet:1967aa} and Velocity-Verlet
 integration.\citep{Dullweber:1997aa} The conditions mentioned in number 6 are
 in reference to methods that can ensure that the system is maintained at a
 given temperature or pressure and while important, go beyond our brief introduction
@@ -631,7 +635,7 @@ V(r) = D_e(e^{-2\gamma(r-r_e)})
 \end{equation}
 
 The remaining CO self-interactions, which are being used unchanged from work
-performed by Karplus and Straub,\citep{Straub:1991no} will be discuseed in
+performed by Karplus and Straub,\citep{Straub:1991no} will be discussed in
 Chapter \ref{chap:PtAu} as the large CO-CO quadrupole interaction is believed
 to be quite important to the reconstruction of metal systems.\citep{Tao:2010aa,
 Eren:2016qt}
