@@ -14,32 +14,32 @@ examined. Finally, current challenges and future directions will be discussed.
 
 \section{Introduction}
 Metal surfaces and interfaces play a key role in a number of chemical and
-technological processes; however, the tendency of oxide layers to form on these
+technological processes; however, the formation of oxide layers on these
 interfaces requires a chemically-realistic treatment of metal-adsorbate
 interactions when simulating these systems\citep{Streitz:1994mw, Duin:2010dk,
-Devine:2011bk, Fantauzzi:2014pb}.  The modified atomistic structure and
-electronic environment of these surfaces after oxide formation is expected to
+Devine:2011bk, Fantauzzi:2014pb}.  The modified structure and
+electronic environment after oxide formation is expected to
 affect many properties of the interface, especially the local electric field,
 the polarization of the surface, and also diffusion and adsorption on the
 surface.\citep{Streitz:1994mw, Getman:2008sp, Bray:2011hq,Small:2012dw}
 
 There have been numerous attempts to include charge transfer and polarization
-within molecular simulations.\citep{Rick:1994ss, Streitz:1994mw,
+in molecular simulations.\citep{Rick:1994ss, Streitz:1994mw,
 Siepmann:1995es, Iori:2008ic, Iori:2009au} Depending on whether atomic or
-molecular polarizability is desired, different implementations are more or less
+molecular polarizability is desired, different implementations may be
 appropriate. The polarization of molecules and metals is often treated using
-various charge transfer methods, whereas atomic polarizability is typically
+charge transfer methods, whereas atomic polarizability is typically
 reliant on a dynamic multipole representation of the charge density of the
 atom.
 
 One of the simplest ways to include atomic polarizability is with the use of
-Drude particles, which are loosely based on Drude's model electrical
-conduction that he proposed in 1900.\citep{Drude:1900aa, Drude:1900bb}. In the
+Drude particles, which are loosely based on Drude's model of electrical
+conduction, proposed in 1900.\citep{Drude:1900aa, Drude:1900bb}. In the
 description of these particles, the static charge of atom $i$ is decomposed
-into two portions, generally a larger portion that is retained at the atomic
+into two portions, generally a larger portion that is retained at the nuclear
 location, and the remaining portion that is allowed to move ``freely'' around
-the atomic site, typically constrained by either a fixed distance $r$ or a
-standard restoring force with an equilibrium distance of $r_e$. If the atom is
+the nucleus, typically constrained by either a fixed distance $r$ or by a
+restoring force with an equilibrium distance of $r_e$. If the atom is
 neutral, the creation of a small dipole moment by placing a positive charge at
 the atomic site and a negative charge at the end of the rod or spring can lead
 to an effective treatment of the anisotropic atomic polarization. This method
@@ -72,7 +72,7 @@ and Sprik where they described the charge on a metal as a Gaussian density
 where the charge variables were again included in an extended Lagrangian so
 that a constraint on the surface potential could be
 enforced.\citep{Siepmann:1995es} This restriction on the potential led to an
-accurate capturing of the image charge formalism often used in continuum
+accurate capturing of the image charges often used in continuum
 electrostatics. Their investigation of water ordering on metal surfaces did not
 include any charge transfer between the water and the metal. Instead they
 described the primary interactions between the metal surface and the water
@@ -197,7 +197,7 @@ $J$.  In many charge partitioning schemes (and in most classical force fields),
 the partial charges assigned to condensed phase atoms are significantly smaller
 than the unit charges required to produce the gas phase ions, e.g. the \ce{H}
 in \ce{H2O} in TIP4P is assigned a charge of +0.52.\citep{Jorgensen:1983tp}
-This results in electronegativity and hardness terms that may estimate the
+This results in electronegativity and hardness terms that may poorly estimate the
 local slope and harmonic constants leading to construction of a charge surface
 that is overly broad.
 
@@ -397,7 +397,7 @@ value for $k$ of 316 $\frac{\text{kcal}}{\mathrm{mol\times e}^2}$. Various
 polarizabilities and distances can be obtained for oxygen binding to platinum,
 all leading to values for $k$ around 280 $\frac{\text{kcal}}{\mathrm{mol\times
 e}^2}$.  These values are starting points for the
-parameterization rather than as fixed points since the system used to derive
+parameterization rather than fixed points since the system used to derive
 these values is an idealized model and not fully descriptive of the systems we
 examined.
 
@@ -471,7 +471,7 @@ of possible directions of studies, specifically, oxide formation on platinum is
 of immense interest. Additional interactions with metal surfaces will also be
 explored with this technique and will include small molecules, {\em i.e.}
 \ce{CO}, \ce{H2O}, \ce{NO}, etc., metal ions, and small biological analogs like
-that amino acids and short peptide chains.
+amino acids and short peptide chains.
 
 
 
