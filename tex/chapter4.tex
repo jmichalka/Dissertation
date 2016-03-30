@@ -103,7 +103,7 @@ descriptor of potential catalytic activity.
 
 \section{Methodology}
 Platinum-platinum interactions were modeled with the Embedded-Atom-Method (EAM)
-which is described more fully in Chapters \ref{chap:PtAu} and
+which is described more fully in Chapters \ref{chap:intro} and
 \ref{chap:island}.\citep{Foiles:1986ky}
 
 %Modeling the surface reconstruction of a solid/gas interface requires large
@@ -344,7 +344,7 @@ the temperature to either 700\ ~K or 1000\ ~K depending on the initial
 stability of the pure system.  The systems with longer plateaus were more
 stable and were run at 1000\ ~K to bring reconstruction dynamics into the
 domain of typical simulation times.  Gas phase CO molecules, corresponding to
-0.25 ML or 0.5 ML surface coverage were placed in the vacuum region and then
+0.25 ML or 0.5 ML of surface coverage were placed in the vacuum region and then
 allowed to adsorb on the surface. The systems were then re-equilibrated for
 approximately one nanosecond before data collection was begun.  Data was
 collected by running the systems in the microcanonical (NVE) ensemble for 100
@@ -365,9 +365,9 @@ actually catalytically active. While the coordination number of individual
 atoms can help describe their binding strengths, Calle-Vallejo {\it et al.}
 have observed that including the first and second nearest neighbor counts in
 their description of coordination allowed for a better description of an atom's
-local environment.\citep{Calle-Vallejo:2015qq} With this information, similar to
-volcano plots, they were able to create ``coordination-activity plots'' that
-related an atoms coordination with its catalytic activity. Since they needed to
+local environment.\citep{Calle-Vallejo:2015qq} With this information 
+they were able to create ``coordination-activity plots'' that
+related an atoms coordination with its catalytic activity, similar to volcano plots. Since they needed to
 include information about second nearest neighbors, they introduced a new term,
 the generalized coordination number (GCN) as a useful measure of the various
 binding environments on metal surfaces or nanoparticles. 
@@ -502,7 +502,7 @@ had begun to coalesce into a triple step, highlighted in yellow.}
 \subsubsection{Pt (765)}
 The (765) surfaces, while undergoing significant amounts of step-wandering did
 not experience any clear instances of step-edge doubling during the
-simulations. The MS systems, those extended to display wider steps maintained
+simulations. The MS systems, those extended to display more steps, maintained
 the (765) motif over the entire simulation (barring one incident on the 0.5 ML
 system). What appears to be the initial stages of a doubling event results in
 portions of both involved edges sinking into the surface of the metal. This
@@ -526,7 +526,7 @@ systems were run at.
 An interesting case of frustrated double layer formation is highlighted in
 Figure \ref{fig:partialDoubleLayer} where three double layers have begun to
 form, but the center double layer highlighted in green is preventing the blue
-or yellow double layer from coalescing. Within our simulation time, the 0.5 ML
+or red double layer from coalescing. Within our simulation time, the 0.5 ML
 LS systems were not observed to form a double step that encompassed the length
 of the system, whereas numerous examples of partial double steps can be found.
 
@@ -556,11 +556,9 @@ and will be explored in more detail in the discussion.
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{../figures/chap4/321MiniDiamonds.pdf}
-\caption{The (321) 0.25 ML LS system at the (a) beginning and
-(b) end of the simulation. The green diamonds highlight the repeated (111) domains formed
-between the initially regular steps. The presence of so many nucleation sites,
-where two edges touch at one to two atoms may purely be a result of energetics
-of the (321) step surface.}
+\caption{The (321) 0.25 ML LS system at the (a) beginning and (b) end of the
+simulation. The red outline highlights one of the repeated (111) ``diamond''
+domains formed between the initially regular steps.}
 \label{fig:diamonds}
 \end{figure}
 
@@ -588,7 +586,7 @@ low-energy surfaces matched previous values calculated using EAM, which is
 expected as they were one of many experimental variables that were used to
 parameterize the EAM forcefields.\citep{Foiles:1986ky} These values differ
 slightly from experimental\citep{Tyson:1977xe, De-Boer:1988tg, Galeev:1980pt} and
-DFT\citep{Vitos:1998qq} sources, but match in terms of proportions between the
+DFT\citep{Vitos:1998qq} sources, but match in terms of ratios between the
 various surfaces.  The surface energies of Pt(111), Pt(110), and Pt(100) that
 were calculated in this experiment are compared to those calculated in previous
 EAM experimentation \citep{Foiles:1986ky} as well as against experimental
@@ -621,7 +619,7 @@ Facet & Surface Energy & EAM\tnote{a} & Experimental\tnote{b} & Sim./Exp.\\
 \end{table}
 
 The same methodology was used to calculate surface energies for the \ce{Pt}
-(765), \ce{Pt} (557), \ce{Pt} (112), and \ce{Pt} (321) surfaces and are shown
+(765), \ce{Pt} (557), \ce{Pt} (112), and \ce{Pt} (321) surfaces and these energies are shown
 in Table \ref{table:surface_energy}.  The surface energy of these systems is
 inversely correlated to the distance between step-edges. This is reasonable as
 the larger step length corresponds to a larger amount of the low-energy (111)
@@ -700,14 +698,13 @@ configurations e, f, g, and h are all favorable for adatom formation.
   \centering
   \includegraphics[width=0.9\linewidth]{../figures/chap4/112_557_EnergySeparation_CO.pdf}
   \caption{Energies for displacing an edge atom (*) perpendicularly from the
-step edge. The top graph contains data for the (112) surface while the bottom
-graph depicts results for the (557) surface.  Each of the energy curves
-corresponds to one of the labeled configuration to the right and are referenced
-to the unperturbed step edge. The white spheres represent Pt atoms on the upper
-step, while the dark grey spheres are Pt on the lower step.  The colored atoms
-(blue) on the upper step represent a Pt atom with a CO molecule adsorbed at an
-atop site. Certain configurations of CO, notably g and h, can lower the
-energetic barrier for creating an adatom.}
+step edge. The top and bottom graphs contain data for the (112) and (557)
+surfaces, respectively.  Each of the energy curves corresponds to one of the
+labeled configuration on the right and are referenced to the unperturbed step
+edge. The spheres represent Pt atoms on the upper (white) and lower (grey)
+steps.  Colored atoms (blue) are depicted with a CO molecule adsorbed in an
+atop configuration. Certain configurations of CO, notably g and h, can lower
+the energetic barrier for creating an adatom.}
 \label{fig:112_557_ES}
 \end{figure}
 \end{landscape}
@@ -730,11 +727,11 @@ In general, this analysis provides several helpful results. First, removing an
 atom from a (321) or (765) step is more energetically favorable than from a
 (112) or (557) step. This is due to the lower coordination of atoms in
 the kinked edges. This trend is clearly shown in Figures \ref{fig:112_557_ES}
-and \ref{fig:321_765_ES} for configuration a where no CO is present on the
+and \ref{fig:321_765_ES} for configuration {\em a} where no CO is present on the
 surface. In these instances, removing an atom from a kinked step edge is 10
 kcal/mol more favorable than it is to form an adatom from a flat step. This is
-directly due to the lower coordination of the atoms in the kink steps.
-Second, the length of the plateau seems to also affect the energy required to form
+due to the lower coordination of the atoms in the kink steps.
+Additionally9, the length of the plateau seems to also affect the energy required to form
 an adatom at higher coverages.  Configurations e, f, and h in Figure
 \ref{fig:321_765_ES} for the kinked steps highlights this result well. It is
 approximately 25 kcal/mol more favorable to form an adatom on the (321) surface
@@ -751,7 +748,7 @@ energetic barrier for adatom formation.  This conclusion can be demonstrated by
 comparing configurations d and e in both figures. In configuration e, the
 \ce{CO} are located along a vector which is aimed perpendicularly away from the
 step, while in configuration d the repulsive force generated by the \ce{CO} is
-either completely or mostly parallel to the step edge. As the coverage
+mostly parallel to the step edge. As the coverage
 increases, the likelihood of a higher energy configuration also increases,
 which leads to more step-edge breakup and a larger surface diffusion.
 
@@ -764,7 +761,7 @@ observed primarily on the 0.5 ML surfaces. The initial formation of these
 diamonds however is of fairly low cost. Principally, the hopping
 diagrammed in Figure \ref{fig:kinkSketch} has a barrier of approximately 40
 kcal/mole in the worst case, while the resulting structure is within 0.1 kcal/mole of the original
-surface. While the presence of \ce{CO} provides some of the driving force for
+surface. Since the presence of \ce{CO} provides some of the driving force for
 this hopping, the resultant increase in (111) domain size on the surface
 combined with the numerous nucleation sites that are formed between steps leads
 to this patterning existing as a metastable state in many of our simulations of
@@ -824,22 +821,19 @@ before the steps could finish doubling, which in some cases led to partially
 doubled step edges, highlighted in Figure \ref{fig:partialDoubleLayer}.
 
 Further evidence of the importance of plateau length was elucidated from the
-observed differences between the different (321) systems. The
+observed differences between the different (321), LS and MS, systems. The
 longer steps tended to have more partially formed double layers as
 a result of numerous nucleation sites. This prevented the full
 zippering mechanism from occurring. In contrast, the (321) steps that were
 extended to display a greater number of steps had a few
 instances of complete step edge doubling.
 
-All surfaces, even those without \ce{CO} present showed some amount of surface
-roughening and reconstruction suggesting that the surface is only quasi-stable
+All of the (321) surfaces, even those without \ce{CO} present showed some amount of surface
+roughening and reconstruction suggesting that these surfaces are only quasi-stable
 at high temperatures. However, the presence of \ce{CO} at 0.25 and 0.5 ML
 coverages did lead to significantly more step-wandering intermediate
 reconstructions and partial and full double layer formation.
-
 %Dynamics of GCN for surfaces
-
-
 %The slight refaceting of the surfaces led to an artificially low diffusion
 %constant for these systems (true?) because the majority of steps have become
 %slightly buried in these systems to reduce the high surface energy of these
